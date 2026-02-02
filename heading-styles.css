@@ -1,0 +1,50 @@
+/* Heading Styles - Bold Industrial Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Russo One', 'Teko', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 42px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-family: 'Bebas Neue', 'Teko', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Section Titles */
+.section-title {
+    font-family: 'Russo One', 'Teko', sans-serif;
+    font-size: 42px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Service Cards */
+.service-card h3 {
+    font-family: 'Bebas Neue', 'Teko', sans-serif;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav a {
+    font-family: 'Bebas Neue', 'Teko', sans-serif;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+}
+
+/* Body Text */
+p, li {
+    font-family: 'Teko', 'Arial', sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.5;
+}

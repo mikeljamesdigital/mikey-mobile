@@ -1,0 +1,106 @@
+/* Stars Container */
+.stars-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    will-change: transform;
+}
+
+/* Base Star Styles */
+.star {
+    position: absolute;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50 0 L61 35 L98 35 L68 57 L79 91 L50 70 L21 91 L32 57 L2 35 L39 35 Z" fill="white"/></svg>');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: drop-shadow(0 0 3px rgba(255, 255, 255, 0.9)) drop-shadow(0 0 6px rgba(255, 255, 255, 0.6));
+}
+
+/* Individual Star Positions and Sizes */
+/* Large stars (12px - 3x the original 4px) */
+.star-1 { top: 15%; left: 8%; width: 12px; height: 12px; animation: twinkle1 3.2s ease-in-out infinite; }
+.star-2 { top: 25%; left: 22%; width: 12px; height: 12px; animation: twinkle2 4.1s ease-in-out infinite; }
+.star-3 { top: 35%; left: 45%; width: 12px; height: 12px; animation: twinkle3 3.7s ease-in-out infinite; }
+.star-4 { top: 18%; left: 68%; width: 12px; height: 12px; animation: twinkle4 4.5s ease-in-out infinite; }
+.star-5 { top: 42%; left: 85%; width: 12px; height: 12px; animation: twinkle5 3.3s ease-in-out infinite; }
+.star-6 { top: 55%; left: 12%; width: 12px; height: 12px; animation: twinkle6 4.8s ease-in-out infinite; }
+.star-7 { top: 65%; left: 38%; width: 12px; height: 12px; animation: twinkle7 3.9s ease-in-out infinite; }
+.star-8 { top: 72%; left: 62%; width: 12px; height: 12px; animation: twinkle8 4.2s ease-in-out infinite; }
+.star-9 { top: 48%; left: 78%; width: 12px; height: 12px; animation: twinkle9 3.5s ease-in-out infinite; }
+.star-10 { top: 82%; left: 28%; width: 12px; height: 12px; animation: twinkle10 4.6s ease-in-out infinite; }
+.star-11 { top: 88%; left: 52%; width: 12px; height: 12px; animation: twinkle11 3.8s ease-in-out infinite; }
+.star-12 { top: 92%; left: 88%; width: 12px; height: 12px; animation: twinkle12 4.3s ease-in-out infinite; }
+
+/* Medium stars (4px) */
+.star-13 { top: 12%; left: 35%; width: 4px; height: 4px; animation: twinkle13 3.6s ease-in-out infinite; }
+.star-14 { top: 28%; left: 58%; width: 4px; height: 4px; animation: twinkle14 4.4s ease-in-out infinite; }
+.star-15 { top: 38%; left: 15%; width: 4px; height: 4px; animation: twinkle15 3.4s ease-in-out infinite; }
+.star-16 { top: 45%; left: 92%; width: 4px; height: 4px; animation: twinkle16 4.7s ease-in-out infinite; }
+.star-17 { top: 52%; left: 48%; width: 4px; height: 4px; animation: twinkle17 3.1s ease-in-out infinite; }
+.star-18 { top: 62%; left: 72%; width: 4px; height: 4px; animation: twinkle18 4.9s ease-in-out infinite; }
+.star-19 { top: 75%; left: 5%; width: 4px; height: 4px; animation: twinkle19 3.3s ease-in-out infinite; }
+.star-20 { top: 85%; left: 65%; width: 4px; height: 4px; animation: twinkle20 4.1s ease-in-out infinite; }
+.star-21 { top: 8%; left: 82%; width: 4px; height: 4px; animation: twinkle21 3.7s ease-in-out infinite; }
+.star-22 { top: 22%; left: 95%; width: 4px; height: 4px; animation: twinkle22 4.5s ease-in-out infinite; }
+.star-23 { top: 58%; left: 25%; width: 4px; height: 4px; animation: twinkle23 3.9s ease-in-out infinite; }
+.star-24 { top: 95%; left: 42%; width: 4px; height: 4px; animation: twinkle24 4.2s ease-in-out infinite; }
+
+/* Small stars (2px) */
+.star-25 { top: 10%; left: 50%; width: 2px; height: 2px; animation: twinkle25 3.5s ease-in-out infinite; }
+.star-26 { top: 20%; left: 75%; width: 2px; height: 2px; animation: twinkle26 4.6s ease-in-out infinite; }
+.star-27 { top: 32%; left: 30%; width: 2px; height: 2px; animation: twinkle27 3.2s ease-in-out infinite; }
+.star-28 { top: 40%; left: 60%; width: 2px; height: 2px; animation: twinkle28 4.8s ease-in-out infinite; }
+.star-29 { top: 50%; left: 5%; width: 2px; height: 2px; animation: twinkle29 3.4s ease-in-out infinite; }
+.star-30 { top: 60%; left: 88%; width: 2px; height: 2px; animation: twinkle30 4.4s ease-in-out infinite; }
+.star-31 { top: 70%; left: 18%; width: 2px; height: 2px; animation: twinkle31 3.6s ease-in-out infinite; }
+.star-32 { top: 78%; left: 55%; width: 2px; height: 2px; animation: twinkle32 4.7s ease-in-out infinite; }
+.star-33 { top: 5%; left: 42%; width: 2px; height: 2px; animation: twinkle33 3.8s ease-in-out infinite; }
+.star-34 { top: 15%; left: 65%; width: 2px; height: 2px; animation: twinkle34 4.3s ease-in-out infinite; }
+.star-35 { top: 68%; left: 95%; width: 2px; height: 2px; animation: twinkle35 3.1s ease-in-out infinite; }
+.star-36 { top: 90%; left: 75%; width: 2px; height: 2px; animation: twinkle36 4.9s ease-in-out infinite; }
+
+/* Individual Twinkle Animations - Each with different timing and opacity patterns */
+@keyframes twinkle1 { 0%, 100% { opacity: 1; } 25% { opacity: 0.3; } 50% { opacity: 0.8; } 75% { opacity: 0.5; } }
+@keyframes twinkle2 { 0%, 100% { opacity: 0.9; } 20% { opacity: 0.4; } 60% { opacity: 1; } 80% { opacity: 0.6; } }
+@keyframes twinkle3 { 0%, 100% { opacity: 0.8; } 30% { opacity: 0.2; } 55% { opacity: 0.9; } 85% { opacity: 0.4; } }
+@keyframes twinkle4 { 0%, 100% { opacity: 1; } 15% { opacity: 0.5; } 45% { opacity: 0.7; } 70% { opacity: 0.3; } }
+@keyframes twinkle5 { 0%, 100% { opacity: 0.9; } 35% { opacity: 0.3; } 65% { opacity: 1; } 90% { opacity: 0.5; } }
+@keyframes twinkle6 { 0%, 100% { opacity: 0.8; } 25% { opacity: 0.6; } 50% { opacity: 0.3; } 75% { opacity: 0.9; } }
+@keyframes twinkle7 { 0%, 100% { opacity: 1; } 20% { opacity: 0.4; } 55% { opacity: 0.8; } 80% { opacity: 0.2; } }
+@keyframes twinkle8 { 0%, 100% { opacity: 0.9; } 30% { opacity: 0.5; } 60% { opacity: 0.3; } 85% { opacity: 0.7; } }
+@keyframes twinkle9 { 0%, 100% { opacity: 0.8; } 15% { opacity: 0.3; } 45% { opacity: 1; } 75% { opacity: 0.5; } }
+@keyframes twinkle10 { 0%, 100% { opacity: 1; } 35% { opacity: 0.4; } 65% { opacity: 0.6; } 90% { opacity: 0.3; } }
+@keyframes twinkle11 { 0%, 100% { opacity: 0.9; } 25% { opacity: 0.2; } 50% { opacity: 0.8; } 80% { opacity: 0.4; } }
+@keyframes twinkle12 { 0%, 100% { opacity: 0.8; } 20% { opacity: 0.5; } 55% { opacity: 0.3; } 85% { opacity: 1; } }
+@keyframes twinkle13 { 0%, 100% { opacity: 1; } 30% { opacity: 0.4; } 60% { opacity: 0.7; } 90% { opacity: 0.5; } }
+@keyframes twinkle14 { 0%, 100% { opacity: 0.9; } 15% { opacity: 0.3; } 45% { opacity: 0.9; } 75% { opacity: 0.4; } }
+@keyframes twinkle15 { 0%, 100% { opacity: 0.8; } 35% { opacity: 0.5; } 65% { opacity: 0.3; } 85% { opacity: 0.8; } }
+@keyframes twinkle16 { 0%, 100% { opacity: 1; } 25% { opacity: 0.2; } 50% { opacity: 0.6; } 80% { opacity: 0.4; } }
+@keyframes twinkle17 { 0%, 100% { opacity: 0.9; } 20% { opacity: 0.5; } 55% { opacity: 0.3; } 85% { opacity: 0.7; } }
+@keyframes twinkle18 { 0%, 100% { opacity: 0.8; } 30% { opacity: 0.4; } 60% { opacity: 1; } 90% { opacity: 0.5; } }
+@keyframes twinkle19 { 0%, 100% { opacity: 1; } 15% { opacity: 0.3; } 45% { opacity: 0.8; } 75% { opacity: 0.4; } }
+@keyframes twinkle20 { 0%, 100% { opacity: 0.9; } 35% { opacity: 0.5; } 65% { opacity: 0.4; } 85% { opacity: 0.9; } }
+@keyframes twinkle21 { 0%, 100% { opacity: 0.8; } 25% { opacity: 0.3; } 50% { opacity: 0.7; } 80% { opacity: 0.5; } }
+@keyframes twinkle22 { 0%, 100% { opacity: 1; } 20% { opacity: 0.4; } 55% { opacity: 0.6; } 85% { opacity: 0.3; } }
+@keyframes twinkle23 { 0%, 100% { opacity: 0.9; } 30% { opacity: 0.2; } 60% { opacity: 0.8; } 90% { opacity: 0.4; } }
+@keyframes twinkle24 { 0%, 100% { opacity: 0.8; } 15% { opacity: 0.5; } 45% { opacity: 0.3; } 75% { opacity: 1; } }
+@keyframes twinkle25 { 0%, 100% { opacity: 1; } 35% { opacity: 0.4; } 65% { opacity: 0.7; } 85% { opacity: 0.5; } }
+@keyframes twinkle26 { 0%, 100% { opacity: 0.9; } 25% { opacity: 0.3; } 50% { opacity: 0.9; } 80% { opacity: 0.4; } }
+@keyframes twinkle27 { 0%, 100% { opacity: 0.8; } 20% { opacity: 0.5; } 55% { opacity: 0.4; } 85% { opacity: 0.8; } }
+@keyframes twinkle28 { 0%, 100% { opacity: 1; } 30% { opacity: 0.2; } 60% { opacity: 0.6; } 90% { opacity: 0.5; } }
+@keyframes twinkle29 { 0%, 100% { opacity: 0.9; } 15% { opacity: 0.4; } 45% { opacity: 0.8; } 75% { opacity: 0.3; } }
+@keyframes twinkle30 { 0%, 100% { opacity: 0.8; } 35% { opacity: 0.5; } 65% { opacity: 0.3; } 85% { opacity: 1; } }
+@keyframes twinkle31 { 0%, 100% { opacity: 1; } 25% { opacity: 0.3; } 50% { opacity: 0.7; } 80% { opacity: 0.4; } }
+@keyframes twinkle32 { 0%, 100% { opacity: 0.9; } 20% { opacity: 0.5; } 55% { opacity: 0.4; } 85% { opacity: 0.8; } }
+@keyframes twinkle33 { 0%, 100% { opacity: 0.8; } 30% { opacity: 0.3; } 60% { opacity: 0.9; } 90% { opacity: 0.5; } }
+@keyframes twinkle34 { 0%, 100% { opacity: 1; } 15% { opacity: 0.4; } 45% { opacity: 0.6; } 75% { opacity: 0.3; } }
+@keyframes twinkle35 { 0%, 100% { opacity: 0.9; } 35% { opacity: 0.2; } 65% { opacity: 0.8; } 85% { opacity: 0.5; } }
+@keyframes twinkle36 { 0%, 100% { opacity: 0.8; } 25% { opacity: 0.5; } 50% { opacity: 0.3; } 80% { opacity: 1; } }
+
+/* Parallax effect for stars */
+.hero.parallax .stars-container {
+    transform: translateY(var(--scroll-offset, 0));
+}
