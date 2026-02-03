@@ -64,6 +64,16 @@ body{font-family:'Teko','Arial',sans-serif;color:#fff;font-size:22px;line-height
 .hero-van-image{aspect-ratio:2048/1143;max-width:100%;height:auto;display:block}
 .skyline-silhouette{aspect-ratio:2048/692}
 .city-skyline-bottom{min-height:200px}
+.hamburger{display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:10px;z-index:1001}
+.hamburger span{width:30px;height:3px;background:#fff;transition:all .3s ease;display:block}
+.hamburger.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px)}
+.hamburger.active span:nth-child(2){opacity:0}
+.hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}
+.mobile-menu{display:none;flex-direction:column;background:#00BCD4;position:absolute;top:100%;left:0;width:100%;box-shadow:0 4px 10px rgba(0,0,0,.3);z-index:999}
+.mobile-menu.active{display:flex}
+.mobile-nav-link{color:#fff;text-decoration:none;font-weight:700;font-size:16px;letter-spacing:1px;padding:15px 20px;border-bottom:1px solid rgba(255,255,255,.1);transition:background .3s ease}
+.mobile-nav-link:hover{background:rgba(0,0,0,.1)}
+@media(max-width:768px){.nav-left,.nav-right{display:none}.hamburger{display:flex}.nav-center{flex:1;text-align:center}}
     </style>
     <link rel="stylesheet" href="styles.css" media="print" onload="this.media='all'">
     <link rel="stylesheet" href="heading-styles.css" media="print" onload="this.media='all'">
@@ -95,6 +105,18 @@ body{font-family:'Teko','Arial',sans-serif;color:#fff;font-size:22px;line-height
                 <a href="#pricing" class="nav-link">PRICING</a>
                 <a href="#contact" class="nav-link">CONTACT US</a>
             </div>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <div class="mobile-menu">
+            <a href="#" class="mobile-nav-link">HOME</a>
+            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
+            <a href="#services" class="mobile-nav-link">SERVICES</a>
+            <a href="#pricing" class="mobile-nav-link">PRICING</a>
+            <a href="#contact" class="mobile-nav-link">CONTACT US</a>
         </div>
     </nav>
 
@@ -468,6 +490,24 @@ body{font-family:'Teko','Arial',sans-serif;color:#fff;font-size:22px;line-height
     </script>
 
     <script>
+        // Hamburger menu functionality
+        const hamburger = document.querySelector('.hamburger');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        hamburger.addEventListener('click', function() {
+            this.classList.toggle('active');
+            mobileMenu.classList.toggle('active');
+        });
+        
+        // Close mobile menu when a link is clicked
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                hamburger.classList.remove('active');
+                mobileMenu.classList.remove('active');
+            });
+        });
+
         // Parallax scrolling effect
         window.addEventListener('scroll', function() {
             const hero = document.querySelector('.hero.parallax');
