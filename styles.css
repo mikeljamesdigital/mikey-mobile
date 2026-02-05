@@ -911,10 +911,7 @@ body {
     left: 0;
     width: 100%;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    z-index: -1;
-    pointer-events: none;
-    visibility: hidden !important;
-    opacity: 0 !important;
+    z-index: 999;
 }
 
 .mobile-nav-link {
