@@ -173,38 +173,39 @@
 <strong>Phone:</strong> (559) 838-4267<br />
 <strong>Service Area:</strong> Fresno, CA &amp; Surrounding Areas</p>
 <hr />
-<h2>Schema Markup</h2>
-<pre><code class="language-json">{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;AutomotiveBusiness&quot;,
-  &quot;name&quot;: &quot;Mikey Mobile Oil Change&quot;,
-  &quot;description&quot;: &quot;Professional mobile oil change services in Fresno, CA. We come to your home or office.&quot;,
-  &quot;url&quot;: &quot;https://mikeymobile.com/fresno/&quot;,
-  &quot;telephone&quot;: &quot;(559) 838-4267&quot;,
-  &quot;priceRange&quot;: &quot;$$&quot;,
-  &quot;address&quot;: {
-    &quot;@type&quot;: &quot;PostalAddress&quot;,
-    &quot;addressLocality&quot;: &quot;Fresno&quot;,
-    &quot;addressRegion&quot;: &quot;CA&quot;,
-    &quot;addressCountry&quot;: &quot;US&quot;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Mikey Mobile Oil Change",
+  "description": "Professional mobile oil change services in Fresno, CA. We come to your home or office.",
+  "url": "https://mikeymobile.com/fresno/",
+  "telephone": "(559) 838-4267",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Fresno",
+    "addressRegion": "CA",
+    "addressCountry": "US"
   },
-  &quot;geo&quot;: {
-    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
-    &quot;latitude&quot;: 36.746842,
-    &quot;longitude&quot;: -119.772591
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.746842,
+    "longitude": -119.772591
   },
-  &quot;areaServed&quot;: {
-    &quot;@type&quot;: &quot;City&quot;,
-    &quot;name&quot;: &quot;Fresno&quot;
+  "areaServed": {
+    "@type": "City",
+    "name": "Fresno"
   },
-  &quot;openingHoursSpecification&quot;: [{
-    &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
-    &quot;dayOfWeek&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;],
-    &quot;opens&quot;: &quot;08:00&quot;,
-    &quot;closes&quot;: &quot;18:00&quot;
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:00",
+    "closes": "18:00"
   }]
 }
-</code></pre>
+
+</script>
             <div class="location-cta">
                 <a href="#" class="btn book-now-btn">BOOK NOW</a>
             </div>
