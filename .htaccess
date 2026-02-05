@@ -1,3 +1,31 @@
+# Enable mod_rewrite for clean URLs
+RewriteEngine On
+RewriteBase /
+
+# Remove trailing slashes (except for directories)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [R=301,L]
+
+# Redirect index.html to root
+RewriteCond %{THE_REQUEST} ^GET\ .*/index\.html\ HTTP
+RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+
+# Redirect .html extensions to clean URLs
+RewriteCond %{THE_REQUEST} ^GET\ (.*)\.html\ HTTP
+RewriteRule ^(.*)\.html$ /$1 [R=301,L]
+
+# Serve .html files for clean URLs (if file exists)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+)$ $1.html [L,QSA]
+
+# Serve index.html for directory requests
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME}/index.html -f
+RewriteRule ^(.+)$ $1/index.html [L,QSA]
+
 # Enable compression
 <IfModule mod_deflate.c>
     AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
