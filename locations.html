@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Locations | Mikey Mobile Oil Change</title>
+    <meta name="description" content="Mikey Mobile Oil Change serves Fresno, Clovis, Madera Ranchos and surrounding neighborhoods. Find your area and book mobile oil change service today!">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="stars.css">
+    <link rel="stylesheet" href="heading-styles.css">
+    <style>
+        .locations-hero {
+            background: linear-gradient(180deg, #1a0d30 0%, #2A1548 30%, #3D2066 70%, #4a2575 100%);
+            padding: 80px 0 60px;
+            text-align: center;
+        }
+        .locations-hero h1 {
+            font-family: 'Russo One', 'Teko', sans-serif;
+            font-size: 56px;
+            color: #FFFFFF;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .locations-hero p {
+            font-family: 'Teko', sans-serif;
+            font-size: 24px;
+            color: #00BCD4;
+        }
+        .locations-grid {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+        .location-card {
+            background: linear-gradient(135deg, #2A1548 0%, #3D2066 100%);
+            border: 3px solid #00BCD4;
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+        .location-card:hover {
+            transform: translateY(-5px);
+            border-color: #E85D9A;
+            box-shadow: 0 10px 30px rgba(232, 93, 154, 0.3);
+        }
+        .location-card h2 {
+            font-family: 'Russo One', sans-serif;
+            font-size: 36px;
+            color: #E85D9A;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+        .location-card h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 24px;
+            color: #00BCD4;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+        .location-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        .location-card li {
+            font-family: 'Teko', sans-serif;
+            font-size: 20px;
+            color: #FFFFFF;
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        .location-card li:before {
+            content: "▸";
+            position: absolute;
+            left: 0;
+            color: #00BCD4;
+            font-size: 24px;
+        }
+        .location-card a {
+            color: #FFFFFF;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .location-card a:hover {
+            color: #E85D9A;
+        }
+        .location-card .btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #E85D9A 0%, #d14d87 100%);
+            color: #FFFFFF;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            border: 2px solid #00BCD4;
+        }
+        .location-card .btn:hover {
+            background: linear-gradient(135deg, #ff6eb4 0%, #E85D9A 100%);
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <span>SERVING FRESNO & SURROUNDING AREAS</span>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="nav-left">
+                <a href="index.html" class="nav-link">HOME</a>
+                <a href="about.html" class="nav-link">ABOUT US</a>
+                <a href="index.html#services" class="nav-link">SERVICES</a>
+            </div>
+            <div class="nav-center">
+                <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
+            </div>
+            <div class="nav-right">
+                <a href="index.html#pricing" class="nav-link">PRICING</a>
+                <a href="index.html#contact" class="nav-link">CONTACT US</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="locations-hero">
+        <div class="stars-container">
+            <div class="star star-1"></div>
+            <div class="star star-2"></div>
+            <div class="star star-3"></div>
+            <div class="star star-4"></div>
+            <div class="star star-5"></div>
+            <div class="star star-6"></div>
+            <div class="star star-7"></div>
+            <div class="star star-8"></div>
+            <div class="star star-9"></div>
+            <div class="star star-10"></div>
+        </div>
+        <div class="container">
+            <h1>Our Service Locations</h1>
+            <p>Professional Mobile Oil Change Service Throughout the Central Valley</p>
+        </div>
+    </section>
+
+    <!-- Locations Grid -->
+    <div class="locations-grid">
+        <!-- Fresno Card -->
+        <div class="location-card">
+            <h2>Fresno, CA</h2>
+            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">The heart of the Central Valley. We serve all of Fresno with convenient mobile oil change service.</p>
+            <a href="fresno/index.html" class="btn">View Fresno Page</a>
+            
+            <h3>Fresno Neighborhoods:</h3>
+            <ul>
+                <li><a href="fresno/fig-garden/index.html">Fig Garden</a></li>
+                <li><a href="fresno/sunnyside/index.html">Sunnyside</a></li>
+                <li><a href="fresno/fig-garden-loop/index.html">Fig Garden Loop</a></li>
+                <li><a href="fresno/woodward-park/index.html">Woodward Park</a></li>
+                <li><a href="fresno/riverpark/index.html">Riverpark</a></li>
+                <li><a href="fresno/pinedale/index.html">Pinedale</a></li>
+                <li><a href="fresno/sierra-sky-park/index.html">Sierra Sky Park</a></li>
+                <li><a href="fresno/fort-washington/index.html">Fort Washington</a></li>
+            </ul>
+        </div>
+
+        <!-- Clovis Card -->
+        <div class="location-card">
+            <h2>Clovis, CA</h2>
+            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Gateway to the Sierra. Professional mobile oil change service for all Clovis residents.</p>
+            <a href="clovis/index.html" class="btn">View Clovis Page</a>
+            
+            <h3>Clovis Neighborhoods:</h3>
+            <ul>
+                <li><a href="clovis/clovis-north/index.html">Clovis North</a></li>
+                <li><a href="clovis/cindy-lane/index.html">Cindy Lane</a></li>
+                <li><a href="clovis/dry-creek/index.html">Dry Creek</a></li>
+                <li><a href="clovis/clovis-high/index.html">Clovis High</a></li>
+                <li><a href="clovis/quail-lakes/index.html">Quail Lakes</a></li>
+                <li><a href="clovis/harlan-ranch/index.html">Harlan Ranch</a></li>
+            </ul>
+        </div>
+
+        <!-- Madera Ranchos Card -->
+        <div class="location-card">
+            <h2>Madera Ranchos, CA</h2>
+            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Rural community with big expectations. We bring quality mobile oil change service to your property.</p>
+            <a href="madera-ranchos/index.html" class="btn">View Madera Ranchos Page</a>
+            
+            <h3>Madera Ranchos Neighborhoods:</h3>
+            <ul>
+                <li><a href="madera-ranchos/rolling-hills/index.html">Rolling Hills</a></li>
+                <li><a href="madera-ranchos/riverstone/index.html">Riverstone</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">READY TO GET YOUR OIL CHANGED?</h2>
+            <p class="cta-subtitle">Book your appointment now and experience the convenience of mobile service!</p>
+            <a href="#" class="btn btn-primary book-now-btn">BOOK NOW</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
+                </div>
+                <div class="footer-links">
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="about.html" class="footer-link">About</a>
+                    <a href="locations.html" class="footer-link">Locations</a>
+                    <a href="index.html#services" class="footer-link">Services</a>
+                    <a href="index.html#pricing" class="footer-link">Pricing</a>
+                    <a href="index.html#contact" class="footer-link">Contact</a>
+                </div>
+                <div class="footer-contact">
+                    <a href="tel:559-838-4267" class="footer-phone">(559) 838-4267</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Mikey Mobile Oil Change. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Booking Form Modal -->
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="modal-body">
+                <iframe
+                    src="https://api.leadconnectorhq.com/widget/form/RYMWwwaJ9YuDfpuPwaPL"
+                    style="width:100%;height:100%;border:none;border-radius:3px"
+                    id="inline-RYMWwwaJ9YuDfpuPwaPL" 
+                    data-layout="{'id':'INLINE'}"
+                    data-trigger-type="alwaysShow"
+                    data-trigger-value=""
+                    data-activation-type="alwaysActivated"
+                    data-activation-value=""
+                    data-deactivation-type="neverDeactivate"
+                    data-deactivation-value=""
+                    data-form-name="Marketing Form - Claim Offer"
+                    data-height="888"
+                    data-layout-iframe-id="inline-RYMWwwaJ9YuDfpuPwaPL"
+                    data-form-id="RYMWwwaJ9YuDfpuPwaPL"
+                    title="Marketing Form - Claim Offer">
+                </iframe>
+                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
