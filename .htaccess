@@ -1,30 +1,12 @@
-# Enable mod_rewrite for clean URLs
-RewriteEngine On
-RewriteBase /
-
-# Remove trailing slashes (except for directories)
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_URI} (.+)/$
-RewriteRule ^ %1 [R=301,L]
-
-# Redirect index.html to root
-RewriteCond %{THE_REQUEST} ^GET\ .*/index\.html\ HTTP
-RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
-
-# Redirect .html extensions to clean URLs
-RewriteCond %{THE_REQUEST} ^GET\ (.*)\.html\ HTTP
-RewriteRule ^(.*)\.html$ /$1 [R=301,L]
-
-# Serve .html files for clean URLs (if file exists)
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}\.html -f
-RewriteRule ^(.+)$ $1.html [L,QSA]
-
-# Serve index.html for directory requests
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME}/index.html -f
-RewriteRule ^(.+)$ $1/index.html [L,QSA]
+# Redirect index.html to root (fixes duplicate homepage)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    
+    # Redirect /index.html to / (301 permanent redirect)
+    RewriteCond %{THE_REQUEST} ^GET\ .*/index\.html\ HTTP
+    RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+</IfModule>
 
 # Enable compression
 <IfModule mod_deflate.c>
