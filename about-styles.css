@@ -1,0 +1,373 @@
+/* About Page Specific Styles */
+
+/* About Hero Section */
+.about-hero {
+    position: relative;
+    min-height: 50vh;
+    background: linear-gradient(180deg, #1a0d30 0%, #2A1548 33%, #3D2066 66%, #4a2575 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px 60px;
+    overflow: hidden;
+}
+
+.about-hero .hero-content {
+    position: relative;
+    z-index: 5;
+    max-width: 900px;
+}
+
+.about-hero h1 {
+    font-size: 72px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+}
+
+.about-hero .hero-subtitle {
+    font-size: 32px;
+    color: #E85D9A;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-hero .hero-tagline {
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.9);
+    font-style: italic;
+}
+
+/* About Intro Section */
+.about-intro {
+    background: #2A1548;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.about-intro h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    color: #00BCD4;
+}
+
+.intro-text {
+    font-size: 22px;
+    line-height: 1.9;
+    max-width: 1000px;
+    margin: 0 auto 30px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Stats Section */
+.stats-section {
+    background: #3D2066;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.stats-section h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.section-subtitle {
+    font-size: 24px;
+    color: #E85D9A;
+    margin-bottom: 60px;
+    font-style: italic;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-card {
+    background: rgba(255, 255, 255, 0.1);
+    border: 3px solid #E85D9A;
+    border-radius: 20px;
+    padding: 50px 30px;
+    transition: all 0.3s ease;
+}
+
+.stat-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(232, 93, 154, 0.4);
+    background: rgba(232, 93, 154, 0.15);
+}
+
+.stat-number {
+    font-size: 72px;
+    font-weight: bold;
+    color: #E85D9A;
+    margin-bottom: 15px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.stat-label {
+    font-size: 22px;
+    color: #ffffff;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+}
+
+/* Quality Section */
+.quality-section {
+    background: #2A1548;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.quality-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    color: #00BCD4;
+}
+
+.quality-text {
+    font-size: 22px;
+    line-height: 1.9;
+    max-width: 900px;
+    margin: 0 auto;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* Guarantees Section */
+.guarantees-section {
+    background: #3D2066;
+    padding: 80px 20px;
+}
+
+.guarantee-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.guarantee-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 50px 40px;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.guarantee-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 188, 212, 0.3);
+    border-color: #00BCD4;
+}
+
+.guarantee-icon {
+    font-size: 64px;
+    margin-bottom: 25px;
+}
+
+.guarantee-card h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #E85D9A;
+}
+
+.guarantee-card p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Story Section */
+.story-section {
+    background: #2A1548;
+    padding: 80px 20px;
+}
+
+.story-section h2 {
+    font-size: 48px;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #00BCD4;
+}
+
+.story-section p {
+    font-size: 22px;
+    line-height: 1.9;
+    max-width: 1000px;
+    margin: 0 auto 35px;
+    color: rgba(255, 255, 255, 0.95);
+    text-align: left;
+}
+
+/* Mission Section */
+.mission-section {
+    background: #3D2066;
+    padding: 80px 20px;
+}
+
+.mission-section h2 {
+    font-size: 48px;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.mission-intro {
+    font-size: 22px;
+    line-height: 1.8;
+    max-width: 900px;
+    margin: 0 auto 60px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.mission-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.mission-card {
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 40px 35px;
+    transition: all 0.3s ease;
+}
+
+.mission-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(232, 93, 154, 0.3);
+    border-color: #E85D9A;
+}
+
+.mission-card h3 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #00BCD4;
+}
+
+.mission-card p {
+    font-size: 20px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* Difference Section */
+.difference-section {
+    background: #2A1548;
+    padding: 80px 20px;
+}
+
+.difference-section h2 {
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.difference-section .section-subtitle {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.difference-content {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.difference-item {
+    background: rgba(255, 255, 255, 0.08);
+    border-left: 5px solid #E85D9A;
+    border-radius: 15px;
+    padding: 40px;
+    margin-bottom: 40px;
+    transition: all 0.3s ease;
+}
+
+.difference-item:hover {
+    background: rgba(255, 255, 255, 0.12);
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(232, 93, 154, 0.3);
+}
+
+.difference-item h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #00BCD4;
+}
+
+.difference-item p {
+    font-size: 20px;
+    line-height: 1.9;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+/* About CTA Section */
+.about-cta {
+    background: linear-gradient(135deg, #3D2066 0%, #2A1548 100%);
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.about-cta h2 {
+    font-size: 52px;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.about-cta p {
+    font-size: 24px;
+    margin-bottom: 40px;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.about-cta .btn {
+    font-size: 24px;
+    padding: 20px 60px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .about-hero h1 {
+        font-size: 48px;
+    }
+    
+    .about-hero .hero-subtitle {
+        font-size: 24px;
+    }
+    
+    .about-hero .hero-tagline {
+        font-size: 18px;
+    }
+    
+    .about-intro h2,
+    .stats-section h2,
+    .quality-section h2,
+    .story-section h2,
+    .mission-section h2,
+    .difference-section h2 {
+        font-size: 36px;
+    }
+    
+    .guarantee-grid,
+    .mission-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .stat-number {
+        font-size: 56px;
+    }
+    
+    .about-cta h2 {
+        font-size: 36px;
+    }
+}
