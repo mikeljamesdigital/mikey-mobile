@@ -970,3 +970,39 @@ body {
         opacity: 1 !important;
     }
 }
+
+/* Mikey Character Mascot */
+.mikey-character {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 200px;
+    height: auto;
+    z-index: 9999;
+    pointer-events: none;
+    transition: transform 0.3s ease;
+}
+
+.mikey-character img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive sizing for character */
+@media (max-width: 768px) {
+    .mikey-character {
+        width: 120px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mikey-character {
+        width: 80px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
