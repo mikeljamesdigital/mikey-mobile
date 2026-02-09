@@ -971,38 +971,41 @@ body {
     }
 }
 
-/* Mikey Character Mascot */
-.mikey-character {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 200px;
-    height: auto;
-    z-index: 9999;
-    pointer-events: none;
-    transition: transform 0.3s ease;
+/* Mikey Character on Pricing Box */
+.pricing-card {
+    position: relative;
 }
 
-.mikey-character img {
+.mikey-character-pricing {
+    position: absolute;
+    top: -60px;
+    right: -40px;
+    width: 180px;
+    height: auto;
+    z-index: 10;
+    pointer-events: none;
+}
+
+.mikey-character-pricing img {
     width: 100%;
     height: auto;
     display: block;
-    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.4));
 }
 
-/* Responsive sizing for character */
+/* Responsive sizing for character on pricing */
 @media (max-width: 768px) {
-    .mikey-character {
+    .mikey-character-pricing {
         width: 120px;
-        bottom: 10px;
-        right: 10px;
+        top: -40px;
+        right: -20px;
     }
 }
 
 @media (max-width: 480px) {
-    .mikey-character {
-        width: 80px;
-        bottom: 10px;
-        right: 10px;
+    .mikey-character-pricing {
+        width: 90px;
+        top: -30px;
+        right: -10px;
     }
 }
