@@ -1009,3 +1009,50 @@ body {
         right: -13px;
     }
 }
+
+/* Mikey Character on Hero Sections (About, Locations, etc.) */
+.about-hero, .locations-hero {
+    position: relative;
+}
+
+.mikey-character-hero {
+    position: absolute;
+    bottom: -60px;
+    right: 50px;
+    width: 180px;
+    height: auto;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.mikey-character-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.5));
+}
+
+/* Responsive sizing for character on hero */
+@media (max-width: 1024px) {
+    .mikey-character-hero {
+        width: 150px;
+        bottom: -50px;
+        right: 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .mikey-character-hero {
+        width: 120px;
+        bottom: -40px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mikey-character-hero {
+        width: 90px;
+        bottom: -30px;
+        right: 10px;
+    }
+}
