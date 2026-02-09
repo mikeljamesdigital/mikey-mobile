@@ -1,4 +1,4 @@
-# Redirect index.html to root (fixes duplicate homepage)
+# Remove .html extension for clean URLs
 <IfModule mod_rewrite.c>
     RewriteEngine On
     RewriteBase /
@@ -6,6 +6,18 @@
     # Redirect /index.html to / (301 permanent redirect)
     RewriteCond %{THE_REQUEST} ^GET\ .*/index\.html\ HTTP
     RewriteRule ^(.*)index\.html$ /$1 [R=301,L]
+    
+    # Remove .html extension from URLs
+    # If someone requests /about.html, redirect to /about
+    RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
+    RewriteRule ^(.+)\.html$ /$1 [R=301,L]
+    
+    # Internally rewrite clean URLs to .html files
+    # If /about is requested, serve /about.html
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.+)$ $1.html [L]
 </IfModule>
 
 # Enable compression
