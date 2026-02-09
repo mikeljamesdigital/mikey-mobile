@@ -40,8 +40,6 @@
             border-radius: 20px;
             padding: 40px;
             transition: all 0.3s ease;
-            position: relative;
-            z-index: 1;
         }
         .location-card:hover {
             transform: translateY(-5px);
@@ -104,25 +102,12 @@
             margin-top: 20px;
             transition: all 0.3s ease;
             border: 2px solid #00BCD4;
-            position: relative;
-            z-index: 10;
-            cursor: pointer;
         }
         .location-card .btn:hover {
             background: linear-gradient(135deg, #ff6eb4 0%, #E85D9A 100%);
             transform: translateY(-2px);
         }
     </style>
-    
-    
-    
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <!-- Top Bar -->
@@ -136,7 +121,7 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="nav-left">
-                <a href="/" class="nav-link">HOME</a>
+                <a href="index.html" class="nav-link">HOME</a>
                 <a href="about.html" class="nav-link">ABOUT US</a>
                 <a href="index.html#services" class="nav-link">SERVICES</a>
             </div>
@@ -144,21 +129,9 @@
                 <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
             </div>
             <div class="nav-right">
-                <a href="locations.html" class="nav-link">LOCATIONS</a>
+                <a href="index.html#pricing" class="nav-link">PRICING</a>
                 <a href="index.html#contact" class="nav-link">CONTACT US</a>
             </div>
-            <button class="hamburger" aria-label="Toggle menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-        <div class="mobile-menu">
-            <a href="/" class="mobile-nav-link">HOME</a>
-            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
-            <a href="index.html#services" class="mobile-nav-link">SERVICES</a>
-            <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
-            <a href="index.html#contact" class="mobile-nav-link">CONTACT US</a>
         </div>
     </nav>
 
@@ -180,15 +153,6 @@
             <h1>Our Service Locations</h1>
             <p>Professional Mobile Oil Change Service Throughout the Central Valley</p>
         </div>
-        <!-- Mikey Character on Hero -->
-        <div class="mikey-character-hero">
-            <picture>
-                <source media="(max-width: 480px)" srcset="/MikeyMobile_v8_Character-XS.png">
-                <source media="(max-width: 768px)" srcset="/MikeyMobile_v8_Character-Sm.png">
-                <source media="(max-width: 1200px)" srcset="/MikeyMobile_v8_Character.png">
-                <img src="/MikeyMobile_v8_Character-Lg.png" alt="Mikey - Your Mobile Mechanic" loading="lazy">
-            </picture>
-        </div>
     </section>
 
     <!-- Locations Grid -->
@@ -197,18 +161,18 @@
         <div class="location-card">
             <h2>Fresno, CA</h2>
             <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">The heart of the Central Valley. We serve all of Fresno with convenient mobile oil change service.</p>
-            <a href="fresno/index" class="btn">View Fresno Page</a>
+            <a href="fresno/index.html" class="btn">View Fresno Page</a>
             
             <h3>Fresno Neighborhoods:</h3>
             <ul>
-                <li><a href="fresno/fig-garden/index">Fig Garden</a></li>
-                <li><a href="fresno/sunnyside/index">Sunnyside</a></li>
-                <li><a href="fresno/fig-garden-loop/index">Fig Garden Loop</a></li>
-                <li><a href="fresno/woodward-park/index">Woodward Park</a></li>
-                <li><a href="fresno/riverpark/index">Riverpark</a></li>
-                <li><a href="fresno/pinedale/index">Pinedale</a></li>
-                <li><a href="fresno/sierra-sky-park/index">Sierra Sky Park</a></li>
-                <li><a href="fresno/fort-washington/index">Fort Washington</a></li>
+                <li><a href="fresno/fig-garden/index.html">Fig Garden</a></li>
+                <li><a href="fresno/sunnyside/index.html">Sunnyside</a></li>
+                <li><a href="fresno/fig-garden-loop/index.html">Fig Garden Loop</a></li>
+                <li><a href="fresno/woodward-park/index.html">Woodward Park</a></li>
+                <li><a href="fresno/riverpark/index.html">Riverpark</a></li>
+                <li><a href="fresno/pinedale/index.html">Pinedale</a></li>
+                <li><a href="fresno/sierra-sky-park/index.html">Sierra Sky Park</a></li>
+                <li><a href="fresno/fort-washington/index.html">Fort Washington</a></li>
             </ul>
         </div>
 
@@ -216,16 +180,16 @@
         <div class="location-card">
             <h2>Clovis, CA</h2>
             <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Gateway to the Sierra. Professional mobile oil change service for all Clovis residents.</p>
-            <a href="clovis/index" class="btn">View Clovis Page</a>
+            <a href="clovis/index.html" class="btn">View Clovis Page</a>
             
             <h3>Clovis Neighborhoods:</h3>
             <ul>
-                <li><a href="clovis/clovis-north/index">Clovis North</a></li>
-                <li><a href="clovis/cindy-lane/index">Cindy Lane</a></li>
-                <li><a href="clovis/dry-creek/index">Dry Creek</a></li>
-                <li><a href="clovis/clovis-high/index">Clovis High</a></li>
-                <li><a href="clovis/quail-lakes/index">Quail Lakes</a></li>
-                <li><a href="clovis/harlan-ranch/index">Harlan Ranch</a></li>
+                <li><a href="clovis/clovis-north/index.html">Clovis North</a></li>
+                <li><a href="clovis/cindy-lane/index.html">Cindy Lane</a></li>
+                <li><a href="clovis/dry-creek/index.html">Dry Creek</a></li>
+                <li><a href="clovis/clovis-high/index.html">Clovis High</a></li>
+                <li><a href="clovis/quail-lakes/index.html">Quail Lakes</a></li>
+                <li><a href="clovis/harlan-ranch/index.html">Harlan Ranch</a></li>
             </ul>
         </div>
 
@@ -233,12 +197,12 @@
         <div class="location-card">
             <h2>Madera Ranchos, CA</h2>
             <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Rural community with big expectations. We bring quality mobile oil change service to your property.</p>
-            <a href="madera-ranchos/index" class="btn">View Madera Ranchos Page</a>
+            <a href="madera-ranchos/index.html" class="btn">View Madera Ranchos Page</a>
             
             <h3>Madera Ranchos Neighborhoods:</h3>
             <ul>
-                <li><a href="madera-ranchos/rolling-hills/index">Rolling Hills</a></li>
-                <li><a href="madera-ranchos/riverstone/index">Riverstone</a></li>
+                <li><a href="madera-ranchos/rolling-hills/index.html">Rolling Hills</a></li>
+                <li><a href="madera-ranchos/riverstone/index.html">Riverstone</a></li>
             </ul>
         </div>
     </div>
@@ -260,7 +224,7 @@
                     <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
                 </div>
                 <div class="footer-links">
-                    <a href="/" class="footer-link">Home</a>
+                    <a href="index.html" class="footer-link">Home</a>
                     <a href="about.html" class="footer-link">About</a>
                     <a href="locations.html" class="footer-link">Locations</a>
                     <a href="index.html#services" class="footer-link">Services</a>
@@ -304,26 +268,6 @@
         </div>
     </div>
 
-    <script>
-        // Hamburger menu functionality
-        const hamburger = document.querySelector('.hamburger');
-        const mobileMenu = document.querySelector('.mobile-menu');
-        
-        hamburger.addEventListener('click', function() {
-            this.classList.toggle('active');
-            mobileMenu.classList.toggle('active');
-        });
-        
-        // Close mobile menu when a link is clicked
-        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
-        mobileNavLinks.forEach(link => {
-            link.addEventListener('click', function() {
-                hamburger.classList.remove('active');
-                mobileMenu.classList.remove('active');
-            });
-        });
-    </script>
     <script src="script.js"></script>
-
 </body>
 </html>

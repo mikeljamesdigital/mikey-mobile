@@ -93,16 +93,6 @@
             color: #E85D9A;
         }
     </style>
-    
-    
-    
-    
-    
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/site.webmanifest">
 </head>
 <body>
     <!-- Top Bar -->
@@ -116,8 +106,8 @@
     <nav class="navbar">
         <div class="container nav-container">
             <div class="nav-left">
-                <a href="../index" class="nav-link">HOME</a>
-                <a href="../about" class="nav-link">ABOUT US</a>
+                <a href="../index.html" class="nav-link">HOME</a>
+                <a href="../about.html" class="nav-link">ABOUT US</a>
                 <a href="../index.html#services" class="nav-link">SERVICES</a>
             </div>
             <div class="nav-center">
@@ -145,7 +135,7 @@
             <div class="star star-10"></div>
         </div>
         <div class="location-content">
-            <div class="breadcrumb"><a href="../index">Home</a> &gt; Fresno</div>
+            <div class="breadcrumb"><a href="../index.html">Home</a> &gt; Fresno</div>
             <h1>Mobile Oil Change in Fresno, CA | Mikey Mobile Oil Change</h1>
 <p><strong>Professional Oil Changes at Your Home or Office in Fresno</strong></p>
 <hr />
@@ -183,41 +173,40 @@
 <strong>Phone:</strong> (559) 838-4267<br />
 <strong>Service Area:</strong> Fresno, CA &amp; Surrounding Areas</p>
 <hr />
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "AutomotiveBusiness",
-  "name": "Mikey Mobile Oil Change",
-  "description": "Professional mobile oil change services in Fresno, CA. We come to your home or office.",
-  "url": "https://mikeymobile.com/fresno/",
-  "telephone": "(559) 838-4267",
-  "priceRange": "$$",
-  "address": {
-    "@type": "PostalAddress",
-    "addressLocality": "Fresno",
-    "addressRegion": "CA",
-    "addressCountry": "US"
+<h2>Schema Markup</h2>
+<pre><code class="language-json">{
+  &quot;@context&quot;: &quot;https://schema.org&quot;,
+  &quot;@type&quot;: &quot;AutomotiveBusiness&quot;,
+  &quot;name&quot;: &quot;Mikey Mobile Oil Change&quot;,
+  &quot;description&quot;: &quot;Professional mobile oil change services in Fresno, CA. We come to your home or office.&quot;,
+  &quot;url&quot;: &quot;https://mikeymobile.com/fresno/&quot;,
+  &quot;telephone&quot;: &quot;(559) 838-4267&quot;,
+  &quot;priceRange&quot;: &quot;$$&quot;,
+  &quot;address&quot;: {
+    &quot;@type&quot;: &quot;PostalAddress&quot;,
+    &quot;addressLocality&quot;: &quot;Fresno&quot;,
+    &quot;addressRegion&quot;: &quot;CA&quot;,
+    &quot;addressCountry&quot;: &quot;US&quot;
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 36.746842,
-    "longitude": -119.772591
+  &quot;geo&quot;: {
+    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
+    &quot;latitude&quot;: 36.746842,
+    &quot;longitude&quot;: -119.772591
   },
-  "areaServed": {
-    "@type": "City",
-    "name": "Fresno"
+  &quot;areaServed&quot;: {
+    &quot;@type&quot;: &quot;City&quot;,
+    &quot;name&quot;: &quot;Fresno&quot;
   },
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-    "opens": "08:00",
-    "closes": "18:00"
+  &quot;openingHoursSpecification&quot;: [{
+    &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
+    &quot;dayOfWeek&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;],
+    &quot;opens&quot;: &quot;08:00&quot;,
+    &quot;closes&quot;: &quot;18:00&quot;
   }]
 }
-
-</script>
+</code></pre>
             <div class="location-cta">
-                <a href="#" class="btn book-now-btn">BOOK NOW</a>
+                <a href="#" class="btn book-now-btn" onclick="document.getElementById('bookingModal').style.display='block'; return false;">BOOK NOW</a>
             </div>
             <div class="location-info">
                 <p><strong>Hours:</strong> Monday - Saturday, 8:00 AM - 6:00 PM</p>
@@ -234,8 +223,8 @@
                     <img src="../logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
                 </div>
                 <div class="footer-links">
-                    <a href="../index" class="footer-link">Home</a>
-                    <a href="../about" class="footer-link">About</a>
+                    <a href="../index.html" class="footer-link">Home</a>
+                    <a href="../about.html" class="footer-link">About</a>
                     <a href="../index.html#services" class="footer-link">Services</a>
                     <a href="../index.html#pricing" class="footer-link">Pricing</a>
                     <a href="../index.html#contact" class="footer-link">Contact</a>
@@ -278,14 +267,5 @@
     </div>
 
     <script src="../script.js"></script>
-    <!-- Mikey Character Mascot -->
-    <div class="mikey-character">
-        <picture>
-            <source media="(max-width: 480px)" srcset="/MikeyMobile_v8_Character-XS.png">
-            <source media="(max-width: 768px)" srcset="/MikeyMobile_v8_Character-Sm.png">
-            <source media="(max-width: 1200px)" srcset="/MikeyMobile_v8_Character.png">
-            <img src="/MikeyMobile_v8_Character-Lg.png" alt="Mikey - Your Mobile Mechanic" loading="lazy">
-        </picture>
-    </div>
 </body>
 </html>
