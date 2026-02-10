@@ -20,10 +20,41 @@
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container nav-container">
+            <button class="mobile-menu-toggle" onclick="document.getElementById('mobileMenu').classList.add('active')">
+                ☰
+            </button>
             <div class="nav-left">
                 <a href="index.html" class="nav-link">HOME</a>
                 <a href="about.html" class="nav-link active">ABOUT US</a>
-                <a href="locations.html" class="nav-link">LOCATIONS</a>
+                <div class="nav-dropdown">
+                    <a href="locations.html" class="nav-link dropdown-toggle">LOCATIONS</a>
+                    <div class="dropdown-menu">
+                        <div class="dropdown-section">
+                            <a href="fresno/index.html" class="dropdown-main">Fresno</a>
+                            <a href="fresno/fig-garden/index.html" class="dropdown-sub">Fig Garden</a>
+                            <a href="fresno/sunnyside/index.html" class="dropdown-sub">Sunnyside</a>
+                            <a href="fresno/woodward-park/index.html" class="dropdown-sub">Woodward Park</a>
+                            <a href="fresno/fig-garden-loop/index.html" class="dropdown-sub">Fig Garden Loop</a>
+                            <a href="fresno/riverpark/index.html" class="dropdown-sub">Riverpark</a>
+                            <a href="fresno/pinedale/index.html" class="dropdown-sub">Pinedale</a>
+                            <a href="fresno/sierra-sky-park/index.html" class="dropdown-sub">Sierra Sky Park</a>
+                            <a href="fresno/fort-washington/index.html" class="dropdown-sub">Fort Washington</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <a href="clovis/index.html" class="dropdown-main">Clovis</a>
+                            <a href="clovis/clovis-north/index.html" class="dropdown-sub">Clovis North</a>
+                            <a href="clovis/cindy-lane/index.html" class="dropdown-sub">Cindy Lane</a>
+                            <a href="clovis/dry-creek/index.html" class="dropdown-sub">Dry Creek</a>
+                            <a href="clovis/harlan-ranch/index.html" class="dropdown-sub">Harlan Ranch</a>
+                            <a href="clovis/clovis-high/index.html" class="dropdown-sub">Clovis High</a>
+                            <a href="clovis/quail-lakes/index.html" class="dropdown-sub">Quail Lakes</a>
+                        </div>
+                        <a href="madera-ranchos/index.html" class="dropdown-main">Madera Ranchos</a>
+                            <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-sub">Rolling Hills</a>
+                            <a href="madera-ranchos/riverstone/index.html" class="dropdown-sub">Riverstone</a>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="nav-center">
                 <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
@@ -34,6 +65,45 @@
             </div>
         </div>
     </nav>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">
+            ×
+        </button>
+        <div class="mobile-menu-content">
+            <a href="index.html" class="mobile-nav-link">HOME</a>
+            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
+            
+            <div class="mobile-dropdown-section">
+                <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
+                <a href="fresno/index.html" class="mobile-dropdown-main">Fresno</a>
+                <a href="fresno/fig-garden/index.html" class="mobile-dropdown-sub">Fig Garden</a>
+                <a href="fresno/sunnyside/index.html" class="mobile-dropdown-sub">Sunnyside</a>
+                <a href="fresno/woodward-park/index.html" class="mobile-dropdown-sub">Woodward Park</a>
+                <a href="fresno/fig-garden-loop/index.html" class="mobile-dropdown-sub">Fig Garden Loop</a>
+                <a href="fresno/riverpark/index.html" class="mobile-dropdown-sub">Riverpark</a>
+                <a href="fresno/pinedale/index.html" class="mobile-dropdown-sub">Pinedale</a>
+                <a href="fresno/sierra-sky-park/index.html" class="mobile-dropdown-sub">Sierra Sky Park</a>
+                <a href="fresno/fort-washington/index.html" class="mobile-dropdown-sub">Fort Washington</a>
+                
+                <a href="clovis/index.html" class="mobile-dropdown-main">Clovis</a>
+                <a href="clovis/clovis-north/index.html" class="mobile-dropdown-sub">Clovis North</a>
+                <a href="clovis/cindy-lane/index.html" class="mobile-dropdown-sub">Cindy Lane</a>
+                <a href="clovis/dry-creek/index.html" class="mobile-dropdown-sub">Dry Creek</a>
+                <a href="clovis/harlan-ranch/index.html" class="mobile-dropdown-sub">Harlan Ranch</a>
+                <a href="clovis/clovis-high/index.html" class="mobile-dropdown-sub">Clovis High</a>
+                <a href="clovis/quail-lakes/index.html" class="mobile-dropdown-sub">Quail Lakes</a>
+                
+                <a href="madera-ranchos/index.html" class="mobile-dropdown-main">Madera Ranchos</a>
+                <a href="madera-ranchos/rolling-hills/index.html" class="mobile-dropdown-sub">Rolling Hills</a>
+                <a href="madera-ranchos/riverstone/index.html" class="mobile-dropdown-sub">Riverstone</a>
+            </div>
+            
+            <a href="index.html#services" class="mobile-nav-link">SERVICES</a>
+            <a href="index.html#pricing" class="mobile-nav-link">PRICING</a>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="about-hero">
