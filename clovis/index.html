@@ -102,23 +102,6 @@
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <div class="nav-left">
-                <a href="../index.html" class="nav-link">HOME</a>
-                <a href="../about.html" class="nav-link">ABOUT US</a>
-                <a href="../index.html#services" class="nav-link">SERVICES</a>
-            </div>
-            <div class="nav-center">
-                <img src="../logo.png" alt="Mikey Mobile Oil Change" class="logo">
-            </div>
-            <div class="nav-right">
-                <a href="../index.html#pricing" class="nav-link">PRICING</a>
-                <a href="../index.html#contact" class="nav-link">CONTACT US</a>
-            </div>
-        </div>
-    </nav>
 
     <!-- Location Content -->
     <section class="hero" style="min-height: auto; padding: 60px 0;">
@@ -174,38 +157,39 @@
 <strong>Phone:</strong> (559) 838-4267<br />
 <strong>Service Area:</strong> Clovis, CA &amp; Surrounding Areas</p>
 <hr />
-<h2>Schema Markup</h2>
-<pre><code class="language-json">{
-  &quot;@context&quot;: &quot;https://schema.org&quot;,
-  &quot;@type&quot;: &quot;AutomotiveBusiness&quot;,
-  &quot;name&quot;: &quot;Mikey Mobile Oil Change&quot;,
-  &quot;description&quot;: &quot;Professional mobile oil change services in Clovis, CA. We come to your home or office.&quot;,
-  &quot;url&quot;: &quot;https://mikeymobile.com/clovis/&quot;,
-  &quot;telephone&quot;: &quot;(559) 838-4267&quot;,
-  &quot;priceRange&quot;: &quot;$$&quot;,
-  &quot;address&quot;: {
-    &quot;@type&quot;: &quot;PostalAddress&quot;,
-    &quot;addressLocality&quot;: &quot;Clovis&quot;,
-    &quot;addressRegion&quot;: &quot;CA&quot;,
-    &quot;addressCountry&quot;: &quot;US&quot;
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AutomotiveBusiness",
+  "name": "Mikey Mobile Oil Change",
+  "description": "Professional mobile oil change services in Clovis, CA. We come to your home or office.",
+  "url": "https://mikeymobile.com/clovis/",
+  "telephone": "(559) 838-4267",
+  "priceRange": "$$",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Clovis",
+    "addressRegion": "CA",
+    "addressCountry": "US"
   },
-  &quot;geo&quot;: {
-    &quot;@type&quot;: &quot;GeoCoordinates&quot;,
-    &quot;latitude&quot;: 36.825226,
-    &quot;longitude&quot;: -119.702927
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 36.825226,
+    "longitude": -119.702927
   },
-  &quot;areaServed&quot;: {
-    &quot;@type&quot;: &quot;City&quot;,
-    &quot;name&quot;: &quot;Clovis&quot;
+  "areaServed": {
+    "@type": "City",
+    "name": "Clovis"
   },
-  &quot;openingHoursSpecification&quot;: [{
-    &quot;@type&quot;: &quot;OpeningHoursSpecification&quot;,
-    &quot;dayOfWeek&quot;: [&quot;Monday&quot;, &quot;Tuesday&quot;, &quot;Wednesday&quot;, &quot;Thursday&quot;, &quot;Friday&quot;, &quot;Saturday&quot;],
-    &quot;opens&quot;: &quot;08:00&quot;,
-    &quot;closes&quot;: &quot;18:00&quot;
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+    "opens": "08:00",
+    "closes": "18:00"
   }]
 }
-</code></pre>
+
+</script>
             <div class="location-cta">
                 <a href="#" class="btn book-now-btn" onclick="document.getElementById('bookingModal').style.display='block'; return false;">BOOK NOW</a>
             </div>
