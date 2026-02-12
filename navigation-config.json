@@ -1,0 +1,77 @@
+{
+  "main_nav": {
+    "left": [
+      {
+        "label": "HOME",
+        "url": "index.html",
+        "dropdown": null
+      },
+      {
+        "label": "ABOUT",
+        "url": "about.html",
+        "dropdown": null
+      },
+      {
+        "label": "LOCATIONS",
+        "url": "locations.html",
+        "dropdown": [
+          {
+            "label": "Fresno",
+            "url": "fresno/index.html",
+            "subitems": [
+              {"label": "Fig Garden", "url": "fresno/fig-garden/index.html"},
+              {"label": "Sunnyside", "url": "fresno/sunnyside/index.html"},
+              {"label": "Fig Garden Loop", "url": "fresno/fig-garden-loop/index.html"},
+              {"label": "Woodward Park", "url": "fresno/woodward-park/index.html"},
+              {"label": "Riverpark", "url": "fresno/riverpark/index.html"},
+              {"label": "Pinedale", "url": "fresno/pinedale/index.html"},
+              {"label": "Sierra Sky Park", "url": "fresno/sierra-sky-park/index.html"},
+              {"label": "Fort Washington", "url": "fresno/fort-washington/index.html"}
+            ]
+          },
+          {
+            "label": "Clovis",
+            "url": "clovis/index.html",
+            "subitems": [
+              {"label": "Clovis North", "url": "clovis/clovis-north/index.html"},
+              {"label": "Cindy Lane", "url": "clovis/cindy-lane/index.html"},
+              {"label": "Dry Creek", "url": "clovis/dry-creek/index.html"},
+              {"label": "Clovis High", "url": "clovis/clovis-high/index.html"},
+              {"label": "Quail Lakes", "url": "clovis/quail-lakes/index.html"},
+              {"label": "Harlan Ranch", "url": "clovis/harlan-ranch/index.html"}
+            ]
+          },
+          {
+            "label": "Madera Ranchos",
+            "url": "madera-ranchos/index.html",
+            "subitems": [
+              {"label": "Rolling Hills", "url": "madera-ranchos/rolling-hills/index.html"},
+              {"label": "Riverstone", "url": "madera-ranchos/riverstone/index.html"}
+            ]
+          }
+        ]
+      }
+    ],
+    "right": [
+      {
+        "label": "SERVICES",
+        "url": "index.html#services",
+        "dropdown": null
+      },
+      {
+        "label": "PRICING",
+        "url": "index.html#pricing",
+        "dropdown": null
+      },
+      {
+        "label": "CONTACT",
+        "url": "index.html#contact",
+        "dropdown": null
+      }
+    ]
+  },
+  "logo": {
+    "image": "logo.png",
+    "alt": "Mikey Mobile Oil Change"
+  }
+}

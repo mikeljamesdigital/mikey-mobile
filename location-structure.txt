@@ -1,0 +1,23 @@
+Location Hierarchy for Navigation Menu:
+
+1. Fresno (fresno/index.html)
+   - Fig Garden (fresno/fig-garden/index.html)
+   - Sunnyside (fresno/sunnyside/index.html)
+   - Fig Garden Loop (fresno/fig-garden-loop/index.html)
+   - Woodward Park (fresno/woodward-park/index.html)
+   - Riverpark (fresno/riverpark/index.html)
+   - Pinedale (fresno/pinedale/index.html)
+   - Sierra Sky Park (fresno/sierra-sky-park/index.html)
+   - Fort Washington (fresno/fort-washington/index.html)
+
+2. Clovis (clovis/index.html)
+   - Clovis North (clovis/clovis-north/index.html)
+   - Cindy Lane (clovis/cindy-lane/index.html)
+   - Dry Creek (clovis/dry-creek/index.html)
+   - Clovis High (clovis/clovis-high/index.html)
+   - Quail Lakes (clovis/quail-lakes/index.html)
+   - Harlan Ranch (clovis/harlan-ranch/index.html)
+
+3. Madera Ranchos (madera-ranchos/index.html)
+   - Rolling Hills (madera-ranchos/rolling-hills/index.html)
+   - Riverstone (madera-ranchos/riverstone/index.html)

@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="about-styles.css">
     <link rel="stylesheet" href="stars.css">
     <link rel="stylesheet" href="heading-styles.css">
+    <link rel="stylesheet" href="navigation.css">
 </head>
 <body>
     <!-- Top Bar -->
@@ -17,6 +18,69 @@
         </div>
     </div>
 
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-container">
+                <!-- Left Navigation -->
+                <div class="nav-left">
+                    <a href="index.html" class="nav-link">HOME</a>
+                    <a href="about.html" class="nav-link">ABOUT</a>
+                    <div class="nav-dropdown">
+                        <a href="locations.html" class="nav-link dropdown-trigger">LOCATIONS</a>
+                        <div class="dropdown-menu">
+                            <div class="dropdown-section">
+                                <a href="fresno/index.html" class="dropdown-city">Fresno</a>
+                                <a href="fresno/fig-garden/index.html" class="dropdown-neighborhood">Fig Garden</a>
+                                <a href="fresno/sunnyside/index.html" class="dropdown-neighborhood">Sunnyside</a>
+                                <a href="fresno/fig-garden-loop/index.html" class="dropdown-neighborhood">Fig Garden Loop</a>
+                                <a href="fresno/woodward-park/index.html" class="dropdown-neighborhood">Woodward Park</a>
+                                <a href="fresno/riverpark/index.html" class="dropdown-neighborhood">Riverpark</a>
+                                <a href="fresno/pinedale/index.html" class="dropdown-neighborhood">Pinedale</a>
+                                <a href="fresno/sierra-sky-park/index.html" class="dropdown-neighborhood">Sierra Sky Park</a>
+                                <a href="fresno/fort-washington/index.html" class="dropdown-neighborhood">Fort Washington</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <a href="clovis/index.html" class="dropdown-city">Clovis</a>
+                                <a href="clovis/clovis-north/index.html" class="dropdown-neighborhood">Clovis North</a>
+                                <a href="clovis/cindy-lane/index.html" class="dropdown-neighborhood">Cindy Lane</a>
+                                <a href="clovis/dry-creek/index.html" class="dropdown-neighborhood">Dry Creek</a>
+                                <a href="clovis/clovis-high/index.html" class="dropdown-neighborhood">Clovis High</a>
+                                <a href="clovis/quail-lakes/index.html" class="dropdown-neighborhood">Quail Lakes</a>
+                                <a href="clovis/harlan-ranch/index.html" class="dropdown-neighborhood">Harlan Ranch</a>
+                            </div>
+                            <div class="dropdown-section">
+                                <a href="madera-ranchos/index.html" class="dropdown-city">Madera Ranchos</a>
+                                <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-neighborhood">Rolling Hills</a>
+                                <a href="madera-ranchos/riverstone/index.html" class="dropdown-neighborhood">Riverstone</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center Logo -->
+                <div class="nav-center">
+                    <a href="index.html">
+                        <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
+                    </a>
+                </div>
+
+                <!-- Right Navigation -->
+                <div class="nav-right">
+                    <a href="index.html#services" class="nav-link">SERVICES</a>
+                    <a href="index.html#pricing" class="nav-link">PRICING</a>
+                    <a href="index.html#contact" class="nav-link">CONTACT</a>
+                </div>
+
+                <!-- Mobile Hamburger Menu Button -->
+                <button class="hamburger-menu" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="mobile-menu">
