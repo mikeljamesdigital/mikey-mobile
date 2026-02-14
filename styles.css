@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Teko:wght@400;600;700&display=swap');
+/* Fonts loaded via preconnect in HTML head for better performance */
 /* Global Styles */
 * {
     margin: 0;
@@ -107,6 +107,8 @@ body {
     text-transform: uppercase;
     text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
     line-height: 1.1;
+    min-height: 70px;
+    display: block;
 }
 
 .hero-buttons {
@@ -114,6 +116,7 @@ body {
     gap: 20px;
     justify-content: center;
     margin-bottom: 60px;
+    min-height: 60px;
 }
 
 .btn {
@@ -182,6 +185,7 @@ body {
     width: 900px;
     max-width: 100%;
     height: auto;
+    aspect-ratio: 16 / 9;
     display: block;
     margin: 0 auto;
     filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
