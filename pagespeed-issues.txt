@@ -1,0 +1,49 @@
+PageSpeed Performance Issues - Score 66
+
+MAJOR ISSUES:
+
+1. JavaScript Execution Time: 1.3s
+   - Google reCAPTCHA: 894ms (556ms eval, 229ms parse)
+   - leadconnectorhq.com scripts: 209ms
+   - Facebook Pixel: 76ms
+   - Total: 1,093ms script evaluation
+
+2. Main-Thread Work: 2.1s
+   - Script Evaluation: 1,093ms
+   - Script Parsing & Compilation: 469ms
+   - Other: 258ms
+   - Style & Layout: 119ms
+
+3. Third-Party Scripts (causing most issues):
+   - Google reCAPTCHA (www.gstatic.com)
+   - leadconnectorhq.com (multiple scripts)
+   - Facebook Pixel (connect.facebook.net)
+   - Google Analytics/Anchor
+
+4. Reduce unused JavaScript: 460 KiB
+   - reCAPTCHA has lots of unused code
+
+5. Reduce unused CSS: 41 KiB
+   - reCAPTCHA styles
+
+6. Long main-thread tasks: 9 found
+
+7. Non-composited animations: 17 animated elements
+   - Stars animation likely causing this
+
+8. Image optimization: 155 KiB savings
+   - transit-van-new.png
+   - logo.png
+
+9. Cache lifetimes: 117 KiB savings
+   - Facebook events
+   - libphonenumber-js
+   - beacon.min.js
+
+SOLUTION PRIORITIES:
+
+1. Defer/async third-party scripts (reCAPTCHA, Facebook, leadconnectorhq)
+2. Remove or lazy-load unused third-party scripts
+3. Optimize star animations (use CSS transforms only)
+4. Compress images (convert to WebP)
+5. Add cache headers
