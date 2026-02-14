@@ -1,8 +1,14 @@
+# Robots.txt for Mikey Mobile Oil Change
+# https://mikeymobile.com
+
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://phpstack-1584168-6184673.cloudwaysapps.com/sitemap.xml
+# Disallow crawling of admin panel
+Disallow: /admin/
+
+# Disallow crawling of deployment script
+Disallow: /gitautodeploy.php
 
 # Allow all search engines to crawl the site
 User-agent: Googlebot
@@ -11,5 +17,5 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-# Disallow crawling of admin/backend files if any exist
-Disallow: /gitautodeploy.php
+# Sitemap location
+Sitemap: https://mikeymobile.com/sitemap.xml
