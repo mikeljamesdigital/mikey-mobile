@@ -409,8 +409,8 @@
         </div>
     </div>
 
-    <!-- Go High Level Form Script -->
-    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+    <!-- Go High Level Form Script - Lazy loaded when modal opens -->
+    <!-- Script will be loaded dynamically when user clicks Book Now -->
 
     <script>
         // Parallax scrolling effect
@@ -428,15 +428,28 @@
             }
         });
 
-        // Modal functionality
+        // Modal functionality with lazy loading
         const modal = document.getElementById('bookingModal');
         const closeBtn = document.querySelector('.modal-close');
         const bookNowButtons = document.querySelectorAll('a[href="#contact"].btn-primary');
+        let formScriptLoaded = false;
+
+        // Function to lazy load the form script
+        function loadFormScript() {
+            if (formScriptLoaded) return;
+            
+            const script = document.createElement('script');
+            script.src = 'https://link.msgsndr.com/js/form_embed.js';
+            script.async = true;
+            document.body.appendChild(script);
+            formScriptLoaded = true;
+        }
 
         // Open modal when any Book Now button is clicked
         bookNowButtons.forEach(button => {
             button.addEventListener('click', function(e) {
                 e.preventDefault();
+                loadFormScript(); // Load form script only when needed
                 modal.style.display = 'block';
                 document.body.style.overflow = 'hidden'; // Prevent background scrolling
             });
