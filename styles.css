@@ -167,6 +167,11 @@ body {
     position: relative;
     z-index: 3;
     will-change: transform;
+    min-height: 506px;
+    width: 100%;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .vehicle-placeholder {
@@ -660,6 +665,10 @@ body {
     .vehicle-placeholder {
         width: 100%;
         max-width: 400px;
+    }
+
+    .hero-image {
+        min-height: 280px;
     }
 
     .hero-van-image {
