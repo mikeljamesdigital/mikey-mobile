@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/contact.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Mikey Mobile Oil Change in Fresno & Clovis. Get a fast quote, ask a question, or book your mobile oil change. We respond within 24 hours.">
+    <title>Contact Us | Mikey Mobile Oil Change — Fresno & Clovis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
+    <!-- reCAPTCHA v3 — replace YOUR_RECAPTCHA_SITE_KEY with your actual site key -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdZn4wsAAAAAPDMbsX79BOR6YBmxL0zSCwtvX09" async defer></script>
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .btn-primary{background:#E8399A;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s;display:inline-block;border:none;cursor:pointer}
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline-white{background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .3s;display:inline-block}
+        .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+        /* ── Hero ── */
+        .hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 48px;
+            text-align:center;
+        }
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:18px}
+        .hero h1 span{color:#E8399A}
+        .hero p{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:580px;margin:0 auto 36px;line-height:1.7}
+        .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Trust Strip ── */
+        .trust-strip{background:#E8399A;padding:14px 0}
+        .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
+        .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+
+        /* ── Main Contact Section ── */
+        .contact-section{padding:72px 0;background:#F8F4FF}
+        .contact-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px;align-items:start}
+
+        /* ── Contact Info Panel ── */
+        .contact-info{display:flex;flex-direction:column;gap:24px}
+        .info-card{background:#fff;border-radius:14px;padding:28px;box-shadow:0 4px 20px rgba(30,45,90,.08)}
+        .info-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.2rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:16px}
+        .info-row{display:flex;align-items:flex-start;gap:12px;padding:10px 0;border-bottom:1px solid rgba(30,45,90,.07)}
+        .info-row:last-child{border-bottom:none}
+        .info-icon{font-size:1.2rem;flex-shrink:0;margin-top:1px}
+        .info-label{font-size:.78rem;font-weight:600;color:#E8399A;text-transform:uppercase;letter-spacing:1px;margin-bottom:2px}
+        .info-value{font-size:.92rem;color:#1E2D5A;font-weight:500}
+        .info-value a{color:#1E2D5A;text-decoration:none}
+        .info-value a:hover{color:#E8399A}
+        .social-row{display:flex;gap:12px;margin-top:4px}
+        .social-btn{background:#F8F4FF;border:1px solid rgba(30,45,90,.12);border-radius:8px;padding:8px 16px;font-size:.82rem;color:#1E2D5A;font-weight:500;text-decoration:none;transition:all .2s}
+        .social-btn:hover{background:#E8399A;color:#fff;border-color:#E8399A}
+        .quick-actions{display:flex;flex-direction:column;gap:10px}
+        .quick-btn{display:flex;align-items:center;gap:12px;background:#1E2D5A;color:#fff;padding:14px 20px;border-radius:10px;text-decoration:none;transition:all .3s}
+        .quick-btn:hover{background:#E8399A}
+        .quick-btn-icon{font-size:1.3rem;flex-shrink:0}
+        .quick-btn-text{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:1px}
+        .quick-btn-sub{font-size:.75rem;color:rgba(255,255,255,.6);margin-top:1px}
+
+        /* ── Contact Form ── */
+        .contact-form-wrap{background:#fff;border-radius:16px;padding:40px;box-shadow:0 4px 24px rgba(30,45,90,.1)}
+        .form-title{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#1E2D5A;margin-bottom:6px}
+        .form-subtitle{font-size:.92rem;color:#4a5568;margin-bottom:28px;line-height:1.6}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .form-group{margin-bottom:18px}
+        .form-group label{display:block;font-size:.82rem;font-weight:600;color:#1E2D5A;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px}
+        .form-group input,
+        .form-group select,
+        .form-group textarea{
+            width:100%;
+            padding:12px 16px;
+            border:1.5px solid rgba(30,45,90,.15);
+            border-radius:8px;
+            font-family:'Inter',sans-serif;
+            font-size:.95rem;
+            color:#1E2D5A;
+            background:#fff;
+            transition:border-color .2s;
+            outline:none;
+        }
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus{border-color:#E8399A}
+        .form-group textarea{resize:vertical;min-height:110px}
+        .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%231E2D5A' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:40px}
+        .form-required{color:#E8399A}
+        .form-submit-btn{width:100%;background:#E8399A;color:#fff;padding:16px;border:none;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.2rem;letter-spacing:2px;cursor:pointer;transition:all .3s;margin-top:8px}
+        .form-submit-btn:hover{background:#d42d8a;transform:translateY(-1px)}
+        .form-submit-btn:disabled{background:#ccc;cursor:not-allowed;transform:none}
+        .form-note{font-size:.78rem;color:#4a5568;text-align:center;margin-top:12px;line-height:1.5}
+
+        /* ── Success / Error Messages ── */
+        .form-success{display:none;background:#e8f5e9;border:1.5px solid #4caf50;border-radius:10px;padding:24px;text-align:center;margin-top:16px}
+        .form-success.show{display:block}
+        .form-success-icon{font-size:2.5rem;margin-bottom:8px}
+        .form-success h3{font-family:'Bebas Neue',sans-serif;font-size:1.4rem;color:#2e7d32;margin-bottom:6px}
+        .form-success p{font-size:.9rem;color:#388e3c;line-height:1.6}
+        .form-error{display:none;background:#fde8e8;border:1.5px solid #e53e3e;border-radius:10px;padding:16px;text-align:center;margin-top:12px;font-size:.88rem;color:#c53030}
+        .form-error.show{display:block}
+
+        /* ── Why Contact Section ── */
+        .why-section{padding:64px 0;background:#fff}
+        .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+        .why-card{background:#F8F4FF;border-radius:12px;padding:28px 24px;text-align:center;border-top:3px solid #E8399A}
+        .why-icon{font-size:2rem;margin-bottom:12px}
+        .why-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:8px}
+        .why-card p{font-size:.88rem;color:#4a5568;line-height:1.6}
+
+        /* ── CTA ── */
+        .cta-section{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 0;text-align:center}
+        .cta-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:14px}
+        .cta-section h2 span{color:#E8399A}
+        .cta-section p{font-size:1rem;color:rgba(255,255,255,.78);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        @media(max-width:900px){
+            .contact-grid{grid-template-columns:1fr}
+            .why-grid{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:600px){
+            .form-row{grid-template-columns:1fr}
+            .contact-form-wrap{padding:24px}
+            .why-grid{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+
+    <header></header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="section-label">FRESNO, CLOVIS & SURROUNDING AREAS</span>
+            <h1>Get in Touch<br><span>We Respond Fast</span></h1>
+            <p>Have a question, need a quote, or ready to book? Fill out the form below and we'll get back to you within a few hours. For immediate help, call or text us directly.</p>
+            <div class="hero-btns">
+                <a href="tel:5598384267" class="btn-primary">CALL (559) 838-4267</a>
+                <a href="/book-now.html" class="btn-outline-white">BOOK ONLINE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">📞 Call or Text Anytime</span>
+            <span class="trust-item">⚡ Fast Response</span>
+            <span class="trust-item">💰 Free Quotes</span>
+            <span class="trust-item">⭐ 5-Star Rated</span>
+            <span class="trust-item">✅ Licensed & Insured</span>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+
+                <!-- Info Panel -->
+                <div class="contact-info">
+
+                    <div class="info-card">
+                        <h3>Contact Information</h3>
+                        <div class="info-row">
+                            <span class="info-icon">📞</span>
+                            <div>
+                                <div class="info-label">Phone & Text</div>
+                                <div class="info-value"><a href="tel:5598384267">(559) 838-4267</a></div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-icon">📧</span>
+                            <div>
+                                <div class="info-label">Email</div>
+                                <div class="info-value"><a href="mailto:mikey@mikeymobile.com">mikey@mikeymobile.com</a></div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-icon">⏰</span>
+                            <div>
+                                <div class="info-label">Hours</div>
+                                <div class="info-value">Mon–Sat: 8 AM – 6 PM<br>Sun: Closed</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <div class="info-label">Service Area</div>
+                                <div class="info-value">Fresno, Clovis & Madera Ranchos</div>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-icon">💳</span>
+                            <div>
+                                <div class="info-label">Payment</div>
+                                <div class="info-value">Credit/Debit, Venmo, Cash</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Find Us Online</h3>
+                        <div class="social-row">
+                            <a href="https://www.google.com/maps/search/Mikey+Mobile+Oil+Change" target="_blank" class="social-btn">⭐ Google</a>
+                            <a href="https://www.facebook.com/mikeymobileoilchange" target="_blank" class="social-btn">📘 Facebook</a>
+                            <a href="https://www.yelp.com/biz/mikey-mobile-oil-change-fresno" target="_blank" class="social-btn">⭐ Yelp</a>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <h3>Quick Actions</h3>
+                        <div class="quick-actions">
+                            <a href="/book-now.html" class="quick-btn">
+                                <span class="quick-btn-icon">📅</span>
+                                <div>
+                                    <div class="quick-btn-text">Book Online</div>
+                                    <div class="quick-btn-sub">Schedule in 60 seconds</div>
+                                </div>
+                            </a>
+                            <a href="tel:5598384267" class="quick-btn">
+                                <span class="quick-btn-icon">📞</span>
+                                <div>
+                                    <div class="quick-btn-text">Call (559) 838-4267</div>
+                                    <div class="quick-btn-sub">Mon–Sat, 8 AM – 6 PM</div>
+                                </div>
+                            </a>
+                            <a href="sms:5598384267" class="quick-btn">
+                                <span class="quick-btn-icon">💬</span>
+                                <div>
+                                    <div class="quick-btn-text">Send a Text</div>
+                                    <div class="quick-btn-sub">Fastest response method</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrap">
+                    <div class="form-title">Send Us a Message</div>
+                    <div class="form-subtitle">Fill out the form below and we'll get back to you within a few hours. For same-day service, please call or text us directly.</div>
+
+                    <!-- Replace YOUR_FORMSPREE_ENDPOINT with your Formspree form URL e.g. https://formspree.io/f/xyzabcde -->
+                    <form id="contactForm" action="https://formspree.io/f/meerrvlg" method="POST" novalidate>
+                        <!-- Hidden field for reCAPTCHA token -->
+                        <input type="hidden" name="g-recaptcha-response" id="recaptchaToken">
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name <span class="form-required">*</span></label>
+                                <input type="text" id="name" name="name" placeholder="Mike Johnson" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address <span class="form-required">*</span></label>
+                                <input type="email" id="email" name="email" placeholder="mike@example.com" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="(559) 555-0100">
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Your Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., Woodward Park, Clovis North">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service">
+                                <option value="">-- Select a Service --</option>
+                                <option value="Gas/Hybrid Oil Change ($99)">Gas / Hybrid Oil Change — $99</option>
+                                <option value="Diesel Oil Change ($249)">Diesel Oil Change — $249</option>
+                                <option value="Boat Pre-Season Prep ($499)">Boat Pre-Season Prep — $499</option>
+                                <option value="Same-Day Service">Same-Day Service</option>
+                                <option value="Fleet/Multiple Vehicles">Fleet / Multiple Vehicles</option>
+                                <option value="General Question">General Question</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="vehicle">Your Vehicle</label>
+                            <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2019 Toyota Camry, 2021 Ford F-250">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message <span class="form-required">*</span></label>
+                            <textarea id="message" name="message" placeholder="Tell us what you need, when you'd like service, and any questions you have..." required></textarea>
+                        </div>
+
+                        <button type="submit" class="form-submit-btn" id="submitBtn">SEND MESSAGE</button>
+                        <p class="form-note">🔒 Protected by Google reCAPTCHA · We never share your information</p>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success-icon">✅</div>
+                        <h3>Message Sent!</h3>
+                        <p>Thanks for reaching out! We've received your message and will get back to you within a few hours. For immediate service, call or text us at <strong>(559) 838-4267</strong>.</p>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div class="form-error" id="formError">
+                        Something went wrong. Please try again or call us directly at (559) 838-4267.
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Contact Section -->
+    <section class="why-section">
+        <div class="container" style="text-align:center">
+            <span class="section-label">WHY REACH OUT</span>
+            <h2 class="section-title">We Make It<br><span>Easy to Connect</span></h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">⚡</div>
+                    <h3>Fast Response</h3>
+                    <p>We respond to messages within a few hours during business hours. For urgent needs, a quick text or call gets you the fastest answer.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Free Quotes</h3>
+                    <p>Not sure what you need? Tell us your vehicle and we'll give you an exact all-inclusive price before you commit to anything.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">📅</div>
+                    <h3>Flexible Scheduling</h3>
+                    <p>We work around your schedule — mornings, afternoons, or same-day when available. Book online or let us know your preferred time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Skip<br><span>The Shop?</span></h2>
+            <p>Book your all-inclusive mobile oil change in 60 seconds. We come to your driveway, office, or anywhere your vehicle is parked.</p>
+            <div class="cta-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">Mon–Sat • 8 AM–6 PM • Fresno, Clovis & Surrounding Areas</p>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
+    <script>
+    // ── Contact Form Handler ──
+    // Replace YOUR_RECAPTCHA_SITE_KEY with your actual reCAPTCHA v3 site key
+    const RECAPTCHA_SITE_KEY = '6LdZn4wsAAAAAPDMbsX79BOR6YBmxL0zSCwtvX09';
+
+    const form = document.getElementById('contactForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const successMsg = document.getElementById('formSuccess');
+    const errorMsg = document.getElementById('formError');
+
+    form.addEventListener('submit', async function(e) {
+        e.preventDefault();
+
+        // Basic validation
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (!name || !email || !message) {
+            errorMsg.textContent = 'Please fill in all required fields (Name, Email, and Message).';
+            errorMsg.classList.add('show');
+            return;
+        }
+
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'SENDING...';
+        errorMsg.classList.remove('show');
+
+        try {
+            // Get reCAPTCHA token
+            let token = '';
+            if (RECAPTCHA_SITE_KEY !== 'YOUR_RECAPTCHA_SITE_KEY') {
+                token = await new Promise((resolve) => {
+                    grecaptcha.ready(() => {
+                        grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' }).then(resolve);
+                    });
+                });
+                document.getElementById('recaptchaToken').value = token;
+            }
+
+            // Submit to Formspree
+            const formData = new FormData(form);
+            const response = await fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            });
+
+            if (response.ok) {
+                form.style.display = 'none';
+                successMsg.classList.add('show');
+                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            } else {
+                const data = await response.json();
+                throw new Error(data.error || 'Submission failed');
+            }
+        } catch (err) {
+            errorMsg.textContent = 'Something went wrong. Please try again or call us at (559) 838-4267.';
+            errorMsg.classList.add('show');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'SEND MESSAGE';
+        }
+    });
+    </script>
+</body>
+</html>

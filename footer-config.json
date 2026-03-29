@@ -1,0 +1,114 @@
+{
+    "company": {
+        "name": "Mikey Mobile Oil Change",
+        "tagline": "Skip The Shop. We Come to You.",
+        "phone": "(559) 838-4267",
+        "email": "mikey@mikeymobile.com"
+    },
+    "columns": [
+        {
+            "title": "Quick Links",
+            "links": [
+                {
+                    "label": "Home",
+                    "url": "index.html"
+                },
+                {
+                    "label": "About",
+                    "url": "about.html"
+                },
+                {
+                    "label": "Services",
+                    "url": "services.html"
+                },
+                {
+                    "label": "Locations",
+                    "url": "locations.html"
+                },
+                {
+                    "label": "Contact",
+                    "url": "contact.html"
+                }
+            ]
+        },
+        {
+            "title": "Services",
+            "links": [
+                {
+                    "label": "Oil Change Service",
+                    "url": "index.html#pricing"
+                },
+                {
+                    "label": "Diesel Service",
+                    "url": "index.html#pricing"
+                },
+                {
+                    "label": "Boat Summer Prep",
+                    "url": "services/boat-summer-service-fresno-ca.html"
+                }
+            ]
+        },
+        {
+            "title": "Service Areas",
+            "links": [
+                {
+                    "label": "Fresno",
+                    "url": "locations.html"
+                },
+                {
+                    "label": "Clovis",
+                    "url": "locations.html"
+                },
+                {
+                    "label": "Madera Ranchos",
+                    "url": "locations.html"
+                }
+            ]
+        },
+        {
+            "title": "Contact",
+            "content": [
+                {
+                    "type": "phone",
+                    "text": "Phone: (559) 838-4267"
+                },
+                {
+                    "type": "email",
+                    "text": "Email: mikey@mikeymobile.com"
+                },
+                {
+                    "type": "hours",
+                    "text": "Mon-Fri: 8am-6pm"
+                },
+                {
+                    "type": "hours",
+                    "text": "Sat: 9am-3pm"
+                }
+            ]
+        }
+    ],
+    "social": [
+        {
+            "platform": "Goolge Places Page",
+            "url": "https://share.google/G0S2Z1Xx6vjRxakwF",
+            "icon": "google"
+        },
+        {
+            "platform": "Facebook",
+            "url": "https://www.facebook.com/mikeymobileoilchange/",
+            "icon": "facebook"
+        },
+        {
+            "platform": "Instagram",
+            "url": "https://www.instagram.com/mikeymobileoilchange/",
+            "icon": "instagram"
+        },
+        {
+            "platform": "Yelp",
+            "url": "#",
+            "icon": "https://www.yelp.com/biz/mikey-mobile-oil-change-fresno"
+        }
+    ],
+    "copyright": "\u00a9 2025 Mikey Mobile Oil Change. All rights reserved.",
+    "legal": "Licensed & Insured in California"
+}

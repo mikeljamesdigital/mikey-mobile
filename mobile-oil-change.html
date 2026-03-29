@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/mobile-oil-change.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mobile oil change for gas, hybrid, diesel, and boats in Fresno & Clovis. All-inclusive pricing — $99 gas/hybrid, $249 diesel, $499 boat. We come to you.">
+    <title>Mobile Oil Change — Fresno & Clovis | Mikey Mobile</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .btn-primary{background:#E8399A;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s;display:inline-block;border:none;cursor:pointer}
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline-white{background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .3s;display:inline-block}
+        .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+        .btn-outline-navy{background:transparent;color:#1E2D5A;padding:13px 28px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1.5px;text-decoration:none;border:2px solid #1E2D5A;transition:all .3s;display:inline-block}
+        .btn-outline-navy:hover{background:#1E2D5A;color:#fff}
+
+        /* ── Hero ── */
+        .hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 48px;
+            text-align:center;
+        }
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:18px}
+        .hero h1 span{color:#E8399A}
+        .hero p{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:620px;margin:0 auto 36px;line-height:1.7}
+        .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Trust Strip ── */
+        .trust-strip{background:#E8399A;padding:14px 0}
+        .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
+        .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+
+        /* ── Pricing Cards ── */
+        .pricing-section{padding:72px 0;background:#F8F4FF;text-align:center}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:48px}
+        .pricing-card{background:#fff;border-radius:16px;padding:36px 28px;box-shadow:0 4px 24px rgba(30,45,90,.09);position:relative;display:flex;flex-direction:column}
+        .pricing-card.featured{background:#1E2D5A;border:2px solid #E8399A}
+        .pricing-card-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:2px;padding:4px 16px;border-radius:20px;white-space:nowrap}
+        .pricing-card-label{font-family:'Bebas Neue',sans-serif;font-size:.85rem;letter-spacing:2px;color:#E8399A;margin-bottom:8px}
+        .pricing-card.featured .pricing-card-label{color:#E8399A}
+        .pricing-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#1E2D5A;margin-bottom:6px}
+        .pricing-card.featured h3{color:#fff}
+        .pricing-price{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:#E8399A;line-height:1;margin:16px 0 4px}
+        .pricing-price-note{font-size:.82rem;color:#4a5568;margin-bottom:20px}
+        .pricing-card.featured .pricing-price-note{color:rgba(255,255,255,.55)}
+        .pricing-includes{list-style:none;text-align:left;margin-bottom:24px;flex:1}
+        .pricing-includes li{font-size:.9rem;color:#4a5568;padding:7px 0;border-bottom:1px solid rgba(30,45,90,.07);display:flex;align-items:flex-start;gap:8px}
+        .pricing-includes li:last-child{border-bottom:none}
+        .pricing-card.featured .pricing-includes li{color:rgba(255,255,255,.8);border-bottom-color:rgba(255,255,255,.08)}
+        .pricing-includes li::before{content:'✓';color:#E8399A;font-weight:700;flex-shrink:0;margin-top:1px}
+        .pricing-card-cta{margin-top:auto}
+        .btn-card{display:block;width:100%;text-align:center;background:#E8399A;color:#fff;padding:13px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s}
+        .btn-card:hover{background:#d42d8a}
+        .btn-card-outline{display:block;width:100%;text-align:center;background:transparent;color:#1E2D5A;padding:13px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1.5px;text-decoration:none;border:2px solid #1E2D5A;transition:all .3s}
+        .btn-card-outline:hover{background:#1E2D5A;color:#fff}
+        .pricing-note{font-size:.85rem;color:#4a5568;max-width:680px;margin:32px auto 0;line-height:1.7;background:#fff;border-radius:10px;padding:18px 24px;border-left:4px solid #E8399A;text-align:left}
+
+        /* ── Service Detail Sections ── */
+        .service-section{padding:72px 0}
+        .service-section.alt{background:#F8F4FF}
+        .service-section.dark{background:#1E2D5A}
+        .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+        .service-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,2.8rem);color:#1E2D5A;line-height:1.1;margin-bottom:12px}
+        .service-copy h2 span{color:#E8399A}
+        .service-section.dark .service-copy h2{color:#fff}
+        .service-copy p{font-size:.97rem;color:#4a5568;line-height:1.8;margin-bottom:12px}
+        .service-section.dark .service-copy p{color:rgba(255,255,255,.75)}
+        .service-list{list-style:none;margin:16px 0 28px}
+        .service-list li{font-size:.92rem;color:#4a5568;padding:7px 0;border-bottom:1px solid rgba(30,45,90,.07);display:flex;align-items:flex-start;gap:8px}
+        .service-section.dark .service-list li{color:rgba(255,255,255,.75);border-bottom-color:rgba(255,255,255,.08)}
+        .service-list li::before{content:'✓';color:#E8399A;font-weight:700;flex-shrink:0;margin-top:1px}
+        .service-list li:last-child{border-bottom:none}
+        .service-btns{display:flex;gap:12px;flex-wrap:wrap}
+
+        /* ── Price Box ── */
+        .price-box{background:#1E2D5A;border-radius:14px;padding:32px;text-align:center}
+        .service-section.dark .price-box{background:rgba(255,255,255,.07);border:1px solid rgba(232,57,154,.3)}
+        .service-section.alt .price-box{background:#1E2D5A}
+        .price-box-label{font-family:'Bebas Neue',sans-serif;font-size:.85rem;letter-spacing:2px;color:rgba(255,255,255,.55);margin-bottom:8px}
+        .price-box-amount{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:#E8399A;line-height:1;margin-bottom:4px}
+        .price-box-note{font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.5}
+        .price-box-includes{list-style:none;text-align:left;margin-bottom:0}
+        .price-box-includes li{font-size:.88rem;color:rgba(255,255,255,.8);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.08);display:flex;align-items:flex-start;gap:8px}
+        .price-box-includes li:last-child{border-bottom:none}
+        .price-box-includes li::before{content:'✓';color:#E8399A;font-weight:700;flex-shrink:0;margin-top:1px}
+
+        /* ── What's Included ── */
+        .included-section{padding:72px 0;background:#1E2D5A;text-align:center}
+        .included-section .section-title{color:#fff}
+        .included-section .section-label{background:rgba(255,255,255,.15);color:#fff}
+        .included-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:40px}
+        .included-card{background:rgba(255,255,255,.06);border:1px solid rgba(232,57,154,.2);border-radius:12px;padding:28px 24px;text-align:left;transition:border-color .3s}
+        .included-card:hover{border-color:#E8399A}
+        .included-icon{font-size:2rem;margin-bottom:12px}
+        .included-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:#fff;letter-spacing:.5px;margin-bottom:8px}
+        .included-card p{font-size:.88rem;color:rgba(255,255,255,.7);line-height:1.6}
+
+        /* ── Brands ── */
+        .brands-section{padding:60px 0;background:#F8F4FF;text-align:center}
+        .brands-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:32px;max-width:800px;margin-left:auto;margin-right:auto}
+        .brand-pill{background:#fff;border:1px solid rgba(30,45,90,.12);border-radius:24px;padding:8px 20px;font-size:.88rem;color:#1E2D5A;font-weight:500}
+
+        /* ── How It Works ── */
+        .how-section{padding:72px 0;text-align:center}
+        .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:40px}
+        .step-num{width:52px;height:52px;border-radius:50%;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+        .step h3{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:8px}
+        .step p{font-size:.88rem;color:#4a5568;line-height:1.6}
+
+        /* ── CTA ── */
+        .cta-section{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 0;text-align:center}
+        .cta-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:14px}
+        .cta-section h2 span{color:#E8399A}
+        .cta-section p{font-size:1rem;color:rgba(255,255,255,.78);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        @media(max-width:900px){
+            .pricing-grid{grid-template-columns:1fr}
+            .service-grid{grid-template-columns:1fr}
+            .included-grid{grid-template-columns:1fr 1fr}
+            .steps{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:600px){
+            .included-grid{grid-template-columns:1fr}
+            .steps{grid-template-columns:1fr 1fr}
+        }
+    </style>
+</head>
+<body>
+
+    <header></header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="section-label">FRESNO, CLOVIS & SURROUNDING AREAS</span>
+            <h1>Mobile Oil Change<br><span>We Come to You</span></h1>
+            <p>Gas, hybrid, diesel, or boat — we bring professional oil change service directly to your driveway, office, or wherever your vehicle is parked. All-inclusive pricing. No hidden fees.</p>
+            <div class="hero-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">✅ All-Inclusive Pricing</span>
+            <span class="trust-item">🚗 We Come to You</span>
+            <span class="trust-item">⏱️ Done in 30 Minutes</span>
+            <span class="trust-item">💰 No Hidden Fees</span>
+            <span class="trust-item">⚡ Same-Day Available</span>
+        </div>
+    </div>
+
+    <!-- Pricing Overview -->
+    <section class="pricing-section">
+        <div class="container">
+            <span class="section-label">ALL-INCLUSIVE PRICING</span>
+            <h2 class="section-title">Simple, Transparent<br><span>Flat-Rate Pricing</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:600px;margin:0 auto;line-height:1.7">Every service is all-inclusive — oil, filter, and labor. The price you see is the price you pay. No add-ons, no surprises, no upsells.</p>
+            <div class="pricing-grid">
+
+                <!-- Gas / Hybrid -->
+                <div class="pricing-card featured">
+                    <div class="pricing-card-badge">MOST POPULAR</div>
+                    <div class="pricing-card-label">GAS & HYBRID</div>
+                    <h3>Cars, Trucks & SUVs</h3>
+                    <div class="pricing-price">$99</div>
+                    <p class="pricing-price-note">All-inclusive — oil, filter & labor</p>
+                    <ul class="pricing-includes">
+                        <li>5 quarts of synthetic-blend oil</li>
+                        <li>New oil filter for your make/model</li>
+                        <li>Full drain & refill to manufacturer spec</li>
+                        <li>Multi-point visual inspection</li>
+                        <li>Digital service record emailed to you</li>
+                        <li>Extra quarts of synthetic-blend: +$8/qt</li>
+                        <li>Full synthetic upgrade: quoted separately</li>
+                    </ul>
+                    <div class="pricing-card-cta">
+                        <a href="/book-now.html" class="btn-card">BOOK NOW</a>
+                    </div>
+                </div>
+
+                <!-- Diesel -->
+                <div class="pricing-card">
+                    <div class="pricing-card-label">DIESEL</div>
+                    <h3>Heavy-Duty Trucks</h3>
+                    <div class="pricing-price">$249</div>
+                    <p class="pricing-price-note">All-inclusive — oil, filter & labor</p>
+                    <ul class="pricing-includes">
+                        <li>10 quarts of synthetic diesel oil</li>
+                        <li>Heavy-duty diesel filter</li>
+                        <li>Full drain & refill to spec</li>
+                        <li>F-250, F-350, 2500, 3500 & more</li>
+                        <li>Multi-point visual inspection</li>
+                        <li>Digital service record</li>
+                        <li>Extra quarts of synthetic oil: +$15/qt</li>
+                    </ul>
+                    <div class="pricing-card-cta">
+                        <a href="tel:5598384267" class="btn-card-outline">CALL TO BOOK</a>
+                    </div>
+                </div>
+
+                <!-- Boat -->
+                <div class="pricing-card">
+                    <div class="pricing-card-label">BOAT</div>
+                    <h3>Pre-Season Prep</h3>
+                    <div class="pricing-price">$499</div>
+                    <p class="pricing-price-note">All-inclusive — fluids, filter & labor</p>
+                    <ul class="pricing-includes">
+                        <li>Engine oil change</li>
+                        <li>V-drive fluid service</li>
+                        <li>Transmission fluid service</li>
+                        <li>Impeller replacement</li>
+                        <li>Full pre-season inspection</li>
+                        <li>We come to your slip or storage</li>
+                        <li>Digital service record</li>
+                    </ul>
+                    <div class="pricing-card-cta">
+                        <a href="tel:5598384267" class="btn-card-outline">CALL TO BOOK</a>
+                    </div>
+                </div>
+
+            </div>
+            <div class="pricing-note">
+                <strong>Same-day service available</strong> — a rush fee applies based on the time your request is received. All same-day appointments are scheduled after 5:00 PM. <a href="/same-day-service.html" style="color:#E8399A">View same-day pricing tiers →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gas & Hybrid Detail -->
+    <section class="service-section" id="gas-hybrid">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-copy">
+                    <span class="section-label">GAS & HYBRID VEHICLES</span>
+                    <h2>Cars, Trucks<br><span>& SUVs — $99</span></h2>
+                    <p>Whether you drive a Honda Civic, a Ford F-150, or a Chevy Tahoe — if it runs on gas or is a hybrid, we service it. Our technician arrives at your location fully equipped with the correct oil and filter for your specific vehicle.</p>
+                    <p>No shop, no waiting room, no drop-off. We handle everything on-site in about 30 minutes while you stay home, stay at work, or go about your day.</p>
+                    <ul class="service-list">
+                        <li>All gas-powered cars, trucks & SUVs</li>
+                        <li>Toyota, Honda, Ford, Chevy, Dodge, Nissan & more</li>
+                        <li>Hybrid vehicles — Prius, RAV4 Hybrid, CR-V Hybrid & more</li>
+                        <li>Correct oil weight and filter for your make/model</li>
+                        <li>5 quarts synthetic-blend included; extra quarts +$8/qt</li>
+                        <li>Full synthetic upgrade available — quoted separately</li>
+                    </ul>
+                    <div class="service-btns">
+                        <a href="/book-now.html" class="btn-primary">BOOK NOW — $99</a>
+                        <a href="tel:5598384267" class="btn-outline-navy">CALL US</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-box">
+                        <div class="price-box-label">GAS & HYBRID — ALL-INCLUSIVE</div>
+                        <div class="price-box-amount">$99</div>
+                        <div class="price-box-note">Everything included. No hidden fees.</div>
+                        <ul class="price-box-includes">
+                            <li>5 quarts synthetic-blend oil</li>
+                            <li>New oil filter</li>
+                            <li>Full drain & refill</li>
+                            <li>Multi-point check</li>
+                            <li>Digital service record</li>
+                            <li>Clean worksite — drip pans used</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diesel Detail -->
+    <section class="service-section alt" id="diesel">
+        <div class="container">
+            <div class="service-grid">
+                <div>
+                    <div class="price-box">
+                        <div class="price-box-label">DIESEL — ALL-INCLUSIVE</div>
+                        <div class="price-box-amount">$249</div>
+                        <div class="price-box-note">Heavy-duty trucks only. No hidden fees.</div>
+                        <ul class="price-box-includes">
+                            <li>10 quarts synthetic diesel oil</li>
+                            <li>Heavy-duty diesel filter</li>
+                            <li>Full drain & refill to spec</li>
+                            <li>Multi-point inspection</li>
+                            <li>Digital service record</li>
+                            <li>Extra quarts: +$15/qt</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-copy">
+                    <span class="section-label">DIESEL VEHICLES</span>
+                    <h2>Heavy-Duty<br><span>Trucks — $249</span></h2>
+                    <p>Diesel oil changes are for heavy-duty trucks — Ford F-250, F-350, Ram 2500, Ram 3500, and similar platforms. These engines require more oil, a heavier filter, and a technician who knows the difference.</p>
+                    <p>We bring 10 quarts of synthetic diesel oil and a heavy-duty filter to your location. If your truck needs more than 10 quarts, additional quarts are $15 each — always quoted before we start.</p>
+                    <ul class="service-list">
+                        <li>Ford F-250, F-350 (6.7 Power Stroke & more)</li>
+                        <li>Ram 2500, Ram 3500 (Cummins & more)</li>
+                        <li>GMC Sierra 2500HD, 3500HD (Duramax)</li>
+                        <li>Chevy Silverado 2500HD, 3500HD</li>
+                        <li>10 quarts synthetic diesel oil included</li>
+                        <li>Extra quarts: +$15/qt — quoted upfront</li>
+                    </ul>
+                    <div class="service-btns">
+                        <a href="tel:5598384267" class="btn-primary">CALL TO BOOK — $249</a>
+                        <a href="/book-now.html" class="btn-outline-navy">BOOK ONLINE</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Boat Detail -->
+    <section class="service-section dark" id="boat">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-copy">
+                    <span class="section-label">BOAT PRE-SEASON</span>
+                    <h2>Boat Pre-Season<br><span>Prep — $499</span></h2>
+                    <p>Get your boat ready for the season without hauling it anywhere. We come to your slip, storage yard, or driveway and handle the full pre-season fluid service so your engine is ready to run the moment you hit the water.</p>
+                    <p>The $499 all-inclusive price covers everything — engine oil, V-drive fluid, transmission fluid, and impeller replacement. One visit, one price, fully done.</p>
+                    <ul class="service-list">
+                        <li>Engine oil change — full drain & refill</li>
+                        <li>V-drive fluid service</li>
+                        <li>Transmission fluid service</li>
+                        <li>Impeller replacement</li>
+                        <li>Pre-season visual inspection</li>
+                        <li>We come to your slip, storage, or driveway</li>
+                    </ul>
+                    <div class="service-btns">
+                        <a href="tel:5598384267" class="btn-primary">CALL TO BOOK — $499</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="price-box">
+                        <div class="price-box-label">BOAT PRE-SEASON — ALL-INCLUSIVE</div>
+                        <div class="price-box-amount">$499</div>
+                        <div class="price-box-note">All fluids, filter & impeller included.</div>
+                        <ul class="price-box-includes">
+                            <li>Engine oil change</li>
+                            <li>V-drive fluid service</li>
+                            <li>Transmission fluid service</li>
+                            <li>Impeller replacement</li>
+                            <li>Pre-season inspection</li>
+                            <li>We come to your location</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What's Included -->
+    <section class="included-section">
+        <div class="container">
+            <span class="section-label">EVERY SERVICE INCLUDES</span>
+            <h2 class="section-title" style="color:#fff">What You Get<br><span>Every Time</span></h2>
+            <p style="font-size:1rem;color:rgba(255,255,255,.7);max-width:560px;margin:0 auto;line-height:1.7">Every oil change — gas, hybrid, or diesel — comes with the same thorough service. Here's exactly what happens when we show up at your door.</p>
+            <div class="included-grid">
+                <div class="included-card">
+                    <div class="included-icon">🔧</div>
+                    <h3>Full Drain & Refill</h3>
+                    <p>Complete drain of old oil, new crush washer installed, and refill with fresh oil to your vehicle's exact manufacturer specification.</p>
+                </div>
+                <div class="included-card">
+                    <div class="included-icon">🔩</div>
+                    <h3>New Oil Filter</h3>
+                    <p>OEM-compatible filter for your specific make, model, and year — not a generic substitute. Correct fit, correct spec, every time.</p>
+                </div>
+                <div class="included-card">
+                    <div class="included-icon">📋</div>
+                    <h3>Multi-Point Check</h3>
+                    <p>We check tire pressure, top off washer fluid, and visually inspect for obvious leaks or issues while we're under the hood.</p>
+                </div>
+                <div class="included-card">
+                    <div class="included-icon">🧹</div>
+                    <h3>Clean Worksite</h3>
+                    <p>We bring drip pans and absorbent mats, and take all used oil with us for proper disposal. Your driveway stays exactly as we found it.</p>
+                </div>
+                <div class="included-card">
+                    <div class="included-icon">📱</div>
+                    <h3>Digital Service Record</h3>
+                    <p>You receive a service summary with the oil type used, mileage recorded, and your next recommended change date.</p>
+                </div>
+                <div class="included-card">
+                    <div class="included-icon">✅</div>
+                    <h3>Satisfaction Guarantee</h3>
+                    <p>If anything isn't right, we'll make it right — no questions asked. Every job is backed by our 100% satisfaction guarantee.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands -->
+    <section class="brands-section">
+        <div class="container">
+            <span class="section-label">VEHICLES WE SERVICE</span>
+            <h2 class="section-title">We Service<br><span>All Major Brands</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:540px;margin:0 auto;line-height:1.7">We carry the correct oil grade and filter for all major makes and models. Don't see your brand? Call us — we likely service it.</p>
+            <div class="brands-grid">
+                <span class="brand-pill">Toyota</span>
+                <span class="brand-pill">Honda</span>
+                <span class="brand-pill">Ford</span>
+                <span class="brand-pill">Chevrolet</span>
+                <span class="brand-pill">Dodge</span>
+                <span class="brand-pill">RAM</span>
+                <span class="brand-pill">Nissan</span>
+                <span class="brand-pill">Subaru</span>
+                <span class="brand-pill">Volkswagen</span>
+                <span class="brand-pill">Hyundai</span>
+                <span class="brand-pill">Kia</span>
+                <span class="brand-pill">Jeep</span>
+                <span class="brand-pill">GMC</span>
+                <span class="brand-pill">Mazda</span>
+                <span class="brand-pill">Lexus</span>
+                <span class="brand-pill">Acura</span>
+                <span class="brand-pill">Buick</span>
+                <span class="brand-pill">Cadillac</span>
+                <span class="brand-pill">Chrysler</span>
+                <span class="brand-pill">Mitsubishi</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section">
+        <div class="container">
+            <span class="section-label">THE PROCESS</span>
+            <h2 class="section-title">Book, Confirm,<br><span>Done in 30 Minutes</span></h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Book Online or Call</h3>
+                    <p>Click the button or call us. Tell us your vehicle and location — we'll confirm availability and your all-inclusive price.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>We Confirm</h3>
+                    <p>We verify the flat-rate price for your vehicle and lock in your appointment. No surprises — you know the total before we show up.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>We Show Up</h3>
+                    <p>Your technician arrives at your location at the scheduled time, fully equipped with the right oil and filter for your vehicle.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>Done in 30 Min</h3>
+                    <p>Oil change completed on-site. We clean up, send you a digital service record, and you're back to your day.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Skip the Shop.<br><span>We Come to You.</span></h2>
+            <p>Book your all-inclusive mobile oil change today. $99 gas/hybrid · $249 diesel · $499 boat. No hidden fees, no waiting room, no hassle.</p>
+            <div class="cta-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">Mon–Sat • 8 AM–6 PM • Fresno, Clovis & Surrounding Areas • Same-day available</p>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

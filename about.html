@@ -2,224 +2,418 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/about.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Mikey Mobile Oil Change</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="about-styles.css">
-    <link rel="stylesheet" href="stars.css">
-    <link rel="stylesheet" href="heading-styles.css">
-    <link rel="stylesheet" href="navigation.css">
+    <meta name="description" content="Meet Mike — the certified technician behind Mikey Mobile Oil Change. Serving Fresno, Clovis & the Central Valley with professional mobile oil changes at your door.">
+    <title>About Mikey Mobile Oil Change | Fresno's Mobile Oil Change Expert</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Teko:wght@400;600;700&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared Layout ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .section-subtitle{font-size:1.05rem;color:#4a5568;line-height:1.7;max-width:680px}
+
+        /* ── Hero ── */
+        .about-hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 0;
+            overflow:visible;
+            position:relative;
+        }
+        .about-hero-inner{
+            display:flex;
+            align-items:center;
+            gap:40px;
+            max-width:1100px;
+            margin:0 auto;
+            padding:0 24px;
+        }
+        .about-hero-copy{
+            flex:1;
+            padding-bottom:48px;
+            padding-top:48px;
+        }
+        .about-hero-copy .section-label{margin-bottom:16px}
+        .about-hero-copy h1{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:clamp(2.8rem,7vw,5rem);
+            color:#fff;
+            line-height:1.05;
+            margin-bottom:18px;
+        }
+        .about-hero-copy h1 span{color:#E8399A}
+        .about-hero-copy p{
+            font-size:1.1rem;
+            color:rgba(255,255,255,0.85);
+            line-height:1.7;
+            max-width:520px;
+            margin-bottom:28px;
+        }
+        .about-hero-img{
+            flex:0 0 auto;
+            width:420px;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            z-index:2;
+        }
+        .about-hero-img img{
+            width:100%;
+            max-width:400px;
+            display:block;
+            filter:drop-shadow(0 8px 40px rgba(0,0,0,0.4));
+        }
+
+        /* ── Trust Strip ── */
+        .trust-strip{
+            background:#E8399A;
+            padding:14px 0;
+            overflow:hidden;
+        }
+        .trust-strip-inner{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            flex-wrap:wrap;
+            gap:12px 28px;
+            max-width:1100px;
+            margin:0 auto;
+            padding:0 24px;
+        }
+        .trust-item{
+            color:#fff;
+            font-family:'Bebas Neue',sans-serif;
+            font-size:15px;
+            letter-spacing:1.5px;
+            display:flex;
+            align-items:center;
+            gap:6px;
+            white-space:nowrap;
+        }
+
+        /* ── Stats Bar ── */
+        .stats-bar{
+            background:#F8F4FF;
+            padding:48px 0;
+        }
+        .stats-grid{
+            display:grid;
+            grid-template-columns:repeat(4,1fr);
+            gap:24px;
+            text-align:center;
+        }
+        .stat-item .stat-number{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:3.2rem;
+            color:#E8399A;
+            line-height:1;
+            margin-bottom:6px;
+        }
+        .stat-item .stat-label{
+            font-size:0.85rem;
+            color:#4a5568;
+            text-transform:uppercase;
+            letter-spacing:1px;
+            font-weight:600;
+        }
+
+        /* ── Story Section ── */
+        .story-section{
+            background:#fff;
+            padding:80px 0;
+        }
+        .story-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:60px;
+            align-items:center;
+        }
+        .story-text p{
+            font-size:1rem;
+            color:#4a5568;
+            line-height:1.8;
+            margin-bottom:18px;
+        }
+        .story-text p:last-child{margin-bottom:0}
+        .story-visual{
+            background:linear-gradient(135deg,#1E2D5A,#2a3f7a);
+            border-radius:16px;
+            padding:40px;
+            color:#fff;
+            position:relative;
+            overflow:hidden;
+        }
+        .story-visual::before{
+            content:'';
+            position:absolute;
+            top:-40px;right:-40px;
+            width:200px;height:200px;
+            background:rgba(232,57,154,0.15);
+            border-radius:50%;
+        }
+        .story-visual-quote{
+            font-size:1.15rem;
+            line-height:1.7;
+            font-style:italic;
+            color:rgba(255,255,255,0.9);
+            margin-bottom:24px;
+            position:relative;
+            z-index:1;
+        }
+        .story-visual-quote::before{
+            content:'"';
+            font-family:'Bebas Neue',sans-serif;
+            font-size:5rem;
+            color:#E8399A;
+            line-height:0.5;
+            display:block;
+            margin-bottom:12px;
+        }
+        .story-visual-sig{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.3rem;
+            color:#E8399A;
+            letter-spacing:1px;
+        }
+
+        /* ── Mission Section ── */
+        .mission-section{
+            background:#1E2D5A;
+            padding:80px 0;
+        }
+        .mission-section .section-title{color:#fff}
+        .mission-section .section-subtitle{color:rgba(255,255,255,0.75);margin-bottom:48px}
+        .mission-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:24px;
+        }
+        .mission-card{
+            background:rgba(255,255,255,0.07);
+            border:1px solid rgba(232,57,154,0.3);
+            border-radius:12px;
+            padding:32px 28px;
+            transition:transform 0.3s ease,border-color 0.3s ease;
+        }
+        .mission-card:hover{
+            transform:translateY(-4px);
+            border-color:#E8399A;
+        }
+        .mission-icon{
+            font-size:2.2rem;
+            margin-bottom:16px;
+        }
+        .mission-card h3{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.4rem;
+            color:#fff;
+            letter-spacing:1px;
+            margin-bottom:12px;
+        }
+        .mission-card p{
+            font-size:0.95rem;
+            color:rgba(255,255,255,0.75);
+            line-height:1.7;
+        }
+
+        /* ── Difference Section ── */
+        .difference-section{
+            background:#F8F4FF;
+            padding:80px 0;
+        }
+        .difference-grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:28px;
+            margin-top:48px;
+        }
+        .difference-card{
+            background:#fff;
+            border-radius:12px;
+            padding:32px 28px;
+            box-shadow:0 4px 20px rgba(30,45,90,0.08);
+            border-top:4px solid #E8399A;
+        }
+        .difference-card h3{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.4rem;
+            color:#1E2D5A;
+            letter-spacing:1px;
+            margin-bottom:14px;
+        }
+        .difference-card p{
+            font-size:0.95rem;
+            color:#4a5568;
+            line-height:1.7;
+        }
+
+        /* ── Guarantee Section ── */
+        .guarantee-section{
+            background:#fff;
+            padding:80px 0;
+        }
+        .guarantee-grid{
+            display:grid;
+            grid-template-columns:1fr 1fr;
+            gap:28px;
+            margin-top:48px;
+        }
+        .guarantee-card{
+            background:#F8F4FF;
+            border-radius:12px;
+            padding:36px 32px;
+            display:flex;
+            gap:20px;
+            align-items:flex-start;
+        }
+        .guarantee-icon{
+            font-size:2.4rem;
+            flex-shrink:0;
+            line-height:1;
+        }
+        .guarantee-card h3{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.4rem;
+            color:#1E2D5A;
+            letter-spacing:1px;
+            margin-bottom:10px;
+        }
+        .guarantee-card p{
+            font-size:0.95rem;
+            color:#4a5568;
+            line-height:1.7;
+        }
+
+        /* ── CTA Section ── */
+        .about-cta{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);
+            padding:80px 0;
+            text-align:center;
+        }
+        .about-cta h2{
+            font-family:'Bebas Neue',sans-serif;
+            font-size:clamp(2rem,5vw,3.5rem);
+            color:#fff;
+            margin-bottom:16px;
+        }
+        .about-cta h2 span{color:#E8399A}
+        .about-cta p{
+            font-size:1.1rem;
+            color:rgba(255,255,255,0.8);
+            margin-bottom:36px;
+            max-width:560px;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .cta-buttons{
+            display:flex;
+            gap:16px;
+            justify-content:center;
+            flex-wrap:wrap;
+        }
+        .btn-primary{
+            background:#E8399A;
+            color:#fff;
+            padding:16px 36px;
+            border-radius:8px;
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.2rem;
+            letter-spacing:1.5px;
+            text-decoration:none;
+            transition:all 0.3s ease;
+            display:inline-block;
+        }
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline{
+            background:transparent;
+            color:#fff;
+            padding:16px 36px;
+            border-radius:8px;
+            font-family:'Bebas Neue',sans-serif;
+            font-size:1.2rem;
+            letter-spacing:1.5px;
+            text-decoration:none;
+            border:2px solid rgba(255,255,255,0.5);
+            transition:all 0.3s ease;
+            display:inline-block;
+        }
+        .btn-outline:hover{border-color:#fff;background:rgba(255,255,255,0.1)}
+
+        /* ── Responsive ── */
+        @media(max-width:900px){
+            .story-grid{grid-template-columns:1fr}
+            .mission-grid{grid-template-columns:1fr}
+            .difference-grid{grid-template-columns:1fr}
+            .guarantee-grid{grid-template-columns:1fr}
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .about-hero-img{display:none}
+        }
+        @media(max-width:600px){
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .about-hero-copy h1{font-size:2.8rem}
+        }
+    </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
-        <div class="container">
-            <span>SERVING FRESNO & SURROUNDING AREAS</span>
-        </div>
-    </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <div class="nav-container">
-                <!-- Left Navigation -->
-                <div class="nav-left">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                    <div class="nav-dropdown">
-                        <a href="locations.html" class="nav-link dropdown-trigger">LOCATIONS</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-section">
-                                <a href="fresno/index.html" class="dropdown-city">Fresno</a>
-                                <a href="fresno/fig-garden/index.html" class="dropdown-neighborhood">Fig Garden</a>
-                                <a href="fresno/sunnyside/index.html" class="dropdown-neighborhood">Sunnyside</a>
-                                <a href="fresno/fig-garden-loop/index.html" class="dropdown-neighborhood">Fig Garden Loop</a>
-                                <a href="fresno/woodward-park/index.html" class="dropdown-neighborhood">Woodward Park</a>
-                                <a href="fresno/riverpark/index.html" class="dropdown-neighborhood">Riverpark</a>
-                                <a href="fresno/pinedale/index.html" class="dropdown-neighborhood">Pinedale</a>
-                                <a href="fresno/sierra-sky-park/index.html" class="dropdown-neighborhood">Sierra Sky Park</a>
-                                <a href="fresno/fort-washington/index.html" class="dropdown-neighborhood">Fort Washington</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="clovis/index.html" class="dropdown-city">Clovis</a>
-                                <a href="clovis/clovis-north/index.html" class="dropdown-neighborhood">Clovis North</a>
-                                <a href="clovis/cindy-lane/index.html" class="dropdown-neighborhood">Cindy Lane</a>
-                                <a href="clovis/dry-creek/index.html" class="dropdown-neighborhood">Dry Creek</a>
-                                <a href="clovis/clovis-high/index.html" class="dropdown-neighborhood">Clovis High</a>
-                                <a href="clovis/quail-lakes/index.html" class="dropdown-neighborhood">Quail Lakes</a>
-                                <a href="clovis/harlan-ranch/index.html" class="dropdown-neighborhood">Harlan Ranch</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="madera-ranchos/index.html" class="dropdown-city">Madera Ranchos</a>
-                                <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-neighborhood">Rolling Hills</a>
-                                <a href="madera-ranchos/riverstone/index.html" class="dropdown-neighborhood">Riverstone</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Center Logo -->
-                <div class="nav-center">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
-                    </a>
-                </div>
-
-                <!-- Right Navigation -->
-                <div class="nav-right">
-                    <a href="services.html" class="nav-link">SERVICES</a>
-                    <a href="index.html#pricing" class="nav-link">PRICING</a>
-                    <a href="index.html#contact" class="nav-link">CONTACT</a>
-                </div>
-
-                <!-- Mobile Hamburger Menu Button -->
-                <button class="hamburger-menu" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
-        <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">
-            ×
-        </button>
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-nav-link">HOME</a>
-            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
-            
-            <div class="mobile-dropdown-section">
-                <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
-                <a href="fresno/index.html" class="mobile-dropdown-main">Fresno</a>
-                <a href="fresno/fig-garden/index.html" class="mobile-dropdown-sub">Fig Garden</a>
-                <a href="fresno/sunnyside/index.html" class="mobile-dropdown-sub">Sunnyside</a>
-                <a href="fresno/woodward-park/index.html" class="mobile-dropdown-sub">Woodward Park</a>
-                <a href="fresno/fig-garden-loop/index.html" class="mobile-dropdown-sub">Fig Garden Loop</a>
-                <a href="fresno/riverpark/index.html" class="mobile-dropdown-sub">Riverpark</a>
-                <a href="fresno/pinedale/index.html" class="mobile-dropdown-sub">Pinedale</a>
-                <a href="fresno/sierra-sky-park/index.html" class="mobile-dropdown-sub">Sierra Sky Park</a>
-                <a href="fresno/fort-washington/index.html" class="mobile-dropdown-sub">Fort Washington</a>
-                
-                <a href="clovis/index.html" class="mobile-dropdown-main">Clovis</a>
-                <a href="clovis/clovis-north/index.html" class="mobile-dropdown-sub">Clovis North</a>
-                <a href="clovis/cindy-lane/index.html" class="mobile-dropdown-sub">Cindy Lane</a>
-                <a href="clovis/dry-creek/index.html" class="mobile-dropdown-sub">Dry Creek</a>
-                <a href="clovis/harlan-ranch/index.html" class="mobile-dropdown-sub">Harlan Ranch</a>
-                <a href="clovis/clovis-high/index.html" class="mobile-dropdown-sub">Clovis High</a>
-                <a href="clovis/quail-lakes/index.html" class="mobile-dropdown-sub">Quail Lakes</a>
-                
-                <a href="madera-ranchos/index.html" class="mobile-dropdown-main">Madera Ranchos</a>
-                <a href="madera-ranchos/rolling-hills/index.html" class="mobile-dropdown-sub">Rolling Hills</a>
-                <a href="madera-ranchos/riverstone/index.html" class="mobile-dropdown-sub">Riverstone</a>
-            </div>
-            
-            <a href="services.html" class="mobile-nav-link">SERVICES</a>
-            <a href="index.html#pricing" class="mobile-nav-link">PRICING</a>
-        </div>
-    </div>
+    <!-- Navigation will be loaded here by script -->
+    <header></header>
 
     <!-- Hero Section -->
     <section class="about-hero">
-        <div class="stars-container">
-            <div class="star star-1"></div>
-            <div class="star star-2"></div>
-            <div class="star star-3"></div>
-            <div class="star star-4"></div>
-            <div class="star star-5"></div>
-            <div class="star star-6"></div>
-            <div class="star star-7"></div>
-            <div class="star star-8"></div>
-            <div class="star star-9"></div>
-            <div class="star star-10"></div>
-            <div class="star star-11"></div>
-            <div class="star star-12"></div>
-            <div class="star star-13"></div>
-            <div class="star star-14"></div>
-            <div class="star star-15"></div>
-            <div class="star star-16"></div>
-            <div class="star star-17"></div>
-            <div class="star star-18"></div>
-            <div class="star star-19"></div>
-            <div class="star star-20"></div>
-            <div class="star star-21"></div>
-            <div class="star star-22"></div>
-            <div class="star star-23"></div>
-            <div class="star star-24"></div>
-            <div class="star star-25"></div>
-            <div class="star star-26"></div>
-            <div class="star star-27"></div>
-            <div class="star star-28"></div>
-            <div class="star star-29"></div>
-            <div class="star star-30"></div>
-            <div class="star star-31"></div>
-            <div class="star star-32"></div>
-            <div class="star star-33"></div>
-            <div class="star star-34"></div>
-            <div class="star star-35"></div>
-            <div class="star star-36"></div>
-        </div>
-        <div class="hero-content">
-            <h1>ABOUT US</h1>
-            <p class="hero-subtitle">High-Quality Mobile Oil Changes</p>
-            <p class="hero-tagline">Your Convenience Is Our Ultimate Goal!</p>
-        </div>
-    </section>
-
-    <!-- Intro Section -->
-    <section class="about-intro">
-        <div class="container">
-            <h2>Reliable Service for All!</h2>
-            <p class="intro-text">As a local, family-owned mobile oil change service in Fresno, CA, I, Mike, prioritize your convenience, bringing expert care right to your doorstep with trusted, reliable solutions tailored to our community's needs.</p>
-            <p class="intro-text">I only use premium oils and filters, ensuring your vehicle receives top-notch care with meticulous attention to detail. I perform each service efficiently, leaving no mess behind, so your car runs smoothly and your space stays spotless. With a focus on professionalism and expertise, I provide reliable maintenance you can trust, right at your doorstep.</p>
-        </div>
-    </section>
-
-    <!-- Stats Section -->
-    <section class="stats-section">
-        <div class="container">
-            <h2>Some Cool Facts</h2>
-            <p class="section-subtitle">Numbers Speak For Themselves</p>
-            <div class="stats-grid">
-                <div class="stat-card">
-                    <div class="stat-number">124</div>
-                    <div class="stat-label">Oil Changes In 2025</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">7</div>
-                    <div class="stat-label">Certifications Held</div>
-                </div>
-                <div class="stat-card">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">In Your Heart</div>
-                </div>
+        <div class="about-hero-inner">
+            <div class="about-hero-copy">
+                <span class="section-label">FRESNO'S MOBILE OIL CHANGE EXPERT</span>
+                <h1>The Story<br>Behind <span>Mikey</span><br>Mobile</h1>
+                <p>A local, family-owned business built on one simple idea: your time is too valuable to spend in a waiting room. We bring certified, professional oil changes directly to your driveway or office.</p>
+            </div>
+            <div class="about-hero-img">
+                <img src="/pink-full-gear.png" alt="Mikey Mobile Oil Change logo">
             </div>
         </div>
     </section>
 
-    <!-- Quality First Section -->
-    <section class="quality-section">
-        <div class="container">
-            <h2>Quality Comes First!</h2>
-            <p class="quality-text">At our Fresno, CA family-owned mobile oil change service, quality is our top priority! We ensure every detail of your oil change is meticulously handled during each service, using premium oils and filters.</p>
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">🎁 Free Labor — New Customers</span>
+            <span class="trust-item">🚗 We Come to Your Driveway</span>
+            <span class="trust-item">⏱️ Done in 30 Minutes</span>
+            <span class="trust-item">💰 Transparent Pricing</span>
+            <span class="trust-item">✅ Same-Day Available</span>
         </div>
-    </section>
+    </div>
 
-    <!-- Guarantees Section -->
-    <section class="guarantees-section">
+    <!-- Stats Bar -->
+    <section class="stats-bar">
         <div class="container">
-            <div class="guarantee-grid">
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">✓</div>
-                    <h3>100% Customer Satisfaction Guaranteed</h3>
-                    <p>That's right, we'll come put your old oil back in your car free of charge…just kidding! We aim to please. If for any reason you are unhappy with your service, we will waive the labor fee to change your oil.</p>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">124+</div>
+                    <div class="stat-label">Oil Changes Completed</div>
                 </div>
-                <div class="guarantee-card">
-                    <div class="guarantee-icon">🛢️</div>
-                    <h3>Clean Oil Changes</h3>
-                    <p>That's right, Mikey Mobile uses state-of-the-art equipment that helps reduce and in some cases eliminate any oil spillage. We'll transfer your old oil into a secure container and dispose of it all without making a mess.</p>
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Certifications Held</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Customer Satisfaction</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">30 Min</div>
+                    <div class="stat-label">Average Service Time</div>
                 </div>
             </div>
         </div>
@@ -228,33 +422,45 @@
     <!-- Story Section -->
     <section class="story-section">
         <div class="container">
-            <h2>Our Story: From Passion to Profession</h2>
-            <p>My journey into the automotive world began long before Mikey Mobile Oil Change became a reality. Like many in the Central Valley, I grew up with a deep appreciation for the vehicles that connect us—from the family minivan loaded up for a trip to Shaver Lake, to the hardworking trucks that power our agricultural heartland. My fascination started not in a garage, but in the driveway, watching my father meticulously care for our family's cars. He taught me that regular maintenance wasn't just a chore; it was an act of responsibility, a way of ensuring safety and reliability for the people you love. That lesson stuck with me.</p>
-            
-            <p>For years, I worked in traditional auto shops and dealerships. While I honed my technical skills and earned multiple certifications, I grew increasingly frustrated with the industry's status quo. I saw customers forced to burn through their precious PTO or waste a beautiful Saturday morning just for a routine 30-minute service. I saw confusing invoices, impersonal interactions, and a general disconnect between the service provider and the vehicle owner. The process was broken. It was inefficient, inconvenient, and often, intimidating.</p>
-            
-            <p>I knew there had to be a better way. The idea for Mikey Mobile Oil Change was born from a desire to solve this problem directly. Why force Fresno drivers to come to the shop when the shop could come to them? I envisioned a service that combined the technical expertise of a dealership with the personalized care of a trusted neighborhood mechanic. I invested in state-of-the-art, spill-proof oil extraction equipment, sourced the highest quality synthetic and conventional oils, and designed a mobile workshop capable of delivering pristine, professional service anywhere in Fresno, Clovis, and the surrounding areas. This isn't just a business to me; it's the culmination of a lifelong passion and a commitment to serving my community with integrity and innovation.</p>
+            <div class="story-grid">
+                <div class="story-text">
+                    <span class="section-label">OUR STORY</span>
+                    <h2 class="section-title">From the Driveway<br>to <span>Your</span> Driveway</h2>
+                    <p>My journey into the automotive world started long before Mikey Mobile became a reality. Growing up in the Central Valley, I watched my father meticulously care for our family's vehicles — teaching me that regular maintenance wasn't just a chore, it was an act of responsibility for the people you love.</p>
+                    <p>After years working in traditional auto shops and dealerships, I grew frustrated watching customers burn through their PTO or waste a Saturday morning for a routine 30-minute service. The process was broken — inefficient, inconvenient, and often intimidating.</p>
+                    <p>I knew there had to be a better way. Why force Fresno drivers to come to the shop when the shop could come to them? Mikey Mobile was born from that idea — combining dealership-level expertise with the personal care of a trusted neighborhood mechanic, delivered right to your door.</p>
+                </div>
+                <div class="story-visual">
+                    <div class="story-visual-quote">
+                        This isn't just a business to me. It's the culmination of a lifelong passion and a commitment to serving my community with integrity and innovation.
+                    </div>
+                    <div class="story-visual-sig">— Mike, Founder of Mikey Mobile</div>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Mission Section -->
     <section class="mission-section">
         <div class="container">
-            <h2>Our Mission: Convenience, Quality, and Community</h2>
-            <p class="mission-intro">At Mikey Mobile Oil Change, our mission is to deliver an unparalleled vehicle maintenance experience by providing exceptional, convenient, and transparent service directly to our customers. We are driven by three core principles:</p>
-            
+            <span class="section-label">OUR MISSION</span>
+            <h2 class="section-title" style="color:#fff">Three Principles That<br>Drive <span>Everything We Do</span></h2>
+            <p class="section-subtitle">At Mikey Mobile, every decision comes back to three core commitments we make to every customer.</p>
             <div class="mission-grid">
                 <div class="mission-card">
-                    <h3>🚗 Your Convenience Is Our Command</h3>
-                    <p>We are relentlessly focused on saving you time and effort. Our service is designed to integrate seamlessly into your life, not disrupt it. Whether we're servicing your car in your driveway while you relax with your family or in your office parking lot while you close a deal, our goal is to make vehicle maintenance a background task that you no longer have to stress about.</p>
+                    <div class="mission-icon">🚗</div>
+                    <h3>Your Convenience Is Our Command</h3>
+                    <p>Our service is designed to integrate seamlessly into your life, not disrupt it. Whether we're servicing your car in your driveway while you relax with your family, or in your office parking lot while you close a deal — vehicle maintenance should be a background task, not a chore.</p>
                 </div>
                 <div class="mission-card">
-                    <h3>⭐ Uncompromising Quality is Our Standard</h3>
-                    <p>We firmly believe that convenience should never come at the expense of quality. That's why I only use premium, API-certified oils and top-tier filters from industry-leading brands like Valvoline, Mobile 1, K&N, and ACDelco. Every service is performed with meticulous attention to detail, following manufacturer specifications to the letter. Your vehicle is a significant investment, and we treat it with the world-class care it deserves.</p>
+                    <div class="mission-icon">⭐</div>
+                    <h3>Uncompromising Quality Is Our Standard</h3>
+                    <p>Convenience should never come at the expense of quality. We only use premium, API-certified oils and top-tier filters from brands like Valvoline, Mobil 1, K&N, and ACDelco. Every service follows manufacturer specifications to the letter — because your vehicle deserves world-class care.</p>
                 </div>
                 <div class="mission-card">
-                    <h3>🤝 Building Trust Through Transparency</h3>
-                    <p>We are committed to fostering a relationship of trust with every customer. This begins with honest, upfront pricing. There are no hidden fees, no confusing jargon, and no upselling pressure. Before any work begins, we provide a clear, easy-to-understand quote. We also take the time to answer your questions, explain the service, and provide professional recommendations.</p>
+                    <div class="mission-icon">🤝</div>
+                    <h3>Building Trust Through Transparency</h3>
+                    <p>No hidden fees, no confusing jargon, no upselling pressure. Before any work begins, you receive a clear, easy-to-understand quote. We take the time to answer your questions and explain exactly what we're doing — because trust is the most important thing we can earn.</p>
                 </div>
             </div>
         </div>
@@ -263,23 +469,50 @@
     <!-- Difference Section -->
     <section class="difference-section">
         <div class="container">
-            <h2>The Mikey Mobile Difference</h2>
-            <p class="section-subtitle">Clean, Certified, and Customer-Focused</p>
-            
-            <div class="difference-content">
-                <div class="difference-item">
-                    <h3>State-of-the-Art Cleanliness</h3>
-                    <p>One of the biggest concerns with at-home service is the potential for a mess. We've eliminated that worry. Mikey Mobile uses a closed-loop, fluid extraction system that transfers old oil directly from your engine into a secure, environmentally-safe containment unit. This cutting-edge technology dramatically reduces, and in most cases completely eliminates, the risk of any drips or spills on your driveway or parking space. We take immense pride in leaving your space absolutely spotless—the only evidence we were there will be the new service sticker on your windshield and the smooth performance of your engine.</p>
+            <div style="text-align:center;margin-bottom:0">
+                <span class="section-label">THE MIKEY MOBILE DIFFERENCE</span>
+                <h2 class="section-title" style="margin:0 auto 12px">Clean, Certified &amp;<br><span>Customer-Focused</span></h2>
+                <p class="section-subtitle" style="margin:0 auto">Here's what sets us apart from every other oil change option in Fresno and Clovis.</p>
+            </div>
+            <div class="difference-grid">
+                <div class="difference-card">
+                    <h3>🧹 State-of-the-Art Cleanliness</h3>
+                    <p>We use a closed-loop fluid extraction system that transfers old oil directly from your engine into a secure, environmentally-safe containment unit. This technology eliminates drips or spills on your driveway. The only evidence we were there? A new service sticker and a smoothly running engine.</p>
                 </div>
-                
-                <div class="difference-item">
-                    <h3>Certified Expertise at Your Door</h3>
-                    <p>I am not just a car enthusiast; I am a certified automotive technician with 7 industry-recognized certifications. My expertise covers a wide range of domestic and foreign vehicles, from GM and Ford to Toyota, Honda, and European makes like Mercedes-Benz and BMW. This level of professionalism ensures that your vehicle is serviced correctly, adhering to the highest industry standards, every single time.</p>
+                <div class="difference-card">
+                    <h3>🎓 Certified Expertise at Your Door</h3>
+                    <p>Mike holds 7 industry-recognized certifications covering a wide range of domestic and foreign vehicles — from GM and Ford to Toyota, Honda, and European makes like Mercedes-Benz and BMW. Your vehicle is serviced correctly, to the highest industry standards, every single time.</p>
                 </div>
-                
-                <div class="difference-item">
-                    <h3>Our 100% Satisfaction Guarantee</h3>
-                    <p>We aim to please, and we stand behind our work with confidence. Our guarantee is simple: if for any reason you are unhappy with the quality of our service, we will waive the labor fee. We are dedicated to ensuring every customer is completely satisfied, and we will always go the extra mile to make things right. Your trust is the most important thing we can earn.</p>
+                <div class="difference-card">
+                    <h3>🛡️ 100% Satisfaction Guarantee</h3>
+                    <p>We stand behind our work with confidence. If for any reason you are unhappy with the quality of our service, we will waive the labor fee — no questions asked. We are dedicated to ensuring every customer is completely satisfied, and we will always go the extra mile to make things right.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee-section">
+        <div class="container">
+            <div style="text-align:center;margin-bottom:0">
+                <span class="section-label">OUR PROMISES TO YOU</span>
+                <h2 class="section-title" style="margin:0 auto 12px">What You Can Always<br><span>Count On</span></h2>
+                <p class="section-subtitle" style="margin:0 auto">Every service comes with these two non-negotiable commitments.</p>
+            </div>
+            <div class="guarantee-grid">
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">✅</div>
+                    <div>
+                        <h3>100% Customer Satisfaction Guaranteed</h3>
+                        <p>We aim to please — and we back it up. If for any reason you're unhappy with your service, we will waive the labor fee. No hassle, no argument. Your satisfaction is our reputation, and we protect it on every single job.</p>
+                    </div>
+                </div>
+                <div class="guarantee-card">
+                    <div class="guarantee-icon">🛢️</div>
+                    <div>
+                        <h3>Spotless, Mess-Free Service Every Time</h3>
+                        <p>Mikey Mobile uses state-of-the-art extraction equipment that eliminates oil spillage. We transfer your old oil into a secure container and dispose of it responsibly — leaving your driveway exactly as we found it. Clean service is not optional; it's our standard.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -288,63 +521,20 @@
     <!-- CTA Section -->
     <section class="about-cta">
         <div class="container">
-            <h2>Ready to Experience the Difference?</h2>
-            <p>Join the growing family of satisfied Fresno drivers who have discovered a better way to care for their vehicles.</p>
-            <a href="#" class="btn btn-primary book-now-btn">BOOK NOW</a>
+            <h2>Ready to Experience<br><span>The Difference?</span></h2>
+            <p>Join the growing family of Fresno and Clovis drivers who've discovered a better way to care for their vehicles. Book in 60 seconds — no waiting room required.</p>
+            <div class="cta-buttons">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline">CALL (559) 838-4267</a>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="index.html#services" class="footer-link">Services</a>
-                    <a href="index.html#pricing" class="footer-link">Pricing</a>
-                    <a href="index.html#contact" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <a href="tel:559-838-4267" class="footer-phone">(559) 838-4267</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mikey Mobile Oil Change. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
 
-    <!-- Booking Form Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/RYMWwwaJ9YuDfpuPwaPL"
-                    style="width:100%;height:100%;border:none;border-radius:3px"
-                    id="inline-RYMWwwaJ9YuDfpuPwaPL" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Marketing Form - Claim Offer"
-                    data-height="888"
-                    data-layout-iframe-id="inline-RYMWwwaJ9YuDfpuPwaPL"
-                    data-form-id="RYMWwwaJ9YuDfpuPwaPL"
-                    title="Marketing Form - Claim Offer">
-                </iframe>
-                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

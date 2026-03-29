@@ -1,0 +1,1010 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Oil Change Price Estimates — Mikey Mobile</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: #fff;
+      color: #111;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    /* TOP BAR */
+    .top-bar {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+    }
+    .top-bar a { color: #FFD700; text-decoration: none; }
+
+    /* HERO */
+    .hero {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 50px 24px 40px;
+    }
+    .hero h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(36px, 7vw, 64px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 14px;
+    }
+    .hero h1 span { color: #FFD700; }
+    .hero p {
+      font-size: 20px;
+      color: #ccc;
+      max-width: 640px;
+      margin: 0 auto 28px;
+    }
+    .hero .formula {
+      display: inline-block;
+      background: #222;
+      border: 2px solid #FFD700;
+      border-radius: 8px;
+      padding: 16px 28px;
+      font-size: 18px;
+      color: #fff;
+      margin-bottom: 28px;
+    }
+    .hero .formula strong { color: #FFD700; }
+
+    /* CTA BUTTON */
+    .btn-cta {
+      display: inline-block;
+      background: #E00;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 18px 44px;
+      border-radius: 6px;
+      text-decoration: none;
+      box-shadow: 0 6px 20px rgba(220,0,0,0.4);
+      transition: background 0.2s, transform 0.15s;
+    }
+    .btn-cta:hover { background: #b00; transform: translateY(-2px); }
+
+    /* BRAND NAV */
+    .brand-nav {
+      background: #fff;
+      padding: 16px 24px;
+      text-align: center;
+      border-bottom: 2px solid #eee;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+    }
+    .brand-btn {
+      display: inline-block;
+      background: #111;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 15px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 8px 18px;
+      border-radius: 4px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .brand-btn:hover { background: #E00; }
+
+    /* MAIN */
+    .main { max-width: 1000px; margin: 0 auto; padding: 40px 24px 60px; }
+
+    .brand-section { margin-bottom: 52px; }
+    .brand-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 32px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #111;
+      border-left: 6px solid #E00;
+      padding-left: 14px;
+      margin-bottom: 18px;
+    }
+
+    /* TABLE */
+    .table-wrap { overflow-x: auto; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 17px;
+    }
+    thead tr {
+      background: #111;
+      color: #fff;
+    }
+    thead th {
+      font-family: 'Oswald', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+    tbody tr { border-bottom: 1px solid #eee; }
+    tbody tr:hover { background: #fffbf0; }
+    tbody td { padding: 11px 14px; color: #222; }
+    .total {
+      font-family: 'Oswald', sans-serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: #E00 !important;
+    }
+    .ev-row td { color: #888; font-style: italic; }
+    .ev-badge {
+      color: #2a7a2a !important;
+      font-style: normal !important;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    /* FOOTER CTA */
+    .footer-cta {
+      background: #111;
+      color: #fff;
+      text-align: center;
+      padding: 50px 24px;
+    }
+    .footer-cta h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(28px, 5vw, 46px);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .footer-cta p { font-size: 19px; color: #ccc; margin-bottom: 28px; }
+    .footer-cta .fine { font-size: 14px; color: #666; margin-top: 14px; }
+
+    footer {
+      background: #000;
+      color: #555;
+      text-align: center;
+      padding: 20px;
+      font-size: 13px;
+    }
+    footer a { color: #777; text-decoration: none; }
+
+    @media (max-width: 600px) {
+      table { font-size: 15px; }
+      thead th { padding: 10px 8px; font-size: 13px; }
+      tbody td { padding: 9px 8px; }
+      .total { font-size: 17px; }
+      .brand-title { font-size: 26px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="top-bar">
+  Serving Fresno, Clovis &amp; Surrounding Areas &nbsp;|&nbsp;
+  <a href="tel:5598384267">(559) 838-4267</a>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <h1>Oil Change<br /><span>Price Estimates</span></h1>
+  <p>Use the estimates below to get a general idea of your oil and filter cost. <strong>These are estimates only</strong> — actual pricing may vary based on your specific vehicle, model year, and oil preference. For an official quote, call or click below.</p>
+  <div class="formula">
+    <strong>Oil</strong> ($8.00/qt) &nbsp;+&nbsp; <strong>Filter</strong> ($15.00) &nbsp;=&nbsp; <strong>Estimated Total</strong>
+  </div>
+  <br />
+  <a href="tel:5598384267" class="btn-cta">Get an Official Estimate — (559) 838-4267</a>
+</div>
+
+<!-- DISCLAIMER BANNER -->
+<div style="background:#fff8e1; border-top:3px solid #FFD700; border-bottom:3px solid #FFD700; padding:14px 24px; text-align:center; font-size:16px; color:#555;">
+  ⚠️ <strong>These are estimates only.</strong> Actual cost may vary based on your vehicle's model year, engine, and oil preference. <a href="tel:5598384267" style="color:#E00; font-weight:700;">Call (559) 838-4267</a> or click below for your official estimate.
+</div>
+
+<!-- BRAND NAV -->
+<nav class="brand-nav">
+  <a href="#toyota" class="brand-btn">Toyota</a>
+    <a href="#honda" class="brand-btn">Honda</a>
+    <a href="#chevrolet" class="brand-btn">Chevrolet</a>
+    <a href="#ford" class="brand-btn">Ford</a>
+    <a href="#subaru" class="brand-btn">Subaru</a>
+    <a href="#dodge" class="brand-btn">Dodge</a>
+    <a href="#chrysler" class="brand-btn">Chrysler</a>
+    <a href="#lincoln" class="brand-btn">Lincoln</a>
+    <a href="#volkswagen" class="brand-btn">Volkswagen</a>
+    
+</nav>
+
+<!-- PRICING TABLES -->
+<div class="main" id="pricingMain">
+
+  <div class="brand-section" id="toyota">
+    <h2 class="brand-title">Toyota</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>RAV4</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.6 qts</td>
+          <td>$36.80</td>
+          <td>$15.00</td>
+          <td class="total">$51.80</td>
+        </tr>
+        <tr>
+          <td><strong>Camry (4-cyl)</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.6 qts</td>
+          <td>$36.80</td>
+          <td>$15.00</td>
+          <td class="total">$51.80</td>
+        </tr>
+        <tr>
+          <td><strong>Camry (V6)</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.4 qts</td>
+          <td>$51.20</td>
+          <td>$15.00</td>
+          <td class="total">$66.20</td>
+        </tr>
+        <tr>
+          <td><strong>Corolla</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.4 qts</td>
+          <td>$35.20</td>
+          <td>$15.00</td>
+          <td class="total">$50.20</td>
+        </tr>
+        <tr>
+          <td><strong>Tacoma</strong></td>
+          <td>0W-20 / 5W-30 full synthetic</td>
+          <td>6.1 qts</td>
+          <td>$48.80</td>
+          <td>$15.00</td>
+          <td class="total">$63.80</td>
+        </tr>
+        <tr>
+          <td><strong>Highlander</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.4 qts</td>
+          <td>$51.20</td>
+          <td>$15.00</td>
+          <td class="total">$66.20</td>
+        </tr>
+        <tr>
+          <td><strong>Tundra</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>7.9 qts</td>
+          <td>$63.20</td>
+          <td>$15.00</td>
+          <td class="total">$78.20</td>
+        </tr>
+        <tr>
+          <td><strong>4Runner</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.6 qts</td>
+          <td>$52.80</td>
+          <td>$15.00</td>
+          <td class="total">$67.80</td>
+        </tr>
+        <tr>
+          <td><strong>Corolla Cross</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.4 qts</td>
+          <td>$35.20</td>
+          <td>$15.00</td>
+          <td class="total">$50.20</td>
+        </tr>
+        <tr>
+          <td><strong>Sienna</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.4 qts</td>
+          <td>$51.20</td>
+          <td>$15.00</td>
+          <td class="total">$66.20</td>
+        </tr>
+        <tr>
+          <td><strong>Prius</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.4 qts</td>
+          <td>$35.20</td>
+          <td>$15.00</td>
+          <td class="total">$50.20</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="honda">
+    <h2 class="brand-title">Honda</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>CR-V</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.2 qts</td>
+          <td>$33.60</td>
+          <td>$15.00</td>
+          <td class="total">$48.60</td>
+        </tr>
+        <tr>
+          <td><strong>Civic</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>3.9 qts</td>
+          <td>$31.20</td>
+          <td>$15.00</td>
+          <td class="total">$46.20</td>
+        </tr>
+        <tr>
+          <td><strong>Accord</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.4 qts</td>
+          <td>$35.20</td>
+          <td>$15.00</td>
+          <td class="total">$50.20</td>
+        </tr>
+        <tr>
+          <td><strong>HR-V</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>3.9 qts</td>
+          <td>$31.20</td>
+          <td>$15.00</td>
+          <td class="total">$46.20</td>
+        </tr>
+        <tr>
+          <td><strong>Pilot</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Odyssey</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.5 qts</td>
+          <td>$36.00</td>
+          <td>$15.00</td>
+          <td class="total">$51.00</td>
+        </tr>
+        <tr>
+          <td><strong>Passport</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr class="ev-row">
+          <td><strong>Prologue</strong></td>
+          <td>Electric vehicle</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="ev-badge">⚡ Electric — No Oil Needed</td>
+        </tr>
+        <tr>
+          <td><strong>Ridgeline</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Prelude</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>3.9 qts</td>
+          <td>$31.20</td>
+          <td>$15.00</td>
+          <td class="total">$46.20</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="chevrolet">
+    <h2 class="brand-title">Chevrolet</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Silverado (V8)</strong></td>
+          <td>5W-30 / 0W-20 full synthetic</td>
+          <td>8.5 qts</td>
+          <td>$68.00</td>
+          <td>$15.00</td>
+          <td class="total">$83.00</td>
+        </tr>
+        <tr>
+          <td><strong>Silverado (V6)</strong></td>
+          <td>5W-30 / 0W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Equinox</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>5.0 qts</td>
+          <td>$40.00</td>
+          <td>$15.00</td>
+          <td class="total">$55.00</td>
+        </tr>
+        <tr>
+          <td><strong>Trax</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>4.2 qts</td>
+          <td>$33.60</td>
+          <td>$15.00</td>
+          <td class="total">$48.60</td>
+        </tr>
+        <tr>
+          <td><strong>Traverse</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Tahoe</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>8.0 qts</td>
+          <td>$64.00</td>
+          <td>$15.00</td>
+          <td class="total">$79.00</td>
+        </tr>
+        <tr>
+          <td><strong>Blazer</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Malibu</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>5.0 qts</td>
+          <td>$40.00</td>
+          <td>$15.00</td>
+          <td class="total">$55.00</td>
+        </tr>
+        <tr>
+          <td><strong>Colorado</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Suburban</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>8.0 qts</td>
+          <td>$64.00</td>
+          <td>$15.00</td>
+          <td class="total">$79.00</td>
+        </tr>
+        <tr class="ev-row">
+          <td><strong>Bolt</strong></td>
+          <td>Electric vehicle</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="ev-badge">⚡ Electric — No Oil Needed</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="ford">
+    <h2 class="brand-title">Ford</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>F-150</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>7.7 qts</td>
+          <td>$61.60</td>
+          <td>$15.00</td>
+          <td class="total">$76.60</td>
+        </tr>
+        <tr>
+          <td><strong>Explorer</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Escape</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>4.3 qts</td>
+          <td>$34.40</td>
+          <td>$15.00</td>
+          <td class="total">$49.40</td>
+        </tr>
+        <tr>
+          <td><strong>Maverick</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Bronco (2.3L)</strong></td>
+          <td>0W-30 full synthetic</td>
+          <td>7.0 qts</td>
+          <td>$56.00</td>
+          <td>$15.00</td>
+          <td class="total">$71.00</td>
+        </tr>
+        <tr>
+          <td><strong>Transit</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Edge</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Mustang</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Ranger</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.2 qts</td>
+          <td>$49.60</td>
+          <td>$15.00</td>
+          <td class="total">$64.60</td>
+        </tr>
+        <tr>
+          <td><strong>Expedition</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="subaru">
+    <h2 class="brand-title">Subaru</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Crosstrek</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.1 qts</td>
+          <td>$40.80</td>
+          <td>$15.00</td>
+          <td class="total">$55.80</td>
+        </tr>
+        <tr>
+          <td><strong>Forester</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.1 qts</td>
+          <td>$40.80</td>
+          <td>$15.00</td>
+          <td class="total">$55.80</td>
+        </tr>
+        <tr>
+          <td><strong>Outback</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.1 qts</td>
+          <td>$40.80</td>
+          <td>$15.00</td>
+          <td class="total">$55.80</td>
+        </tr>
+        <tr>
+          <td><strong>Ascent</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.8 qts</td>
+          <td>$38.40</td>
+          <td>$15.00</td>
+          <td class="total">$53.40</td>
+        </tr>
+        <tr>
+          <td><strong>Impreza</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.1 qts</td>
+          <td>$40.80</td>
+          <td>$15.00</td>
+          <td class="total">$55.80</td>
+        </tr>
+        <tr>
+          <td><strong>Legacy</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.1 qts</td>
+          <td>$40.80</td>
+          <td>$15.00</td>
+          <td class="total">$55.80</td>
+        </tr>
+        <tr class="ev-row">
+          <td><strong>Solterra</strong></td>
+          <td>Electric vehicle</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="ev-badge">⚡ Electric — No Oil Needed</td>
+        </tr>
+        <tr>
+          <td><strong>WRX</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>4.4 qts</td>
+          <td>$35.20</td>
+          <td>$15.00</td>
+          <td class="total">$50.20</td>
+        </tr>
+        <tr>
+          <td><strong>BRZ</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="dodge">
+    <h2 class="brand-title">Dodge</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Durango</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>7.0 qts</td>
+          <td>$56.00</td>
+          <td>$15.00</td>
+          <td class="total">$71.00</td>
+        </tr>
+        <tr>
+          <td><strong>Hornet</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.0 qts</td>
+          <td>$40.00</td>
+          <td>$15.00</td>
+          <td class="total">$55.00</td>
+        </tr>
+        <tr>
+          <td><strong>Charger</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>7.0 qts</td>
+          <td>$56.00</td>
+          <td>$15.00</td>
+          <td class="total">$71.00</td>
+        </tr>
+        <tr>
+          <td><strong>Challenger</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="chrysler">
+    <h2 class="brand-title">Chrysler</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Pacifica</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.0 qts</td>
+          <td>$40.00</td>
+          <td>$15.00</td>
+          <td class="total">$55.00</td>
+        </tr>
+        <tr>
+          <td><strong>Voyager</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>5.0 qts</td>
+          <td>$40.00</td>
+          <td>$15.00</td>
+          <td class="total">$55.00</td>
+        </tr>
+        <tr>
+          <td><strong>300</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="lincoln">
+    <h2 class="brand-title">Lincoln</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Nautilus</strong></td>
+          <td>5W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Corsair</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>5.7 qts</td>
+          <td>$45.60</td>
+          <td>$15.00</td>
+          <td class="total">$60.60</td>
+        </tr>
+        <tr>
+          <td><strong>Aviator</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Navigator</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="brand-section" id="volkswagen">
+    <h2 class="brand-title">Volkswagen</h2>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Vehicle</th>
+            <th>Oil Type</th>
+            <th>Quarts</th>
+            <th>Oil Cost</th>
+            <th>Filter</th>
+            <th>Est. Total</th>
+          </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><strong>Tiguan</strong></td>
+          <td>5W-40 full synthetic</td>
+          <td>5.8 qts</td>
+          <td>$46.40</td>
+          <td>$15.00</td>
+          <td class="total">$61.40</td>
+        </tr>
+        <tr>
+          <td><strong>Atlas</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Taos</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>4.8 qts</td>
+          <td>$38.40</td>
+          <td>$15.00</td>
+          <td class="total">$53.40</td>
+        </tr>
+        <tr>
+          <td><strong>Jetta</strong></td>
+          <td>5W-30 full synthetic</td>
+          <td>5.8 qts</td>
+          <td>$46.40</td>
+          <td>$15.00</td>
+          <td class="total">$61.40</td>
+        </tr>
+        <tr class="ev-row">
+          <td><strong>ID.4</strong></td>
+          <td>Electric vehicle</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="ev-badge">⚡ Electric — No Oil Needed</td>
+        </tr>
+        <tr>
+          <td><strong>Golf GTI</strong></td>
+          <td>5W-40 full synthetic</td>
+          <td>5.8 qts</td>
+          <td>$46.40</td>
+          <td>$15.00</td>
+          <td class="total">$61.40</td>
+        </tr>
+        <tr>
+          <td><strong>Atlas Cross Sport</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr>
+          <td><strong>Golf R</strong></td>
+          <td>5W-40 full synthetic</td>
+          <td>5.8 qts</td>
+          <td>$46.40</td>
+          <td>$15.00</td>
+          <td class="total">$61.40</td>
+        </tr>
+        <tr>
+          <td><strong>Arteon</strong></td>
+          <td>0W-20 full synthetic</td>
+          <td>6.0 qts</td>
+          <td>$48.00</td>
+          <td>$15.00</td>
+          <td class="total">$63.00</td>
+        </tr>
+        <tr class="ev-row">
+          <td><strong>ID.Buzz</strong></td>
+          <td>Electric vehicle</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td class="ev-badge">⚡ Electric — No Oil Needed</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER CTA -->
+<div class="footer-cta">
+  <h2>Ready for Your<br />Official Estimate?</h2>
+  <p>The prices above are estimates to give you a ballpark before you commit to anything. Call or click and we'll confirm your exact oil type, filter, and total cost in under 2 minutes. No obligation, no credit card required.</p>
+  <a href="tel:5598384267" class="btn-cta">Get an Official Estimate — (559) 838-4267</a>
+  <p class="fine">No obligation &bull; No credit card required &bull; Same-day appointments often available</p>
+</div>
+
+<footer>
+  <p>&copy; 2025 Mikey Mobile Oil Change &bull; Fresno, CA &bull;
+    <a href="https://mikeymobile.com">mikeymobile.com</a> &bull;
+    <a href="tel:5598384267">(559) 838-4267</a>
+  </p>
+</footer>
+
+
+
+</body>
+</html>

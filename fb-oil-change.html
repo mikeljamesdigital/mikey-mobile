@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>FREE Mobile Oil Change | Mikey Mobile Oil Change — Fresno, CA</title>
+  <meta name="description" content="Claim your FREE mobile oil change in Fresno, Clovis & the Central Valley. Pay for oil and filter only — avg. $60. We come to you. No waiting rooms. Book now." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #1A1A2E; line-height: 1.6; }
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; }
+
+    /* ── PALETTE ──
+       Primary:   Hot Pink    #E8399A
+       Secondary: Deep Navy   #1E2D5A
+       Accent 1:  Soft White  #F8F4FF
+       Accent 2:  Coral Pink  #FF6BB5
+    */
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      background: #1E2D5A;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .top-bar a { color: #FF6BB5; font-weight: 700; }
+
+    /* ── NAV ── */
+    .nav {
+      background: #1E2D5A;
+      border-bottom: 3px solid #E8399A;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 40px;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .nav-logo { height: 60px; width: auto; }
+    .nav-cta {
+      background: #E8399A;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      letter-spacing: 1px;
+      padding: 12px 28px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .nav-cta:hover { background: #c82d87; }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #1E2D5A 0%, #2a3f7a 50%, #1E2D5A 100%);
+      color: #fff;
+      padding: 60px 40px 0;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 40px;
+      align-items: flex-end;
+    }
+    .hero-badge {
+      display: inline-block;
+      background: #E8399A;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 16px;
+      letter-spacing: 2px;
+      padding: 6px 18px;
+      border-radius: 4px;
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(52px, 7vw, 88px);
+      line-height: 1;
+      margin-bottom: 10px;
+    }
+    .hero h1 .accent { color: #E8399A; }
+    .hero h1 .accent2 { color: #FF6BB5; }
+    .hero-sub {
+      font-size: 22px;
+      font-weight: 600;
+      color: #c8d8ff;
+      margin-bottom: 16px;
+    }
+    .hero-desc {
+      font-size: 18px;
+      color: #a8b8e8;
+      margin-bottom: 32px;
+      max-width: 520px;
+    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 40px; }
+    .btn-primary {
+      background: #E8399A;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.1s;
+      display: inline-block;
+    }
+    .btn-primary:hover { background: #c82d87; transform: translateY(-2px); }
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 22px;
+      letter-spacing: 1px;
+      padding: 16px 36px;
+      border-radius: 8px;
+      border: 2px solid #fff;
+      cursor: pointer;
+      transition: background 0.2s;
+      display: inline-block;
+    }
+    .btn-outline:hover { background: rgba(255,255,255,0.1); }
+    .hero-character {
+      align-self: flex-end;
+      max-height: 500px;
+      width: auto;
+      object-fit: contain;
+      filter: drop-shadow(0 10px 30px rgba(0,0,0,0.4));
+    }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip {
+      background: #E8399A;
+      padding: 18px 40px;
+    }
+    .trust-strip-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 40px;
+    }
+    .trust-item {
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 17px;
+      letter-spacing: 1.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .trust-item span { font-size: 20px; }
+
+    /* ── SECTIONS ── */
+    .section { padding: 80px 40px; }
+    .section-inner { max-width: 1200px; margin: 0 auto; }
+    .section-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #E8399A;
+      margin-bottom: 12px;
+      text-transform: uppercase;
+    }
+    .section-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(36px, 5vw, 58px);
+      line-height: 1.05;
+      margin-bottom: 20px;
+      color: #1E2D5A;
+    }
+    .section-title .accent { color: #E8399A; }
+    .section-desc {
+      font-size: 19px;
+      color: #444;
+      max-width: 680px;
+      margin-bottom: 40px;
+    }
+
+    /* ── PROMO OFFER SECTION ── */
+    .offer-section { background: #F8F4FF; }
+    .offer-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .offer-van img {
+      border-radius: 16px;
+      box-shadow: 0 20px 60px rgba(30,45,90,0.15);
+      width: 100%;
+    }
+    .offer-list { list-style: none; margin-bottom: 32px; }
+    .offer-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 0;
+      border-bottom: 1px solid #e0d8f0;
+      font-size: 18px;
+      color: #333;
+    }
+    .offer-list li:last-child { border-bottom: none; }
+    .offer-list .check {
+      background: #E8399A;
+      color: #fff;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .price-card {
+      background: #1E2D5A;
+      color: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      margin-bottom: 24px;
+      text-align: center;
+      border: 3px solid #E8399A;
+    }
+    .price-card .price-label { font-size: 14px; letter-spacing: 2px; color: #FF6BB5; text-transform: uppercase; margin-bottom: 8px; }
+    .price-card .price-main { font-family: 'Bebas Neue', sans-serif; font-size: 72px; color: #E8399A; line-height: 1; }
+    .price-card .price-sub { font-size: 16px; color: #a8b8e8; margin-top: 8px; }
+    .price-card .price-note { font-size: 14px; color: #FF6BB5; margin-top: 12px; font-weight: 600; }
+
+    /* ── WHY MOBILE SECTION ── */
+    .why-section { background: #1E2D5A; }
+    .why-section .section-title { color: #fff; }
+    .why-section .section-desc { color: #a8b8e8; }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(232,57,154,0.3);
+      border-radius: 12px;
+      padding: 32px 24px;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .benefit-card:hover { border-color: #E8399A; transform: translateY(-4px); }
+    .benefit-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 48px;
+      color: #E8399A;
+      line-height: 1;
+      margin-bottom: 12px;
+    }
+    .benefit-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 24px;
+      color: #fff;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+    .benefit-card p { font-size: 16px; color: #a8b8e8; line-height: 1.6; }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { background: #F8F4FF; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+    }
+    .steps-grid::before {
+      content: '';
+      position: absolute;
+      top: 36px;
+      left: 12%;
+      right: 12%;
+      height: 3px;
+      background: linear-gradient(90deg, #E8399A, #FF6BB5);
+      z-index: 0;
+    }
+    .step-card {
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+    .step-num {
+      width: 72px;
+      height: 72px;
+      background: #E8399A;
+      color: #fff;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+      box-shadow: 0 4px 20px rgba(232,57,154,0.4);
+    }
+    .step-card h4 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 20px;
+      color: #1E2D5A;
+      margin-bottom: 8px;
+      letter-spacing: 0.5px;
+    }
+    .step-card p { font-size: 15px; color: #555; }
+
+    /* ── VEHICLE TYPES ── */
+    .vehicles-section { background: #fff; }
+    .vehicles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .vehicle-card {
+      background: #1E2D5A;
+      border-radius: 16px;
+      padding: 36px 28px;
+      border-top: 5px solid #E8399A;
+    }
+    .vehicle-type {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 13px;
+      letter-spacing: 3px;
+      color: #FF6BB5;
+      margin-bottom: 8px;
+    }
+    .vehicle-card h3 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 30px;
+      color: #fff;
+      margin-bottom: 16px;
+    }
+    .vehicle-list { list-style: none; }
+    .vehicle-list li {
+      color: #a8b8e8;
+      font-size: 15px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .vehicle-list li::before { content: '→'; color: #E8399A; font-weight: 700; }
+    .vehicle-list li:last-child { border-bottom: none; }
+
+    /* ── STATS STRIP ── */
+    .stats-section { background: #E8399A; padding: 60px 40px; }
+    .stats-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+    .stat-num {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 72px;
+      color: #fff;
+      line-height: 1;
+    }
+    .stat-label {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 18px;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 1px;
+      margin-top: 6px;
+    }
+    .stat-desc { font-size: 14px; color: rgba(255,255,255,0.7); margin-top: 8px; }
+
+    /* ── MID CTA ── */
+    .mid-cta {
+      background: linear-gradient(135deg, #1E2D5A, #2a3f7a);
+      padding: 70px 40px;
+      text-align: center;
+    }
+    .mid-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(40px, 5vw, 64px);
+      color: #fff;
+      margin-bottom: 16px;
+      line-height: 1.1;
+    }
+    .mid-cta h2 .accent { color: #E8399A; }
+    .mid-cta p { font-size: 20px; color: #a8b8e8; margin-bottom: 36px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .cta-btn-group { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-section { background: #F8F4FF; }
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .testimonial-card {
+      background: #fff;
+      border-radius: 12px;
+      padding: 32px 28px;
+      box-shadow: 0 4px 24px rgba(30,45,90,0.08);
+      border-left: 5px solid #E8399A;
+    }
+    .stars { color: #E8399A; font-size: 22px; margin-bottom: 16px; }
+    .testimonial-card blockquote {
+      font-size: 16px;
+      color: #333;
+      line-height: 1.7;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+    .testimonial-author { font-weight: 700; color: #1E2D5A; font-size: 15px; }
+    .testimonial-location { font-size: 13px; color: #888; margin-top: 2px; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(135deg, #1E2D5A 0%, #2a3f7a 100%);
+      padding: 80px 40px;
+      text-align: center;
+    }
+    .final-cta-logo { height: 120px; margin: 0 auto 32px; }
+    .final-cta h2 {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: clamp(44px, 6vw, 72px);
+      color: #fff;
+      line-height: 1.05;
+      margin-bottom: 16px;
+    }
+    .final-cta h2 .accent { color: #E8399A; }
+    .final-cta p { font-size: 20px; color: #a8b8e8; margin-bottom: 36px; max-width: 560px; margin-left: auto; margin-right: auto; }
+    .final-cta .fine-print { font-size: 14px; color: rgba(255,255,255,0.45); margin-top: 20px; }
+
+    /* ── FOOTER ── */
+    .footer {
+      background: #111827;
+      color: #a8b8e8;
+      text-align: center;
+      padding: 28px 20px;
+      font-size: 14px;
+    }
+    .footer a { color: #FF6BB5; }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .modal-overlay.active { display: flex; }
+    .modal-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 32px;
+      max-width: 560px;
+      width: 100%;
+      position: relative;
+      max-height: 90vh;
+      overflow-y: auto;
+    }
+    .modal-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #666;
+      background: none;
+      border: none;
+      line-height: 1;
+    }
+    .modal-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 32px;
+      color: #1E2D5A;
+      margin-bottom: 6px;
+    }
+    .modal-sub { font-size: 15px; color: #666; margin-bottom: 20px; }
+    .modal-iframe-wrap { width: 100%; min-height: 800px; }
+    .modal-iframe-wrap iframe { width: 100%; height: 800px; border: none; border-radius: 8px; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-character { max-height: 300px; margin: 0 auto; }
+      .offer-grid { grid-template-columns: 1fr; }
+      .benefits-grid { grid-template-columns: 1fr 1fr; }
+      .steps-grid { grid-template-columns: 1fr 1fr; }
+      .steps-grid::before { display: none; }
+      .vehicles-grid { grid-template-columns: 1fr; }
+      .stats-grid { grid-template-columns: 1fr; gap: 24px; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .nav { padding: 12px 20px; }
+      .section { padding: 60px 20px; }
+    }
+    @media (max-width: 600px) {
+      .benefits-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+      .hero { padding: 40px 20px 0; }
+      .hero h1 { font-size: 52px; }
+      .hero-btns { flex-direction: column; }
+      .btn-primary, .btn-outline { text-align: center; }
+      .cta-btn-group { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- TOP BAR -->
+  <div class="top-bar">
+    📞 Schedule Your FREE Oil Change: <a href="tel:5598384267">(559) 838-4267</a> &nbsp;|&nbsp; Serving Fresno, Clovis &amp; the Central Valley
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <img src="/pink-full-gear.png" alt="Mikey Mobile Oil Change" class="nav-logo" />
+    <button class="nav-cta" onclick="openFormModal()">CLAIM FREE OIL CHANGE</button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <div class="hero-copy">
+        <div class="hero-badge">FREE OIL CHANGE — LIMITED TIME</div>
+        <h1>Your First<br /><span class="accent">Oil Change</span><br /><span class="accent2">Is On Us.</span></h1>
+        <p class="hero-sub">We Come to You — No Shop, No Wait, No Hassle</p>
+        <p class="hero-desc">New customers pay for oil and filter only — average cost just $60. We handle everything else. Fresno, Clovis &amp; the Central Valley.</p>
+        <div class="hero-btns">
+          <button class="btn-primary" onclick="openFormModal()">SCHEDULE MY FREE OIL CHANGE</button>
+          <a href="tel:5598384267" class="btn-outline">CALL NOW — (559) 838-4267</a>
+        </div>
+      </div>
+      <img src="/MikeyMobile_v8_Character-Lg.png" alt="Mikey Mobile Technician" class="hero-character" />
+    </div>
+  </section>
+
+  <!-- TRUST STRIP -->
+  <div class="trust-strip">
+    <div class="trust-strip-inner">
+      <div class="trust-item"><span>🎁</span> FREE LABOR — NEW CUSTOMERS</div>
+      <div class="trust-item"><span>🚗</span> WE COME TO YOUR DRIVEWAY</div>
+      <div class="trust-item"><span>⏱️</span> DONE IN 30 MINUTES</div>
+      <div class="trust-item"><span>💰</span> PAY OIL &amp; FILTER ONLY (~$60)</div>
+      <div class="trust-item"><span>✅</span> NO OBLIGATION QUOTE FIRST</div>
+    </div>
+  </div>
+
+  <!-- PROMO OFFER -->
+  <section class="section offer-section">
+    <div class="section-inner">
+      <div class="offer-grid">
+        <div class="offer-van">
+          <img src="/transit-van.png" alt="Mikey Mobile Oil Change Van" />
+        </div>
+        <div class="offer-details">
+          <div class="section-label">The Offer</div>
+          <h2 class="section-title">FREE Mobile Oil Change.<br /><span class="accent">You Pay Oil &amp; Filter Only.</span></h2>
+          <ul class="offer-list">
+            <li><div class="check">✓</div><span><strong>Labor is 100% FREE</strong> for all new customers — no strings attached</span></li>
+            <li><div class="check">✓</div><span>You pay for oil and filter only — average cost is just <strong>$60</strong></span></li>
+            <li><div class="check">✓</div><span>We come to your home, driveway, or workplace — <strong>you don't move</strong></span></li>
+            <li><div class="check">✓</div><span>Get a <strong>quote before we start</strong> — no surprises, no pressure</span></li>
+            <li><div class="check">✓</div><span>Full synthetic or conventional — <strong>your choice</strong></span></li>
+            <li><div class="check">✓</div><span>Cars, trucks, SUVs, and hybrids — <strong>all makes and models</strong></span></li>
+          </ul>
+          <div class="price-card">
+            <div class="price-label">Your Cost Today</div>
+            <div class="price-main">~$60</div>
+            <div class="price-sub">Oil &amp; filter only — labor is FREE</div>
+            <div class="price-note">⭐ New customers only. Quote provided before service.</div>
+          </div>
+          <button class="btn-primary" style="width:100%;font-size:24px;padding:18px;" onclick="openFormModal()">SCHEDULE MY FREE OIL CHANGE</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY MOBILE -->
+  <section class="section why-section">
+    <div class="section-inner">
+      <div class="section-label" style="color:#FF6BB5;">Why Mobile</div>
+      <h2 class="section-title" style="color:#fff;">Stop Wasting Your<br /><span class="accent">Saturday at the Shop</span></h2>
+      <p class="section-desc" style="color:#a8b8e8;">Traditional oil change shops cost you more than money — they cost you time. Here's why mobile is the smarter choice.</p>
+      <div class="benefits-grid">
+        <div class="benefit-card">
+          <div class="benefit-num">01</div>
+          <h3>No Waiting Rooms</h3>
+          <p>Forget sitting in a plastic chair for 90 minutes. We come to you and you keep doing whatever you were doing — we handle the rest.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">02</div>
+          <h3>Done in 30 Minutes</h3>
+          <p>Our technician shows up on time, gets to work, and has your vehicle done in under 30 minutes. No delays, no upsells, no drama.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">03</div>
+          <h3>Quote Before We Start</h3>
+          <p>You know exactly what you're paying before we touch your vehicle. Oil type, filter cost — all confirmed upfront. Zero surprises.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">04</div>
+          <h3>We Come to Your Location</h3>
+          <p>Home, work, apartment complex — wherever your car is parked, that's where we show up. No driving required on your end.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">05</div>
+          <h3>Certified Technician</h3>
+          <p>Every oil change is performed by a trained, certified technician. We treat your vehicle like it's our own — because our reputation depends on it.</p>
+        </div>
+        <div class="benefit-card">
+          <div class="benefit-num">06</div>
+          <h3>Digital Service Record</h3>
+          <p>We keep a complete record of every service we perform on your vehicle — oil type, mileage, date, and what was inspected.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="section how-section">
+    <div class="section-inner">
+      <div class="section-label">The Process</div>
+      <h2 class="section-title">Book Your Free Oil Change<br /><span class="accent">In 4 Simple Steps</span></h2>
+      <p class="section-desc">No complicated forms, no long waits, no commitment. Getting your first free oil change is straightforward.</p>
+      <div class="steps-grid">
+        <div class="step-card">
+          <div class="step-num">1</div>
+          <h4>Click to Schedule</h4>
+          <p>Fill out the quick form with your vehicle info and preferred date. Takes less than 60 seconds.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">2</div>
+          <h4>Get Your Quote</h4>
+          <p>We'll confirm the oil and filter cost for your specific vehicle — you approve before we book.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">3</div>
+          <h4>We Show Up</h4>
+          <p>Our technician arrives at your location at the scheduled time with all the supplies needed.</p>
+        </div>
+        <div class="step-card">
+          <div class="step-num">4</div>
+          <h4>Done — Drive On</h4>
+          <p>Oil changed, filter replaced, vehicle inspected. You're good to go — no shop visit required.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VEHICLE TYPES -->
+  <section class="section vehicles-section">
+    <div class="section-inner">
+      <div class="section-label">What We Service</div>
+      <h2 class="section-title">Gas. Hybrid. Diesel.<br /><span class="accent">We Service Them All.</span></h2>
+      <p class="section-desc">Whether you drive a daily commuter, a full-size truck, or a hybrid SUV — we have the supplies and expertise to handle it.</p>
+      <div class="vehicles-grid">
+        <div class="vehicle-card">
+          <div class="vehicle-type">GAS VEHICLES</div>
+          <h3>Cars, Trucks &amp; SUVs</h3>
+          <ul class="vehicle-list">
+            <li>Sedans &amp; compact cars</li>
+            <li>Full-size pickup trucks</li>
+            <li>SUVs &amp; crossovers</li>
+            <li>Minivans &amp; cargo vans</li>
+            <li>All major makes &amp; models</li>
+          </ul>
+        </div>
+        <div class="vehicle-card">
+          <div class="vehicle-type">HYBRID VEHICLES</div>
+          <h3>Hybrid Cars &amp; SUVs</h3>
+          <ul class="vehicle-list">
+            <li>Toyota Prius &amp; Camry Hybrid</li>
+            <li>Honda CR-V &amp; Accord Hybrid</li>
+            <li>Ford Escape &amp; Explorer Hybrid</li>
+            <li>Chevy Malibu Hybrid</li>
+            <li>RAM 1500 eTorque &amp; more</li>
+          </ul>
+        </div>
+        <div class="vehicle-card">
+          <div class="vehicle-type">DIESEL TRUCKS</div>
+          <h3>Diesel Pickups &amp; Trucks</h3>
+          <ul class="vehicle-list">
+            <li>Ford F-250 / F-350 Power Stroke</li>
+            <li>Chevy / GMC Duramax</li>
+            <li>RAM 2500 / 3500 Cummins</li>
+            <li>Light-duty diesel trucks</li>
+            <li>Diesel-specific oil &amp; filters</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-grid">
+      <div>
+        <div class="stat-num">~$60</div>
+        <div class="stat-label">Average Total Cost</div>
+        <div class="stat-desc">Oil &amp; filter only — labor is always FREE for new customers</div>
+      </div>
+      <div>
+        <div class="stat-num">30 Min</div>
+        <div class="stat-label">Average Service Time</div>
+        <div class="stat-desc">From arrival to done — faster than driving to a shop and waiting</div>
+      </div>
+      <div>
+        <div class="stat-num">$0</div>
+        <div class="stat-label">Labor Cost for You</div>
+        <div class="stat-desc">First-time customers pay zero for labor — that's our welcome offer</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MID CTA -->
+  <div class="mid-cta">
+    <h2>Ready to Claim Your<br /><span class="accent">FREE Oil Change?</span></h2>
+    <p>No obligation. No credit card required. Just tell us your vehicle and we'll send you a quote before you commit to anything.</p>
+    <div class="cta-btn-group">
+      <button class="btn-primary" style="font-size:24px;padding:18px 40px;" onclick="openFormModal()">SCHEDULE MY FREE OIL CHANGE</button>
+      <a href="tel:5598384267" class="btn-outline" style="font-size:24px;padding:18px 40px;">CALL NOW — (559) 838-4267</a>
+    </div>
+  </div>
+
+  <!-- TESTIMONIALS -->
+  <section class="section testimonials-section">
+    <div class="section-inner">
+      <div class="section-label">What Customers Say</div>
+      <h2 class="section-title">Real People.<br /><span class="accent">Real Results.</span></h2>
+      <p class="section-desc">Here's what Fresno and Clovis drivers are saying about their first Mikey Mobile oil change.</p>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I was skeptical at first — a free oil change that actually comes to you? But it was exactly as advertised. He showed up on time, was done in 25 minutes, and I never left my driveway. I'm a customer for life now."</blockquote>
+          <div class="testimonial-author">Jessica M.</div>
+          <div class="testimonial-location">Fresno, CA — Toyota Camry</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I have three kids and zero time to sit at a shop. Mikey came to my house while the kids were at school, changed the oil on my Suburban, and texted me when he was done. Best $60 I've ever spent — and the labor was free!"</blockquote>
+          <div class="testimonial-author">Tanya R.</div>
+          <div class="testimonial-location">Clovis, CA — Chevy Suburban</div>
+        </div>
+        <div class="testimonial-card">
+          <div class="stars">★★★★★</div>
+          <blockquote>"I run a small business and my truck is my livelihood. I can't afford downtime. Mikey came to my shop, changed the oil while I was working, and gave me a full rundown of what he checked. Professional, fast, and honest."</blockquote>
+          <div class="testimonial-author">Marcus T.</div>
+          <div class="testimonial-location">Fresno, CA — Ford F-150</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <img src="/pink-full-gear.png" alt="Mikey Mobile Oil Change" class="final-cta-logo" />
+    <h2>Your FREE Oil Change<br /><span class="accent">Is One Click Away.</span></h2>
+    <p>New customers in Fresno, Clovis &amp; the Central Valley — claim your free labor oil change today. You only pay for oil and filter.</p>
+    <div class="cta-btn-group">
+      <button class="btn-primary" style="font-size:24px;padding:18px 40px;" onclick="openFormModal()">SCHEDULE MY FREE OIL CHANGE</button>
+      <a href="tel:5598384267" class="btn-outline" style="font-size:24px;padding:18px 40px;">CALL NOW — (559) 838-4267</a>
+    </div>
+    <p class="fine-print">New customers only. Labor is FREE — you pay for oil &amp; filter only (avg. ~$60). Quote provided before service. No credit card required.</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2025 Mikey Mobile Oil Change. All rights reserved. | Licensed &amp; Insured in California | <a href="/privacy-policy.html">Privacy Policy</a></p>
+    <p style="margin-top:6px;">Serving Fresno, Clovis, Madera Ranchos &amp; the Central Valley | <a href="tel:5598384267">(559) 838-4267</a></p>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="modal-overlay" id="formModal" onclick="handleModalClick(event)">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeFormModal()" aria-label="Close">&times;</button>
+      <div class="modal-title">Schedule Your FREE Oil Change</div>
+      <div class="modal-sub">Fill out the form below — we'll confirm your quote before scheduling.</div>
+      <div class="modal-iframe-wrap" id="modalIframeWrap"></div>
+    </div>
+  </div>
+
+  <script>
+    const FORM_HTML = `<iframe
+      src="https://api.leadconnectorhq.com/widget/form/eol7CrP73Z42VBev8TvH"
+      style="width:100%;height:800px;border:none;border-radius:8px"
+      id="inline-eol7CrP73Z42VBev8TvH"
+      data-layout="{'id':'INLINE'}"
+      data-trigger-type="alwaysShow"
+      data-trigger-value=""
+      data-activation-type="alwaysActivated"
+      data-activation-value=""
+      data-deactivation-type="neverDeactivate"
+      data-deactivation-value=""
+      data-form-name="Facebook - Free Oil Change Landing Page"
+      data-height="781"
+      data-layout-iframe-id="inline-eol7CrP73Z42VBev8TvH"
+      data-form-id="eol7CrP73Z42VBev8TvH"
+      title="Facebook - Free Oil Change Landing Page"
+    ></iframe>`;
+
+    let formLoaded = false;
+
+    function openFormModal() {
+      if (!formLoaded) {
+        document.getElementById('modalIframeWrap').innerHTML = FORM_HTML;
+        const script = document.createElement('script');
+        script.src = 'https://link.msgsndr.com/js/form_embed.js';
+        document.body.appendChild(script);
+        formLoaded = true;
+      }
+      document.getElementById('formModal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeFormModal() {
+      document.getElementById('formModal').classList.remove('active');
+      document.body.style.overflow = '';
+    }
+
+    function handleModalClick(e) {
+      if (e.target === document.getElementById('formModal')) closeFormModal();
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeFormModal();
+    });
+  </script>
+
+</body>
+</html>

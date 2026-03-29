@@ -2,358 +2,291 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/locations.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service Locations | Mikey Mobile Oil Change</title>
-    <meta name="description" content="Mikey Mobile Oil Change serves Fresno, Clovis, Madera Ranchos and surrounding neighborhoods. Find your area and book mobile oil change service today!">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stars.css">
-    <link rel="stylesheet" href="heading-styles.css">
-    <link rel="stylesheet" href="navigation.css">
+    <meta name="description" content="Mikey Mobile Oil Change serves Fresno, Clovis, and Madera Ranchos. We come to your driveway — no shop visit required. Book same-day or schedule in advance.">
+    <title>Service Locations | Mikey Mobile Oil Change — Fresno, Clovis & Madera Ranchos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
     <style>
-        .locations-hero {
-            background: linear-gradient(180deg, #1a0d30 0%, #2A1548 30%, #3D2066 70%, #4a2575 100%);
-            padding: 80px 0 60px;
-            text-align: center;
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .btn-primary{background:#E8399A;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s;display:inline-block}
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline-white{background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .3s;display:inline-block}
+        .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+        .btn-outline-navy{background:transparent;color:#1E2D5A;padding:13px 28px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.05rem;letter-spacing:1.5px;text-decoration:none;border:2px solid #1E2D5A;transition:all .3s;display:inline-block}
+        .btn-outline-navy:hover{background:#1E2D5A;color:#fff}
+
+        /* ── Hero ── */
+        .hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 48px;
+            text-align:center;
         }
-        .locations-hero h1 {
-            font-family: 'Russo One', 'Teko', sans-serif;
-            font-size: 56px;
-            color: #FFFFFF;
-            margin-bottom: 20px;
-            text-transform: uppercase;
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:18px}
+        .hero h1 span{color:#E8399A}
+        .hero p{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:600px;margin:0 auto 36px;line-height:1.7}
+        .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Trust Strip ── */
+        .trust-strip{background:#E8399A;padding:14px 0}
+        .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
+        .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+
+        /* ── Service Area Overview ── */
+        .area-overview{padding:72px 0;background:#F8F4FF;text-align:center}
+        .area-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;max-width:700px;margin:40px auto 0}
+        .area-stat{background:#fff;border-radius:12px;padding:28px 20px;box-shadow:0 2px 12px rgba(30,45,90,.07)}
+        .area-stat-num{font-family:'Bebas Neue',sans-serif;font-size:2.8rem;color:#E8399A;line-height:1}
+        .area-stat-label{font-size:.85rem;color:#4a5568;margin-top:6px;text-transform:uppercase;letter-spacing:.5px}
+
+        /* ── Location Cards ── */
+        .locations-section{padding:72px 0}
+        .location-block{margin-bottom:72px}
+        .location-block:last-child{margin-bottom:0}
+        .location-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start}
+        .location-grid.reverse{direction:rtl}
+        .location-grid.reverse > *{direction:ltr}
+
+        .location-copy .loc-number{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(232,57,154,.12);line-height:1;margin-bottom:-10px}
+        .location-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,2.8rem);color:#1E2D5A;line-height:1.1;margin-bottom:12px}
+        .location-copy h2 span{color:#E8399A}
+        .location-copy p{font-size:.97rem;color:#4a5568;line-height:1.8;margin-bottom:14px}
+        .location-copy-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+
+        /* ── Neighborhood Card ── */
+        .neighborhood-card{background:#1E2D5A;border-radius:16px;padding:32px}
+        .neighborhood-card-title{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:2px;color:rgba(255,255,255,.55);margin-bottom:16px}
+        .neighborhood-grid{display:grid;grid-template-columns:1fr 1fr;gap:0}
+        .neighborhood-item{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid rgba(255,255,255,.07);font-size:.9rem;color:rgba(255,255,255,.85)}
+        .neighborhood-item:nth-last-child(-n+2){border-bottom:none}
+        .neighborhood-item::before{content:'';width:6px;height:6px;border-radius:50%;background:#E8399A;flex-shrink:0}
+        .neighborhood-item a{color:rgba(255,255,255,.85);text-decoration:none;transition:color .2s}
+        .neighborhood-item a:hover{color:#E8399A}
+        .neighborhood-note{font-size:.82rem;color:rgba(255,255,255,.4);margin-top:16px;line-height:1.5}
+
+        /* ── Coverage Map CTA ── */
+        .coverage-section{padding:60px 0;background:#F8F4FF;text-align:center}
+        .coverage-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#1E2D5A;margin-bottom:12px}
+        .coverage-section h2 span{color:#E8399A}
+        .coverage-section p{font-size:1rem;color:#4a5568;max-width:540px;margin:0 auto 28px;line-height:1.7}
+
+        /* ── CTA ── */
+        .cta-section{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 0;text-align:center}
+        .cta-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:14px}
+        .cta-section h2 span{color:#E8399A}
+        .cta-section p{font-size:1rem;color:rgba(255,255,255,.78);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Divider ── */
+        .location-divider{border:none;border-top:1px solid rgba(30,45,90,.1);margin:0}
+
+        @media(max-width:900px){
+            .location-grid,.location-grid.reverse{grid-template-columns:1fr;direction:ltr}
+            .area-stats{grid-template-columns:repeat(3,1fr)}
         }
-        .locations-hero p {
-            font-family: 'Teko', sans-serif;
-            font-size: 24px;
-            color: #00BCD4;
-        }
-        .locations-grid {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
-        }
-        .location-card {
-            background: linear-gradient(135deg, #2A1548 0%, #3D2066 100%);
-            border: 3px solid #00BCD4;
-            border-radius: 20px;
-            padding: 40px;
-            transition: all 0.3s ease;
-        }
-        .location-card:hover {
-            transform: translateY(-5px);
-            border-color: #E85D9A;
-            box-shadow: 0 10px 30px rgba(232, 93, 154, 0.3);
-        }
-        .location-card h2 {
-            font-family: 'Russo One', sans-serif;
-            font-size: 36px;
-            color: #E85D9A;
-            margin-bottom: 20px;
-            text-transform: uppercase;
-        }
-        .location-card h3 {
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 24px;
-            color: #00BCD4;
-            margin-top: 30px;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-        }
-        .location-card ul {
-            list-style: none;
-            padding: 0;
-        }
-        .location-card li {
-            font-family: 'Teko', sans-serif;
-            font-size: 20px;
-            color: #FFFFFF;
-            margin-bottom: 10px;
-            padding-left: 25px;
-            position: relative;
-        }
-        .location-card li:before {
-            content: "▸";
-            position: absolute;
-            left: 0;
-            color: #00BCD4;
-            font-size: 24px;
-        }
-        .location-card a {
-            color: #FFFFFF;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-        .location-card a:hover {
-            color: #E85D9A;
-        }
-        .location-card .btn {
-            display: inline-block;
-            background: linear-gradient(135deg, #E85D9A 0%, #d14d87 100%);
-            color: #FFFFFF;
-            padding: 15px 40px;
-            border-radius: 50px;
-            font-family: 'Bebas Neue', sans-serif;
-            font-size: 20px;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            text-decoration: none;
-            margin-top: 20px;
-            transition: all 0.3s ease;
-            border: 2px solid #00BCD4;
-        }
-        .location-card .btn:hover {
-            background: linear-gradient(135deg, #ff6eb4 0%, #E85D9A 100%);
-            transform: translateY(-2px);
+        @media(max-width:600px){
+            .area-stats{grid-template-columns:1fr 1fr}
+            .neighborhood-grid{grid-template-columns:1fr}
+            .neighborhood-item:nth-last-child(-n+2){border-bottom:1px solid rgba(255,255,255,.07)}
+            .neighborhood-item:last-child{border-bottom:none}
         }
     </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
+
+    <header></header>
+
+    <!-- Hero -->
+    <section class="hero">
         <div class="container">
-            <span>SERVING FRESNO & SURROUNDING AREAS</span>
+            <span class="section-label">CENTRAL VALLEY MOBILE SERVICE</span>
+            <h1>We Come to<br><span>Your Driveway</span></h1>
+            <p>Serving Fresno, Clovis, and Madera Ranchos — wherever your vehicle is parked, that's where we work. No shop, no drop-off, no waiting room.</p>
+            <div class="hero-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">📍 Fresno</span>
+            <span class="trust-item">📍 Clovis</span>
+            <span class="trust-item">📍 Madera Ranchos</span>
+            <span class="trust-item">🚗 We Come to You</span>
+            <span class="trust-item">✅ Same-Day Available</span>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Area Overview Stats -->
+    <section class="area-overview">
         <div class="container">
-            <div class="nav-container">
-                <!-- Left Navigation -->
-                <div class="nav-left">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                    <div class="nav-dropdown">
-                        <a href="locations.html" class="nav-link dropdown-trigger">LOCATIONS</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-section">
-                                <a href="fresno/index.html" class="dropdown-city">Fresno</a>
-                                <a href="fresno/fig-garden/index.html" class="dropdown-neighborhood">Fig Garden</a>
-                                <a href="fresno/sunnyside/index.html" class="dropdown-neighborhood">Sunnyside</a>
-                                <a href="fresno/fig-garden-loop/index.html" class="dropdown-neighborhood">Fig Garden Loop</a>
-                                <a href="fresno/woodward-park/index.html" class="dropdown-neighborhood">Woodward Park</a>
-                                <a href="fresno/riverpark/index.html" class="dropdown-neighborhood">Riverpark</a>
-                                <a href="fresno/pinedale/index.html" class="dropdown-neighborhood">Pinedale</a>
-                                <a href="fresno/sierra-sky-park/index.html" class="dropdown-neighborhood">Sierra Sky Park</a>
-                                <a href="fresno/fort-washington/index.html" class="dropdown-neighborhood">Fort Washington</a>
+            <span class="section-label">SERVICE COVERAGE</span>
+            <h2 class="section-title">3 Cities.<br><span>One Mobile Technician.</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:560px;margin:0 auto;line-height:1.7">We cover the Central Valley's core communities — from the heart of Fresno to the neighborhoods of Clovis and the rural properties of Madera Ranchos.</p>
+            <div class="area-stats">
+                <div class="area-stat">
+                    <div class="area-stat-num">3</div>
+                    <div class="area-stat-label">Cities Served</div>
+                </div>
+                <div class="area-stat">
+                    <div class="area-stat-num">16+</div>
+                    <div class="area-stat-label">Neighborhoods</div>
+                </div>
+                <div class="area-stat">
+                    <div class="area-stat-num">30</div>
+                    <div class="area-stat-label">Min Service Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Locations -->
+    <section class="locations-section">
+        <div class="container">
+
+            <!-- Fresno -->
+            <div class="location-block" id="fresno">
+                <div class="location-grid">
+                    <div class="location-copy">
+                        <div class="loc-number">01</div>
+                        <span class="section-label">FRESNO, CA</span>
+                        <h2>The Heart of the<br><span>Central Valley</span></h2>
+                        <p>Fresno is our home base and our most active service area. Whether you're in a quiet residential neighborhood, a busy office parking lot, or anywhere in between — we come to you and handle your oil change while you carry on with your day.</p>
+                        <p>We service all major Fresno neighborhoods and surrounding communities. If you're not sure whether we cover your area, give us a call and we'll confirm in seconds.</p>
+                        <div class="location-copy-btns">
+                            <a href="/fresno.html" class="btn-primary">VIEW FRESNO PAGE</a>
+                            <a href="tel:5598384267" class="btn-outline-navy">CALL US</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="neighborhood-card">
+                            <div class="neighborhood-card-title">FRESNO NEIGHBORHOODS WE SERVE</div>
+                            <div class="neighborhood-grid">
+                                <div class="neighborhood-item"><a href="/fresno/fig-garden.html">Fig Garden</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/sunnyside.html">Sunnyside</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/fig-garden-loop.html">Fig Garden Loop</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/woodward-park.html">Woodward Park</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/riverpark.html">Riverpark</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/pinedale.html">Pinedale</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/sierra-sky-park.html">Sierra Sky Park</a></div>
+                                <div class="neighborhood-item"><a href="/fresno/fort-washington.html">Fort Washington</a></div>
                             </div>
-                            <div class="dropdown-section">
-                                <a href="clovis/index.html" class="dropdown-city">Clovis</a>
-                                <a href="clovis/clovis-north/index.html" class="dropdown-neighborhood">Clovis North</a>
-                                <a href="clovis/cindy-lane/index.html" class="dropdown-neighborhood">Cindy Lane</a>
-                                <a href="clovis/dry-creek/index.html" class="dropdown-neighborhood">Dry Creek</a>
-                                <a href="clovis/clovis-high/index.html" class="dropdown-neighborhood">Clovis High</a>
-                                <a href="clovis/quail-lakes/index.html" class="dropdown-neighborhood">Quail Lakes</a>
-                                <a href="clovis/harlan-ranch/index.html" class="dropdown-neighborhood">Harlan Ranch</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="madera-ranchos/index.html" class="dropdown-city">Madera Ranchos</a>
-                                <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-neighborhood">Rolling Hills</a>
-                                <a href="madera-ranchos/riverstone/index.html" class="dropdown-neighborhood">Riverstone</a>
-                            </div>
+                            <p class="neighborhood-note">Don't see your neighborhood? Call us — we likely cover it.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Center Logo -->
-                <div class="nav-center">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
-                    </a>
-                </div>
-
-                <!-- Right Navigation -->
-                <div class="nav-right">
-                    <a href="services.html" class="nav-link">SERVICES</a>
-                    <a href="index.html#pricing" class="nav-link">PRICING</a>
-                    <a href="index.html#contact" class="nav-link">CONTACT</a>
-                </div>
-
-                <!-- Mobile Hamburger Menu Button -->
-                <button class="hamburger-menu" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
-        </div>
-    </nav>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
-        <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">
-            ×
-        </button>
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-nav-link">HOME</a>
-            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
-            
-            <div class="mobile-dropdown-section">
-                <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
-                <a href="fresno/index.html" class="mobile-dropdown-main">Fresno</a>
-                <a href="fresno/fig-garden/index.html" class="mobile-dropdown-sub">Fig Garden</a>
-                <a href="fresno/sunnyside/index.html" class="mobile-dropdown-sub">Sunnyside</a>
-                <a href="fresno/woodward-park/index.html" class="mobile-dropdown-sub">Woodward Park</a>
-                <a href="fresno/fig-garden-loop/index.html" class="mobile-dropdown-sub">Fig Garden Loop</a>
-                <a href="fresno/riverpark/index.html" class="mobile-dropdown-sub">Riverpark</a>
-                <a href="fresno/pinedale/index.html" class="mobile-dropdown-sub">Pinedale</a>
-                <a href="fresno/sierra-sky-park/index.html" class="mobile-dropdown-sub">Sierra Sky Park</a>
-                <a href="fresno/fort-washington/index.html" class="mobile-dropdown-sub">Fort Washington</a>
-                
-                <a href="clovis/index.html" class="mobile-dropdown-main">Clovis</a>
-                <a href="clovis/clovis-north/index.html" class="mobile-dropdown-sub">Clovis North</a>
-                <a href="clovis/cindy-lane/index.html" class="mobile-dropdown-sub">Cindy Lane</a>
-                <a href="clovis/dry-creek/index.html" class="mobile-dropdown-sub">Dry Creek</a>
-                <a href="clovis/harlan-ranch/index.html" class="mobile-dropdown-sub">Harlan Ranch</a>
-                <a href="clovis/clovis-high/index.html" class="mobile-dropdown-sub">Clovis High</a>
-                <a href="clovis/quail-lakes/index.html" class="mobile-dropdown-sub">Quail Lakes</a>
-                
-                <a href="madera-ranchos/index.html" class="mobile-dropdown-main">Madera Ranchos</a>
-                <a href="madera-ranchos/rolling-hills/index.html" class="mobile-dropdown-sub">Rolling Hills</a>
-                <a href="madera-ranchos/riverstone/index.html" class="mobile-dropdown-sub">Riverstone</a>
+            <hr class="location-divider">
+
+            <!-- Clovis -->
+            <div class="location-block" id="clovis" style="margin-top:72px">
+                <div class="location-grid reverse">
+                    <div class="location-copy">
+                        <div class="loc-number">02</div>
+                        <span class="section-label">CLOVIS, CA</span>
+                        <h2>Gateway to<br><span>the Sierra</span></h2>
+                        <p>Clovis residents deserve the same convenience as everyone else — and we deliver it. From established neighborhoods near Old Town Clovis to newer developments in the north, we bring professional oil change service directly to your address.</p>
+                        <p>Same-day service is often available in Clovis. Book online or call us to check today's availability.</p>
+                        <div class="location-copy-btns">
+                            <a href="/clovis.html" class="btn-primary">VIEW CLOVIS PAGE</a>
+                            <a href="tel:5598384267" class="btn-outline-navy">CALL US</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="neighborhood-card">
+                            <div class="neighborhood-card-title">CLOVIS NEIGHBORHOODS WE SERVE</div>
+                            <div class="neighborhood-grid">
+                                <div class="neighborhood-item"><a href="/clovis/clovis-north.html">Clovis North</a></div>
+                                <div class="neighborhood-item"><a href="/clovis/cindy-lane.html">Cindy Lane</a></div>
+                                <div class="neighborhood-item"><a href="/clovis/dry-creek.html">Dry Creek</a></div>
+                                <div class="neighborhood-item"><a href="/clovis/clovis-high.html">Clovis High</a></div>
+                                <div class="neighborhood-item"><a href="/clovis/quail-lakes.html">Quail Lakes</a></div>
+                                <div class="neighborhood-item"><a href="/clovis/harlan-ranch.html">Harlan Ranch</a></div>
+                            </div>
+                            <p class="neighborhood-note">Don't see your neighborhood? Call us — we likely cover it.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <a href="services.html" class="mobile-nav-link">SERVICES</a>
-            <a href="index.html#pricing" class="mobile-nav-link">PRICING</a>
-        </div>
-    </div>
 
-    <!-- Hero Section -->
-    <section class="locations-hero">
-        <div class="stars-container">
-            <div class="star star-1"></div>
-            <div class="star star-2"></div>
-            <div class="star star-3"></div>
-            <div class="star star-4"></div>
-            <div class="star star-5"></div>
-            <div class="star star-6"></div>
-            <div class="star star-7"></div>
-            <div class="star star-8"></div>
-            <div class="star star-9"></div>
-            <div class="star star-10"></div>
-        </div>
-        <div class="container">
-            <h1>Our Service Locations</h1>
-            <p>Professional Mobile Oil Change Service Throughout the Central Valley</p>
+            <hr class="location-divider">
+
+            <!-- Madera Ranchos -->
+            <div class="location-block" id="madera-ranchos" style="margin-top:72px">
+                <div class="location-grid">
+                    <div class="location-copy">
+                        <div class="loc-number">03</div>
+                        <span class="section-label">MADERA RANCHOS, CA</span>
+                        <h2>Rural Community,<br><span>Premium Service</span></h2>
+                        <p>Living in Madera Ranchos means a little more distance from the city — but that doesn't mean you should have to drive to a shop for a routine oil change. We bring the same professional service to your property that Fresno and Clovis customers enjoy.</p>
+                        <p>Whether you're in Rolling Hills, Riverstone, or anywhere in the Ranchos area, we'll come to you. Call ahead to confirm scheduling for your specific address.</p>
+                        <div class="location-copy-btns">
+                            <a href="/madera-ranchos.html" class="btn-primary">VIEW MADERA RANCHOS PAGE</a>
+                            <a href="tel:5598384267" class="btn-outline-navy">CALL US</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="neighborhood-card">
+                            <div class="neighborhood-card-title">MADERA RANCHOS NEIGHBORHOODS WE SERVE</div>
+                            <div class="neighborhood-grid">
+                                <div class="neighborhood-item"><a href="/madera-ranchos/rolling-hills.html">Rolling Hills</a></div>
+                                <div class="neighborhood-item"><a href="/madera-ranchos/riverstone.html">Riverstone</a></div>
+                            </div>
+                            <p class="neighborhood-note">Expanding coverage in Madera Ranchos. Call to confirm your area.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Locations Grid -->
-    <div class="locations-grid">
-        <!-- Fresno Card -->
-        <div class="location-card">
-            <h2>Fresno, CA</h2>
-            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">The heart of the Central Valley. We serve all of Fresno with convenient mobile oil change service.</p>
-            <a href="fresno/index.html" class="btn">View Fresno Page</a>
-            
-            <h3>Fresno Neighborhoods:</h3>
-            <ul>
-                <li><a href="fresno/fig-garden/index.html">Fig Garden</a></li>
-                <li><a href="fresno/sunnyside/index.html">Sunnyside</a></li>
-                <li><a href="fresno/fig-garden-loop/index.html">Fig Garden Loop</a></li>
-                <li><a href="fresno/woodward-park/index.html">Woodward Park</a></li>
-                <li><a href="fresno/riverpark/index.html">Riverpark</a></li>
-                <li><a href="fresno/pinedale/index.html">Pinedale</a></li>
-                <li><a href="fresno/sierra-sky-park/index.html">Sierra Sky Park</a></li>
-                <li><a href="fresno/fort-washington/index.html">Fort Washington</a></li>
-            </ul>
+    <!-- Coverage Note -->
+    <section class="coverage-section">
+        <div class="container">
+            <span class="section-label">NOT SURE IF WE COVER YOUR AREA?</span>
+            <h2>Just Give Us<br><span>a Call</span></h2>
+            <p>If your neighborhood isn't listed, there's a good chance we still cover it. Our service area is always expanding — call us and we'll confirm in under a minute.</p>
+            <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+                <a href="tel:5598384267" class="btn-primary">CALL (559) 838-4267</a>
+                <a href="/book-now.html" class="btn-outline-navy">BOOK ONLINE</a>
+            </div>
         </div>
+    </section>
 
-        <!-- Clovis Card -->
-        <div class="location-card">
-            <h2>Clovis, CA</h2>
-            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Gateway to the Sierra. Professional mobile oil change service for all Clovis residents.</p>
-            <a href="clovis/index.html" class="btn">View Clovis Page</a>
-            
-            <h3>Clovis Neighborhoods:</h3>
-            <ul>
-                <li><a href="clovis/clovis-north/index.html">Clovis North</a></li>
-                <li><a href="clovis/cindy-lane/index.html">Cindy Lane</a></li>
-                <li><a href="clovis/dry-creek/index.html">Dry Creek</a></li>
-                <li><a href="clovis/clovis-high/index.html">Clovis High</a></li>
-                <li><a href="clovis/quail-lakes/index.html">Quail Lakes</a></li>
-                <li><a href="clovis/harlan-ranch/index.html">Harlan Ranch</a></li>
-            </ul>
-        </div>
-
-        <!-- Madera Ranchos Card -->
-        <div class="location-card">
-            <h2>Madera Ranchos, CA</h2>
-            <p style="font-family: 'Teko', sans-serif; font-size: 20px; color: #FFFFFF;">Rural community with big expectations. We bring quality mobile oil change service to your property.</p>
-            <a href="madera-ranchos/index.html" class="btn">View Madera Ranchos Page</a>
-            
-            <h3>Madera Ranchos Neighborhoods:</h3>
-            <ul>
-                <li><a href="madera-ranchos/rolling-hills/index.html">Rolling Hills</a></li>
-                <li><a href="madera-ranchos/riverstone/index.html">Riverstone</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <!-- CTA Section -->
+    <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2 class="cta-title">READY TO GET YOUR OIL CHANGED?</h2>
-            <p class="cta-subtitle">Book your appointment now and experience the convenience of mobile service!</p>
-            <a href="#" class="btn btn-primary book-now-btn">BOOK NOW</a>
+            <h2>Ready to Skip<br><span>the Shop?</span></h2>
+            <p>Join hundreds of Central Valley drivers who've discovered a better way to maintain their vehicles. Book in 60 seconds — we'll handle the rest.</p>
+            <div class="cta-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR OIL CHANGE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">Mon–Sat • 8 AM–6 PM • Fresno, Clovis &amp; Madera Ranchos</p>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
-                </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="locations.html" class="footer-link">Locations</a>
-                    <a href="index.html#services" class="footer-link">Services</a>
-                    <a href="index.html#pricing" class="footer-link">Pricing</a>
-                    <a href="index.html#contact" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <a href="tel:559-838-4267" class="footer-phone">(559) 838-4267</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mikey Mobile Oil Change. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
+    <footer></footer>
 
-    <!-- Booking Form Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/RYMWwwaJ9YuDfpuPwaPL"
-                    style="width:100%;height:100%;border:none;border-radius:3px"
-                    id="inline-RYMWwwaJ9YuDfpuPwaPL" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Marketing Form - Claim Offer"
-                    data-height="888"
-                    data-layout-iframe-id="inline-RYMWwwaJ9YuDfpuPwaPL"
-                    data-form-id="RYMWwwaJ9YuDfpuPwaPL"
-                    title="Marketing Form - Claim Offer">
-                </iframe>
-                <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-            </div>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

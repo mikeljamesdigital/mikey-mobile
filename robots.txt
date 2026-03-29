@@ -1,21 +1,8 @@
-# Robots.txt for Mikey Mobile Oil Change
-# https://mikeymobile.com
-
 User-agent: *
 Allow: /
 
-# Disallow crawling of admin panel
-Disallow: /admin/
-
-# Disallow crawling of deployment script
-Disallow: /gitautodeploy.php
-
-# Allow all search engines to crawl the site
-User-agent: Googlebot
-Allow: /
-
-User-agent: Bingbot
-Allow: /
+# Block hidden/utility pages from indexing
+Disallow: /instant-quote.html
 
 # Sitemap location
 Sitemap: https://mikeymobile.com/sitemap.xml

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/same-day-service.html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Need an oil change today? Mikey Mobile offers same-day mobile oil change service in Fresno and Clovis. Rush pricing confirmed upfront — all appointments after 5 PM.">
+    <title>Same-Day Mobile Oil Change | Mikey Mobile — Fresno & Clovis</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .btn-primary{background:#E8399A;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s;display:inline-block}
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline-white{background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .3s;display:inline-block}
+        .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+        .btn-outline-navy{background:transparent;color:#1E2D5A;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid #1E2D5A;transition:all .3s;display:inline-block}
+        .btn-outline-navy:hover{background:#1E2D5A;color:#fff}
+
+        /* ── Hero ── */
+        .hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 48px;
+            text-align:center;
+        }
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:18px}
+        .hero h1 span{color:#E8399A}
+        .hero p{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:620px;margin:0 auto 12px;line-height:1.7}
+        .hero-note{font-size:.88rem;color:rgba(255,255,255,.5);margin-bottom:32px}
+        .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Trust Strip ── */
+        .trust-strip{background:#E8399A;padding:14px 0}
+        .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
+        .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+
+        /* ── Ground Rules ── */
+        .ground-rules{padding:72px 0;background:#F8F4FF}
+        .ground-rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px}
+        .rule-card{background:#fff;border-radius:12px;padding:28px 24px;border-top:4px solid #E8399A;box-shadow:0 2px 12px rgba(30,45,90,.07)}
+        .rule-card-icon{font-size:2rem;margin-bottom:12px}
+        .rule-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:8px}
+        .rule-card p{font-size:.9rem;color:#4a5568;line-height:1.6}
+        .rule-card strong{color:#1E2D5A}
+
+        /* ── Pricing Table ── */
+        .pricing-section{padding:72px 0;background:#1E2D5A}
+        .pricing-section .section-title{color:#fff}
+        .pricing-section .section-label{background:rgba(255,255,255,.15);color:#fff}
+        .pricing-intro{font-size:1rem;color:rgba(255,255,255,.75);max-width:640px;margin:0 auto 40px;line-height:1.7;text-align:center}
+        .pricing-table{max-width:720px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)}
+        .pricing-table-header{display:grid;grid-template-columns:1fr 1fr;background:#E8399A;padding:14px 24px}
+        .pricing-table-header span{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:1.5px;color:#fff}
+        .pricing-row{display:grid;grid-template-columns:1fr 1fr;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.05);transition:background .2s}
+        .pricing-row:hover{background:rgba(255,255,255,.1)}
+        .pricing-row:last-child{border-bottom:none}
+        .pricing-row.emergency{background:rgba(232,57,154,.15)}
+        .pricing-row .time{font-size:.93rem;color:rgba(255,255,255,.8)}
+        .pricing-row .fee{font-size:.93rem;color:#fff;font-weight:600}
+        .pricing-row.emergency .time{color:#E8399A;font-weight:600}
+        .pricing-row.emergency .fee{color:#E8399A}
+        .pricing-disclaimer{max-width:720px;margin:20px auto 0;font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;text-align:center}
+
+        /* ── How It Works ── */
+        .how-section{padding:72px 0}
+        .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;margin-top:40px;position:relative}
+        .step{text-align:center;padding:0 12px}
+        .step-num{width:52px;height:52px;border-radius:50%;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:1.5rem;display:flex;align-items:center;justify-content:center;margin:0 auto 16px}
+        .step h3{font-family:'Bebas Neue',sans-serif;font-size:1.1rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:8px}
+        .step p{font-size:.88rem;color:#4a5568;line-height:1.6}
+
+        /* ── First-Timer Notice ── */
+        .notice-section{padding:56px 0;background:#F8F4FF}
+        .notice-box{background:#fff;border:2px solid #E8399A;border-radius:14px;padding:36px;max-width:760px;margin:0 auto;text-align:center}
+        .notice-box h2{font-family:'Bebas Neue',sans-serif;font-size:1.8rem;color:#1E2D5A;margin-bottom:12px}
+        .notice-box h2 span{color:#E8399A}
+        .notice-box p{font-size:.95rem;color:#4a5568;line-height:1.7;max-width:580px;margin:0 auto}
+        .notice-box strong{color:#1E2D5A}
+
+        /* ── CTA ── */
+        .cta-section{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 0;text-align:center}
+        .cta-section h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:14px}
+        .cta-section h2 span{color:#E8399A}
+        .cta-section p{font-size:1rem;color:rgba(255,255,255,.78);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto;line-height:1.7}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        @media(max-width:600px){
+            .ground-rules-grid{grid-template-columns:1fr 1fr}
+            .steps{grid-template-columns:1fr 1fr}
+            .pricing-row .time,.pricing-row .fee{font-size:.82rem}
+            .pricing-table-header span{font-size:.88rem}
+        }
+        @media(max-width:420px){
+            .ground-rules-grid,.steps{grid-template-columns:1fr}
+        }
+    </style>
+</head>
+<body>
+
+    <header></header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <span class="section-label">FRESNO & CLOVIS — AVAILABLE TODAY</span>
+            <h1>Same-Day<br><span>Mobile Oil Change</span></h1>
+            <p>Can't wait until tomorrow? We come to you — today. Rush pricing is always confirmed upfront before you commit to anything.</p>
+            <p class="hero-note">All same-day appointments are scheduled after 5:00 PM</p>
+            <div class="hero-btns">
+                <a href="tel:5598384267" class="btn-primary">CALL TO REQUEST SAME-DAY</a>
+                <a href="/book-now.html" class="btn-outline-white">BOOK ONLINE</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">⚡ Available Today</span>
+            <span class="trust-item">💰 Full Quote Before You Commit</span>
+            <span class="trust-item">🚗 We Come to You</span>
+            <span class="trust-item">⏱️ Done in 30 Minutes</span>
+            <span class="trust-item">✅ No Surprises</span>
+        </div>
+    </div>
+
+    <!-- Ground Rules -->
+    <section class="ground-rules">
+        <div class="container" style="text-align:center">
+            <span class="section-label">WHAT YOU NEED TO KNOW FIRST</span>
+            <h2 class="section-title">How Same-Day<br><span>Service Works</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:640px;margin:0 auto;line-height:1.7">Before we get into pricing, here are the four ground rules that apply to every same-day request — so there are zero surprises from start to finish.</p>
+        </div>
+        <div class="container">
+            <div class="ground-rules-grid">
+                <div class="rule-card">
+                    <div class="rule-card-icon">🕔</div>
+                    <h3>After 5 PM Only</h3>
+                    <p>All same-day appointments are scheduled <strong>after 5:00 PM</strong>. This ensures our technician can arrive with the right parts and give your vehicle full attention.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-icon">⚡</div>
+                    <h3>Rush Fee Applies</h3>
+                    <p>Every same-day request includes a rush fee on top of the standard service price. The fee is based on <strong>the time your request is received</strong> — earlier is cheaper.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-icon">📋</div>
+                    <h3>Full Quote First</h3>
+                    <p>We send you the <strong>complete cost breakdown</strong> — service price plus rush fee — before you confirm anything. You only pay what you agreed to.</p>
+                </div>
+                <div class="rule-card">
+                    <div class="rule-card-icon">🛢️</div>
+                    <h3>Oil & Filter Included</h3>
+                    <p>Unlike the old pricing structure, your <strong>oil and filter are included</strong> in the standard service price ($99 gas/hybrid, $249 diesel). The rush fee is the only add-on.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Table -->
+    <section class="pricing-section">
+        <div class="container" style="text-align:center">
+            <span class="section-label">RUSH FEE PRICING</span>
+            <h2 class="section-title">Rush Charge<br><span>Pricing Tiers</span></h2>
+            <p class="pricing-intro">The rush fee is determined by the time your request is received (Pacific Standard Time). The earlier you reach out, the lower the fee. All fees are in addition to the standard service price.</p>
+            <div class="pricing-table">
+                <div class="pricing-table-header">
+                    <span>REQUEST TIME (PST)</span>
+                    <span>RUSH FEE</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">During Operating Hours (8 AM–5 PM)</span>
+                    <span class="fee">+$25</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">After 5:00 PM – 7:00 PM</span>
+                    <span class="fee">+$50</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">After 7:00 PM – 8:00 PM</span>
+                    <span class="fee">+$75</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">After 8:00 PM – 9:00 PM</span>
+                    <span class="fee">+$100</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">After 9:00 PM – 10:00 PM</span>
+                    <span class="fee">+$150</span>
+                </div>
+                <div class="pricing-row">
+                    <span class="time">After 10:00 PM – 11:00 PM</span>
+                    <span class="fee">+$400</span>
+                </div>
+                <div class="pricing-row emergency">
+                    <span class="time">After 11:00 PM</span>
+                    <span class="fee">+$1,000 — Emergency Only</span>
+                </div>
+            </div>
+            <p class="pricing-disclaimer">Rush fees are added to the standard service price ($99 gas/hybrid · $249 diesel). Rush tier is determined by the time your request is received in PST. Same-day availability is not guaranteed — call to confirm before booking.</p>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-section">
+        <div class="container" style="text-align:center">
+            <span class="section-label">THE PROCESS</span>
+            <h2 class="section-title">From Request to<br><span>Completed Service</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:580px;margin:0 auto;line-height:1.7">Here's exactly what happens from the moment you reach out to the moment we drive away.</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-num">1</div>
+                    <h3>Request Service</h3>
+                    <p>Call or book online. Tell us you need service today, your vehicle details, and your location.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">2</div>
+                    <h3>Get Your Quote</h3>
+                    <p>We calculate your rush tier based on the current PST time and send you a complete price breakdown — before you agree to anything.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">3</div>
+                    <h3>Confirm & Schedule</h3>
+                    <p>If the price works, we lock in your appointment. All same-day slots are after 5:00 PM.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">4</div>
+                    <h3>We Come to You</h3>
+                    <p>Your technician arrives at your home, office, or wherever your vehicle is parked — no shop, no drop-off.</p>
+                </div>
+                <div class="step">
+                    <div class="step-num">5</div>
+                    <h3>Done in 30 Min</h3>
+                    <p>We complete the oil change, clean up, and you're back to your evening. You pay only what was quoted.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- First-Timer Notice -->
+    <section class="notice-section">
+        <div class="container">
+            <div class="notice-box">
+                <h2>⚠️ First-Time Customer <span>Notice</span></h2>
+                <p>The <strong>complimentary oil change promotion for new customers</strong> requires booking at least 48 hours in advance. Same-day and rush requests are not eligible for the free oil change offer — even for first-time customers. The standard service price, rush fee, and any applicable add-ons all apply. We will make this clear during your quote so there are no surprises.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Need Service<br><span>Right Now?</span></h2>
+            <p>Call us immediately or click below. Rush tier is based on the time we receive your request — the sooner you reach out, the lower the fee.</p>
+            <div class="cta-btns">
+                <a href="tel:5598384267" class="btn-primary">CALL (559) 838-4267</a>
+                <a href="/book-now.html" class="btn-outline-white">BOOK ONLINE</a>
+            </div>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">No obligation • Full quote before you commit • Serving Fresno, Clovis & Surrounding Areas</p>
+        </div>
+    </section>
+
+    <footer></footer>
+
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
+</body>
+</html>

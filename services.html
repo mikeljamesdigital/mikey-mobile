@@ -2,367 +2,422 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/services.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobile Oil Change Services - Fresno & Clovis | Mikey Mobile</title>
-    <meta name="description" content="Professional mobile oil change service in Fresno & Clovis, CA. We come to you with premium oil, expert technicians, and transparent pricing. Book today!">
-    
-    <!-- Preload Critical Fonts -->
+    <meta name="description" content="Mikey Mobile Oil Change services in Fresno & Clovis — gas, hybrid, diesel, and boat maintenance. We come to you. Transparent pricing, no surprises.">
+    <title>Mobile Oil Change Services | Mikey Mobile — Fresno & Clovis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Teko:wght@400;600;700&display=swap">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stars.css">
-    <link rel="stylesheet" href="heading-styles.css">
-    <link rel="stylesheet" href="navigation.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="navigation.css?v=2">
+    <link rel="stylesheet" href="/footer.css">
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;color:#1E2D5A;background:#fff}
+
+        /* ── Shared ── */
+        .container{max-width:1100px;margin:0 auto;padding:0 24px}
+        .section-label{display:inline-block;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;padding:4px 14px;border-radius:20px;margin-bottom:14px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.2rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .section-sub{font-size:1.05rem;color:#4a5568;line-height:1.7;max-width:680px}
+        .btn-primary{background:#E8399A;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;transition:all .3s;display:inline-block}
+        .btn-primary:hover{background:#d42d8a;transform:translateY(-2px)}
+        .btn-outline-navy{background:transparent;color:#1E2D5A;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid #1E2D5A;transition:all .3s;display:inline-block}
+        .btn-outline-navy:hover{background:#1E2D5A;color:#fff}
+        .btn-outline-white{background:transparent;color:#fff;padding:15px 32px;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:1.15rem;letter-spacing:1.5px;text-decoration:none;border:2px solid rgba(255,255,255,.5);transition:all .3s;display:inline-block}
+        .btn-outline-white:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+
+        /* ── Hero ── */
+        .services-hero{
+            background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);
+            padding:80px 0 48px;
+            text-align:center;
+        }
+        .services-hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(3rem,8vw,5.5rem);color:#fff;line-height:1.05;margin-bottom:18px}
+        .services-hero h1 span{color:#E8399A}
+        .services-hero p{font-size:1.1rem;color:rgba(255,255,255,.82);max-width:600px;margin:0 auto 36px;line-height:1.7}
+        .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Trust Strip ── */
+        .trust-strip{background:#E8399A;padding:14px 0}
+        .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
+        .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
+
+        /* ── Service Sections ── */
+        .service-section{padding:80px 0}
+        .service-section.alt{background:#F8F4FF}
+        .service-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:start}
+        .service-grid.reverse{direction:rtl}
+        .service-grid.reverse > *{direction:ltr}
+
+        .service-number{font-family:'Bebas Neue',sans-serif;font-size:5rem;color:rgba(232,57,154,.15);line-height:1;margin-bottom:-10px}
+        .service-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,2.8rem);color:#1E2D5A;line-height:1.1;margin-bottom:16px}
+        .service-copy h2 span{color:#E8399A}
+        .service-copy p{font-size:.97rem;color:#4a5568;line-height:1.8;margin-bottom:14px}
+        .service-copy p:last-of-type{margin-bottom:0}
+
+        .service-includes{margin:24px 0;list-style:none}
+        .service-includes li{display:flex;align-items:flex-start;gap:10px;font-size:.93rem;color:#4a5568;padding:7px 0;border-bottom:1px solid rgba(30,45,90,.07)}
+        .service-includes li:last-child{border-bottom:none}
+        .service-includes li::before{content:'✓';color:#E8399A;font-weight:700;flex-shrink:0;margin-top:1px}
+
+        .service-cta-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+
+        /* ── Pricing Card ── */
+        .pricing-card{background:#1E2D5A;border-radius:16px;padding:36px 32px;color:#fff;position:sticky;top:100px}
+        .pricing-card-label{font-family:'Bebas Neue',sans-serif;font-size:13px;letter-spacing:2px;color:rgba(255,255,255,.6);margin-bottom:8px}
+        .pricing-card-price{font-family:'Bebas Neue',sans-serif;font-size:4rem;color:#E8399A;line-height:1;margin-bottom:4px}
+        .pricing-card-price sup{font-size:2rem;vertical-align:super}
+        .pricing-card-desc{font-size:.88rem;color:rgba(255,255,255,.65);margin-bottom:24px;line-height:1.6}
+        .pricing-breakdown{background:rgba(255,255,255,.07);border-radius:10px;padding:20px;margin-bottom:24px}
+        .pricing-breakdown-row{display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08);font-size:.88rem}
+        .pricing-breakdown-row:last-child{border-bottom:none}
+        .pricing-breakdown-row .label{color:rgba(255,255,255,.7)}
+        .pricing-breakdown-row .value{color:#fff;font-weight:600}
+        .pricing-breakdown-row .value.pink{color:#E8399A}
+        .pricing-note{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.5;margin-bottom:20px}
+        .pricing-card .btn-primary{width:100%;text-align:center;display:block}
+
+        /* ── Same-Day Banner ── */
+        .same-day-section{background:#1E2D5A;padding:60px 0}
+        .same-day-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .same-day-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,4vw,3rem);color:#fff;line-height:1.1;margin-bottom:14px}
+        .same-day-copy h2 span{color:#E8399A}
+        .same-day-copy p{font-size:.97rem;color:rgba(255,255,255,.78);line-height:1.7;margin-bottom:14px}
+        .same-day-table{background:rgba(255,255,255,.07);border-radius:12px;overflow:hidden}
+        .same-day-table-header{background:#E8399A;padding:12px 20px;font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:1.5px;color:#fff;display:grid;grid-template-columns:1fr 1fr}
+        .same-day-row{display:grid;grid-template-columns:1fr 1fr;padding:12px 20px;border-bottom:1px solid rgba(255,255,255,.07);font-size:.88rem}
+        .same-day-row:last-child{border-bottom:none}
+        .same-day-row .time{color:rgba(255,255,255,.75)}
+        .same-day-row .fee{color:#fff;font-weight:600}
+        .same-day-note{font-size:.82rem;color:rgba(255,255,255,.5);margin-top:12px;line-height:1.5}
+
+        /* ── ASE Section ── */
+        .ase-section{background:#F8F4FF;padding:60px 0}
+        .ase-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
+        .ase-badge{background:#1E2D5A;border-radius:16px;padding:36px;text-align:center}
+        .ase-badge-icon{font-size:3.5rem;margin-bottom:16px}
+        .ase-badge h3{font-family:'Bebas Neue',sans-serif;font-size:1.6rem;color:#fff;letter-spacing:1px;margin-bottom:8px}
+        .ase-badge p{font-size:.9rem;color:rgba(255,255,255,.7);line-height:1.6}
+        .ase-badge .pink{color:#E8399A}
+        .ase-copy h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.6rem);color:#1E2D5A;line-height:1.1;margin-bottom:14px}
+        .ase-copy h2 span{color:#E8399A}
+        .ase-copy p{font-size:.97rem;color:#4a5568;line-height:1.7;margin-bottom:14px}
+
+        /* ── CTA ── */
+        .services-cta{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 0;text-align:center}
+        .services-cta h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(2rem,5vw,3.5rem);color:#fff;margin-bottom:14px}
+        .services-cta h2 span{color:#E8399A}
+        .services-cta p{font-size:1.05rem;color:rgba(255,255,255,.8);margin-bottom:36px;max-width:540px;margin-left:auto;margin-right:auto}
+        .cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+        /* ── Responsive ── */
+        @media(max-width:900px){
+            .service-grid,.service-grid.reverse{grid-template-columns:1fr;direction:ltr}
+            .same-day-inner,.ase-inner{grid-template-columns:1fr}
+            .pricing-card{position:static}
+        }
+        @media(max-width:600px){
+            .service-section{padding:56px 0}
+        }
+    </style>
 </head>
 <body>
-    <!-- Top Bar -->
-    <div class="top-bar">
+
+    <header></header>
+
+    <!-- Hero -->
+    <section class="services-hero">
         <div class="container">
-            <span>SERVING FRESNO & SURROUNDING AREAS</span>
+            <span class="section-label">FRESNO & CLOVIS MOBILE SERVICE</span>
+            <h1>Every Service.<br><span>At Your Door.</span></h1>
+            <p>From your daily commuter to your diesel work truck to your boat — we bring certified, professional maintenance directly to you. No shop, no waiting room, no wasted time.</p>
+            <div class="hero-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR SERVICE</a>
+                <a href="tel:5598384267" class="btn-outline-white">(559) 838-4267</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <span class="trust-item">🎁 Free Labor — New Customers</span>
+            <span class="trust-item">🚗 We Come to You</span>
+            <span class="trust-item">⏱️ Done in 30 Minutes</span>
+            <span class="trust-item">💰 Upfront Pricing — No Surprises</span>
+            <span class="trust-item">✅ Same-Day Available</span>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- Service 01: Gas & Hybrid -->
+    <section class="service-section" id="gas-hybrid">
         <div class="container">
-            <div class="nav-container">
-                <!-- Left Navigation -->
-                <div class="nav-left">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                    <div class="nav-dropdown">
-                        <a href="locations.html" class="nav-link dropdown-trigger">LOCATIONS</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-section">
-                                <a href="fresno/index.html" class="dropdown-city">Fresno</a>
-                                <a href="fresno/fig-garden/index.html" class="dropdown-neighborhood">Fig Garden</a>
-                                <a href="fresno/sunnyside/index.html" class="dropdown-neighborhood">Sunnyside</a>
-                                <a href="fresno/fig-garden-loop/index.html" class="dropdown-neighborhood">Fig Garden Loop</a>
-                                <a href="fresno/woodward-park/index.html" class="dropdown-neighborhood">Woodward Park</a>
-                                <a href="fresno/riverpark/index.html" class="dropdown-neighborhood">Riverpark</a>
-                                <a href="fresno/pinedale/index.html" class="dropdown-neighborhood">Pinedale</a>
-                                <a href="fresno/sierra-sky-park/index.html" class="dropdown-neighborhood">Sierra Sky Park</a>
-                                <a href="fresno/fort-washington/index.html" class="dropdown-neighborhood">Fort Washington</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="clovis/index.html" class="dropdown-city">Clovis</a>
-                                <a href="clovis/clovis-north/index.html" class="dropdown-neighborhood">Clovis North</a>
-                                <a href="clovis/cindy-lane/index.html" class="dropdown-neighborhood">Cindy Lane</a>
-                                <a href="clovis/dry-creek/index.html" class="dropdown-neighborhood">Dry Creek</a>
-                                <a href="clovis/clovis-high/index.html" class="dropdown-neighborhood">Clovis High</a>
-                                <a href="clovis/quail-lakes/index.html" class="dropdown-neighborhood">Quail Lakes</a>
-                                <a href="clovis/harlan-ranch/index.html" class="dropdown-neighborhood">Harlan Ranch</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="madera-ranchos/index.html" class="dropdown-city">Madera Ranchos</a>
-                                <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-neighborhood">Rolling Hills</a>
-                                <a href="madera-ranchos/riverstone/index.html" class="dropdown-neighborhood">Riverstone</a>
-                            </div>
-                        </div>
+            <div class="service-grid">
+                <div class="service-copy">
+                    <div class="service-number">01</div>
+                    <span class="section-label">GAS &amp; HYBRID VEHICLES</span>
+                    <h2>Cars, Trucks<br>&amp; <span>SUVs</span></h2>
+                    <p>Gas or hybrid — if it runs on an engine, we service it. Our technician comes to your driveway, parking lot, or workplace and handles your oil change start to finish while you carry on with your day.</p>
+                    <p>Every standard service includes 5 quarts of synthetic-blend oil and a fresh oil filter. Need more quarts or prefer full synthetic? We'll quote you upfront so there are zero surprises.</p>
+                    <ul class="service-includes">
+                        <li>All gas and hybrid cars, trucks &amp; SUVs</li>
+                        <li>5 quarts of synthetic-blend oil included</li>
+                        <li>New oil filter included</li>
+                        <li>Additional quarts available at $8/qt (synthetic-blend)</li>
+                        <li>Full synthetic upgrade available — quoted before we start</li>
+                        <li>Toyota, Honda, Ford, Chevy, Subaru, VW &amp; more</li>
+                        <li>Done in 30 minutes or less at your location</li>
+                        <li>Mon–Sat, 8 AM–6 PM • Same-day often available</li>
+                    </ul>
+                    <div class="service-cta-btns">
+                        <a href="/book-now.html" class="btn-primary">BOOK AN APPOINTMENT</a>
+                        <a href="tel:5598384267" class="btn-outline-navy">CALL (559) 838-4267</a>
                     </div>
                 </div>
-
-                <!-- Center Logo -->
-                <div class="nav-center">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
-                    </a>
-                </div>
-
-                <!-- Right Navigation -->
-                <div class="nav-right">
-                    <a href="services.html" class="nav-link">SERVICES</a>
-                    <a href="index.html#pricing" class="nav-link">PRICING</a>
-                    <a href="#contact" class="nav-link">CONTACT</a>
-                </div>
-
-                <!-- Mobile Hamburger Menu Button -->
-                <button class="hamburger-menu" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
-        <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">
-            ×
-        </button>
-        <div class="mobile-menu-content">
-            <a href="index.html" class="mobile-nav-link">HOME</a>
-            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
-            
-            <div class="mobile-dropdown-section">
-                <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
-                <a href="fresno/index.html" class="mobile-dropdown-main">Fresno</a>
-                <a href="fresno/fig-garden/index.html" class="mobile-dropdown-sub">Fig Garden</a>
-                <a href="fresno/sunnyside/index.html" class="mobile-dropdown-sub">Sunnyside</a>
-                <a href="fresno/woodward-park/index.html" class="mobile-dropdown-sub">Woodward Park</a>
-                <a href="fresno/fig-garden-loop/index.html" class="mobile-dropdown-sub">Fig Garden Loop</a>
-                <a href="fresno/riverpark/index.html" class="mobile-dropdown-sub">Riverpark</a>
-                <a href="fresno/pinedale/index.html" class="mobile-dropdown-sub">Pinedale</a>
-                <a href="fresno/sierra-sky-park/index.html" class="mobile-dropdown-sub">Sierra Sky Park</a>
-                <a href="fresno/fort-washington/index.html" class="mobile-dropdown-sub">Fort Washington</a>
-                
-                <a href="clovis/index.html" class="mobile-dropdown-main">Clovis</a>
-                <a href="clovis/clovis-north/index.html" class="mobile-dropdown-sub">Clovis North</a>
-                <a href="clovis/cindy-lane/index.html" class="mobile-dropdown-sub">Cindy Lane</a>
-                <a href="clovis/dry-creek/index.html" class="mobile-dropdown-sub">Dry Creek</a>
-                <a href="clovis/harlan-ranch/index.html" class="mobile-dropdown-sub">Harlan Ranch</a>
-                <a href="clovis/clovis-high/index.html" class="mobile-dropdown-sub">Clovis High</a>
-                <a href="clovis/quail-lakes/index.html" class="mobile-dropdown-sub">Quail Lakes</a>
-                
-                <a href="madera-ranchos/index.html" class="mobile-dropdown-main">Madera Ranchos</a>
-                <a href="madera-ranchos/rolling-hills/index.html" class="mobile-dropdown-sub">Rolling Hills</a>
-                <a href="madera-ranchos/riverstone/index.html" class="mobile-dropdown-sub">Riverstone</a>
-            </div>
-            
-            <a href="services.html" class="mobile-nav-link">SERVICES</a>
-            <a href="index.html#pricing" class="mobile-nav-link">PRICING</a>
-            <a href="#contact" class="mobile-nav-link">CONTACT</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero parallax" style="min-height: 400px; padding: 60px 0;">
-        <div class="stars-container">
-            <div class="star star-1"></div>
-            <div class="star star-2"></div>
-            <div class="star star-3"></div>
-            <div class="star star-4"></div>
-            <div class="star star-5"></div>
-            <div class="star star-6"></div>
-            <div class="star star-7"></div>
-            <div class="star star-8"></div>
-            <div class="star star-9"></div>
-            <div class="star star-10"></div>
-            <div class="star star-11"></div>
-            <div class="star star-12"></div>
-            <div class="star star-13"></div>
-            <div class="star star-14"></div>
-            <div class="star star-15"></div>
-            <div class="star star-16"></div>
-            <div class="star star-17"></div>
-            <div class="star star-18"></div>
-            <div class="star star-19"></div>
-            <div class="star star-20"></div>
-            <div class="star star-21"></div>
-            <div class="star star-22"></div>
-            <div class="star star-23"></div>
-            <div class="star star-24"></div>
-            <div class="star star-25"></div>
-            <div class="star star-26"></div>
-            <div class="star star-27"></div>
-            <div class="star star-28"></div>
-            <div class="star star-29"></div>
-            <div class="star star-30"></div>
-            <div class="star star-31"></div>
-            <div class="star star-32"></div>
-            <div class="star star-33"></div>
-            <div class="star star-34"></div>
-            <div class="star star-35"></div>
-            <div class="star star-36"></div>
-        </div>
-        <div class="container hero-content">
-            <h1 class="hero-title">PROFESSIONAL MOBILE OIL CHANGE SERVICES</h1>
-            <p style="font-size: 24px; margin-bottom: 30px;">Serving Fresno, Clovis & Surrounding Areas</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">BOOK NOW</a>
-                <a href="tel:559-838-4267" class="btn btn-secondary">(559) 838-4267</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Content -->
-    <section class="services-section" style="background: #ffffff; padding: 80px 0;">
-        <div class="container">
-            <div style="max-width: 900px; margin: 0 auto;">
-                <h2 style="color: #2C3E5C; text-align: center; margin-bottom: 40px;">Mikey Mobile Oil Change – Professional Mobile Oil Change Service in Fresno & Clovis, CA</h2>
-                
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                    At <strong>Mikey Mobile Oil Change</strong>, we bring fast, professional oil changes directly to your home or office in <a href="fresno/index.html" style="color: #00BCD4; text-decoration: none;">Fresno</a>, <a href="clovis/index.html" style="color: #00BCD4; text-decoration: none;">Clovis</a>, and surrounding areas. No more wasting time at the shop—our fully equipped mobile van comes to you.
-                </p>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 40px;">
-                    Skip the waiting room. Reclaim your day. Whether you're at home relaxing or staying productive at work, our expert technicians handle everything while you focus on what matters.
-                </p>
-
-                <h3 style="color: #E85D9A; font-size: 32px; margin-top: 50px; margin-bottom: 25px;">Why Choose Mikey Mobile Oil Change?</h3>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                    Convenience is king. Traditional oil changes mean driving to a shop, waiting in line, and losing hours. We eliminate that hassle. Our service is designed for busy <a href="fresno/index.html" style="color: #00BCD4; text-decoration: none;">Fresno</a> drivers who value time, quality, and respect for their vehicle and property.
-                </p>
-
-                <ul style="color: #333; font-size: 20px; line-height: 2; margin-bottom: 40px; list-style: none; padding-left: 0;">
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ Ultimate Convenience</strong> — We come to your location: driveway, parking lot, workplace—anywhere safe and accessible.</li>
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ Premium Products</strong> — We use top brands like <a href="https://www.valvoline.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Valvoline</a>, <a href="https://www.mobil.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Mobil 1</a>, <a href="https://www.knfilters.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">K&N</a>, and <a href="https://www.acdelco.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">ACDelco</a> for superior protection and performance.</li>
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ All Makes & Models</strong> — Cars, trucks (including diesel), SUVs, minivans. From <a href="https://www.gm.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">GM</a>, <a href="https://www.ford.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Ford</a>, <a href="https://www.toyota.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Toyota</a>, <a href="https://www.honda.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Honda</a>, <a href="https://www.bmwusa.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">BMW</a>, <a href="https://www.mbusa.com/" target="_blank" rel="noopener" style="color: #00BCD4; text-decoration: none;">Mercedes-Benz</a>, and more.</li>
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ Transparent Pricing</strong> — Starting at <a href="index.html#pricing" style="color: #00BCD4; text-decoration: none;">$75 + oil & filter</a>. Honest, upfront—no hidden fees.</li>
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ Expert Technicians</strong> — Highly trained, courteous, and careful. We treat your vehicle and property like our own.</li>
-                    <li style="margin-bottom: 15px;"><strong style="color: #E85D9A;">✓ Locally Owned</strong> — Fresno-based, building trust in our community.</li>
-                </ul>
-
-                <h3 style="color: #E85D9A; font-size: 32px; margin-top: 50px; margin-bottom: 25px;">Our Simple Mobile Oil Change Process</h3>
-
-                <ol style="color: #333; font-size: 20px; line-height: 2; margin-bottom: 40px;">
-                    <li style="margin-bottom: 15px;"><strong>Schedule Easily</strong> — Call <a href="tel:559-838-4267" style="color: #00BCD4; text-decoration: none;">(559) 838-4267</a> or <a href="#contact" style="color: #00BCD4; text-decoration: none;">book online</a>. Pick a time that works for you.</li>
-                    <li style="margin-bottom: 15px;"><strong>We Arrive Prepared</strong> — Our van is stocked with premium oil, filters, and tools.</li>
-                    <li style="margin-bottom: 15px;"><strong>Professional Service</strong> — Quick, clean oil change (dripless where possible). We check fluids, top off as needed, and inspect for issues.</li>
-                    <li style="margin-bottom: 15px;"><strong>Done Fast</strong> — Most services take 20-40 minutes. Relax, work, or enjoy your break.</li>
-                    <li style="margin-bottom: 15px;"><strong>Peace of Mind</strong> — Drive confidently knowing your engine is protected.</li>
-                </ol>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                    Regular oil changes extend engine life, improve fuel efficiency, and prevent costly repairs. In Fresno's hot climate and stop-and-go traffic, staying on top of maintenance is essential.
-                </p>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 40px;">
-                    We service all major vehicles with care. Whether it's your daily commuter, family SUV, work truck, or diesel rig, we customize to your needs.
-                </p>
-
-                <h3 style="color: #E85D9A; font-size: 32px; margin-top: 50px; margin-bottom: 25px;">Serving Fresno & Clovis Proudly</h3>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 30px;">
-                    As a local business, we understand Central Valley drivers. From <a href="fresno/index.html" style="color: #00BCD4; text-decoration: none;">downtown Fresno</a> to <a href="clovis/index.html" style="color: #00BCD4; text-decoration: none;">Clovis neighborhoods</a>, we cover the area efficiently. We proudly serve <a href="fresno/fig-garden/index.html" style="color: #00BCD4; text-decoration: none;">Fig Garden</a>, <a href="fresno/woodward-park/index.html" style="color: #00BCD4; text-decoration: none;">Woodward Park</a>, <a href="clovis/clovis-north/index.html" style="color: #00BCD4; text-decoration: none;">Clovis North</a>, and many more neighborhoods.
-                </p>
-
-                <p style="color: #333; font-size: 20px; line-height: 1.8; margin-bottom: 40px;">
-                    <strong>Hours:</strong> Monday–Saturday 8:00 AM–6:00 PM
-                </p>
-
-                <div style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 50px; border-radius: 15px; text-align: center; margin-top: 60px;">
-                    <h3 style="color: #ffffff; font-size: 36px; margin-bottom: 20px;">Ready for Hassle-Free Maintenance?</h3>
-                    <p style="color: #ffffff; font-size: 22px; margin-bottom: 30px;">Don't wait—schedule your mobile oil change today. Experience the difference of professional service at your doorstep.</p>
-                    <a href="tel:559-838-4267" class="btn btn-primary" style="font-size: 24px; padding: 18px 50px; margin-right: 15px;">CALL NOW: (559) 838-4267</a>
-                    <a href="#contact" class="btn btn-secondary" style="font-size: 24px; padding: 18px 50px; background: #ffffff; color: #667eea;">BOOK APPOINTMENT</a>
+                <div>
+                    <div class="pricing-card">
+                        <div class="pricing-card-label">STANDARD SERVICE PRICE</div>
+                        <div class="pricing-card-price"><sup>$</sup>99</div>
+                        <div class="pricing-card-desc">Flat rate — includes 5 qts synthetic-blend + oil filter</div>
+                        <div class="pricing-breakdown">
+                            <div class="pricing-breakdown-row">
+                                <span class="label">5 qts Synthetic-Blend Oil</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Oil Filter</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Labor</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Additional Quart (syn-blend)</span>
+                                <span class="value pink">+$8/qt</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Full Synthetic Upgrade</span>
+                                <span class="value pink">Quoted</span>
+                            </div>
+                        </div>
+                        <p class="pricing-note">If your vehicle requires more than 5 quarts or you'd like to upgrade to full synthetic, we'll let you know the exact cost before any work begins.</p>
+                        <a href="/book-now.html" class="btn-primary">BOOK NOW — $99</a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <!-- Service 02: Diesel -->
+    <section class="service-section alt" id="diesel">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
+            <div class="service-grid reverse">
+                <div class="service-copy">
+                    <div class="service-number">02</div>
+                    <span class="section-label">HEAVY-DUTY DIESEL TRUCKS</span>
+                    <h2>Diesel Trucks<br>&amp; <span>Work Vehicles</span></h2>
+                    <p>Diesel engines work harder and demand more from their oil. This service is built specifically for heavy-duty trucks — Ford F-250/F-350, Ram 2500/3500, Chevy/GMC 2500/3500, and similar. We bring the right diesel-rated synthetic oil and a heavy-duty filter directly to your truck.</p>
+                    <p>Standard diesel service includes 10 quarts of synthetic oil and a heavy-duty filter — enough for most HD trucks. If your engine requires more, additional quarts are $15 each, quoted before we start.</p>
+                    <ul class="service-includes">
+                        <li>Heavy-duty trucks: F-250/F-350, Ram 2500/3500, Silverado/Sierra HD</li>
+                        <li>10 quarts of synthetic diesel oil included</li>
+                        <li>Heavy-duty oil filter included</li>
+                        <li>Additional quarts at $15/qt — quoted upfront</li>
+                        <li>Duramax, Cummins &amp; Power Stroke engines</li>
+                        <li>On-site service — we come to your driveway or jobsite</li>
+                        <li>Mon–Sat, 8 AM–6 PM • Same-day often available</li>
+                    </ul>
+                    <div class="service-cta-btns">
+                        <a href="/book-now.html" class="btn-primary">BOOK DIESEL SERVICE</a>
+                        <a href="tel:5598384267" class="btn-outline-navy">CALL (559) 838-4267</a>
+                    </div>
                 </div>
-                <div class="footer-links">
-                    <a href="index.html" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="services.html" class="footer-link">Services</a>
-                    <a href="index.html#pricing" class="footer-link">Pricing</a>
-                    <a href="#contact" class="footer-link">Contact</a>
+                <div>
+                    <div class="pricing-card">
+                        <div class="pricing-card-label">DIESEL SERVICE PRICE</div>
+                        <div class="pricing-card-price"><sup>$</sup>249</div>
+                        <div class="pricing-card-desc">Flat rate — includes 10 qts synthetic diesel oil + heavy-duty filter</div>
+                        <div class="pricing-breakdown">
+                            <div class="pricing-breakdown-row">
+                                <span class="label">10 qts Synthetic Diesel Oil</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Heavy-Duty Oil Filter</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Labor</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Additional Quart (synthetic)</span>
+                                <span class="value pink">+$15/qt</span>
+                            </div>
+                        </div>
+                        <p class="pricing-note">Built for F-250, F-350, Ram 2500/3500, and similar HD trucks. If your engine requires more than 10 quarts, we'll quote the exact cost before starting.</p>
+                        <a href="/book-now.html" class="btn-primary">BOOK DIESEL SERVICE</a>
+                    </div>
                 </div>
-                <div class="footer-contact">
-                    <a href="tel:559-838-4267" class="footer-phone">(559) 838-4267</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mikey Mobile Oil Change. All rights reserved.</p>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <!-- Booking Form Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/RYMWwwaJ9YuDfpuPwaPL"
-                    style="width:100%;height:100%;border:none;border-radius:3px"
-                    id="inline-RYMWwwaJ9YuDfpuPwaPL" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Marketing Form - Claim Offer"
-                    data-height="888"
-                    data-layout-iframe-id="inline-RYMWwwaJ9YuDfpuPwaPL"
-                    data-form-id="RYMWwwaJ9YuDfpuPwaPL"
-                    title="Marketing Form - Claim Offer"
-                >
-                </iframe>
+    <!-- Service 03: Boat -->
+    <section class="service-section" id="boat">
+        <div class="container">
+            <div class="service-grid">
+                <div class="service-copy">
+                    <div class="service-number">03</div>
+                    <span class="section-label">SEASONAL BOAT MAINTENANCE</span>
+                    <h2>Boat Summer<br><span>Maintenance</span></h2>
+                    <p>Before you hit the water, your boat needs to be ready. Our pre-season maintenance package covers everything in one visit — engine oil, V-drive, transmission, and impeller — so you can launch with confidence and no surprises.</p>
+                    <p>We come to your driveway, marina, or storage facility. No trailering, no shop drop-off, no waiting weeks for an appointment. Spots fill up fast before summer — book early.</p>
+                    <ul class="service-includes">
+                        <li>Engine oil &amp; filter change</li>
+                        <li>V-drive oil service</li>
+                        <li>Transmission fluid service</li>
+                        <li>Impeller replacement</li>
+                        <li>We come to you — driveway, marina, or storage</li>
+                        <li>Get summer-ready in a single visit</li>
+                        <li>Limited availability — book early</li>
+                    </ul>
+                    <div class="service-cta-btns">
+                        <a href="/book-now.html" class="btn-primary">BOOK BOAT SERVICE</a>
+                        <a href="tel:5598384267" class="btn-outline-navy">CALL (559) 838-4267</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="pricing-card">
+                        <div class="pricing-card-label">PRE-SEASON PACKAGE</div>
+                        <div class="pricing-card-price"><sup>$</sup>499</div>
+                        <div class="pricing-card-desc">All-inclusive — we come to you</div>
+                        <div class="pricing-breakdown">
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Engine Oil &amp; Filter</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">V-Drive Oil Service</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Transmission Fluid</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">Impeller Replacement</span>
+                                <span class="value">Included</span>
+                            </div>
+                            <div class="pricing-breakdown-row">
+                                <span class="label">On-Site Travel</span>
+                                <span class="value">Included</span>
+                            </div>
+                        </div>
+                        <p class="pricing-note">Limited summer availability. Book early to secure your spot before the season fills up.</p>
+                        <a href="/book-now.html" class="btn-primary">BOOK BOAT SERVICE</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Go High Level Form Script - Lazy loaded when modal opens -->
-    <!-- Script will be loaded dynamically when user clicks Book Now -->
+    <!-- Same-Day Service -->
+    <section class="same-day-section" id="same-day">
+        <div class="container">
+            <div class="same-day-inner">
+                <div class="same-day-copy">
+                    <span class="section-label">SAME-DAY SERVICE</span>
+                    <h2>Need It<br><span>Today?</span></h2>
+                    <p>Same-day service is available based on our current schedule and the time of day your request is made. The earlier you call, the lower the same-day fee — so don't wait if you need it today.</p>
+                    <p>Same-day pricing is the standard oil change cost plus a same-day fee ranging from $25 to $1,000 depending on how late in the day the request comes in and current availability.</p>
+                    <p style="font-size:.88rem;color:rgba(255,255,255,.55)">Same-day availability is not guaranteed and is subject to current schedule. Call us to confirm availability before booking.</p>
+                    <div style="margin-top:24px">
+                        <a href="tel:5598384267" class="btn-primary">CALL TO CHECK AVAILABILITY</a>
+                    </div>
+                </div>
+                <div>
+                    <div class="same-day-table">
+                        <div class="same-day-table-header">
+                            <span>REQUEST TIME (PST)</span>
+                            <span>RUSH FEE</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">During Operating Hours (8 AM–5 PM)</span>
+                            <span class="fee">+$25</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">After 5:00 PM – 7:00 PM</span>
+                            <span class="fee">+$50</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">After 7:00 PM – 8:00 PM</span>
+                            <span class="fee">+$75</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">After 8:00 PM – 9:00 PM</span>
+                            <span class="fee">+$100</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">After 9:00 PM – 10:00 PM</span>
+                            <span class="fee">+$150</span>
+                        </div>
+                        <div class="same-day-row">
+                            <span class="time">After 10:00 PM – 11:00 PM</span>
+                            <span class="fee">+$400</span>
+                        </div>
+                        <div class="same-day-row" style="background:rgba(232,57,154,.12)">
+                            <span class="time" style="color:#E8399A;font-weight:600">After 11:00 PM</span>
+                            <span class="fee" style="color:#E8399A">+$1,000 (Emergency Only)</span>
+                        </div>
+                    </div>
+                    <p class="same-day-note">All same-day requests made during normal operating hours are scheduled after 5 PM of the same day — ensuring our technician arrives with the right parts and full attention. Rush fees are in addition to the standard service price.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script>
-        // Parallax scrolling effect
-        window.addEventListener('scroll', function() {
-            const hero = document.querySelector('.hero.parallax');
-            if (!hero) return;
-            
-            const scrollPosition = window.pageYOffset;
-            const heroHeight = hero.offsetHeight;
-            
-            // Only apply parallax when hero is in view
-            if (scrollPosition < heroHeight) {
-                const offset = scrollPosition * 0.5;
-                hero.style.setProperty('--scroll-offset', offset + 'px');
-            }
-        });
+    <!-- ASE Training Section -->
+    <section class="ase-section">
+        <div class="container">
+            <div class="ase-inner">
+                <div class="ase-badge">
+                    <div class="ase-badge-icon">🎓</div>
+                    <h3>ASE <span class="pink">Trained</span><br>Technician</h3>
+                    <p>Trained by ASE-certified professors at the <strong style="color:#fff">Fresno City College Automotive Technology Department</strong> — one of California's leading automotive programs.</p>
+                </div>
+                <div class="ase-copy">
+                    <span class="section-label">ABOUT OUR TRAINING</span>
+                    <h2>Trained to the<br><span>Highest Standard</span></h2>
+                    <p>Our technician is ASE-trained — meaning they completed their automotive education under ASE-certified professors at the Fresno City College Automotive Technology Department, one of the most respected programs in California's Central Valley.</p>
+                    <p>While our technician is not currently ASE-certified, their training follows the same curriculum and standards used to prepare students for ASE certification exams. Every service is performed with the precision, care, and professionalism that training demands.</p>
+                    <p>We believe in being upfront about our credentials — just as we're upfront about our pricing. You deserve to know exactly who is working on your vehicle.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Modal functionality with lazy loading
-        const modal = document.getElementById('bookingModal');
-        const closeBtn = document.querySelector('.modal-close');
-        const bookNowButtons = document.querySelectorAll('a[href="#contact"].btn-primary, a[href="#contact"].btn-secondary');
-        let formScriptLoaded = false;
+    <!-- CTA -->
+    <section class="services-cta">
+        <div class="container">
+            <h2>Not Sure Which<br><span>Service You Need?</span></h2>
+            <p>Give us a call and we'll walk you through it in under two minutes. No pressure, no obligation — just straight answers from someone who knows your vehicle.</p>
+            <div class="cta-btns">
+                <a href="/book-now.html" class="btn-primary">BOOK YOUR SERVICE</a>
+                <a href="tel:5598384267" class="btn-outline-white">CALL (559) 838-4267</a>
+            </div>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.45)">Mon–Sat • 8 AM–6 PM • Serving Fresno, Clovis &amp; Surrounding Areas</p>
+        </div>
+    </section>
 
-        // Function to lazy load the form script
-        function loadFormScript() {
-            if (formScriptLoaded) return;
-            
-            const script = document.createElement('script');
-            script.src = 'https://link.msgsndr.com/js/form_embed.js';
-            script.async = true;
-            document.body.appendChild(script);
-            formScriptLoaded = true;
-        }
+    <footer></footer>
 
-        // Open modal when any Book Now button is clicked
-        bookNowButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                loadFormScript(); // Load form script only when needed
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-        });
-
-        // Close modal when X is clicked
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-        });
-
-        // Close modal when clicking outside of it
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && modal.style.display === 'block') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            }
-        });
-    </script>
+    <script src="/js/navigation.js?v=2"></script>
+    <script src="/js/footer.js"></script>
 </body>
 </html>

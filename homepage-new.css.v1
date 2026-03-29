@@ -1,0 +1,715 @@
+/* New Homepage Conversion-Focused Styles */
+
+/* Hero Section with Video */
+.hero-new {
+    position: relative;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 20px;
+    overflow: hidden;
+}
+
+.hero-video-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(102, 126, 234, 0.85) 0%, rgba(118, 75, 162, 0.85) 100%);
+    z-index: 1;
+}
+
+.hero-content-new {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero-title-new {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    font-family: 'Russo One', sans-serif;
+    line-height: 1.2;
+}
+
+.hero-subtitle {
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 40px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-buttons-new {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-large {
+    padding: 18px 45px;
+    font-size: 20px;
+}
+
+/* Stats Bar */
+.stats-bar {
+    background: #1a1a1a;
+    padding: 60px 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+
+.stat-item {
+    color: #fff;
+}
+
+.stat-number {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00BCD4;
+    font-family: 'Bebas Neue', sans-serif;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    font-size: 22px;
+    color: #ccc;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Why Choose Section */
+.why-choose {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 60px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.benefit-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.benefit-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
+.benefit-icon {
+    font-size: 64px;
+    margin-bottom: 20px;
+}
+
+.benefit-card h3 {
+    font-size: 24px;
+    color: #00BCD4;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.benefit-card p {
+    font-size: 22px;
+    color: #ccc;
+    line-height: 1.6;
+    font-family: 'Teko', sans-serif;
+}
+
+/* How It Works */
+.how-it-works {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    background: #E85D9A;
+    color: #fff;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.step-icon {
+    font-size: 56px;
+    margin-bottom: 20px;
+}
+
+.step-card h3 {
+    font-size: 26px;
+    color: #fff;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.step-card p {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    font-family: 'Teko', sans-serif;
+}
+
+.cta-center {
+    text-align: center;
+}
+
+/* Pricing Section */
+.pricing-section {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.pricing-card {
+    background: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 2px solid #333;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(0, 188, 212, 0.3);
+}
+
+.pricing-card-featured {
+    border: 3px solid #E85D9A;
+    transform: scale(1.05);
+}
+
+.recommended-badge {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #E85D9A;
+    color: #fff;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.pricing-card h3 {
+    font-size: 28px;
+    color: #00BCD4;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.price {
+    font-size: 56px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.pricing-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    text-align: left;
+}
+
+.pricing-features li {
+    font-size: 22px;
+    color: #ccc;
+    margin-bottom: 12px;
+    font-family: 'Teko', sans-serif;
+}
+
+.pricing-guarantee {
+    text-align: center;
+    color: #00BCD4;
+    font-size: 22px;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Testimonials */
+.testimonials {
+    background: #1a1a1a;
+    padding: 80px 0;
+}
+
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.testimonial-card {
+    background: #0a0a0a;
+    padding: 30px;
+    border-radius: 15px;
+    border: 2px solid #333;
+}
+
+.testimonial-rating {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.testimonial-text {
+    font-size: 22px;
+    color: #ccc;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-style: italic;
+    font-family: 'Teko', sans-serif;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.author-avatar {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.author-name {
+    font-size: 22px;
+    color: #fff;
+    font-weight: bold;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.author-location {
+    font-size: 16px;
+    color: #00BCD4;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Service Area */
+.service-area {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.service-area-intro {
+    text-align: center;
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 50px;
+    font-family: 'Teko', sans-serif;
+}
+
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 50px;
+}
+
+.location-column h3 {
+    font-size: 24px;
+    color: #00BCD4;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.location-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.location-column li {
+    margin-bottom: 12px;
+}
+
+.location-column a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 22px;
+    transition: color 0.3s ease;
+    font-family: 'Teko', sans-serif;
+}
+
+.location-column a:hover {
+    color: #E85D9A;
+}
+
+/* Urgency Section */
+.urgency-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.urgency-text {
+    font-size: 22px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 40px;
+    font-family: 'Teko', sans-serif;
+}
+
+.urgency-visual {
+    margin-bottom: 40px;
+}
+
+.availability-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.day-slot {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.day-name {
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.slots-status {
+    font-size: 14px;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-family: 'Teko', sans-serif;
+}
+
+.slots-low {
+    background: #E85D9A;
+    color: #fff;
+}
+
+.slots-medium {
+    background: #00BCD4;
+    color: #fff;
+}
+
+.slots-high {
+    background: #4CAF50;
+    color: #fff;
+}
+
+.slots-full {
+    background: #666;
+    color: #fff;
+}
+
+.trust-signal-small {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-top: 20px;
+    font-family: 'Teko', sans-serif;
+}
+
+/* FAQ Section */
+.faq-section {
+    background: #0a0a0a;
+    padding: 80px 0;
+}
+
+.faq-grid {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: #1a1a1a;
+    padding: 25px 30px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 2px solid #333;
+}
+
+.faq-question {
+    font-size: 20px;
+    color: #00BCD4;
+    font-weight: bold;
+    margin-bottom: 15px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.faq-answer {
+    font-size: 22px;
+    color: #ccc;
+    line-height: 1.8;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Final CTA */
+.final-cta {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title-white {
+    font-size: 48px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+    font-family: 'Russo One', sans-serif;
+}
+
+.final-cta-subtitle {
+    font-size: 28px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 50px;
+    font-family: 'Teko', sans-serif;
+}
+
+.booking-form-container {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    min-height: 900px;
+}
+
+.booking-form-container iframe {
+    height: 900px !important;
+}
+
+.final-cta-buttons {
+    margin-bottom: 30px;
+}
+
+.trust-signals-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    font-family: 'Teko', sans-serif;
+}
+
+/* Footer */
+.footer {
+    background: #0a0a0a;
+    padding: 60px 0 30px;
+    border-top: 2px solid #333;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-column h4 {
+    font-size: 20px;
+    color: #00BCD4;
+    margin-bottom: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.footer-column p,
+.footer-column a {
+    font-size: 16px;
+    color: #ccc;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    font-family: 'Teko', sans-serif;
+}
+
+.footer-column a:hover {
+    color: #E85D9A;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid #333;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    color: #666;
+    font-family: 'Teko', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .benefits-grid,
+    .steps-grid,
+    .pricing-grid,
+    .testimonials-grid,
+    .locations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-title-new {
+        font-size: 36px;
+    }
+
+    .hero-subtitle {
+        font-size: 20px;
+    }
+
+    .hero-buttons-new {
+        flex-direction: column;
+    }
+
+    .btn-large {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .benefits-grid,
+    .steps-grid,
+    .pricing-grid,
+    .testimonials-grid,
+    .locations-grid,
+    .stats-grid,
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+    .section-title-white {
+        font-size: 36px;
+    }
+
+    .pricing-card-featured {
+        transform: scale(1);
+    }
+
+    .availability-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .day-slot {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title-new {
+        font-size: 28px;
+    }
+
+    .hero-subtitle {
+        font-size: 18px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .stat-number {
+        font-size: 36px;
+    }
+
+    .price {
+        font-size: 42px;
+    }
+}

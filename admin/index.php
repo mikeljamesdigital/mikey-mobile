@@ -103,6 +103,12 @@
                 <p>Manage site navigation menu, add new pages, and update links throughout the website.</p>
             </a>
             
+            <a href="footer-editor.php" class="dashboard-card">
+                <div class="icon">📄</div>
+                <h2>Footer Editor</h2>
+                <p>Edit footer content, links, and contact information that appears on all pages.</p>
+            </a>
+            
             <a href="content-editor.php" class="dashboard-card">
                 <div class="icon">📝</div>
                 <h2>Content Editor</h2>

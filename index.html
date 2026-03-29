@@ -2,480 +2,535 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mikeymobile.com/">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mikey Mobile Oil Change - Fresno's Mobile Oil Change Service</title>
-    
-    <!-- Preload Critical Fonts -->
+    <title>Fresno Mobile Oil Change - Mikey Mobile Oil Change</title>
+    <meta name="description" content="Professional mobile oil changes in Fresno and Clovis. Done at your home or office in 30 minutes. Same-day service available. Book online in 60 seconds!">
+    <!-- Preconnect to font origins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Russo+One&family=Teko:wght@400;600;700&display=swap">
-    
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="stars.css">
-    <link rel="stylesheet" href="heading-styles.css">
-    <link rel="stylesheet" href="navigation.css">
+    <!-- Non-render-blocking Google Fonts with font-display=swap -->
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap"></noscript>
+    <!-- Non-render-blocking navigation and footer CSS -->
+    <link rel="preload" as="style" href="/navigation.css?v=3" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/navigation.css?v=3"></noscript>
+    <link rel="preload" as="style" href="/footer.css?v=2" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/footer.css?v=2"></noscript>
+    <!-- Inline critical nav height to prevent CLS -->
+    <style>header{min-height:80px;display:block}footer{min-height:200px;display:block}</style>
+    <style>
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+        html{scroll-behavior:smooth}
+        body{font-family:'Inter',sans-serif;background:#fff;color:#1A1A2E;font-size:18px;line-height:1.6}
+        a{text-decoration:none;color:inherit}
+        img{max-width:100%;display:block}
+
+        /* TOP BAR */
+        .top-bar{background:#1E2D5A;color:#fff;text-align:center;padding:10px 20px;font-family:'Teko',sans-serif;font-size:18px;letter-spacing:.5px}
+        .top-bar a{color:#FF6BB5;font-weight:700}
+
+        /* HERO */
+        .hero{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);display:flex;align-items:center;position:relative;overflow:visible;padding:60px 40px 0}.hero-copy{padding-bottom:48px}
+        .hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 70% 50%,rgba(232,64,154,.15) 0%,transparent 65%);pointer-events:none}
+        .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:flex-end;width:100%;position:relative;z-index:1}
+        .hero-badge{display:inline-block;background:#E8399A;color:#fff;font-family:'Teko',sans-serif;font-size:16px;letter-spacing:2px;text-transform:uppercase;padding:6px 18px;border-radius:4px;margin-bottom:20px}
+        .hero h1{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,7vw,90px);line-height:.95;color:#fff;margin-bottom:24px}
+        .hero h1 span{color:#E8399A}
+        .hero-sub{font-size:20px;color:rgba(255,255,255,.85);margin-bottom:36px;line-height:1.6}
+        .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
+        .btn-pink{background:#E8399A;color:#fff;font-family:'Teko',sans-serif;font-size:20px;letter-spacing:1px;text-transform:uppercase;padding:16px 36px;border-radius:6px;border:none;cursor:pointer;display:inline-block;transition:transform .2s,box-shadow .2s;box-shadow:0 4px 20px rgba(232,64,154,.4)}
+        .btn-pink:hover{background:#c82d87;transform:translateY(-2px)}
+        .btn-outline{background:transparent;color:#fff;font-family:'Teko',sans-serif;font-size:20px;letter-spacing:1px;text-transform:uppercase;padding:14px 34px;border-radius:6px;border:2px solid rgba(255,255,255,.5);cursor:pointer;display:inline-block;transition:border-color .2s,background .2s}
+        .btn-outline:hover{border-color:#E8399A;background:rgba(232,57,154,.1)}
+        .hero-img-wrap{display:flex;justify-content:center;align-items:flex-end;position:relative;z-index:2}
+        .hero-img-wrap img{max-height:500px;width:auto;object-fit:contain;filter:drop-shadow(0 20px 40px rgba(0,0,0,.5));margin-bottom:0}
+
+        /* TRUST STRIP */
+        .trust-strip{background:#E8399A;padding:18px 20px}
+        .trust-strip-inner{max-width:1200px;margin:0 auto;display:flex;justify-content:center;flex-wrap:wrap;gap:24px 40px}
+        .trust-item{color:#fff;font-family:'Teko',sans-serif;font-size:18px;letter-spacing:1px;text-transform:uppercase;display:flex;align-items:center;gap:8px}
+
+        /* STATS BAR */
+        .stats-bar{background:#F8F4FF;padding:48px 20px}
+        .stats-grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:24px;text-align:center}
+        .stat-num{font-family:'Bebas Neue',sans-serif;font-size:56px;color:#E8399A;line-height:1}.stat-lbl{font-family:'Teko',sans-serif;font-size:16px;letter-spacing:1px;text-transform:uppercase;color:#1E2D5A;margin-top:6px}
+
+        /* SECTIONS */
+        .section{padding:80px 20px}
+        .section-dark{background:#1E2D5A;color:#fff}
+        .section-navy{background:#1E2D5A;color:#fff}
+        .section-light{background:#F8F4FF}
+        .section-white{background:#fff}
+        .container{max-width:1200px;margin:0 auto}
+        .section-label{font-family:'Teko',sans-serif;font-size:14px;letter-spacing:3px;text-transform:uppercase;color:#E8399A;margin-bottom:12px}
+        .section-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(36px,5vw,60px);line-height:1.05;margin-bottom:16px}
+        .section-title span{color:#E8399A}
+        .section-sub{font-size:18px;color:rgba(255,255,255,.75);max-width:640px;margin-bottom:48px}
+        .section-sub-dark{font-size:18px;color:#555;max-width:640px;margin-bottom:48px}
+
+        /* CARDS */
+        .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .card{background:rgba(255,255,255,.06);border:1px solid rgba(232,57,154,.3);border-radius:12px;padding:32px 28px;transition:border-color .2s,transform .2s}
+        .card:hover{border-color:#E8399A;transform:translateY(-4px)}
+        .card h3{font-family:'Teko',sans-serif;font-size:24px;letter-spacing:.5px;color:#fff;margin-bottom:10px}.card-icon{font-size:36px;margin-bottom:16px}
+        .card p{font-size:17px;color:rgba(255,255,255,.75);line-height:1.6}
+
+        /* STEPS */
+        .steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+        .step-card{text-align:center}
+        .step-num{width:64px;height:64px;background:#E8399A;color:#fff;font-family:'Bebas Neue',sans-serif;font-size:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 4px 16px rgba(232,64,154,.4)}
+        .step-icon{font-size:32px;margin-bottom:12px}
+        .step-card h3{font-family:'Teko',sans-serif;font-size:24px;color:#1E2D5A;margin-bottom:10px}
+        .step-card p{font-size:17px;color:#555}
+
+        /* PRICING */
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:start}
+        .pricing-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.15);border-radius:12px;padding:36px 28px;text-align:center}
+        .pricing-card.featured{border-color:#E8399A;background:rgba(232,57,154,.1);position:relative}
+        .pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:#E8399A;color:#fff;font-family:'Teko',sans-serif;font-size:14px;letter-spacing:2px;padding:4px 20px;border-radius:20px}
+        .pricing-card h3{font-family:'Teko',sans-serif;font-size:26px;color:#fff;margin-bottom:12px}
+        .pricing-price{font-family:'Bebas Neue',sans-serif;font-size:64px;color:#E8399A;line-height:1;margin-bottom:24px}
+        .pricing-features{list-style:none;text-align:left;margin-bottom:28px}
+        .pricing-features li{font-size:16px;color:rgba(255,255,255,.8);padding:8px 0;border-bottom:1px solid rgba(255,255,255,.08)}
+        .pricing-note{text-align:center;color:rgba(255,255,255,.6);font-size:16px;margin-top:32px}
+
+        /* TESTIMONIALS */
+        .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+        .testimonial-card{background:#fff;border-radius:12px;padding:32px 28px;border-left:5px solid #E8399A;box-shadow:0 4px 24px rgba(30,45,90,.08)}
+        .t-stars{font-size:20px;margin-bottom:16px}
+        .t-text{font-size:17px;color:#333;line-height:1.7;font-style:italic;margin-bottom:20px}
+        .t-author{display:flex;align-items:center;gap:14px}
+        .t-avatar{width:44px;height:44px;background:#E8399A;color:#fff;font-family:'Teko',sans-serif;font-size:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+        .t-name{font-weight:700;font-size:16px;color:#1E2D5A}
+        .t-loc{font-size:14px;color:#888}
+
+        /* GOOGLE CTA */
+        .google-cta{text-align:center;margin-top:48px;padding:36px 28px;background:linear-gradient(135deg,#F8F4FF,#f0e8ff);border-radius:16px;max-width:680px;margin-left:auto;margin-right:auto}
+        .google-cta .stars{font-size:28px;margin-bottom:10px}
+        .google-cta h4{font-family:'Teko',sans-serif;font-size:26px;color:#1E2D5A;margin-bottom:8px}
+        .google-cta p{font-size:16px;color:#555;margin-bottom:20px}
+        .btn-google{display:inline-block;background:#4285F4;color:#fff;font-family:'Teko',sans-serif;font-size:20px;letter-spacing:1px;text-transform:uppercase;padding:14px 36px;border-radius:6px;box-shadow:0 4px 16px rgba(66,133,244,.35);transition:background .2s}
+        .btn-google:hover{background:#3367d6}
+
+        /* SERVICE AREA */
+        .locations-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-bottom:40px}
+        .location-col h3{font-family:'Teko',sans-serif;font-size:22px;letter-spacing:1px;color:#E8399A;text-transform:uppercase;margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid rgba(232,57,154,.3)}
+        .location-col ul{list-style:none}
+        .location-col li{padding:6px 0}
+        .location-col a{font-size:17px;color:rgba(255,255,255,.8);transition:color .2s}
+        .location-col a:hover{color:#E8399A}
+
+        /* URGENCY */
+        .availability-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:16px;margin:36px auto;max-width:700px}
+        .day-slot{text-align:center}
+        .day-name{font-family:'Teko',sans-serif;font-size:18px;letter-spacing:1px;color:#1E2D5A;margin-bottom:8px}
+        .slot-status{padding:8px 12px;border-radius:6px;font-family:'Teko',sans-serif;font-size:15px;letter-spacing:.5px}
+        .slot-low{background:rgba(232,57,154,.15);color:#c82d87;border:1px solid rgba(232,57,154,.4)}
+        .slot-medium{background:rgba(255,152,0,.15);color:#e65100;border:1px solid rgba(255,152,0,.4)}
+        .slot-full{background:rgba(211,47,47,.15);color:#c62828;border:1px solid rgba(211,47,47,.4)}
+        .slot-high{background:rgba(76,175,80,.15);color:#2e7d32;border:1px solid rgba(76,175,80,.4)}
+
+        /* FAQ */
+        .faq-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+        .faq-item{background:rgba(255,255,255,.06);border:1px solid rgba(232,57,154,.25);border-radius:10px;padding:24px 28px}
+        .faq-q{font-family:'Teko',sans-serif;font-size:20px;color:#FF6BB5;margin-bottom:10px}
+        .faq-a{font-size:17px;color:#a8b8e8;line-height:1.6}
+
+        /* FINAL CTA */
+        .final-cta{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 100%);padding:80px 20px;text-align:center}
+        .booking-form-wrap{max-width:680px;margin:0 auto 32px}
+        .booking-form{background:rgba(255,255,255,.07);border:1px solid rgba(232,57,154,.35);border-radius:16px;padding:36px 40px}
+        .form-row-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .form-group{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+        .form-group label{font-family:'Teko',sans-serif;font-size:15px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.75)}
+        .form-group input,.form-group select,.form-group textarea{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:8px;padding:14px 16px;color:#fff;font-family:'Inter',sans-serif;font-size:16px;outline:none;transition:border-color .2s;width:100%}
+        .form-group textarea{resize:vertical;min-height:100px;line-height:1.5}
+        .form-group input::placeholder,.form-group textarea::placeholder{color:rgba(255,255,255,.4)}
+        .form-group input:focus,.form-group select:focus,.form-group textarea:focus{border-color:#E8399A;background:rgba(255,255,255,.15)}
+        .form-group select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='white' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-color:rgba(255,255,255,.1);cursor:pointer}
+        .form-group select option{background:#1E2D5A;color:#fff}
+        .form-terms{display:flex;align-items:flex-start;gap:12px;margin-bottom:24px;cursor:pointer}
+        .form-terms input[type=checkbox]{width:18px;height:18px;flex-shrink:0;margin-top:3px;accent-color:#E8399A;cursor:pointer}
+        .form-terms span{font-size:14px;color:rgba(255,255,255,.65);line-height:1.5}
+        .form-terms a{color:#E8399A;text-decoration:underline}
+        .btn-form-submit{width:100%;background:#E8399A;color:#fff;font-family:'Teko',sans-serif;font-size:22px;letter-spacing:2px;text-transform:uppercase;padding:18px 36px;border-radius:8px;border:none;cursor:pointer;transition:background .2s,transform .2s;box-shadow:0 4px 20px rgba(232,57,154,.4)}
+        .btn-form-submit:hover{background:#c82d87;transform:translateY(-2px)}
+        .btn-form-submit:disabled{background:rgba(255,255,255,.3);cursor:not-allowed;transform:none}
+        .form-success{display:none;text-align:center;padding:40px 20px}
+        .form-success .success-icon{font-size:56px;margin-bottom:16px}
+        .form-success h3{font-family:'Bebas Neue',sans-serif;font-size:36px;color:#fff;margin-bottom:12px}
+        .form-success p{color:rgba(255,255,255,.8);font-size:18px}
+        .form-error-msg{display:none;background:rgba(232,57,154,.15);border:1px solid #E8399A;border-radius:8px;padding:14px 18px;color:#fff;font-size:15px;margin-bottom:16px;text-align:center}
+        @media(max-width:600px){.form-row-2{grid-template-columns:1fr}.booking-form{padding:24px 20px}}
+        .trust-footer{display:flex;justify-content:center;flex-wrap:wrap;gap:12px 24px;margin-top:28px}
+        .trust-footer span{font-size:16px;color:rgba(255,255,255,.7)}
+
+        /* UTILS */
+        .cta-center{text-align:center;margin-top:40px}
+        .trust-note{font-size:15px;color:rgba(255,255,255,.5);margin-top:12px}
+
+        /* RESPONSIVE */
+        @media(max-width:900px){
+            .hero-inner{grid-template-columns:1fr;text-align:center}
+            .hero-btns{justify-content:center}
+            .hero-img-wrap{display:none}
+            .cards-grid,.steps-grid,.pricing-grid,.testimonials-grid{grid-template-columns:1fr}
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .faq-grid{grid-template-columns:1fr}
+            .locations-grid{grid-template-columns:1fr}
+            .availability-grid{grid-template-columns:repeat(3,1fr)}
+        }
+        @media(max-width:600px){
+            .stats-grid{grid-template-columns:repeat(2,1fr)}
+            .trust-strip-inner{gap:12px 20px}
+            .trust-item{font-size:15px}
+        }
+    </style>
 </head>
 <body>
-    <!-- Top Bar -->
+
     <div class="top-bar">
-        <div class="container">
-            <span>SERVING FRESNO & SURROUNDING AREAS</span>
+        📞 Schedule Your Oil Change: <a href="tel:5598384267">(559) 838-4267</a> &nbsp;|&nbsp; Serving Fresno, Clovis &amp; the Central Valley
+    </div>
+
+    <header><!-- Navigation will be loaded here by script --></header>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-inner container">
+            <div class="hero-copy">
+                <div class="hero-badge">Fresno's #1 Mobile Oil Change</div>
+                <h1>Skip The Shop.<br><span>We Come</span><br>To You.</h1>
+                <p class="hero-sub">Professional mobile oil changes in Fresno &amp; Clovis. Done at your home or office, while you relax or work.</p>
+                <div class="hero-btns">
+                    <a href="#contact" class="btn-pink">Book Your Oil Change</a>
+                    <a href="tel:5598384267" class="btn-outline">Call (559) 838-4267</a>
+                </div>
+            </div>
+            <div class="hero-img-wrap">
+                <picture>
+                    <source srcset="MikeyMobile_v8_Character-Lg.webp" type="image/webp">
+                    <img src="MikeyMobile_v8_Character-Lg.png" alt="Mikey Mobile Oil Change Technician" width="761" height="1001" loading="eager" fetchpriority="high">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST STRIP -->
+    <div class="trust-strip">
+        <div class="trust-strip-inner">
+            <div class="trust-item">🎁 Free Labor — New Customers</div>
+            <div class="trust-item">🚗 We Come to Your Driveway</div>
+            <div class="trust-item">⏱️ Done in 30 Minutes</div>
+            <div class="trust-item">💰 Transparent Pricing</div>
+            <div class="trust-item">✅ Same-Day Available</div>
         </div>
     </div>
 
-    <!-- Navigation -->
-    <nav class="navbar">
+    <!-- STATS -->
+    <div class="stats-bar">
+        <div class="stats-grid">
+            <div><div class="stat-num">100+</div><div class="stat-lbl">Oil Changes Completed</div></div>
+            <div><div class="stat-num">100%</div><div class="stat-lbl">Customer Satisfaction</div></div>
+            <div><div class="stat-num">2025</div><div class="stat-lbl">Serving Fresno Since</div></div>
+            <div><div class="stat-num">30 Min</div><div class="stat-lbl">Average Service Time</div></div>
+        </div>
+    </div>
+
+    <!-- WHY CHOOSE -->
+    <section class="section section-dark">
         <div class="container">
-            <div class="nav-container">
-                <!-- Left Navigation -->
-                <div class="nav-left">
-                    <a href="index.html" class="nav-link">HOME</a>
-                    <a href="about.html" class="nav-link">ABOUT</a>
-                    <div class="nav-dropdown">
-                        <a href="locations.html" class="nav-link dropdown-trigger">LOCATIONS</a>
-                        <div class="dropdown-menu">
-                            <div class="dropdown-section">
-                                <a href="fresno/index.html" class="dropdown-city">Fresno</a>
-                                <a href="fresno/fig-garden/index.html" class="dropdown-neighborhood">Fig Garden</a>
-                                <a href="fresno/sunnyside/index.html" class="dropdown-neighborhood">Sunnyside</a>
-                                <a href="fresno/fig-garden-loop/index.html" class="dropdown-neighborhood">Fig Garden Loop</a>
-                                <a href="fresno/woodward-park/index.html" class="dropdown-neighborhood">Woodward Park</a>
-                                <a href="fresno/riverpark/index.html" class="dropdown-neighborhood">Riverpark</a>
-                                <a href="fresno/pinedale/index.html" class="dropdown-neighborhood">Pinedale</a>
-                                <a href="fresno/sierra-sky-park/index.html" class="dropdown-neighborhood">Sierra Sky Park</a>
-                                <a href="fresno/fort-washington/index.html" class="dropdown-neighborhood">Fort Washington</a>
+            <div class="section-label">Why Choose Us</div>
+            <h2 class="section-title" style="color:#fff;">Why Fresno Drivers<br><span>Choose Mikey Mobile</span></h2>
+            <p class="section-sub">No waiting rooms. No wasted afternoons. Just professional service delivered to your door.</p>
+            <div class="cards-grid">
+                <div class="card"><div class="card-icon">⏰</div><h3>Save Time</h3><p>No waiting rooms. No wasted afternoons. We come to you.</p></div>
+                <div class="card"><div class="card-icon">📅</div><h3>Convenient Scheduling</h3><p>Book online in 60 seconds. Choose your time, we'll be there.</p></div>
+                <div class="card"><div class="card-icon">✓</div><h3>Professional Service</h3><p>Certified technicians. Premium oils. Guaranteed quality.</p></div>
+                <div class="card"><div class="card-icon">💰</div><h3>Transparent Pricing</h3><p>No hidden fees. No upsells. Just honest, fair pricing.</p></div>
+                <div class="card"><div class="card-icon">🚀</div><h3>Same-Day Available</h3><p>Need it today? We offer same-day service in Fresno &amp; Clovis.</p></div>
+                <div class="card"><div class="card-icon">🛡️</div><h3>100% Guaranteed</h3><p>Not satisfied? We'll make it right or refund your money.</p></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section section-white">
+        <div class="container">
+            <div class="section-label">The Process</div>
+            <h2 class="section-title" style="color:#1E2D5A;">Get Your Oil Changed<br><span>in 3 Easy Steps</span></h2>
+            <p class="section-sub-dark">No complicated forms, no long waits. Getting your oil changed has never been this simple.</p>
+            <div class="steps-grid">
+                <div class="step-card"><div class="step-num">1</div><div class="step-icon">📱</div><h3>Book Online</h3><p>Choose your service, date, and location in under 60 seconds</p></div>
+                <div class="step-card"><div class="step-num">2</div><div class="step-icon">🚐</div><h3>We Come to You</h3><p>Our certified technician arrives at your home or office with everything needed</p></div>
+                <div class="step-card"><div class="step-num">3</div><div class="step-icon">✅</div><h3>Relax &amp; Go</h3><p>We complete your oil change in 30 minutes while you relax, work, or play</p></div>
+            </div>
+            <div class="cta-center"><a href="#contact" class="btn-pink">Book Your Oil Change Now</a></div>
+        </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="section section-dark" id="pricing">
+        <div class="container">
+            <div class="section-label">Pricing</div>
+            <h2 class="section-title" style="color:#fff;">Simple,<br><span>Transparent Pricing</span></h2>
+            <p class="section-sub">Every service includes a 30-day satisfaction guarantee. No surprises, no hidden fees.</p>
+            <div class="pricing-grid">
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">MOST POPULAR</div>
+                    <h3>Oil Change Service</h3>
+                    <div class="pricing-price">$99</div>
+                    <ul class="pricing-features">
+                        <li>✓ Synthetic-Blend Oil (5 quarts)</li>
+                        <li>✓ Oil filter</li>
+                        <li>✓ Fluid level check</li>
+                        <li>✓ Tire pressure check</li>
+                        <li>✓ Multi-point inspection</li>
+                    </ul>
+                    <a href="#contact" class="btn-pink" style="display:block;text-align:center;">Book Oil Change</a>
+                </div>
+                <div class="pricing-card">
+                    <h3>Diesel Service</h3>
+                    <div class="pricing-price">$249</div>
+                    <ul class="pricing-features">
+                        <li>✓ Full Synthetic Oil (10 quarts)</li>
+                        <li>✓ Heavy-duty filter</li>
+                        <li>✓ Complete fluid check</li>
+                        <li>✓ DEF top-off</li>
+                        <li>✓ Full inspection</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline" style="display:block;text-align:center;padding:14px;">Book Diesel Service</a>
+                </div>
+<div class="pricing-card">
+                    <h3>Boat Service</h3>
+                    <div class="pricing-price">$499</div>
+                    <ul class="pricing-features">
+                        <li>✓ Full Synthetic Oil Change (8 quarts)</li>
+                        <li>✓ Premium Oil Filter Replacement</li>
+                        <li>✓ V-Drive Oil Change</li>
+                        <li>✓ Transmission Oil Change</li>
+                        <li>✓ Impeller Replacement</li>
+                    </ul>
+                    <a href="#contact" class="btn-outline" style="display:block;text-align:center;padding:14px;">Book Boat Service</a>
+                </div>
+            </div>
+            <p class="pricing-note">All services include a 30-day satisfaction guarantee</p>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section-light">
+        <div class="container">
+            <div class="section-label" style="color:#E8399A;">What Customers Say</div>
+            <h2 class="section-title" style="color:#1E2D5A;">What Fresno Drivers<br><span>Are Saying</span></h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="t-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"Best decision ever! They came to my office, changed my oil while I was in a meeting, and I was back on the road. No wasted time!"</p>
+                    <div class="t-author"><div class="t-avatar">SM</div><div><div class="t-name">Sarah M.</div><div class="t-loc">Woodward Park, Fresno</div></div></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"As a busy mom, I don't have time to sit at Jiffy Lube. Mikey Mobile saved me 2 hours. Professional, fast, and my driveway was spotless!"</p>
+                    <div class="t-author"><div class="t-avatar">JK</div><div><div class="t-name">Jennifer K.</div><div class="t-loc">Clovis North</div></div></div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="t-stars">⭐⭐⭐⭐⭐</div>
+                    <p class="t-text">"I was skeptical at first, but the technician was professional, explained everything, and the price was better than the shop. I'm a customer for life!"</p>
+                    <div class="t-author"><div class="t-avatar">MR</div><div><div class="t-name">Mike R.</div><div class="t-loc">Fig Garden, Fresno</div></div></div>
+                </div>
+            </div>
+            <div class="google-cta">
+                <div class="stars">⭐⭐⭐⭐⭐</div>
+                <h4>5-Star Rated on Google</h4>
+                <p>See what Fresno &amp; Clovis drivers are saying about us — and leave us a review if we've served you!</p>
+                <a href="https://share.google/2r45CQXLpRaqmWpRt" target="_blank" rel="noopener" class="btn-google">📍 View Us on Google</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE AREA -->
+    <section class="section section-navy">
+        <div class="container">
+            <div class="section-label">Service Area</div>
+            <h2 class="section-title" style="color:#fff;">Proudly Serving Fresno,<br><span>Clovis &amp; Surrounding Areas</span></h2>
+            <p class="section-sub">We serve all of Fresno, Clovis, and Madera Ranchos with professional mobile oil change services.</p>
+            <div class="locations-grid">
+                <div class="location-col">
+                    <h3>Fresno</h3>
+                    <ul>
+                        <li><a href="fresno/woodward-park/index.html">Woodward Park</a></li>
+                        <li><a href="fresno/fig-garden/index.html">Fig Garden</a></li>
+                        <li><a href="fresno/riverpark/index.html">Riverpark</a></li>
+                        <li><a href="fresno/sunnyside/index.html">Sunnyside</a></li>
+                    </ul>
+                </div>
+                <div class="location-col">
+                    <h3>Clovis</h3>
+                    <ul>
+                        <li><a href="clovis/clovis-north/index.html">Clovis North</a></li>
+                        <li><a href="clovis/dry-creek/index.html">Dry Creek</a></li>
+                        <li><a href="clovis/quail-lakes/index.html">Quail Lakes</a></li>
+                        <li><a href="clovis/harlan-ranch/index.html">Harlan Ranch</a></li>
+                    </ul>
+                </div>
+                <div class="location-col">
+                    <h3>Madera Ranchos</h3>
+                    <ul>
+                        <li><a href="madera-ranchos/rolling-hills/index.html">Rolling Hills</a></li>
+                        <li><a href="madera-ranchos/riverstone/index.html">Riverstone</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cta-center"><a href="locations.html" class="btn-outline">See All Service Areas</a></div>
+        </div>
+    </section>
+
+    <!-- URGENCY -->
+    <section class="section section-light">
+        <div class="container" style="text-align:center;">
+            <div class="section-label">Availability</div>
+            <h2 class="section-title" style="color:#1E2D5A;">Limited Availability<br><span>This Week</span></h2>
+            <p class="section-sub-dark" style="margin:0 auto 36px;">We only accept 15 appointments per day to ensure quality service. This week's slots are filling fast.</p>
+            <div class="availability-grid">
+                <div class="day-slot"><div class="day-name">MON</div><div class="slot-status slot-low">3 slots left</div></div>
+                <div class="day-slot"><div class="day-name">TUE</div><div class="slot-status slot-medium">7 slots left</div></div>
+                <div class="day-slot"><div class="day-name">WED</div><div class="slot-status slot-full">Fully Booked</div></div>
+                <div class="day-slot"><div class="day-name">THU</div><div class="slot-status slot-medium">5 slots left</div></div>
+                <div class="day-slot"><div class="day-name">FRI</div><div class="slot-status slot-high">12 slots left</div></div>
+            </div>
+            <a href="#contact" class="btn-pink">Book Your Slot Now</a>
+            <p class="trust-note" style="color:#888;">No credit card required to book</p>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-dark">
+        <div class="container">
+            <div class="section-label">FAQ</div>
+            <h2 class="section-title" style="color:#fff;">Frequently Asked<br><span>Questions</span></h2>
+            <div class="faq-grid">
+                <div class="faq-item"><div class="faq-q">How long does an oil change take?</div><div class="faq-a">Most oil changes take 30 minutes or less. We'll let you know the exact time when you book.</div></div>
+                <div class="faq-item"><div class="faq-q">What if I need to reschedule?</div><div class="faq-a">No problem! You can reschedule or cancel up to 24 hours before your appointment with no fee.</div></div>
+                <div class="faq-item"><div class="faq-q">Do you service all vehicle types?</div><div class="faq-a">Yes! We service cars, trucks, SUVs, and diesel vehicles. If you have a specialty vehicle, give us a call.</div></div>
+                <div class="faq-item"><div class="faq-q">What oil brands do you use?</div><div class="faq-a">We use premium brands including Valvoline, Mobil 1, and Pennzoil. You can choose your preferred brand when booking.</div></div>
+                <div class="faq-item"><div class="faq-q">Is mobile oil change more expensive?</div><div class="faq-a">No! Our prices are competitive with traditional shops, and you save time and gas by not driving there.</div></div>
+                <div class="faq-item"><div class="faq-q">Are you licensed and insured?</div><div class="faq-a">Absolutely. We're fully licensed, insured, and our technicians are ASE trained.</div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINAL CTA / BOOKING -->
+    <section class="final-cta" id="contact">
+        <div class="container">
+            <div class="section-label" style="color:#E8399A;text-align:center;">Book Now</div>
+            <h2 class="section-title" style="color:#fff;text-align:center;">Ready to Skip the<br><span>Oil Change Shop?</span></h2>
+            <p class="section-sub" style="text-align:center;margin:0 auto 40px;">Book your mobile oil change in 60 seconds. No waiting rooms. No wasted time.</p>
+            <div class="booking-form-wrap">
+                <div class="booking-form">
+                    <div class="form-error-msg" id="hp-form-error">Something went wrong. Please try again or call <a href="tel:5598384267" style="color:#E8399A">(559) 838-4267</a>.</div>
+                    <form id="hp-booking-form" action="https://formspree.io/f/meerrvlg" method="POST">
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="hp_name">Full Name</label>
+                                <input type="text" id="hp_name" name="full_name" placeholder="Your full name" required autocomplete="name">
                             </div>
-                            <div class="dropdown-section">
-                                <a href="clovis/index.html" class="dropdown-city">Clovis</a>
-                                <a href="clovis/clovis-north/index.html" class="dropdown-neighborhood">Clovis North</a>
-                                <a href="clovis/cindy-lane/index.html" class="dropdown-neighborhood">Cindy Lane</a>
-                                <a href="clovis/dry-creek/index.html" class="dropdown-neighborhood">Dry Creek</a>
-                                <a href="clovis/clovis-high/index.html" class="dropdown-neighborhood">Clovis High</a>
-                                <a href="clovis/quail-lakes/index.html" class="dropdown-neighborhood">Quail Lakes</a>
-                                <a href="clovis/harlan-ranch/index.html" class="dropdown-neighborhood">Harlan Ranch</a>
-                            </div>
-                            <div class="dropdown-section">
-                                <a href="madera-ranchos/index.html" class="dropdown-city">Madera Ranchos</a>
-                                <a href="madera-ranchos/rolling-hills/index.html" class="dropdown-neighborhood">Rolling Hills</a>
-                                <a href="madera-ranchos/riverstone/index.html" class="dropdown-neighborhood">Riverstone</a>
+                            <div class="form-group">
+                                <label for="hp_phone">Phone Number</label>
+                                <input type="tel" id="hp_phone" name="phone" placeholder="(559) 000-0000" required autocomplete="tel">
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label for="hp_email">Email Address</label>
+                            <input type="email" id="hp_email" name="email" placeholder="you@email.com" required autocomplete="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="hp_service">Service Needed</label>
+                            <select id="hp_service" name="service" required>
+                                <option value="" disabled selected>Select a service...</option>
+                                <option value="Gas/Hybrid Oil Change - $99">Gas / Hybrid Oil Change &mdash; $99</option>
+                                <option value="Diesel Oil Change - $249">Diesel Oil Change (HD Trucks) &mdash; $249</option>
+                                <option value="Boat Pre-Season Service - $499">Boat Pre-Season Service &mdash; $499</option>
+                                <option value="Same-Day Rush Service">Same-Day Rush Service</option>
+                                <option value="Not Sure">Not Sure &mdash; I'll explain in notes</option>
+                            </select>
+                        </div>
+                        <div class="form-row-2">
+                            <div class="form-group">
+                                <label for="hp_year">Vehicle Year</label>
+                                <input type="number" id="hp_year" name="vehicle_year" placeholder="e.g. 2019" min="1980" max="2026">
+                            </div>
+                            <div class="form-group">
+                                <label for="hp_make">Vehicle Make</label>
+                                <input type="text" id="hp_make" name="vehicle_make" placeholder="e.g. Toyota, Ford">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hp_model">Vehicle Model</label>
+                            <input type="text" id="hp_model" name="vehicle_model" placeholder="e.g. Camry, F-150, Silverado">
+                        </div>
+                        <div class="form-group">
+                            <label for="hp_notes">Notes / Additional Info</label>
+                            <textarea id="hp_notes" name="notes" placeholder="Any details we should know? (e.g. high mileage, preferred time, location notes)"></textarea>
+                        </div>
+                        <label class="form-terms">
+                            <input type="checkbox" name="terms" required>
+                            <span>I agree to the <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and consent to being contacted about my service request.</span>
+                        </label>
+                        <button type="submit" class="btn-form-submit" id="hp-submit-btn">Get Instant Quote</button>
+                    </form>
+                    <div class="form-success" id="hp-form-success">
+                        <div class="success-icon">&#10003;</div>
+                        <h3>You're All Set!</h3>
+                        <p>We received your request and will reach out within the hour to confirm your appointment. Check your email for details.</p>
                     </div>
                 </div>
-
-                <!-- Center Logo -->
-                <div class="nav-center">
-                    <a href="index.html">
-                        <img src="logo.png" alt="Mikey Mobile Oil Change" class="logo">
-                    </a>
-                </div>
-
-                <!-- Right Navigation -->
-                <div class="nav-right">
-                    <a href="#services" class="nav-link">SERVICES</a>
-                    <a href="#pricing" class="nav-link">PRICING</a>
-                    <a href="#contact" class="nav-link">CONTACT</a>
-                </div>
-
-                <!-- Mobile Hamburger Menu Button -->
-                <button class="hamburger-menu" onclick="document.getElementById('mobileMenu').classList.add('active')" aria-label="Open menu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
             </div>
-        </div>
-    </nav>
-
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="mobile-menu">
-        <button class="mobile-menu-close" onclick="document.getElementById('mobileMenu').classList.remove('active')">
-            ×
-        </button>
-        <div class="mobile-menu-content">
-            <a href="#" class="mobile-nav-link">HOME</a>
-            <a href="about.html" class="mobile-nav-link">ABOUT US</a>
-            
-            <div class="mobile-dropdown-section">
-                <a href="locations.html" class="mobile-nav-link">LOCATIONS</a>
-                <a href="fresno/index.html" class="mobile-dropdown-main">Fresno</a>
-                <a href="fresno/fig-garden/index.html" class="mobile-dropdown-sub">Fig Garden</a>
-                <a href="fresno/sunnyside/index.html" class="mobile-dropdown-sub">Sunnyside</a>
-                <a href="fresno/woodward-park/index.html" class="mobile-dropdown-sub">Woodward Park</a>
-                <a href="fresno/fig-garden-loop/index.html" class="mobile-dropdown-sub">Fig Garden Loop</a>
-                <a href="fresno/riverpark/index.html" class="mobile-dropdown-sub">Riverpark</a>
-                <a href="fresno/pinedale/index.html" class="mobile-dropdown-sub">Pinedale</a>
-                <a href="fresno/sierra-sky-park/index.html" class="mobile-dropdown-sub">Sierra Sky Park</a>
-                <a href="fresno/fort-washington/index.html" class="mobile-dropdown-sub">Fort Washington</a>
-                
-                <a href="clovis/index.html" class="mobile-dropdown-main">Clovis</a>
-                <a href="clovis/clovis-north/index.html" class="mobile-dropdown-sub">Clovis North</a>
-                <a href="clovis/cindy-lane/index.html" class="mobile-dropdown-sub">Cindy Lane</a>
-                <a href="clovis/dry-creek/index.html" class="mobile-dropdown-sub">Dry Creek</a>
-                <a href="clovis/harlan-ranch/index.html" class="mobile-dropdown-sub">Harlan Ranch</a>
-                <a href="clovis/clovis-high/index.html" class="mobile-dropdown-sub">Clovis High</a>
-                <a href="clovis/quail-lakes/index.html" class="mobile-dropdown-sub">Quail Lakes</a>
-                
-                <a href="madera-ranchos/index.html" class="mobile-dropdown-main">Madera Ranchos</a>
-                <a href="madera-ranchos/rolling-hills/index.html" class="mobile-dropdown-sub">Rolling Hills</a>
-                <a href="madera-ranchos/riverstone/index.html" class="mobile-dropdown-sub">Riverstone</a>
+            <script>
+            (function(){
+                var form=document.getElementById('hp-booking-form');
+                var success=document.getElementById('hp-form-success');
+                var errBox=document.getElementById('hp-form-error');
+                var btn=document.getElementById('hp-submit-btn');
+                if(!form)return;
+                form.addEventListener('submit',async function(e){
+                    e.preventDefault();
+                    errBox.style.display='none';
+                    btn.disabled=true;
+                    btn.textContent='Sending...';
+                    try{
+                        var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
+                        if(res.ok){form.style.display='none';success.style.display='block';}
+                        else{throw new Error();}
+                    }catch(err){
+                        errBox.style.display='block';
+                        btn.disabled=false;
+                        btn.textContent='Get Instant Quote';
+                    }
+                });
+            })();
+            </script>
+            <div style="text-align:center;margin-top:24px;">
+                <a href="tel:5598384267" class="btn-outline">Or Call (559) 838-4267</a>
             </div>
-            
-            <a href="#services" class="mobile-nav-link">SERVICES</a>
-            <a href="#pricing" class="mobile-nav-link">PRICING</a>
-            <a href="#contact" class="mobile-nav-link">CONTACT</a>
-        </div>
-    </div>
-
-    <!-- Hero Section -->
-    <section class="hero parallax">
-        <div class="stars-container">
-            <div class="star star-1"></div>
-            <div class="star star-2"></div>
-            <div class="star star-3"></div>
-            <div class="star star-4"></div>
-            <div class="star star-5"></div>
-            <div class="star star-6"></div>
-            <div class="star star-7"></div>
-            <div class="star star-8"></div>
-            <div class="star star-9"></div>
-            <div class="star star-10"></div>
-            <div class="star star-11"></div>
-            <div class="star star-12"></div>
-            <div class="star star-13"></div>
-            <div class="star star-14"></div>
-            <div class="star star-15"></div>
-            <div class="star star-16"></div>
-            <div class="star star-17"></div>
-            <div class="star star-18"></div>
-            <div class="star star-19"></div>
-            <div class="star star-20"></div>
-            <div class="star star-21"></div>
-            <div class="star star-22"></div>
-            <div class="star star-23"></div>
-            <div class="star star-24"></div>
-            <div class="star star-25"></div>
-            <div class="star star-26"></div>
-            <div class="star star-27"></div>
-            <div class="star star-28"></div>
-            <div class="star star-29"></div>
-            <div class="star star-30"></div>
-            <div class="star star-31"></div>
-            <div class="star star-32"></div>
-            <div class="star star-33"></div>
-            <div class="star star-34"></div>
-            <div class="star star-35"></div>
-            <div class="star star-36"></div>
-        </div>
-        <div class="container hero-content">
-            <h1 class="hero-title">FRESNO MOBILE OIL CHANGE</h1>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn btn-primary">BOOK NOW</a>
-                <a href="tel:559-838-4267" class="btn btn-secondary">(559) 838-4267</a>
-            </div>
-            <div class="hero-image">
-                <img src="transit-van-new.png" alt="Mikey Mobile Oil Change Ford Transit Van" class="hero-van-image" width="900" height="506" loading="eager" fetchpriority="high">
-            </div>
-            </div>
-        </div>
-        <div class="city-skyline-bottom">
-            <img src="fresno-skyline-final.png" alt="Fresno Skyline" class="skyline-silhouette" width="1920" height="280" loading="eager">
-        </div>
-    </section>
-
-    <!-- Service Cards -->
-    <section class="service-cards">
-        <div class="container">
-            <div class="cards-grid">
-                <div class="service-card">
-                    <div class="card-icon">🚗</div>
-                    <h3>CARS</h3>
-                    <p>Fast, convenient car servicing at your home or workplace</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">🚚</div>
-                    <h3>TRUCKS</h3>
-                    <p>Swift servicing for trucks, including diesel models</p>
-                </div>
-                <div class="service-card">
-                    <div class="card-icon">🚙</div>
-                    <h3>SUVs & MINIVANS</h3>
-                    <p>Quick, customized servicing for larger vehicles</p>
-                </div>
+            <div class="trust-footer">
+                <span>⭐⭐⭐⭐⭐ 5-Star Rated</span>
+                <span>•</span>
+                <span>Licensed &amp; Insured</span>
+                <span>•</span>
+                <span>30-Day Guarantee</span>
+                <span>•</span>
+                <span>Same-Day Available</span>
             </div>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="container">
-            <h2 class="section-title">MOBILE OIL CHANGE SERVICES IN FRESNO</h2>
-            <p class="section-description">
-                At Mikey Mobile Oil Change, we bring professional oil change services directly to your location. 
-                Whether you're at home or at work, we save you time and hassle by eliminating the need to visit 
-                a shop. Our experienced technicians provide top-quality service using premium products from trusted 
-                brands like Valvoline, Mobile 1, K&N, and ACDelco.
-            </p>
-        </div>
-    </section>
+    <footer><!-- Footer will be loaded here by script --></footer>
 
-    <!-- Reasons to Work With Us Section -->
-    <section id="reasons" class="reasons-section">
-        <div class="container">
-            <h2 class="section-title">WHY FRESNO DRIVERS TRUST MIKEY MOBILE OIL CHANGE</h2>
-            <p class="section-description">
-                Choosing Mikey Mobile Oil Change means you're choosing to skip the waiting room and reclaim your valuable time. 
-                We provide Fresno and the surrounding communities with unparalleled mobile auto care, delivering top-tier service 
-                right to your home or workplace. We're not just another auto service; we're your neighbors, a locally-owned business 
-                dedicated to building trust and setting a new standard for convenience and quality in the industry. We're driven to 
-                provide an experience so seamless and positive, you'll wonder why you ever did it any other way.
-            </p>
-            <div class="reasons-grid">
-                <div class="reason-card">
-                    <div class="reason-icon">🚗</div>
-                    <h3>Ultimate Convenience, Delivered</h3>
-                    <p>We eliminate the hassle. Whether you're at home in Clovis or at the office in Downtown Fresno, our fully-equipped mobile service van comes to you, turning a tedious chore into a background task.</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-icon">🔧</div>
-                    <h3>Expertise You Can Rely On</h3>
-                    <p>Our technicians aren't just friendly; they're highly trained professionals who treat your vehicle and your property with the utmost respect. No job is too complex for our skilled team.</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-icon">💰</div>
-                    <h3>Honest & Upfront Pricing</h3>
-                    <p>With us, what you see is what you get. We provide clear, transparent pricing before any work begins, so you can be confident there will be no hidden fees or last-minute surprises.</p>
-                </div>
-                <div class="reason-card">
-                    <div class="reason-icon">⭐</div>
-                    <h3>Premium Quality Products</h3>
-                    <p>Your vehicle deserves the best. That's why we exclusively use top-quality oils and filters from trusted brands, ensuring your engine runs smoothly and efficiently for miles to come.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Why Mobile Section -->
-    <section id="services" class="why-mobile">
-        <div class="container">
-            <h2 class="section-title">WHY CHOOSE MOBILE OIL CHANGE?</h2>
-            <div class="benefits-grid">
-                <div class="benefit-card">
-                    <h3>At Your Home</h3>
-                    <p>
-                        With a mobile oil change, you save hours by skipping the shop, letting you relax with 
-                        a good book or catch up on your favorite activities without interruption. Spend quality 
-                        time with your family while the service comes to you, hassle-free.
-                    </p>
-                </div>
-                <div class="benefit-card">
-                    <h3>At Your Workplace</h3>
-                    <p>
-                        A mobile oil change at your workplace frees up your schedule, letting you focus on tasks 
-                        or enjoy a lunch break while your car is serviced. No need to leave the office or juggle 
-                        appointments—stay productive while the job's done right in the parking lot.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section id="pricing" class="pricing-section">
-        <div class="container">
-            <h2 class="section-title">SIMPLE, TRANSPARENT PRICING</h2>
-            <div class="pricing-card">
-                <div class="price-display">
-                    <span class="price-amount">$75</span>
-                    <span class="price-detail">+ Oil & Filter</span>
-                </div>
-                <p class="pricing-note">Servicing All Major Makes & Models</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Brands Section -->
-    <section class="brands-section">
-        <div class="container">
-            <h2 class="section-title">BRANDS WE SERVICE</h2>
-            <div class="brands-grid">
-                <div class="brand-category">
-                    <h3>All GM Makes and Models</h3>
-                    <p>Chevrolet, Buick, GMC, & Cadillac</p>
-                </div>
-                <div class="brand-category">
-                    <h3>All Ford, Lincoln, Mercury Models</h3>
-                    <p>Ford, Lincoln, Mercury, Jaguar, Land Rover, & Volvo</p>
-                </div>
-                <div class="brand-category">
-                    <h3>All Foreign Makes and Models</h3>
-                    <p>Toyota, Honda, Hyundai, Mercedes-Benz, BMW, Acura, Lexus, Kia, & Subaru</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Products Section -->
-    <section class="products-section">
-        <div class="container">
-            <h2 class="section-title">PREMIUM PRODUCTS WE USE</h2>
-            <div class="products-grid">
-                <div class="product-badge">Valvoline</div>
-                <div class="product-badge">Mobile 1</div>
-                <div class="product-badge">K&N</div>
-                <div class="product-badge">ACDelco</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <h2 class="cta-title">READY TO GET YOUR OIL CHANGED?</h2>
-            <p class="cta-subtitle">Book your appointment now and experience the convenience of mobile service!</p>
-            <a href="#contact" class="btn btn-primary btn-large">BOOK NOW</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2 class="section-title">CONTACT US</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>Phone</h3>
-                    <a href="tel:559-838-4267" class="contact-link">(559) 838-4267</a>
-                </div>
-                <div class="contact-item">
-                    <h3>Service Area</h3>
-                    <p>Fresno, CA & Surrounding Areas</p>
-                </div>
-                <div class="contact-item">
-                    <h3>Hours</h3>
-                    <p>Monday - Saturday: 8:00 AM - 6:00 PM</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-logo">
-                    <img src="logo.png" alt="Mikey Mobile Oil Change" class="footer-logo-img">
-                </div>
-                <div class="footer-links">
-                    <a href="#" class="footer-link">Home</a>
-                    <a href="about.html" class="footer-link">About</a>
-                    <a href="services.html" class="footer-link">Services</a>
-                    <a href="#pricing" class="footer-link">Pricing</a>
-                    <a href="#contact" class="footer-link">Contact</a>
-                </div>
-                <div class="footer-contact">
-                    <a href="tel:559-838-4267" class="footer-phone">(559) 838-4267</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Mikey Mobile Oil Change. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Booking Form Modal -->
-    <div id="bookingModal" class="modal">
-        <div class="modal-content">
-            <span class="modal-close">&times;</span>
-            <div class="modal-body">
-                <iframe
-                    src="https://api.leadconnectorhq.com/widget/form/RYMWwwaJ9YuDfpuPwaPL"
-                    style="width:100%;height:100%;border:none;border-radius:3px"
-                    id="inline-RYMWwwaJ9YuDfpuPwaPL" 
-                    data-layout="{'id':'INLINE'}"
-                    data-trigger-type="alwaysShow"
-                    data-trigger-value=""
-                    data-activation-type="alwaysActivated"
-                    data-activation-value=""
-                    data-deactivation-type="neverDeactivate"
-                    data-deactivation-value=""
-                    data-form-name="Marketing Form - Claim Offer"
-                    data-height="888"
-                    data-layout-iframe-id="inline-RYMWwwaJ9YuDfpuPwaPL"
-                    data-form-id="RYMWwwaJ9YuDfpuPwaPL"
-                    title="Marketing Form - Claim Offer"
-                >
-                </iframe>
-            </div>
-        </div>
-    </div>
-
-    <!-- Go High Level Form Script - Lazy loaded when modal opens -->
-    <!-- Script will be loaded dynamically when user clicks Book Now -->
-
-    <script>
-        // Parallax scrolling effect
-        window.addEventListener('scroll', function() {
-            const hero = document.querySelector('.hero.parallax');
-            if (!hero) return;
-            
-            const scrollPosition = window.pageYOffset;
-            const heroHeight = hero.offsetHeight;
-            
-            // Only apply parallax when hero is in view
-            if (scrollPosition < heroHeight) {
-                const offset = scrollPosition * 0.5;
-                hero.style.setProperty('--scroll-offset', offset + 'px');
-            }
-        });
-
-        // Modal functionality with lazy loading
-        const modal = document.getElementById('bookingModal');
-        const closeBtn = document.querySelector('.modal-close');
-        const bookNowButtons = document.querySelectorAll('a[href="#contact"].btn-primary');
-        let formScriptLoaded = false;
-
-        // Function to lazy load the form script
-        function loadFormScript() {
-            if (formScriptLoaded) return;
-            
-            const script = document.createElement('script');
-            script.src = 'https://link.msgsndr.com/js/form_embed.js';
-            script.async = true;
-            document.body.appendChild(script);
-            formScriptLoaded = true;
-        }
-
-        // Open modal when any Book Now button is clicked
-        bookNowButtons.forEach(button => {
-            button.addEventListener('click', function(e) {
-                e.preventDefault();
-                loadFormScript(); // Load form script only when needed
-                modal.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent background scrolling
-            });
-        });
-
-        // Close modal when X is clicked
-        closeBtn.addEventListener('click', function() {
-            modal.style.display = 'none';
-            document.body.style.overflow = 'auto'; // Restore scrolling
-        });
-
-        // Close modal when clicking outside of it
-        window.addEventListener('click', function(event) {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            }
-        });
-
-        // Close modal with Escape key
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape' && modal.style.display === 'block') {
-                modal.style.display = 'none';
-                document.body.style.overflow = 'auto'; // Restore scrolling
-            }
-        });
-    </script>
+    <!-- Deferred scripts — load after page renders -->
+    <script defer src="/js/navigation.js?v=3"></script>
+    <script defer src="/js/footer.js?v=2"></script>
 </body>
 </html>

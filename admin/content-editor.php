@@ -207,8 +207,8 @@
             $filePath = '../' . $page;
             
             if (file_exists($filePath)) {
-                // Read the current content
-                $currentContent = file_get_contents($filePath);
+                // Use the content from the textarea
+                $currentContent = $content;
                 
                 // Update title
                 $currentContent = preg_replace(
@@ -221,7 +221,7 @@
                 if (preg_match('/<meta name="description".*?>/i', $currentContent)) {
                     $currentContent = preg_replace(
                         '/<meta name="description".*?>/i',
-                        '<meta name="description" content="' . htmlspecialchars($description) . '">',
+                        '<meta name="description" content="' . htmlspecialchars($description) . '">', 
                         $currentContent
                     );
                 } else {
@@ -233,13 +233,19 @@
                     );
                 }
                 
-                // Save the updated content
-                if (file_put_contents($filePath, $currentContent)) {
-                    $message = 'Content and metadata saved successfully! Remember to purge Cloudflare cache to see changes live.';
-                    $messageType = 'success';
-                } else {
-                    $message = 'Error: Could not write to file. Check file permissions.';
+                // Check if file is writable
+                if (!is_writable($filePath)) {
+                    $message = 'Error: File is not writable. Please contact your hosting provider to fix file permissions for: ' . $page;
                     $messageType = 'error';
+                } else {
+                    // Save the updated content
+                    if (file_put_contents($filePath, $currentContent)) {
+                        $message = 'Content and metadata saved successfully! Remember to purge Cloudflare cache to see changes live.';
+                        $messageType = 'success';
+                    } else {
+                        $message = 'Error: Could not write to file. PHP error: ' . error_get_last()['message'];
+                        $messageType = 'error';
+                    }
                 }
             } else {
                 $message = 'Error: File not found.';
@@ -252,7 +258,12 @@
             'Main Pages' => [
                 'index.html' => 'Home Page',
                 'about.html' => 'About Page',
+                'services.html' => 'Services Page',
+                'contact.html' => 'Contact Page',
                 'locations.html' => 'Locations Page',
+            ],
+            'Service Sub-Pages' => [
+                'services/boat-summer-service-fresno-ca.html' => 'Boat Summer Prep',
             ],
             'City Pages' => [
                 'fresno/index.html' => 'Fresno',

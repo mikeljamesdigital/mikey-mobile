@@ -3,50 +3,49 @@
     "left": [
       {
         "label": "HOME",
-        "url": "index.html",
+        "url": "/",
         "dropdown": null
       },
       {
         "label": "ABOUT",
-        "url": "about.html",
+        "url": "/about.html",
         "dropdown": null
       },
       {
         "label": "LOCATIONS",
-        "url": "locations.html",
+        "url": "/locations.html",
         "dropdown": [
           {
             "label": "Fresno",
-            "url": "fresno/index.html",
+            "url": "/fresno/",
             "subitems": [
-              {"label": "Fig Garden", "url": "fresno/fig-garden/index.html"},
-              {"label": "Sunnyside", "url": "fresno/sunnyside/index.html"},
-              {"label": "Fig Garden Loop", "url": "fresno/fig-garden-loop/index.html"},
-              {"label": "Woodward Park", "url": "fresno/woodward-park/index.html"},
-              {"label": "Riverpark", "url": "fresno/riverpark/index.html"},
-              {"label": "Pinedale", "url": "fresno/pinedale/index.html"},
-              {"label": "Sierra Sky Park", "url": "fresno/sierra-sky-park/index.html"},
-              {"label": "Fort Washington", "url": "fresno/fort-washington/index.html"}
+              {"label": "Fig Garden", "url": "/fresno/fig-garden/"},
+              {"label": "Sunnyside", "url": "/fresno/sunnyside/"},
+              {"label": "Woodward Park", "url": "/fresno/woodward-park/"},
+              {"label": "Riverpark", "url": "/fresno/riverpark/"},
+              {"label": "Pinedale", "url": "/fresno/pinedale/"},
+              {"label": "Sierra Sky Park", "url": "/fresno/sierra-sky-park/"},
+              {"label": "Fort Washington", "url": "/fresno/fort-washington/"}
             ]
           },
           {
             "label": "Clovis",
-            "url": "clovis/index.html",
+            "url": "/clovis/",
             "subitems": [
-              {"label": "Clovis North", "url": "clovis/clovis-north/index.html"},
-              {"label": "Cindy Lane", "url": "clovis/cindy-lane/index.html"},
-              {"label": "Dry Creek", "url": "clovis/dry-creek/index.html"},
-              {"label": "Clovis High", "url": "clovis/clovis-high/index.html"},
-              {"label": "Quail Lakes", "url": "clovis/quail-lakes/index.html"},
-              {"label": "Harlan Ranch", "url": "clovis/harlan-ranch/index.html"}
+              {"label": "Clovis North", "url": "/clovis/clovis-north/"},
+              {"label": "Cindy Lane", "url": "/clovis/cindy-lane/"},
+              {"label": "Dry Creek", "url": "/clovis/dry-creek/"},
+              {"label": "Clovis High", "url": "/clovis/clovis-high/"},
+              {"label": "Quail Lakes", "url": "/clovis/quail-lakes/"},
+              {"label": "Harlan Ranch", "url": "/clovis/harlan-ranch/"}
             ]
           },
           {
             "label": "Madera Ranchos",
-            "url": "madera-ranchos/index.html",
+            "url": "/madera-ranchos/",
             "subitems": [
-              {"label": "Rolling Hills", "url": "madera-ranchos/rolling-hills/index.html"},
-              {"label": "Riverstone", "url": "madera-ranchos/riverstone/index.html"}
+              {"label": "Rolling Hills", "url": "/madera-ranchos/rolling-hills/"},
+              {"label": "Riverstone", "url": "/madera-ranchos/riverstone/"}
             ]
           }
         ]
@@ -55,23 +54,44 @@
     "right": [
       {
         "label": "SERVICES",
-        "url": "services.html",
-        "dropdown": null
+        "url": "/services.html",
+        "dropdown": [
+          {
+            "label": "Oil Change Service",
+            "url": "/mobile-oil-change.html"
+          },
+          {
+            "label": "Diesel Service",
+            "url": "/services.html"
+          },
+          {
+            "label": "Fleet Services",
+            "url": "/fleet-services.html"
+          },
+          {
+            "label": "Same-Day Service",
+            "url": "/same-day-service.html"
+          },
+          {
+            "label": "Boat Summer Prep",
+            "url": "/services/boat-summer-service-fresno-ca.html"
+          }
+        ]
       },
       {
         "label": "PRICING",
-        "url": "index.html#pricing",
+        "url": "/#pricing",
         "dropdown": null
       },
       {
         "label": "CONTACT",
-        "url": "index.html#contact",
+        "url": "/contact.html",
         "dropdown": null
       }
     ]
   },
   "logo": {
-    "image": "logo.png",
+    "image": "/pink-full-gear.webp",
     "alt": "Mikey Mobile Oil Change"
   }
 }

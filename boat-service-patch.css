@@ -1,0 +1,338 @@
+/* ============================================================
+   Boat Service Page — CSS Patch
+   Adds aliases for class names used in HTML that differ from
+   the original boat-service.css definitions.
+   ============================================================ */
+
+/* ── Who Is This Service For? ──────────────────────────────── */
+/* HTML uses .who-card, CSS defines .boat-who-card */
+.who-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.who-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.who-card p {
+    line-height: 1.7;
+    color: #666;
+}
+
+.who-card a {
+    color: #667eea;
+}
+
+/* ── Why Choose Mikey Mobile ───────────────────────────────── */
+/* HTML uses .why-choose-grid / .why-choose-card, CSS defines .boat-choose-grid / .boat-choose-item */
+.why-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.why-choose-card {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.why-choose-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.why-choose-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+    color: #667eea;
+}
+
+.why-choose-card p {
+    line-height: 1.7;
+    color: #555;
+}
+
+/* ── Ready to Book CTA Section ─────────────────────────────── */
+/* HTML uses .cta-buttons / .cta-button, CSS defines .boat-cta-buttons / .boat-btn-* */
+.boat-cta-section .cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.boat-cta-section .cta-button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-family: 'Teko', sans-serif;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.boat-cta-section .cta-button.primary {
+    background: #ff6b9d;
+    color: white;
+}
+
+.boat-cta-section .cta-button.primary:hover {
+    background: #ff4d7d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.boat-cta-section .cta-button.secondary {
+    background: white;
+    color: #667eea;
+}
+
+.boat-cta-section .cta-button.secondary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.boat-cta-section .cta-note {
+    font-size: 1rem;
+    opacity: 0.85;
+    margin-top: 20px;
+}
+
+.boat-cta-section .cta-note a {
+    color: #ffe0f0;
+    text-decoration: underline;
+}
+
+/* ── FAQ Section ───────────────────────────────────────────── */
+/* HTML uses .faq-grid / .faq-item, CSS defines .boat-faq-container / .boat-faq-item */
+.faq-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-left: 4px solid #667eea;
+}
+
+.faq-item h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: #667eea;
+}
+
+.faq-item p {
+    line-height: 1.8;
+    color: #555;
+}
+
+/* ── Don't Let Maintenance Ruin... (Final CTA) ─────────────── */
+/* HTML uses .final-cta-box / .final-cta-buttons, CSS defines .boat-final-package */
+.final-cta-box {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+    text-align: left;
+}
+
+.final-cta-box h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+}
+
+.final-cta-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.final-cta-box li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.final-cta-box li:last-child {
+    border-bottom: none;
+}
+
+.final-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.final-cta-buttons .cta-button {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-family: 'Teko', sans-serif;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.final-cta-buttons .cta-button.primary {
+    background: #ff6b9d;
+    color: white;
+}
+
+.final-cta-buttons .cta-button.primary:hover {
+    background: #ff4d7d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.final-cta-buttons .cta-button.secondary {
+    background: white;
+    color: #667eea;
+}
+
+.final-cta-buttons .cta-button.secondary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+}
+
+.final-note {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #666;
+}
+
+.final-note a {
+    color: #667eea;
+    text-decoration: none;
+}
+
+.final-note a:hover {
+    text-decoration: underline;
+}
+
+/* ── Mobile Responsive Additions ───────────────────────────── */
+@media (max-width: 768px) {
+    .why-choose-grid,
+    .faq-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .faq-item {
+        padding: 20px;
+    }
+
+    .final-cta-box {
+        padding: 25px 20px;
+    }
+
+    .final-cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .final-cta-buttons .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+
+    .boat-cta-section .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .boat-cta-section .cta-button {
+        width: 100%;
+        max-width: 300px;
+        text-align: center;
+    }
+}
+
+/* =====================================================
+   HERO CTA BUTTONS — Call Now & Book Online
+   Fixes plain hyperlinks showing as unstyled links
+   in the .boat-hero-cta container
+   ===================================================== */
+.boat-hero-cta .cta-button {
+    display: inline-block;
+    padding: 16px 36px;
+    border-radius: 50px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 200px;
+    border: 2px solid transparent;
+}
+
+.boat-hero-cta .cta-button.primary {
+    background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+    color: #fff;
+    border-color: #ff6b35;
+    box-shadow: 0 4px 20px rgba(255, 107, 53, 0.4);
+}
+
+.boat-hero-cta .cta-button.primary:hover {
+    background: linear-gradient(135deg, #e55a25 0%, #ff8c5a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.5);
+}
+
+.boat-hero-cta .cta-button.secondary {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+.boat-hero-cta .cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 480px) {
+    .boat-hero-cta .cta-button {
+        width: 100%;
+        min-width: unset;
+        padding: 14px 24px;
+        font-size: 1rem;
+    }
+}

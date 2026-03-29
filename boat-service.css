@@ -1,0 +1,542 @@
+:root {
+    font-size: 112%;
+}
+
+/* Boat Service Page Styles - FIXED VERSION */
+
+/* Hero Section with Image */
+.boat-hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.boat-hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.boat-hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.boat-hero-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(138, 43, 226, 0.85) 0%, rgba(255, 20, 147, 0.75) 100%);
+    z-index: 2;
+}
+
+.boat-hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+}
+
+.boat-hero-content h1 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 3rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.boat-hero-subtitle {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.boat-package-checklist {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 600px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.boat-package-checklist h3 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+}
+
+.boat-package-checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+}
+
+.boat-package-checklist li {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.3rem;
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.boat-package-checklist li:last-child {
+    border-bottom: none;
+}
+
+.boat-hero-cta {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 30px 0;
+    flex-wrap: wrap;
+}
+
+.boat-service-note {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    opacity: 0.9;
+}
+
+/* Why Section */
+.boat-why-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.boat-why-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.boat-why-section .section-intro {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    text-align: center;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #555;
+}
+
+.boat-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.boat-benefit-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.boat-benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.boat-benefit-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.boat-benefit-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.boat-benefit-card p {
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Included Section - FIXED */
+.boat-included-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.boat-included-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.boat-included-section .section-intro {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #555;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boat-included-section .container {
+    color: #333; /* FIXED: Override any white color inheritance */
+}
+
+.boat-service-details {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* Service Detail Cards - FIXED */
+.service-detail-card {
+    background: #f8f9fa;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 15px;
+    border-left: 5px solid #667eea;
+}
+
+.service-detail-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.service-detail-card p {
+    line-height: 1.8;
+    margin-bottom: 10px;
+    color: #666;
+}
+
+.service-detail-card strong {
+    color: #667eea;
+    font-weight: 600;
+}
+
+/* Who Section */
+.boat-who-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.boat-who-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.boat-who-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.boat-who-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.boat-who-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.boat-who-card h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.boat-who-card p {
+    line-height: 1.7;
+    color: #666;
+}
+
+/* Why Choose Section */
+.boat-why-choose-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.boat-why-choose-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.boat-choose-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.boat-choose-item {
+    text-align: center;
+    padding: 30px;
+}
+
+.boat-choose-icon {
+    font-size: 3.5rem;
+    margin-bottom: 15px;
+}
+
+.boat-choose-item h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.boat-choose-item p {
+    line-height: 1.7;
+    color: #666;
+}
+
+/* CTA Section */
+.boat-cta-section {
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    text-align: center;
+}
+
+.boat-cta-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.boat-cta-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    opacity: 0.95;
+}
+
+.boat-cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.boat-btn-primary,
+.boat-btn-secondary {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+    font-family: 'Teko', sans-serif;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    display: inline-block;
+}
+
+.boat-btn-primary {
+    background: #ff6b9d;
+    color: white;
+}
+
+.boat-btn-primary:hover {
+    background: #ff4d7d;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+.boat-btn-secondary {
+    background: white;
+    color: #667eea;
+}
+
+.boat-btn-secondary:hover {
+    background: #f0f0f0;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
+/* FAQ Section */
+.boat-faq-section {
+    padding: 80px 20px;
+    background: #f8f9fa;
+}
+
+.boat-faq-section h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.boat-faq-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.boat-faq-item {
+    background: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.boat-faq-item h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.boat-faq-item p {
+    line-height: 1.8;
+    color: #666;
+}
+
+/* Final CTA Section */
+.boat-final-cta {
+    padding: 80px 20px;
+    background: white;
+    text-align: center;
+}
+
+.boat-final-cta h2 {
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.boat-final-cta p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    color: #555;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.boat-final-package {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 700px;
+    margin: 40px auto;
+}
+
+.boat-final-package h3 {
+    font-family: 'Teko', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.boat-final-package ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    text-align: left;
+}
+
+.boat-final-package li {
+    font-size: 1.1rem;
+    padding: 10px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.boat-final-package li:last-child {
+    border-bottom: none;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .boat-hero {
+        min-height: 500px;
+    }
+    
+    .boat-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .boat-hero-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .boat-package-checklist {
+        padding: 20px;
+    }
+    
+    .boat-package-checklist h3 {
+        font-size: 1.5rem;
+    }
+    
+    .boat-package-checklist li {
+        font-size: 1.1rem;
+    }
+    
+    .boat-hero-cta {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .boat-hero-cta .cta-button,
+    .boat-btn-primary,
+    .boat-btn-secondary {
+        width: 100%;
+        max-width: 300px;
+    }
+    
+    .boat-why-section h2,
+    .boat-included-section h2,
+    .boat-who-section h2,
+    .boat-why-choose-section h2,
+    .boat-cta-section h2,
+    .boat-faq-section h2,
+    .boat-final-cta h2 {
+        font-size: 2rem;
+    }
+    
+    .boat-benefits-grid,
+    .boat-who-grid,
+    .boat-choose-grid {
+        grid-template-columns: 1fr;
+    }
+}

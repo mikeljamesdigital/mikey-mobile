@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+    <meta name="robots" content="index, follow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FREE Mobile Oil Change — Mikey Mobile | Fresno & Clovis</title>
+  <meta name="description" content="Get a FREE mobile oil change in Fresno & Clovis. Pay for oil and filter only — average cost just $40. We come to you. No shop. No wait." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #ffffff;
+      color: #111111;
+      font-family: 'Open Sans', Arial, sans-serif;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    /* ── TOP BAR ── */
+    .top-bar {
+      background: #2C3E5C;
+      color: #fff;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .top-bar a { color: #00BCD4; text-decoration: none; }
+
+    /* ── WRAPPER ── */
+    .wrap {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(180deg, #1a0d30 0%, #2A1548 30%, #3D2066 70%, #4a2575 100%);
+      padding: 60px 24px 40px;
+      text-align: center;
+      border-bottom: 4px solid #E85D9A;
+      color: #fff;
+    }
+    .hero .eyebrow {
+      display: inline-block;
+      background: #E85D9A;
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 18px;
+      border-radius: 4px;
+      margin-bottom: 24px;
+    }
+    .hero h1 {
+      font-family: 'Bebas Neue', 'Oswald', sans-serif;
+      font-size: clamp(52px, 10vw, 88px);
+      font-weight: 400;
+      line-height: 1.05;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: #00BCD4; }
+    .hero .subhead {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(22px, 4vw, 32px);
+      font-weight: 600;
+      color: rgba(255,255,255,0.85);
+      margin-bottom: 28px;
+    }
+    .hero .body-copy {
+      font-size: 21px;
+      color: rgba(255,255,255,0.8);
+      max-width: 680px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+    .hero .body-copy strong { color: #E85D9A; }
+
+    /* ── CTA BUTTON ── */
+    .btn-cta {
+      display: inline-block;
+      background: linear-gradient(135deg, #E85D9A 0%, #d14d87 100%);
+      color: #fff;
+      font-family: 'Oswald', sans-serif;
+      font-size: 26px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 20px 48px;
+      border-radius: 6px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.15s;
+      box-shadow: 0 6px 20px rgba(232,93,154,0.45);
+    }
+    .btn-cta:hover { background: linear-gradient(135deg, #d14d87 0%, #b83d72 100%); transform: translateY(-2px); }
+    .btn-cta.large { font-size: 30px; padding: 24px 56px; }
+
+    /* ── SECTION BASE ── */
+    section { padding: 60px 24px; }
+    section.alt { background: #f4f0fa; }
+    section.dark { background: #2A1548; color: #fff; }
+
+    h2.section-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(30px, 5vw, 48px);
+      font-weight: 700;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      color: inherit;
+    }
+    h2.section-title span { color: #E85D9A; }
+    .section-dark h2.section-title span { color: #00BCD4; }
+
+    .section-intro {
+      font-size: 20px;
+      color: #444;
+      margin-bottom: 40px;
+      max-width: 680px;
+    }
+    section.dark .section-intro { color: #ccc; }
+
+    /* ── REASON CARDS ── */
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .card {
+      background: #fff;
+      border: 2px solid #E85D9A;
+      border-radius: 8px;
+      padding: 28px 24px;
+      text-align: center;
+    }
+    section.alt .card { background: #fff; }
+    section.dark .card { background: rgba(255,255,255,0.05); border-color: #00BCD4; color: #fff; }
+    .card .icon { font-size: 40px; margin-bottom: 14px; }
+    .card h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: inherit;
+    }
+    .card p { font-size: 18px; line-height: 1.6; color: #444; }
+    section.dark .card p { color: #ccc; }
+
+    /* ── DIVIDER ── */
+    .divider {
+      border: none;
+      border-top: 3px solid #E85D9A;
+      margin: 0;
+    }
+    .divider.light { border-color: #ddd; }
+
+    /* ── PAIN POINTS ── */
+    .pain-list {
+      list-style: none;
+      margin-top: 32px;
+    }
+    .pain-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      font-size: 20px;
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      color: #222;
+    }
+    .pain-list li:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .pain-list .x { font-size: 26px; color: #E85D9A; flex-shrink: 0; line-height: 1.4; }
+
+    /* ── STILL NOT SURE ── */
+    .cta-block {
+      text-align: center;
+      padding: 60px 24px;
+      background: #fff;
+      border-top: 4px solid #E85D9A;
+      border-bottom: 4px solid #E85D9A;
+    }
+    .cta-block h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(32px, 6vw, 54px);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .cta-block p {
+      font-size: 21px;
+      color: #444;
+      max-width: 600px;
+      margin: 0 auto 32px;
+      line-height: 1.8;
+    }
+    .cta-block .fine {
+      font-size: 16px;
+      color: #888;
+      margin-top: 16px;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 28px;
+      margin-top: 36px;
+    }
+    .testimonial {
+      background: #fff;
+      border-left: 5px solid #00BCD4;
+      border-radius: 6px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+    }
+    .testimonial .stars { font-size: 22px; margin-bottom: 12px; }
+    .testimonial blockquote {
+      font-size: 18px;
+      font-style: italic;
+      color: #222;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .testimonial .author {
+      font-family: 'Oswald', sans-serif;
+      font-size: 17px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #111;
+    }
+    .testimonial .location { font-size: 15px; color: #888; }
+
+    /* ── FINAL CTA ── */
+    .final-cta {
+      background: linear-gradient(180deg, #1a0d30 0%, #2A1548 100%);
+      color: #fff;
+      text-align: center;
+      padding: 70px 24px;
+    }
+    .final-cta h2 {
+      font-family: 'Oswald', sans-serif;
+      font-size: clamp(34px, 6vw, 58px);
+      font-weight: 700;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .final-cta p {
+      font-size: 21px;
+      color: #ccc;
+      max-width: 600px;
+      margin: 0 auto 36px;
+      line-height: 1.8;
+    }
+    .final-cta .fine { font-size: 15px; color: #777; margin-top: 18px; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #2C3E5C;
+      color: #666;
+      text-align: center;
+      padding: 24px;
+      font-size: 14px;
+    }
+    footer a { color: #00BCD4; text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .hero { padding: 40px 20px 32px; }
+      .hero .body-copy { font-size: 18px; }
+      .btn-cta { font-size: 22px; padding: 18px 32px; width: 100%; text-align: center; }
+      .btn-cta.large { font-size: 24px; padding: 20px 28px; }
+      section { padding: 44px 20px; }
+      .card p { font-size: 17px; }
+      .pain-list li { font-size: 18px; }
+      .testimonial blockquote { font-size: 17px; }
+      .cta-block p { font-size: 18px; }
+      .final-cta p { font-size: 18px; }
+    }
+
+    /* ── MODAL ── */
+    .form-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.75);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .form-modal-overlay.active { display: flex; }
+    .form-modal-box {
+      background: #fff;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 560px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      padding: 32px 28px 24px;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+    .form-modal-close {
+      position: absolute;
+      top: 12px;
+      right: 16px;
+      background: none;
+      border: none;
+      font-size: 28px;
+      cursor: pointer;
+      color: #555;
+      line-height: 1;
+    }
+    .form-modal-close:hover { color: #E85D9A; }
+    .form-modal-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 24px;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #2A1548;
+      margin-bottom: 6px;
+    }
+    .form-modal-sub {
+      font-size: 15px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    #form-iframe-container {
+      width: 100%;
+      min-height: 781px;
+    }
+    #form-iframe-container iframe {
+      width: 100%;
+      height: 781px;
+      border: none;
+      border-radius: 4px;
+    }
+    @media (max-width: 600px) {
+      .form-modal-box { padding: 24px 16px 16px; }
+      #form-iframe-container, #form-iframe-container iframe { min-height: 820px; height: 820px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Serving Fresno, Clovis &amp; Surrounding Areas &nbsp;|&nbsp; <a href="tel:5598384267">(559) 838-4267</a>
+</div>
+
+<!-- ══════════════════════════════════════════
+     HERO — HEADLINE + SUB-HEAD + BODY COPY
+══════════════════════════════════════════ -->
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Limited Time Offer</div>
+    <h1>FREE Mobile<br /><span>Oil Change</span></h1>
+    <p class="subhead">Pay for oil and filter only &mdash; average cost just $40</p>
+    <p class="body-copy">
+      Calling all car, truck, and SUV owners in Fresno and Clovis &mdash; your next oil change is
+      <strong>completely FREE</strong>. That&rsquo;s a <strong>$75 savings</strong> on labor, and all you cover
+      is the cost of your oil and filter. A certified technician comes directly to your home or office,
+      handles everything, and is gone in 30 minutes. No shop. No waiting room. No wasted afternoon.
+    </p>
+    <button onclick="openFormModal(); return false;" class="btn-cta large">Get an Instant Quote!</button>
+    <p style="margin-top:14px; font-size:16px; color:rgba(255,255,255,0.6);">No obligation &bull; No credit card required</p>
+  </div>
+</section>
+
+<hr class="divider" />
+
+<!-- ══════════════════════════════════════════
+     WHY REGULAR OIL CHANGES MATTER
+══════════════════════════════════════════ -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="section-title">Why Regular Oil Changes <span>Actually Matter</span></h2>
+    <p class="section-intro">Skipping oil changes is one of the most expensive mistakes a vehicle owner can make. Here&rsquo;s why staying on schedule protects your investment:</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🔧</div>
+        <h3>Engine Protection</h3>
+        <p>Fresh oil lubricates every moving part in your engine, preventing the metal-on-metal friction that causes thousands of dollars in damage.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⛽</div>
+        <h3>Better Fuel Economy</h3>
+        <p>A clean, well-lubricated engine burns fuel more efficiently, which means more miles per gallon and less money at the pump every week.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📅</div>
+        <h3>Longer Vehicle Life</h3>
+        <p>Vehicles that receive consistent oil changes on schedule last significantly longer, protecting the resale value of your car or truck.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider light" />
+
+<!-- ══════════════════════════════════════════
+     PERKS OF MOBILE OIL CHANGE
+══════════════════════════════════════════ -->
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Why Mobile Beats the <span>Shop Every Time</span></h2>
+    <p class="section-intro">There&rsquo;s a smarter way to get your oil changed &mdash; and it doesn&rsquo;t involve a waiting room, a shuttle bus, or a two-hour block of your day.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🏠</div>
+        <h3>We Come to You</h3>
+        <p>Stay home, stay at the office, or go about your day. We show up at your location fully equipped and ready to work.</p>
+      </div>
+      <div class="card">
+        <div class="icon">⏱️</div>
+        <h3>Done in 30 Minutes</h3>
+        <p>No drop-off, no waiting, no pickup. Your oil change is completed on-site in about 30 minutes while you do literally anything else.</p>
+      </div>
+      <div class="card">
+        <div class="icon">💰</div>
+        <h3>Transparent Pricing</h3>
+        <p>We quote you the exact cost of your oil and filter before you ever commit &mdash; no surprise fees, no upsells, no nonsense.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     STILL NOT SURE? — CTA BLOCK
+══════════════════════════════════════════ -->
+<div class="cta-block">
+  <div class="wrap">
+    <h2>Still Not Sure?</h2>
+    <p>
+      Call or click and we&rsquo;ll give you an instant quote on the exact cost of your preferred oil and filter
+      &mdash; right now, over the phone, before you ever schedule a thing.
+      That&rsquo;s right: you&rsquo;ll know your total cost upfront, with zero pressure to book.
+    </p>
+    <button onclick="openFormModal(); return false;" class="btn-cta">Get an Instant Quote!</button>
+    <p class="fine">No obligation &bull; No credit card required &bull; Takes less than 2 minutes</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     3 MORE PERKS
+══════════════════════════════════════════ -->
+<section class="dark">
+  <div class="wrap">
+    <h2 class="section-title" style="color:#fff;">Even More Reasons to <span style="color:#00BCD4;">Go Mobile</span></h2>
+    <p class="section-intro" style="color:#aaa;">Still on the fence? Here are three more reasons Fresno and Clovis drivers are making the switch to mobile service.</p>
+    <div class="cards">
+      <div class="card">
+        <div class="icon">🛡️</div>
+        <h3>100% Satisfaction Guarantee</h3>
+        <p>If you&rsquo;re not completely happy with the service, we&rsquo;ll make it right &mdash; no questions asked, no hassle.</p>
+      </div>
+      <div class="card">
+        <div class="icon">🔬</div>
+        <h3>Certified Technicians Only</h3>
+        <p>Every technician is ASE-certified, fully insured, and trained to service cars, trucks, SUVs, and diesel vehicles.</p>
+      </div>
+      <div class="card">
+        <div class="icon">📲</div>
+        <h3>Book in 60 Seconds</h3>
+        <p>Schedule online or call us and we&rsquo;ll lock in your appointment in under a minute &mdash; same-day slots often available.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     PAIN POINTS OF TRADITIONAL SHOPS
+══════════════════════════════════════════ -->
+<section class="alt">
+  <div class="wrap">
+    <h2 class="section-title">The Problem with <span>Traditional Oil Change Shops</span></h2>
+    <p class="section-intro">You already know the drill. Here&rsquo;s what you&rsquo;re actually signing up for every time you pull into a quick-lube bay:</p>
+    <ul class="pain-list">
+      <li>
+        <span class="x">✗</span>
+        <span><strong>Hidden fees and upsells at checkout.</strong> You went in for a $29 oil change and walked out paying $95 after the air filter, wiper blades, and &ldquo;recommended&rdquo; fluid top-offs they added without asking.</span>
+      </li>
+      <li>
+        <span class="x">✗</span>
+        <span><strong>A waiting room that steals your afternoon.</strong> Between the drive, the wait, and the drive back, a simple oil change can eat 90 minutes or more out of your day &mdash; time you&rsquo;ll never get back.</span>
+      </li>
+      <li>
+        <span class="x">✗</span>
+        <span><strong>Rushed techs working on too many cars at once.</strong> High-volume shops prioritize speed over quality, which means your vehicle may not get the careful attention it deserves from a technician who&rsquo;s already on their 20th car of the day.</span>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     SECOND CTA
+══════════════════════════════════════════ -->
+<div class="cta-block" style="background:#f0e8ff; border-color:#E85D9A;">
+  <div class="wrap">
+    <h2 style="color:#2A1548;">Ready to Ditch the Shop for Good?</h2>
+    <p>
+      Get your instant quote now. We&rsquo;ll tell you exactly what your oil and filter will cost
+      before you commit to a single thing. Your labor is <strong>FREE</strong> &mdash; all you pay is the parts.
+    </p>
+    <button onclick="openFormModal(); return false;" class="btn-cta">Get an Instant Quote!</button>
+    <p class="fine">No obligation &bull; No credit card required &bull; Same-day appointments available</p>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════════
+     TESTIMONIALS
+══════════════════════════════════════════ -->
+<section>
+  <div class="wrap">
+    <h2 class="section-title">Real Drivers. <span>Real Results.</span></h2>
+    <p class="section-intro">Don&rsquo;t take our word for it &mdash; here&rsquo;s what Fresno and Clovis customers are saying about the mobile oil change experience.</p>
+    <div class="testimonials-grid">
+      <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <blockquote>
+          &ldquo;I was skeptical that &lsquo;free labor&rsquo; was some kind of gimmick, but it&rsquo;s completely legit. I paid $38 for my oil and filter, the tech showed up at my house right on time, and was done in 25 minutes. I&rsquo;ll never go back to a shop.&rdquo;
+        </blockquote>
+        <div class="author">Marcus T.</div>
+        <div class="location">Woodward Park, Fresno</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <blockquote>
+          &ldquo;As a mom with two kids, I don&rsquo;t have time to sit in a waiting room. Mikey Mobile came to my driveway while the kids were napping. The price was upfront, there were zero surprises, and the technician was incredibly professional.&rdquo;
+        </blockquote>
+        <div class="author">Danielle R.</div>
+        <div class="location">Clovis North</div>
+      </div>
+      <div class="testimonial">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <blockquote>
+          &ldquo;I run a small business and my truck is my livelihood. Getting an oil change used to mean losing half a workday. Now I get it done in my parking lot between jobs. The quote was instant, the price was fair, and the service was flawless.&rdquo;
+        </blockquote>
+        <div class="author">Greg M.</div>
+        <div class="location">Fig Garden, Fresno</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════
+     FINAL CTA
+══════════════════════════════════════════ -->
+<div class="final-cta">
+  <div class="wrap">
+    <h2>Your FREE Oil Change<br />Is One Call Away</h2>
+    <p>
+      Get your instant quote right now. Know your exact cost before you commit.
+      Labor is always free &mdash; you only pay for oil and filter.
+      No obligation, no credit card, no catch.
+    </p>
+    <button onclick="openFormModal(); return false;" class="btn-cta large">Get an Instant Quote!</button>
+    <p class="fine">No obligation &bull; No credit card required &bull; Serving Fresno, Clovis &amp; Surrounding Areas</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Mikey Mobile Oil Change &bull; Fresno, CA &bull;
+    <a href="https://mikeymobile.com">mikeymobile.com</a> &bull;
+    <a href="tel:5598384267">(559) 838-4267</a>
+  </p>
+  <p style="margin-top:8px;">
+    <a href="https://mikeymobile.com/privacy">Privacy Policy</a> &bull;
+    <a href="https://mikeymobile.com/terms">Terms of Service</a>
+  </p>
+</footer>
+
+<!-- LeadConnector Form Modal -->
+<div class="form-modal-overlay" id="formModal">
+  <div class="form-modal-box">
+    <button class="form-modal-close" onclick="closeFormModal()" aria-label="Close">&times;</button>
+    <div class="form-modal-title">Get Your Instant Quote</div>
+    <p class="form-modal-sub">Free labor &bull; You only pay for oil &amp; filter &bull; No obligation</p>
+    <div id="form-iframe-container">
+      <!-- iframe injected here on button click -->
+    </div>
+  </div>
+</div>
+
+<script>
+var formLoaded = false;
+
+function openFormModal() {
+  document.getElementById('formModal').classList.add('active');
+  document.body.style.overflow = 'hidden';
+  if (!formLoaded) {
+    formLoaded = true;
+    var container = document.getElementById('form-iframe-container');
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://api.leadconnectorhq.com/widget/form/eol7CrP73Z42VBev8TvH';
+    iframe.style.cssText = 'width:100%;height:781px;border:none;border-radius:3px';
+    iframe.id = 'inline-eol7CrP73Z42VBev8TvH';
+    iframe.setAttribute('data-layout', "{'id':'INLINE'}");
+    iframe.setAttribute('data-trigger-type', 'alwaysShow');
+    iframe.setAttribute('data-trigger-value', '');
+    iframe.setAttribute('data-activation-type', 'alwaysActivated');
+    iframe.setAttribute('data-activation-value', '');
+    iframe.setAttribute('data-deactivation-type', 'neverDeactivate');
+    iframe.setAttribute('data-deactivation-value', '');
+    iframe.setAttribute('data-form-name', 'Facebook - Free Oil Change Landing Page');
+    iframe.setAttribute('data-height', '781');
+    iframe.setAttribute('data-layout-iframe-id', 'inline-eol7CrP73Z42VBev8TvH');
+    iframe.setAttribute('data-form-id', 'eol7CrP73Z42VBev8TvH');
+    iframe.title = 'Facebook - Free Oil Change Landing Page';
+    container.appendChild(iframe);
+    // Load the embed script once
+    if (!document.getElementById('lc-form-script')) {
+      var s = document.createElement('script');
+      s.src = 'https://link.msgsndr.com/js/form_embed.js';
+      s.id = 'lc-form-script';
+      document.body.appendChild(s);
+    }
+  }
+}
+
+function closeFormModal() {
+  document.getElementById('formModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+// Close modal when clicking outside the box
+document.getElementById('formModal').addEventListener('click', function(e) {
+  if (e.target === this) closeFormModal();
+});
+
+// Close on Escape key
+document.addEventListener('keydown', function(e) {
+  if (e.key === 'Escape') closeFormModal();
+});
+</script>
+
+<!-- Google Ads Conversion Tracking -->
+<script>
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17849517433/9MBpCKWUt4McEPmKqL9C',
+      'event_callback': callback
+  });
+  return false;
+}
+</script>
+
+</body>
+</html>

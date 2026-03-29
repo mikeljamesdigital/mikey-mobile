@@ -1,4 +1,19 @@
-/* Navigation Styles */
+/* ============================================================
+   Navigation Styles - Mikey Mobile Oil Change
+   ============================================================ */
+
+/* Top Bar */
+.top-bar {
+    background: #2A1548;
+    color: #ffffff;
+    text-align: center;
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Navbar */
 .navbar {
     background: #00BCD4;
     padding: 15px 0;
@@ -8,6 +23,7 @@
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
 }
 
+/* Nav Container */
 .nav-container {
     display: flex;
     justify-content: space-between;
@@ -37,7 +53,7 @@
 }
 
 .logo {
-    height: 90px;
+    height: 120px;
     width: auto;
     transition: transform 0.3s ease;
 }
@@ -65,7 +81,8 @@
 /* Dropdown Container */
 .nav-dropdown {
     position: relative;
-    display: inline-block;
+    display: flex;
+    align-items: center;
 }
 
 .dropdown-trigger {
@@ -74,37 +91,67 @@
 
 /* Dropdown Menu */
 .dropdown-menu {
-    display: none;
+    display: none !important;
     position: absolute;
-    top: 100%;
+    top: calc(100% + 2px);  /* tight gap — no dead zone */
     left: 50%;
     transform: translateX(-50%);
-    background: #2A1548;
-    border: 2px solid #00BCD4;
+    background: #1E2D5A;
+    border: 2px solid #E8399A;
     border-radius: 10px;
     padding: 20px;
-    margin-top: 15px;
-    min-width: 600px;
+    /* Invisible bridge between nav link and dropdown to prevent hover gap */
+    margin-top: 0;
     z-index: 1000;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    grid-template-columns: 1fr;
+    gap: 0;
+    min-width: 220px;
+}
+
+/* Invisible hover bridge: fills the gap between trigger and menu */
+.nav-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: -20px;
+    right: -20px;
+    height: 20px;
+    background: transparent;
     display: none;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
 }
 
-/* Show dropdown on hover */
+.nav-dropdown:hover::after {
+    display: block;
+}
+
 .nav-dropdown:hover .dropdown-menu {
-    display: grid;
+    display: grid !important;
 }
 
-/* Dropdown Sections */
+/* Narrow dropdown for single-item menus (e.g. Services) */
+.dropdown-menu.dropdown-narrow {
+    min-width: 0;
+    width: auto;
+    white-space: nowrap;
+    grid-template-columns: 1fr;
+    padding: 12px 16px;
+}
+
 .dropdown-section {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    border-bottom: 1px solid rgba(232,57,154,.25);
+}
+.dropdown-section:last-child {
+    padding-bottom: 0;
+    margin-bottom: 0;
+    border-bottom: none;
 }
 
-/* City Links (Main) */
 .dropdown-city {
     color: #E85D9A;
     font-weight: bold;
@@ -123,7 +170,6 @@
     color: #ff6eb4;
 }
 
-/* Neighborhood Links (Sub) */
 .dropdown-neighborhood {
     color: #ffffff;
     font-size: 14px;
@@ -139,235 +185,225 @@
     content: "▸";
     position: absolute;
     left: 8px;
-    color: #00BCD4;
+    color: #E8399A;
     font-size: 12px;
 }
 
 .dropdown-neighborhood:hover {
-    background: rgba(0, 188, 212, 0.2);
-    color: #00BCD4;
+    background: rgba(232,57,154,.15);
+    color: #FF6BB5;
     padding-left: 24px;
 }
 
-/* Hamburger Menu Button (Hidden on Desktop) */
-.hamburger-menu {
-    display: none;
+/* ============================================================
+   HAMBURGER BUTTON — hidden on desktop, shown on mobile
+   Always renders LAST in nav-container so it sits on the RIGHT
+   ============================================================ */
+.mobile-menu-toggle {
+    display: none;              /* hidden on desktop */
     flex-direction: column;
-    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
     background: transparent;
-    border: none;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 6px;
     cursor: pointer;
-    padding: 10px;
-    z-index: 1001;
+    padding: 8px 10px;
+    width: 48px;
+    height: 44px;
+    flex-shrink: 0;
+    /* Sits naturally in the flex row — NO fixed/absolute */
+    position: static;
+    z-index: auto;
+    transition: border-color 0.2s ease, background 0.2s ease;
+    /* Ensure it always ends up on the far right */
+    margin-left: auto;
+    order: 99;
 }
 
-.hamburger-menu span {
-    width: 30px;
+.mobile-menu-toggle:hover,
+.mobile-menu-toggle:focus {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: #ffffff;
+    outline: none;
+}
+
+.mobile-menu-toggle span {
+    width: 26px;
     height: 3px;
     background: #ffffff;
     border-radius: 2px;
     transition: all 0.3s ease;
+    display: block;
 }
 
-.hamburger-menu:hover span {
-    background: #E85D9A;
+/* Animated X when active */
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px);
+}
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+    transform: scaleX(0);
+}
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Mobile Menu */
+/* Body scroll lock when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
+/* ============================================================
+   MOBILE FULL-SCREEN MENU OVERLAY
+   ============================================================ */
 .mobile-menu {
     display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     background: rgba(42, 21, 72, 0.98);
-    z-index: 9999;
+    z-index: 10001;
     overflow-y: auto;
-    padding: 80px 20px 20px;
+    /* padding-top leaves room for the close button */
+    padding: 90px 20px 40px;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+    justify-content: flex-start;
 }
 
 .mobile-menu.active {
-    display: block;
+    display: flex;
 }
 
+/* ============================================================
+   CLOSE BUTTON inside the overlay — top-right corner
+   ============================================================ */
 .mobile-menu-close {
     position: fixed;
-    top: 20px;
-    right: 20px;
-    background: transparent;
+    top: 16px;
+    right: 16px;
+    z-index: 10002;
+    background: rgba(255, 255, 255, 0.1);
     border: 2px solid #00BCD4;
-    color: #00BCD4;
-    font-size: 40px;
-    width: 50px;
-    height: 50px;
+    color: #ffffff;
+    font-size: 22px;
+    line-height: 1;
+    width: 48px;
+    height: 48px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 10001;
-    transition: all 0.3s ease;
-    line-height: 1;
-    padding: 0;
+    transition: all 0.25s ease;
+    /* Only visible when overlay is open */
 }
 
-.mobile-menu-close:hover {
+.mobile-menu-close:hover,
+.mobile-menu-close:focus {
     background: #00BCD4;
     color: #2A1548;
     transform: rotate(90deg);
+    outline: none;
 }
 
+/* Mobile menu content wrapper */
 .mobile-menu-content {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    max-width: 500px;
-    margin: 0 auto;
+    gap: 6px;
+    width: 100%;
+    max-width: 420px;
+    align-items: center;
 }
 
+/* Nav links inside the overlay */
 .mobile-nav-link {
     color: #ffffff;
     text-decoration: none;
-    font-size: 24px;
-    font-weight: bold;
-    padding: 15px 20px;
+    font-family: 'Teko', 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 14px 30px;
+    text-align: center;
+    width: 100%;
+    border: 2px solid transparent;
     border-radius: 8px;
     transition: all 0.3s ease;
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: 2px;
-    border-left: 4px solid transparent;
-}
-
-.mobile-nav-link:hover {
-    background: rgba(0, 188, 212, 0.2);
-    border-left-color: #00BCD4;
-    color: #00BCD4;
-}
-
-.mobile-dropdown-section {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin: 10px 0;
-}
-
-.mobile-dropdown-main {
-    color: #E85D9A;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 12px 20px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-family: 'Bebas Neue', sans-serif;
     letter-spacing: 1px;
-    border-left: 4px solid transparent;
-    margin-top: 10px;
 }
 
-.mobile-dropdown-main:hover {
-    background: rgba(232, 93, 154, 0.2);
-    border-left-color: #E85D9A;
-    color: #ff6eb4;
-}
-
-.mobile-dropdown-sub {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 18px;
-    padding: 10px 20px 10px 40px;
-    border-radius: 8px;
-    transition: all 0.3s ease;
-    font-family: 'Teko', sans-serif;
-    position: relative;
-}
-
-.mobile-dropdown-sub:before {
-    content: "▸";
-    position: absolute;
-    left: 24px;
+.mobile-nav-link:hover,
+.mobile-nav-link:focus {
+    background: rgba(0, 188, 212, 0.2);
+    border-color: #00BCD4;
     color: #00BCD4;
-    font-size: 14px;
 }
 
-.mobile-dropdown-sub:hover {
-    background: rgba(0, 188, 212, 0.1);
-    color: #00BCD4;
-    padding-left: 44px;
-}
+/* ============================================================
+   RESPONSIVE BREAKPOINTS
+   ============================================================ */
 
-/* Responsive Design */
 @media (max-width: 1024px) {
-    .nav-left,
-    .nav-right {
-        gap: 20px;
-    }
-    
-    .nav-center {
-        padding: 0 20px;
-    }
-    
-    .logo {
-        height: 70px;
-    }
-    
-    .nav-link {
-        font-size: 13px;
-    }
-    
-    .dropdown-menu {
-        min-width: 500px;
-    }
+    .nav-left, .nav-right { gap: 20px; }
+    .nav-center { padding: 0 20px; }
+    .logo { height: 95px; }
+    .nav-link { font-size: 13px; }
+    .dropdown-menu { min-width: 400px; }
 }
 
+/* ── Mobile: ≤ 768px ── */
 @media (max-width: 768px) {
-    /* Hide desktop navigation */
+    /* Show hamburger */
+    .mobile-menu-toggle {
+        display: flex;
+        align-self: center;   /* vertically centered in the bar */
+        margin-left: auto;    /* push to far right */
+        margin-right: 0;
+        order: 99;
+        flex-shrink: 0;
+    }
+
+    /* Hide desktop nav links */
     .nav-left,
     .nav-right {
         display: none;
     }
-    
-    /* Show hamburger menu */
-    .hamburger-menu {
-        display: flex;
-        position: absolute;
-        right: 20px;
-    }
-    
-    /* Center logo on mobile */
-    .nav-center {
-        flex: 1;
-        justify-content: center;
-        padding: 0;
-    }
-    
-    .logo {
-        height: 60px;
-    }
-    
+
+    /* Nav container: row, left-to-right, both children vertically centered */
     .nav-container {
-        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;    /* vertically center logo AND hamburger */
+        justify-content: flex-start;
+        padding: 0 16px;
+        width: 100%;
+        box-sizing: border-box;
     }
+
+    /* Logo: left-aligned, vertically centered */
+    .nav-center {
+        flex: 0 0 auto;         /* don't stretch */
+        display: flex;
+        align-items: center;    /* vertically center the <img> */
+        justify-content: flex-start;
+        padding: 0;
+        margin-right: auto;     /* push hamburger to the right */
+    }
+
+    /* Logo 10% bigger than before (was 60px → now 66px) */
+    .logo { height: 88px; }
+
+    .navbar { padding: 8px 0; }
 }
 
 @media (max-width: 480px) {
-    .logo {
-        height: 50px;
-    }
-    
-    .mobile-nav-link {
-        font-size: 20px;
-        padding: 12px 15px;
-    }
-    
-    .mobile-dropdown-main {
-        font-size: 18px;
-        padding: 10px 15px;
-    }
-    
-    .mobile-dropdown-sub {
-        font-size: 16px;
-        padding: 8px 15px 8px 35px;
-    }
+    /* Logo 10% bigger than before (was 50px → now 55px) */
+    .logo { height: 72px; }
+    .mobile-nav-link { font-size: 1.6rem; padding: 12px 20px; }
 }
