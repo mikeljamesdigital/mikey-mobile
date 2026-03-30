@@ -1,0 +1,11 @@
+name = "mikey-mobile-quote-api"
+main = "quote-worker.js"
+compatibility_date = "2024-01-01"
+
+[env.production]
+name = "mikey-mobile-quote-api"
+
+# Route: https://mikeymobile.com/api/quote*
+# Add this route in the Cloudflare dashboard under Workers > Triggers > Routes
+# Route pattern: mikeymobile.com/api/quote*
+# Zone: mikeymobile.com

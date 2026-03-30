@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Quote API Test — Mikey Mobile</title>
+  <meta name="robots" content="noindex, nofollow">
+  <style>
+    body { font-family: monospace; background: #111; color: #0f0; padding: 24px; }
+    h1 { color: #FFD700; font-family: sans-serif; }
+    input, select { background: #222; color: #fff; border: 1px solid #555; padding: 8px 12px; font-size: 16px; margin: 4px; border-radius: 4px; }
+    button { background: #E00; color: #fff; border: none; padding: 10px 24px; font-size: 16px; cursor: pointer; border-radius: 4px; margin: 4px; }
+    pre { background: #000; padding: 16px; border-radius: 6px; white-space: pre-wrap; font-size: 14px; border: 1px solid #333; }
+    label { color: #ccc; font-family: sans-serif; }
+  </style>
+</head>
+<body>
+  <h1>🔧 Quote API Test</h1>
+  <p style="color:#ccc;font-family:sans-serif;">Test the oil change quote API. This page is for internal use only.</p>
+
+  <div>
+    <label>Year: <input id="year" placeholder="2022" value="2022" style="width:80px"></label>
+    <label>Make: <input id="make" placeholder="Toyota" value="Toyota" style="width:120px"></label>
+    <label>Model: <input id="model" placeholder="RAV4" value="RAV4" style="width:140px"></label>
+    <label>Oil Type:
+      <select id="oil_type">
+        <option value="">Recommended</option>
+        <option value="conventional">Conventional</option>
+        <option value="synthetic_blend">Synthetic Blend</option>
+        <option value="full_synthetic">Full Synthetic</option>
+      </select>
+    </label>
+    <button onclick="testAPI()">Get Quote</button>
+  </div>
+
+  <pre id="output">Results will appear here...</pre>
+
+  <script>
+    async function testAPI() {
+      const year      = document.getElementById('year').value;
+      const make      = document.getElementById('make').value;
+      const model     = document.getElementById('model').value;
+      const oil_type  = document.getElementById('oil_type').value;
+
+      const params = new URLSearchParams({ make, model });
+      if (year)     params.set('year', year);
+      if (oil_type) params.set('oil_type', oil_type);
+
+      // Try local worker first, fall back to production URL
+      const url = `/api/quote?${params.toString()}`;
+
+      document.getElementById('output').textContent = 'Fetching...';
+      try {
+        const res = await fetch(url);
+        const data = await res.json();
+        document.getElementById('output').textContent = JSON.stringify(data, null, 2);
+      } catch (err) {
+        document.getElementById('output').textContent = 'Error: ' + err.message + '\n\nMake sure the Cloudflare Worker is deployed and the route /api/quote is configured.';
+      }
+    }
+  </script>
+</body>
+</html>
