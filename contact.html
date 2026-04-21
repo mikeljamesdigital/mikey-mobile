@@ -12,8 +12,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="navigation.css?v=2">
     <link rel="stylesheet" href="/footer.css">
-    <!-- reCAPTCHA v3 — replace YOUR_RECAPTCHA_SITE_KEY with your actual site key -->
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdZn4wsAAAAAPDMbsX79BOR6YBmxL0zSCwtvX09" async defer></script>
+
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
@@ -136,6 +135,10 @@
             .why-grid{grid-template-columns:1fr}
         }
     </style>
+<script
+  src="https://my.mikeymobile.com/js/external-tracking.js"
+  data-tracking-id="tk_bbd85f151ec34c50b2bd1ec33635c4ce"
+></script>
 </head>
 <body>
 
@@ -256,10 +259,7 @@
                     <div class="form-subtitle">Fill out the form below and we'll get back to you within a few hours. For same-day service, please call or text us directly.</div>
 
                     <!-- Replace YOUR_FORMSPREE_ENDPOINT with your Formspree form URL e.g. https://formspree.io/f/xyzabcde -->
-                    <form id="contactForm" action="https://formspree.io/f/meerrvlg" method="POST" novalidate>
-                        <!-- Hidden field for reCAPTCHA token -->
-                        <input type="hidden" name="g-recaptcha-response" id="recaptchaToken">
-
+                    <form id="contactForm" action="https://formspree.io/f/meerrvlg" method="POST">
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="name">Full Name <span class="form-required">*</span></label>
@@ -305,8 +305,7 @@
                             <textarea id="message" name="message" placeholder="Tell us what you need, when you'd like service, and any questions you have..." required></textarea>
                         </div>
 
-                        <button type="submit" class="form-submit-btn" id="submitBtn">SEND MESSAGE</button>
-                        <p class="form-note">🔒 Protected by Google reCAPTCHA · We never share your information</p>
+                        <input type="submit" class="form-submit-btn" id="submitBtn" value="SEND MESSAGE">
                     </form>
 
                     <!-- Success Message -->
@@ -366,71 +365,7 @@
 
     <footer></footer>
 
-    <script src="/js/navigation.js?v=2"></script>
-    <script src="/js/footer.js"></script>
-    <script>
-    // ── Contact Form Handler ──
-    // Replace YOUR_RECAPTCHA_SITE_KEY with your actual reCAPTCHA v3 site key
-    const RECAPTCHA_SITE_KEY = '6LdZn4wsAAAAAPDMbsX79BOR6YBmxL0zSCwtvX09';
-
-    const form = document.getElementById('contactForm');
-    const submitBtn = document.getElementById('submitBtn');
-    const successMsg = document.getElementById('formSuccess');
-    const errorMsg = document.getElementById('formError');
-
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-
-        // Basic validation
-        const name = document.getElementById('name').value.trim();
-        const email = document.getElementById('email').value.trim();
-        const message = document.getElementById('message').value.trim();
-
-        if (!name || !email || !message) {
-            errorMsg.textContent = 'Please fill in all required fields (Name, Email, and Message).';
-            errorMsg.classList.add('show');
-            return;
-        }
-
-        submitBtn.disabled = true;
-        submitBtn.textContent = 'SENDING...';
-        errorMsg.classList.remove('show');
-
-        try {
-            // Get reCAPTCHA token
-            let token = '';
-            if (RECAPTCHA_SITE_KEY !== 'YOUR_RECAPTCHA_SITE_KEY') {
-                token = await new Promise((resolve) => {
-                    grecaptcha.ready(() => {
-                        grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact' }).then(resolve);
-                    });
-                });
-                document.getElementById('recaptchaToken').value = token;
-            }
-
-            // Submit to Formspree
-            const formData = new FormData(form);
-            const response = await fetch(form.action, {
-                method: 'POST',
-                body: formData,
-                headers: { 'Accept': 'application/json' }
-            });
-
-            if (response.ok) {
-                form.style.display = 'none';
-                successMsg.classList.add('show');
-                successMsg.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            } else {
-                const data = await response.json();
-                throw new Error(data.error || 'Submission failed');
-            }
-        } catch (err) {
-            errorMsg.textContent = 'Something went wrong. Please try again or call us at (559) 838-4267.';
-            errorMsg.classList.add('show');
-            submitBtn.disabled = false;
-            submitBtn.textContent = 'SEND MESSAGE';
-        }
-    });
-    </script>
+    <script defer src="/js/navigation.js?v=3"></script>
+    <script defer src="/js/footer.js?v=2"></script>
 </body>
 </html>

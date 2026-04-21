@@ -188,6 +188,10 @@
             .trust-item{font-size:15px}
         }
     </style>
+<script
+  src="https://my.mikeymobile.com/js/external-tracking.js"
+  data-tracking-id="tk_bbd85f151ec34c50b2bd1ec33635c4ce"
+></script>
 </head>
 <body>
 
@@ -479,7 +483,7 @@
                             <input type="checkbox" name="terms" required>
                             <span>I agree to the <a href="/privacy-policy.html" target="_blank">Privacy Policy</a> and consent to being contacted about my service request.</span>
                         </label>
-                        <button type="submit" class="btn-form-submit" id="hp-submit-btn">Get Instant Quote</button>
+                        <input type="submit" class="btn-form-submit" id="hp-submit-btn" value="Get Instant Quote">
                     </form>
                     <div class="form-success" id="hp-form-success">
                         <div class="success-icon">&#10003;</div>
@@ -488,30 +492,7 @@
                     </div>
                 </div>
             </div>
-            <script>
-            (function(){
-                var form=document.getElementById('hp-booking-form');
-                var success=document.getElementById('hp-form-success');
-                var errBox=document.getElementById('hp-form-error');
-                var btn=document.getElementById('hp-submit-btn');
-                if(!form)return;
-                form.addEventListener('submit',async function(e){
-                    e.preventDefault();
-                    errBox.style.display='none';
-                    btn.disabled=true;
-                    btn.textContent='Sending...';
-                    try{
-                        var res=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});
-                        if(res.ok){form.style.display='none';success.style.display='block';}
-                        else{throw new Error();}
-                    }catch(err){
-                        errBox.style.display='block';
-                        btn.disabled=false;
-                        btn.textContent='Get Instant Quote';
-                    }
-                });
-            })();
-            </script>
+
             <div style="text-align:center;margin-top:24px;">
                 <a href="tel:5598384267" class="btn-outline">Or Call (559) 838-4267</a>
             </div>
