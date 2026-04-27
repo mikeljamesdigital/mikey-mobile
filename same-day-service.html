@@ -5,7 +5,7 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mikeymobile.com/same-day-service.html">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Need an oil change today? Mikey Mobile offers same-day mobile oil change service in Fresno and Clovis. Rush pricing confirmed upfront — all appointments after 5 PM.">
+    <meta name="description" content="Need an oil change today? Mikey Mobile offers guaranteed same-day mobile oil change service in Fresno and Clovis. Just $50 same-day fee on top of standard pricing. If we can't make it, your next-day labor is free.">
     <title>Same-Day Mobile Oil Change | Mikey Mobile — Fresno & Clovis</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -46,6 +46,25 @@
         .trust-strip-inner{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;gap:12px 28px;max-width:1100px;margin:0 auto;padding:0 24px}
         .trust-item{color:#fff;font-family:'Bebas Neue',sans-serif;font-size:15px;letter-spacing:1.5px;display:flex;align-items:center;gap:6px;white-space:nowrap}
 
+        /* ── Pricing Highlight ── */
+        .pricing-highlight{padding:72px 0;background:#1E2D5A}
+        .pricing-highlight .section-title{color:#fff}
+        .pricing-highlight .section-label{background:rgba(255,255,255,.15);color:#fff}
+        .pricing-cards-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-top:40px;max-width:900px;margin-left:auto;margin-right:auto}
+        .price-highlight-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:36px 28px;text-align:center}
+        .price-highlight-card.featured{border-color:#E8399A;background:rgba(232,57,154,.1)}
+        .price-highlight-card .card-eyebrow{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:3px;color:rgba(255,255,255,.5);text-transform:uppercase;margin-bottom:8px}
+        .price-highlight-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.3rem;color:#fff;letter-spacing:.5px;margin-bottom:16px}
+        .price-highlight-card .big-price{font-family:'Bebas Neue',sans-serif;font-size:72px;color:#E8399A;line-height:1;margin-bottom:8px}
+        .price-highlight-card .price-label{font-size:.88rem;color:rgba(255,255,255,.6);margin-bottom:20px;line-height:1.5}
+        .price-highlight-card ul{list-style:none;text-align:left;border-top:1px solid rgba(255,255,255,.1);padding-top:20px}
+        .price-highlight-card ul li{font-size:.9rem;color:rgba(255,255,255,.8);padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+
+        /* ── Guarantee Banner ── */
+        .guarantee-banner{background:#E8399A;padding:48px 24px;text-align:center}
+        .guarantee-banner h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(1.8rem,4vw,2.8rem);color:#fff;margin-bottom:12px;line-height:1.1}
+        .guarantee-banner p{font-size:1rem;color:rgba(255,255,255,.9);max-width:640px;margin:0 auto;line-height:1.7}
+
         /* ── Ground Rules ── */
         .ground-rules{padding:72px 0;background:#F8F4FF}
         .ground-rules-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:40px}
@@ -54,24 +73,6 @@
         .rule-card h3{font-family:'Bebas Neue',sans-serif;font-size:1.15rem;color:#1E2D5A;letter-spacing:.5px;margin-bottom:8px}
         .rule-card p{font-size:.9rem;color:#4a5568;line-height:1.6}
         .rule-card strong{color:#1E2D5A}
-
-        /* ── Pricing Table ── */
-        .pricing-section{padding:72px 0;background:#1E2D5A}
-        .pricing-section .section-title{color:#fff}
-        .pricing-section .section-label{background:rgba(255,255,255,.15);color:#fff}
-        .pricing-intro{font-size:1rem;color:rgba(255,255,255,.75);max-width:640px;margin:0 auto 40px;line-height:1.7;text-align:center}
-        .pricing-table{max-width:720px;margin:0 auto;border-radius:14px;overflow:hidden;box-shadow:0 8px 32px rgba(0,0,0,.3)}
-        .pricing-table-header{display:grid;grid-template-columns:1fr 1fr;background:#E8399A;padding:14px 24px}
-        .pricing-table-header span{font-family:'Bebas Neue',sans-serif;font-size:1rem;letter-spacing:1.5px;color:#fff}
-        .pricing-row{display:grid;grid-template-columns:1fr 1fr;padding:16px 24px;border-bottom:1px solid rgba(255,255,255,.07);background:rgba(255,255,255,.05);transition:background .2s}
-        .pricing-row:hover{background:rgba(255,255,255,.1)}
-        .pricing-row:last-child{border-bottom:none}
-        .pricing-row.emergency{background:rgba(232,57,154,.15)}
-        .pricing-row .time{font-size:.93rem;color:rgba(255,255,255,.8)}
-        .pricing-row .fee{font-size:.93rem;color:#fff;font-weight:600}
-        .pricing-row.emergency .time{color:#E8399A;font-weight:600}
-        .pricing-row.emergency .fee{color:#E8399A}
-        .pricing-disclaimer{max-width:720px;margin:20px auto 0;font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.6;text-align:center}
 
         /* ── How It Works ── */
         .how-section{padding:72px 0}
@@ -99,8 +100,6 @@
         @media(max-width:600px){
             .ground-rules-grid{grid-template-columns:1fr 1fr}
             .steps{grid-template-columns:1fr 1fr}
-            .pricing-row .time,.pricing-row .fee{font-size:.82rem}
-            .pricing-table-header span{font-size:.88rem}
         }
         @media(max-width:420px){
             .ground-rules-grid,.steps{grid-template-columns:1fr}
@@ -120,8 +119,8 @@
         <div class="container">
             <span class="section-label">FRESNO & CLOVIS — AVAILABLE TODAY</span>
             <h1>Same-Day<br><span>Mobile Oil Change</span></h1>
-            <p>Can't wait until tomorrow? We come to you — today. Rush pricing is always confirmed upfront before you commit to anything.</p>
-            <p class="hero-note">All same-day appointments are scheduled after 5:00 PM</p>
+            <p>Need it done today? Request during business hours and we'll be there. A flat $50 same-day fee is all that's added to your standard service price — no complicated tiers, no surprises.</p>
+            <p class="hero-note">Guaranteed same-day service when requested during business hours</p>
             <div class="hero-btns">
                 <a href="tel:5598384267" class="btn-primary">CALL TO REQUEST SAME-DAY</a>
                 <a href="/book-now.html" class="btn-outline-white">BOOK ONLINE</a>
@@ -132,88 +131,87 @@
     <!-- Trust Strip -->
     <div class="trust-strip">
         <div class="trust-strip-inner">
-            <span class="trust-item">⚡ Available Today</span>
-            <span class="trust-item">💰 Full Quote Before You Commit</span>
+            <span class="trust-item">⚡ Guaranteed Same-Day</span>
+            <span class="trust-item">💰 Flat $50 Same-Day Fee</span>
             <span class="trust-item">🚗 We Come to You</span>
-            <span class="trust-item">⏱️ Done in 45 minutes</span>
-            <span class="trust-item">✅ No Surprises</span>
+            <span class="trust-item">⏱️ Done in 45 Minutes</span>
+            <span class="trust-item">✅ If We Miss — Next-Day Labor Free</span>
         </div>
     </div>
 
-    <!-- Ground Rules -->
-    <section class="ground-rules">
+    <!-- Pricing Highlight -->
+    <section class="pricing-highlight">
         <div class="container" style="text-align:center">
-            <span class="section-label">WHAT YOU NEED TO KNOW FIRST</span>
-            <h2 class="section-title">How Same-Day<br><span>Service Works</span></h2>
-            <p style="font-size:1rem;color:#4a5568;max-width:640px;margin:0 auto;line-height:1.7">Before we get into pricing, here are the four ground rules that apply to every same-day request — so there are zero surprises from start to finish.</p>
-        </div>
-        <div class="container">
-            <div class="ground-rules-grid">
-                <div class="rule-card">
-                    <div class="rule-card-icon">🕔</div>
-                    <h3>After 5 PM Only</h3>
-                    <p>All same-day appointments are scheduled <strong>after 5:00 PM</strong>. This ensures our technician can arrive with the right parts and give your vehicle full attention.</p>
+            <span class="section-label">SAME-DAY PRICING</span>
+            <h2 class="section-title">Simple, Flat-Rate<br><span>Same-Day Pricing</span></h2>
+            <p style="font-size:1rem;color:rgba(255,255,255,.75);max-width:600px;margin:0 auto;line-height:1.7">No tiers. No time-of-day calculations. Just your standard oil change price plus a flat $50 same-day fee — confirmed before we start.</p>
+            <div class="pricing-cards-row">
+                <div class="price-highlight-card featured">
+                    <div class="card-eyebrow">Same-Day Add-On Fee</div>
+                    <h3>Same-Day Service Fee</h3>
+                    <div class="big-price">$50</div>
+                    <div class="price-label">Added to your standard oil change price.<br>Confirmed upfront — no surprises.</div>
+                    <ul>
+                        <li>✓ Available during business hours</li>
+                        <li>✓ Guaranteed same-day arrival</li>
+                        <li>✓ Full quote before you commit</li>
+                        <li>✓ Oil &amp; filter included in base price</li>
+                    </ul>
                 </div>
-                <div class="rule-card">
-                    <div class="rule-card-icon">⚡</div>
-                    <h3>Rush Fee Applies</h3>
-                    <p>Every same-day request includes a rush fee on top of the standard service price. The fee is based on <strong>the time your request is received</strong> — earlier is cheaper.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-card-icon">📋</div>
-                    <h3>Full Quote First</h3>
-                    <p>We send you the <strong>complete cost breakdown</strong> — service price plus rush fee — before you confirm anything. You only pay what you agreed to.</p>
-                </div>
-                <div class="rule-card">
-                    <div class="rule-card-icon">🛢️</div>
-                    <h3>Oil & Filter Included</h3>
-                    <p>Unlike the old pricing structure, your <strong>oil and filter are included</strong> in the standard service price ($115–$150 gas/hybrid, $249 diesel). The rush fee is the only add-on.</p>
+                <div class="price-highlight-card">
+                    <div class="card-eyebrow">Standard Base Price</div>
+                    <h3>Your Oil Change Cost</h3>
+                    <div class="big-price" style="font-size:42px;line-height:1.2;">$115<br>$135<br>$150</div>
+                    <div class="price-label">4-cyl · 6-cyl · 8-cyl<br>Full synthetic + filter + labor included</div>
+                    <ul>
+                        <li>✓ 4-cylinder engines: $115</li>
+                        <li>✓ 6-cylinder engines: $135</li>
+                        <li>✓ 8-cylinder engines: $150</li>
+                        <li>✓ Additional quarts: +$10/qt</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Pricing Table -->
-    <section class="pricing-section">
+    <!-- Guarantee Banner -->
+    <section class="guarantee-banner">
+        <div class="container">
+            <h2>Our Same-Day Guarantee</h2>
+            <p>If you request service during business hours and we cannot make it out to you the same day, <strong>your next-day oil change labor is completely free</strong>. You only pay for oil and filter. That's our commitment to you.</p>
+        </div>
+    </section>
+
+    <!-- Ground Rules -->
+    <section class="ground-rules">
         <div class="container" style="text-align:center">
-            <span class="section-label">RUSH FEE PRICING</span>
-            <h2 class="section-title">Rush Charge<br><span>Pricing Tiers</span></h2>
-            <p class="pricing-intro">The rush fee is determined by the time your request is received (Pacific Standard Time). The earlier you reach out, the lower the fee. All fees are in addition to the standard service price.</p>
-            <div class="pricing-table">
-                <div class="pricing-table-header">
-                    <span>REQUEST TIME (PST)</span>
-                    <span>RUSH FEE</span>
+            <span class="section-label">WHAT YOU NEED TO KNOW</span>
+            <h2 class="section-title">How Same-Day<br><span>Service Works</span></h2>
+            <p style="font-size:1rem;color:#4a5568;max-width:640px;margin:0 auto;line-height:1.7">Here's everything that applies to every same-day request — so there are zero surprises from start to finish.</p>
+        </div>
+        <div class="container">
+            <div class="ground-rules-grid">
+                <div class="rule-card">
+                    <div class="rule-card-icon">📅</div>
+                    <h3>Request During Business Hours</h3>
+                    <p>Same-day service is available and <strong>guaranteed</strong> when your request is made during business hours. Call or book online and we'll get you on the schedule for today.</p>
                 </div>
-                <div class="pricing-row">
-                    <span class="time">During Operating Hours (8 AM–5 PM)</span>
-                    <span class="fee">+$25</span>
+                <div class="rule-card">
+                    <div class="rule-card-icon">💵</div>
+                    <h3>Flat $50 Same-Day Fee</h3>
+                    <p>No time-based tiers. Same-day pricing is your standard oil change cost plus a <strong>flat $50 same-day fee</strong> — regardless of when during the day you request.</p>
                 </div>
-                <div class="pricing-row">
-                    <span class="time">After 5:00 PM – 7:00 PM</span>
-                    <span class="fee">+$50</span>
+                <div class="rule-card">
+                    <div class="rule-card-icon">📋</div>
+                    <h3>Full Quote Before You Commit</h3>
+                    <p>We send you the <strong>complete cost breakdown</strong> — service price plus same-day fee — before you confirm anything. You only pay what you agreed to.</p>
                 </div>
-                <div class="pricing-row">
-                    <span class="time">After 7:00 PM – 8:00 PM</span>
-                    <span class="fee">+$75</span>
-                </div>
-                <div class="pricing-row">
-                    <span class="time">After 8:00 PM – 9:00 PM</span>
-                    <span class="fee">+$100</span>
-                </div>
-                <div class="pricing-row">
-                    <span class="time">After 9:00 PM – 10:00 PM</span>
-                    <span class="fee">+$150</span>
-                </div>
-                <div class="pricing-row">
-                    <span class="time">After 10:00 PM – 11:00 PM</span>
-                    <span class="fee">+$400</span>
-                </div>
-                <div class="pricing-row emergency">
-                    <span class="time">After 11:00 PM</span>
-                    <span class="fee">+$1,000 — Emergency Only</span>
+                <div class="rule-card">
+                    <div class="rule-card-icon">🛡️</div>
+                    <h3>Guaranteed or Labor Is Free</h3>
+                    <p>If we can't make it out the same day, your <strong>next-day labor is free</strong>. You pay for oil and filter only. We stand behind our same-day commitment.</p>
                 </div>
             </div>
-            <p class="pricing-disclaimer">Rush fees are added to the standard service price ($115–$150 gas/hybrid · $249 diesel). Rush tier is determined by the time your request is received in PST. Same-day availability is not guaranteed — call to confirm before booking.</p>
         </div>
     </section>
 
@@ -227,17 +225,17 @@
                 <div class="step">
                     <div class="step-num">1</div>
                     <h3>Request Service</h3>
-                    <p>Call or book online. Tell us you need service today, your vehicle details, and your location.</p>
+                    <p>Call or book online during business hours. Tell us you need service today, your vehicle details, and your location.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">2</div>
                     <h3>Get Your Quote</h3>
-                    <p>We calculate your rush tier based on the current PST time and send you a complete price breakdown — before you agree to anything.</p>
+                    <p>We confirm your standard oil change price plus the flat $50 same-day fee — full breakdown sent before you agree to anything.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">3</div>
                     <h3>Confirm & Schedule</h3>
-                    <p>If the price works, we lock in your appointment. All same-day slots are after 5:00 PM.</p>
+                    <p>If the price works, we lock in your same-day appointment and give you an arrival window.</p>
                 </div>
                 <div class="step">
                     <div class="step-num">4</div>
@@ -247,7 +245,7 @@
                 <div class="step">
                     <div class="step-num">5</div>
                     <h3>Done in 45 Min</h3>
-                    <p>We complete the oil change, clean up, and you're back to your evening. You pay only what was quoted.</p>
+                    <p>We complete the oil change, clean up, and you're back to your day. You pay only what was quoted.</p>
                 </div>
             </div>
         </div>
@@ -257,8 +255,8 @@
     <section class="notice-section">
         <div class="container">
             <div class="notice-box">
-                <h2>⚠️ First-Time Customer <span>Notice</span></h2>
-                <p>The <strong>Buy 3, Get 1 Free* promotion</strong> requires booking at least 48 hours in advance. Same-day and rush requests are not eligible for the free labor offer. The standard service price, rush fee, and any applicable add-ons all apply. We will make this clear during your quote so there are no surprises.</p>
+                <h2>⚠️ Buy 3, Get 1 Free* <span>Notice</span></h2>
+                <p>The <strong>Buy 3, Get 1 Free* promotion</strong> requires booking at least 48 hours in advance. Same-day requests are not eligible for the free labor offer. The standard service price and same-day fee both apply. We will make this clear during your quote so there are no surprises.</p>
             </div>
         </div>
     </section>
@@ -266,13 +264,13 @@
     <!-- CTA -->
     <section class="cta-section">
         <div class="container">
-            <h2>Need Service<br><span>Right Now?</span></h2>
-            <p>Call us immediately or click below. Rush tier is based on the time we receive your request — the sooner you reach out, the lower the fee.</p>
+            <h2>Need Service<br><span>Today?</span></h2>
+            <p>Call us now or book online. Same-day service is guaranteed when requested during business hours — and if we can't make it, your next-day labor is on us.</p>
             <div class="cta-btns">
                 <a href="tel:5598384267" class="btn-primary">CALL (559) 838-4267</a>
                 <a href="/book-now.html" class="btn-outline-white">BOOK ONLINE</a>
             </div>
-            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">No obligation • Full quote before you commit • Serving Fresno, Clovis & Surrounding Areas</p>
+            <p style="margin-top:20px;font-size:.85rem;color:rgba(255,255,255,.4)">No obligation &bull; Full quote before you commit &bull; Serving Fresno, Clovis &amp; Surrounding Areas</p>
         </div>
     </section>
 
