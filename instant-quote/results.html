@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Quote | Mikey Mobile</title>
+  <link rel="canonical" href="https://mikeymobile.com/instant-quote/results" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1E2D5A;
+      --pink: #E8399A;
+      --pink-light: #fce8f3;
+      --white: #ffffff;
+      --gray: #f5f5f7;
+      --text: #1a1a2e;
+      --muted: #6b7280;
+      --green: #16a34a;
+    }
+
+    body { font-family: 'Inter', sans-serif; background: var(--gray); color: var(--text); min-height: 100vh; }
+
+    header { background: var(--navy); padding: 18px 24px; text-align: center; }
+    header a { text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+    .logo-text { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; color: var(--white); letter-spacing: 1px; }
+    .logo-text span { color: var(--pink); }
+
+    .hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #2a3f7a 100%);
+      padding: 40px 24px 32px;
+      text-align: center;
+      color: var(--white);
+    }
+    .step-badge {
+      display: inline-block;
+      background: var(--pink);
+      color: var(--white);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+    .hero h1 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(1.8rem, 5vw, 2.6rem); letter-spacing: 1px; }
+    .hero h1 span { color: var(--pink); }
+    .hero p { font-size: 0.95rem; color: rgba(255,255,255,0.75); margin-top: 8px; }
+
+    .progress-wrap { background: var(--navy); padding: 0 24px 20px; display: flex; justify-content: center; }
+    .progress { display: flex; align-items: center; max-width: 360px; width: 100%; }
+    .progress-step { display: flex; flex-direction: column; align-items: center; flex: 1; }
+    .progress-step .dot { width: 28px; height: 28px; border-radius: 50%; background: var(--pink); color: var(--white); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+    .progress-step.inactive .dot { background: rgba(255,255,255,0.2); color: rgba(255,255,255,0.5); }
+    .progress-step .label { font-size: 0.65rem; font-weight: 600; color: var(--pink); text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px; white-space: nowrap; }
+    .progress-step.inactive .label { color: rgba(255,255,255,0.4); }
+    .progress-line { flex: 1; height: 2px; background: rgba(255,255,255,0.15); margin-bottom: 18px; }
+    .progress-line.done { background: var(--pink); }
+
+    .card-wrap { max-width: 580px; margin: 0 auto; padding: 24px 16px 48px; }
+
+    /* ── Quote Card ── */
+    .quote-card {
+      background: var(--white);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
+    }
+    .quote-header {
+      background: var(--navy);
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .quote-header .vehicle-name {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      color: var(--white);
+      letter-spacing: 1px;
+    }
+    .quote-header .vehicle-name span { color: var(--pink); }
+    .quote-header .engine-badge {
+      background: var(--pink);
+      color: var(--white);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 4px 12px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .quote-body { padding: 24px; }
+
+    .price-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    .price-row:last-child { border-bottom: none; }
+    .price-row .item-name { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+    .price-row .item-detail { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .price-row .item-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; color: var(--pink); letter-spacing: 0.5px; }
+    .price-row .item-price.total { font-size: 1.6rem; color: var(--navy); }
+
+    .total-row {
+      background: var(--pink-light);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 16px;
+    }
+    .total-row .total-label { font-weight: 700; font-size: 0.9rem; color: var(--navy); }
+    .total-row .total-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.8rem; color: var(--pink); }
+
+    /* ── Oil Info Card ── */
+    .info-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+    .info-card-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--pink-light);
+    }
+    .info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    @media (max-width: 400px) { .info-grid { grid-template-columns: 1fr; } }
+    .info-item { background: var(--gray); border-radius: 8px; padding: 12px 14px; }
+    .info-item .info-label { font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; color: var(--muted); margin-bottom: 4px; }
+    .info-item .info-value { font-size: 0.9rem; font-weight: 600; color: var(--navy); }
+
+    /* ── Upsell ── */
+    .upsell-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 22px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+      border: 2px solid var(--pink-light);
+    }
+    .upsell-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.1rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .upsell-subtitle { font-size: 0.82rem; color: var(--muted); margin-bottom: 16px; }
+    .upsell-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px;
+      border: 1.5px solid #e8e8e8;
+      border-radius: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .upsell-option:hover { border-color: var(--pink); background: var(--pink-light); }
+    .upsell-option input[type="checkbox"] { margin-top: 2px; accent-color: var(--pink); width: 16px; height: 16px; flex-shrink: 0; cursor: pointer; }
+    .upsell-option label { cursor: pointer; flex: 1; }
+    .upsell-option .opt-name { font-weight: 600; font-size: 0.9rem; color: var(--navy); }
+    .upsell-option .opt-detail { font-size: 0.78rem; color: var(--muted); margin-top: 2px; }
+    .upsell-option .opt-price { font-family: 'Bebas Neue', sans-serif; font-size: 1.1rem; color: var(--pink); margin-top: 4px; }
+
+    /* ── Booking Form ── */
+    .booking-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 28px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.08);
+    }
+    .booking-title {
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.4rem;
+      color: var(--navy);
+      letter-spacing: 1px;
+      margin-bottom: 6px;
+    }
+    .booking-subtitle { font-size: 0.85rem; color: var(--muted); margin-bottom: 22px; }
+
+    .form-group { margin-bottom: 18px; }
+    label.field-label {
+      display: block;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    label.field-label .req { color: var(--pink); }
+    input[type="text"], input[type="date"], input[type="time"], select, textarea {
+      width: 100%;
+      padding: 12px 14px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.95rem;
+      color: var(--text);
+      background: #fafafa;
+      transition: border-color 0.2s;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    input:focus, select:focus, textarea:focus { outline: none; border-color: var(--pink); background: var(--white); }
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    @media (max-width: 480px) { .row-2 { grid-template-columns: 1fr; } }
+
+    .time-options { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+    @media (max-width: 380px) { .time-options { grid-template-columns: repeat(2, 1fr); } }
+    .time-btn {
+      padding: 10px 6px;
+      border: 1.5px solid #e0e0e0;
+      border-radius: 8px;
+      background: #fafafa;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .time-btn:hover { border-color: var(--pink); background: var(--pink-light); }
+    .time-btn.selected { border-color: var(--pink); background: var(--pink); color: var(--white); }
+
+    .btn-book {
+      width: 100%;
+      padding: 16px;
+      background: var(--pink);
+      color: var(--white);
+      border: none;
+      border-radius: 10px;
+      font-family: 'Bebas Neue', sans-serif;
+      font-size: 1.3rem;
+      letter-spacing: 1.5px;
+      cursor: pointer;
+      margin-top: 24px;
+      transition: background 0.2s, transform 0.1s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .btn-book:hover { background: #d42e8a; }
+    .btn-book:active { transform: scale(0.98); }
+    .btn-book .spinner { display: none; width: 18px; height: 18px; border: 2px solid rgba(255,255,255,0.4); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .btn-book.loading .spinner { display: block; }
+
+    .error-msg { display: none; background: #fff0f5; border: 1px solid #ffc0d9; border-radius: 8px; padding: 12px 16px; font-size: 0.85rem; color: #c0003c; margin-top: 14px; }
+
+    /* Loading overlay */
+    #loadingOverlay {
+      position: fixed; inset: 0;
+      background: rgba(30,45,90,0.92);
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      z-index: 999;
+      color: white;
+      text-align: center;
+      padding: 24px;
+    }
+    #loadingOverlay .load-spinner {
+      width: 48px; height: 48px;
+      border: 4px solid rgba(255,255,255,0.2);
+      border-top-color: var(--pink);
+      border-radius: 50%;
+      animation: spin 0.8s linear infinite;
+      margin-bottom: 20px;
+    }
+    #loadingOverlay h2 { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 1px; margin-bottom: 8px; }
+    #loadingOverlay p { font-size: 0.9rem; color: rgba(255,255,255,0.7); max-width: 280px; }
+  </style>
+</head>
+<body>
+
+  <!-- Loading overlay shown while data loads -->
+  <div id="loadingOverlay">
+    <div class="load-spinner"></div>
+    <h2>Building Your Quote…</h2>
+    <p>Our AI is researching your vehicle specs. This takes about 10 seconds.</p>
+  </div>
+
+  <header>
+    <a href="https://mikeymobile.com">
+      <span class="logo-text">MIKEY <span>MOBILE</span></span>
+    </a>
+  </header>
+
+  <div class="hero">
+    <div class="step-badge">Step 2 of 3</div>
+    <h1>Your <span>Custom Quote</span></h1>
+    <p id="heroSubtitle">Here's exactly what your service will cost.</p>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress">
+      <div class="progress-step">
+        <div class="dot">✓</div>
+        <div class="label">Your Info</div>
+      </div>
+      <div class="progress-line done"></div>
+      <div class="progress-step">
+        <div class="dot">2</div>
+        <div class="label">Your Quote</div>
+      </div>
+      <div class="progress-line"></div>
+      <div class="progress-step inactive">
+        <div class="dot">3</div>
+        <div class="label">Book It</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card-wrap" id="mainContent" style="display:none;">
+
+    <!-- Quote Card -->
+    <div class="quote-card">
+      <div class="quote-header">
+        <div class="vehicle-name" id="vehicleName">2020 <span>Toyota Camry</span></div>
+        <div class="engine-badge" id="engineBadge">4-Cylinder</div>
+      </div>
+      <div class="quote-body" id="quoteBody">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Oil Info Card -->
+    <div class="info-card">
+      <div class="info-card-title">🔧 Vehicle Service Details</div>
+      <div class="info-grid" id="infoGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+    <!-- Upsell Card -->
+    <div class="upsell-card">
+      <div class="upsell-title">💨 Want to Add Air Filters?</div>
+      <div class="upsell-subtitle">Keep your engine breathing clean — add on while we're already there.</div>
+
+      <div class="upsell-option" id="engineFilterWrap">
+        <input type="checkbox" id="engineFilter" />
+        <label for="engineFilter">
+          <div class="opt-name">Engine Air Filter</div>
+          <div class="opt-detail" id="engineFilterDetail">Replacement filter for your vehicle</div>
+          <div class="opt-price" id="engineFilterPrice">+$35</div>
+        </label>
+      </div>
+
+      <div class="upsell-option" id="cabinFilterWrap">
+        <input type="checkbox" id="cabinFilter" />
+        <label for="cabinFilter">
+          <div class="opt-name">Cabin Air Filter</div>
+          <div class="opt-detail" id="cabinFilterDetail">Keeps the air inside your car clean</div>
+          <div class="opt-price" id="cabinFilterPrice">+$35</div>
+        </label>
+      </div>
+    </div>
+
+    <!-- Booking Form -->
+    <div class="booking-card">
+      <div class="booking-title">📅 Book Your Appointment</div>
+      <div class="booking-subtitle">We'll come to your home, office, or wherever works for you.</div>
+
+      <form id="bookingForm" novalidate>
+
+        <div class="form-group">
+          <label class="field-label" for="address">Service Address <span class="req">*</span></label>
+          <input type="text" id="address" placeholder="e.g. 1234 Elm St, Fresno, CA 93720" required />
+        </div>
+
+        <div class="row-2">
+          <div class="form-group">
+            <label class="field-label" for="bookDate">Preferred Date <span class="req">*</span></label>
+            <input type="date" id="bookDate" required />
+          </div>
+          <div class="form-group">
+            <label class="field-label">Preferred Time <span class="req">*</span></label>
+            <div class="time-options" id="timeOptions">
+              <button type="button" class="time-btn" data-time="8:00 AM">8:00 AM</button>
+              <button type="button" class="time-btn" data-time="9:00 AM">9:00 AM</button>
+              <button type="button" class="time-btn" data-time="10:00 AM">10:00 AM</button>
+              <button type="button" class="time-btn" data-time="11:00 AM">11:00 AM</button>
+              <button type="button" class="time-btn" data-time="1:00 PM">1:00 PM</button>
+              <button type="button" class="time-btn" data-time="2:00 PM">2:00 PM</button>
+              <button type="button" class="time-btn" data-time="3:00 PM">3:00 PM</button>
+              <button type="button" class="time-btn" data-time="4:00 PM">4:00 PM</button>
+              <button type="button" class="time-btn" data-time="5:00 PM">5:00 PM</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="field-label" for="notes">Any Notes? <span style="font-weight:400;color:var(--muted);text-transform:none;font-size:0.75rem;">(optional)</span></label>
+          <textarea id="notes" rows="2" placeholder="e.g. Gate code, parking instructions, specific concerns…" style="resize:vertical;"></textarea>
+        </div>
+
+        <div class="error-msg" id="bookError">Please fill in your address, date, and preferred time.</div>
+
+        <button type="submit" class="btn-book" id="bookBtn">
+          <span class="btn-text">Confirm My Booking →</span>
+          <span class="spinner"></span>
+        </button>
+
+      </form>
+    </div>
+
+  </div>
+
+  <script>
+    let selectedTime = '';
+    let quoteData = {};
+
+    // Time button selection
+    document.querySelectorAll('.time-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.time-btn').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        selectedTime = this.dataset.time;
+      });
+    });
+
+    // Set min date to tomorrow
+    const dateInput = document.getElementById('bookDate');
+    const tomorrow = new Date();
+    tomorrow.setDate(tomorrow.getDate() + 1);
+    dateInput.min = tomorrow.toISOString().split('T')[0];
+
+    function formatCurrency(n) {
+      return '$' + parseFloat(n).toFixed(0);
+    }
+
+    function buildQuoteUI(data) {
+      quoteData = data;
+
+      // Vehicle name
+      document.getElementById('vehicleName').innerHTML =
+        `${data.year} <span>${data.make} ${data.model}${data.submodel ? ' ' + data.submodel : ''}</span>`;
+      document.getElementById('engineBadge').textContent = data.engine_type || '4-Cylinder';
+      document.getElementById('heroSubtitle').textContent =
+        `Here's your custom quote for the ${data.year} ${data.make} ${data.model}.`;
+
+      // Price rows
+      const quoteBody = document.getElementById('quoteBody');
+      let rows = '';
+
+      rows += `<div class="price-row">
+        <div>
+          <div class="item-name">Full Synthetic Oil Change</div>
+          <div class="item-detail">${data.oil_capacity || '5'} qts ${data.oil_type || '0W-20 Full Synthetic'} + OEM-spec filter + labor</div>
+        </div>
+        <div class="item-price">${formatCurrency(data.base_price)}</div>
+      </div>`;
+
+      if (data.extra_quarts && data.extra_quarts > 0) {
+        rows += `<div class="price-row">
+          <div>
+            <div class="item-name">Additional Oil (+${data.extra_quarts} qt)</div>
+            <div class="item-detail">Your engine requires extra capacity</div>
+          </div>
+          <div class="item-price">+${formatCurrency(data.extra_quarts * 10)}</div>
+        </div>`;
+      }
+
+      quoteBody.innerHTML = rows;
+
+      // Info grid
+      const infoGrid = document.getElementById('infoGrid');
+      infoGrid.innerHTML = `
+        <div class="info-item">
+          <div class="info-label">Oil Type</div>
+          <div class="info-value">${data.oil_type || '0W-20 Full Synthetic'}</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Oil Capacity</div>
+          <div class="info-value">${data.oil_capacity || '~5 qts'}</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Engine</div>
+          <div class="info-value">${data.engine_description || data.engine_type || '4-Cylinder'}</div>
+        </div>
+        <div class="info-item">
+          <div class="info-label">Filter Note</div>
+          <div class="info-value">${data.filter_note || 'Standard OEM-spec filter'}</div>
+        </div>
+      `;
+
+      // Upsell details
+      if (data.engine_filter_note) {
+        document.getElementById('engineFilterDetail').textContent = data.engine_filter_note;
+      }
+      if (data.cabin_filter_note) {
+        document.getElementById('cabinFilterDetail').textContent = data.cabin_filter_note;
+      }
+      if (data.engine_filter_price) {
+        document.getElementById('engineFilterPrice').textContent = '+' + formatCurrency(data.engine_filter_price);
+      }
+      if (data.cabin_filter_price) {
+        document.getElementById('cabinFilterPrice').textContent = '+' + formatCurrency(data.cabin_filter_price);
+      }
+
+      // Hide loading, show content
+      document.getElementById('loadingOverlay').style.display = 'none';
+      document.getElementById('mainContent').style.display = 'block';
+    }
+
+    // Load quote data from sessionStorage
+    window.addEventListener('DOMContentLoaded', function() {
+      const raw = sessionStorage.getItem('mmQuote');
+      if (!raw) {
+        // No data — redirect back to form
+        window.location.href = '/instant-quote/';
+        return;
+      }
+      const data = JSON.parse(raw);
+      buildQuoteUI(data);
+    });
+
+    // Booking form submit
+    document.getElementById('bookingForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+
+      const address  = document.getElementById('address').value.trim();
+      const bookDate = document.getElementById('bookDate').value;
+      const notes    = document.getElementById('notes').value.trim();
+      const errEl    = document.getElementById('bookError');
+      const btn      = document.getElementById('bookBtn');
+
+      const addEngineFilter = document.getElementById('engineFilter').checked;
+      const addCabinFilter  = document.getElementById('cabinFilter').checked;
+
+      errEl.style.display = 'none';
+
+      if (!address || !bookDate || !selectedTime) {
+        errEl.style.display = 'block';
+        errEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        return;
+      }
+
+      btn.classList.add('loading');
+      btn.querySelector('.btn-text').textContent = 'Confirming…';
+
+      // Build final booking payload
+      const raw = sessionStorage.getItem('mmQuote');
+      const quoteInfo = raw ? JSON.parse(raw) : {};
+
+      const payload = {
+        ...quoteInfo,
+        address,
+        book_date: bookDate,
+        book_time: selectedTime,
+        notes,
+        add_engine_filter: addEngineFilter,
+        add_cabin_filter: addCabinFilter,
+        engine_filter_price: quoteInfo.engine_filter_price || 35,
+        cabin_filter_price: quoteInfo.cabin_filter_price || 35,
+      };
+
+      try {
+        const res = await fetch('/instant-quote/api/book.php', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+
+        if (!res.ok) throw new Error('Booking error');
+
+        // Store booking info for thank-you page
+        sessionStorage.setItem('mmBooking', JSON.stringify(payload));
+        window.location.href = '/instant-quote/thank-you.html';
+
+      } catch (err) {
+        btn.classList.remove('loading');
+        btn.querySelector('.btn-text').textContent = 'Confirm My Booking →';
+        errEl.textContent = 'Something went wrong. Please try again or call (559) 905-9494.';
+        errEl.style.display = 'block';
+      }
+    });
+  </script>
+
+</body>
+</html>
