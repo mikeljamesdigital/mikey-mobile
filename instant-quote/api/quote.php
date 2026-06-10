@@ -113,12 +113,14 @@ $payload = json_encode([
 $ch = curl_init('https://api.openai.com/v1/chat/completions');
 curl_setopt_array($ch, [
     CURLOPT_RETURNTRANSFER => true,
-    CURLOPT_POST           => true,
+    CURLOPT_CUSTOMREQUEST  => 'POST',
     CURLOPT_POSTFIELDS     => $payload,
     CURLOPT_TIMEOUT        => 30,
     CURLOPT_HTTPHEADER     => [
         'Content-Type: application/json',
+        'Accept: application/json',
         "Authorization: Bearer {$openai_key}",
+        'Content-Length: ' . strlen($payload),
     ],
 ]);
 
