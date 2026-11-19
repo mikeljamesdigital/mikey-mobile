@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Main Pages -->
+
   <url>
     <loc>https://mikeymobile.com/</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -17,10 +16,10 @@
       <image:title>Mikey Mobile Oil Change Service Van</image:title>
     </image:image>
   </url>
-  
+
   <url>
     <loc>https://mikeymobile.com/about.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -28,10 +27,10 @@
       <image:title>Mikey Mobile Oil Change Logo</image:title>
     </image:image>
   </url>
-  
+
   <url>
     <loc>https://mikeymobile.com/locations.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -39,184 +38,215 @@
       <image:title>Mikey Mobile Oil Change Logo</image:title>
     </image:image>
   </url>
-  
+
   <url>
     <loc>https://mikeymobile.com/services.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
     <loc>https://mikeymobile.com/contact.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://mikeymobile.com/mobile-oil-change.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://mikeymobile.com/services/boat-summer-service-fresno-ca.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <loc>https://mikeymobile.com/fleet-services.html</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
+    <loc>https://mikeymobile.com/book-now.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mikeymobile.com/same-day-service.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mikeymobile.com/free-oil-change.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://mikeymobile.com/services/boat-summer-service-fresno-ca.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://mikeymobile.com/boat-summer-service-fresno-ca.html</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://mikeymobile.com/instant-quote/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
     <loc>https://mikeymobile.com/privacy-policy.html</loc>
-    <lastmod>2026-03-06</lastmod>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
 
   <url>
-    <loc>https://mikeymobile.com/same-day-service.html</loc>
-    <lastmod>2026-03-06</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://mikeymobile.com/fresno/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 
-  <!-- City Pages -->
   <url>
-    <loc>https://mikeymobile.com/fresno/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/madera-ranchos/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/madera-ranchos/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-  
-  <!-- Fresno Neighborhoods -->
-  <url>
-    <loc>https://mikeymobile.com/fresno/fig-garden/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/cindy-lane/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/sunnyside/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/clovis-high/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/fig-garden-loop/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/clovis-north/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/woodward-park/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/dry-creek/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/riverpark/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/harlan-ranch/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/pinedale/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/clovis/quail-lakes/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/sierra-sky-park/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/fig-garden-loop/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/fresno/fort-washington/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/fig-garden/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Clovis Neighborhoods -->
+
   <url>
-    <loc>https://mikeymobile.com/clovis/clovis-north/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/fort-washington/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/cindy-lane/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/pinedale/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/dry-creek/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/riverpark/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/clovis-high/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/sierra-sky-park/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/quail-lakes/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/sunnyside/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/clovis/harlan-ranch/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/fresno/woodward-park/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
-  <!-- Madera Ranchos Neighborhoods -->
+
   <url>
-    <loc>https://mikeymobile.com/madera-ranchos/rolling-hills/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/madera-ranchos/riverstone/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
   <url>
-    <loc>https://mikeymobile.com/madera-ranchos/riverstone/index.html</loc>
-    <lastmod>2026-02-12</lastmod>
+    <loc>https://mikeymobile.com/madera-ranchos/rolling-hills/</loc>
+    <lastmod>2026-11-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
-  
+
 </urlset>

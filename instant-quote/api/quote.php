@@ -58,9 +58,9 @@ You are an expert automotive service advisor for Mikey Mobile, a mobile oil chan
 Your job is to research a customer's vehicle and return accurate oil change specifications and pricing.
 
 Mikey Mobile pricing:
-- 4-cylinder engines: \$115 flat (includes 4–5 qts full synthetic + filter + labor)
-- 6-cylinder engines: \$135 flat (includes 6–7 qts full synthetic + filter + labor)
-- 8-cylinder engines: \$150 flat (includes 7–8 qts full synthetic + filter + labor)
+- 4-cylinder engines: \$120 flat (includes 4–5 qts full synthetic + filter + labor)
+- 6-cylinder engines: \$140 flat (includes 6–7 qts full synthetic + filter + labor)
+- 8-cylinder engines: \$160 flat (includes 7–8 qts full synthetic + filter + labor)
 - Diesel engines: \$249 flat
 - Additional quarts beyond the base: +\$10/qt each
 
@@ -81,7 +81,7 @@ Research the {$vehicle_str}{$mileage_str} and return a JSON object with these ex
   "oil_capacity": "e.g. 4.8 qts",
   "oil_capacity_quarts": 4.8,
   "filter_note": "e.g. Standard spin-on filter, OEM spec",
-  "base_price": 115,
+  "base_price": 120,
   "extra_quarts": 0,
   "engine_filter_price": 39,
   "engine_filter_note": "e.g. Fits most 2020 Camry 2.5L engines",
@@ -168,7 +168,7 @@ function build_fallback_quote($make, $model, $year) {
         'oil_capacity'       => '~5 qts',
         'oil_capacity_quarts'=> 5,
         'filter_note'        => 'Standard OEM-spec filter',
-        'base_price'         => 115,
+        'base_price'         => 120,
         'extra_quarts'       => 0,
         'engine_filter_price'=> 39,
         'engine_filter_note' => 'Standard engine air filter',
@@ -186,7 +186,7 @@ function send_quote_email($name, $phone, $email, $vehicle, $mileage, $quote) {
     $engine   = $quote['engine_type']        ?? 'Unknown';
     $oil_type = $quote['oil_type']           ?? 'Unknown';
     $oil_cap  = $quote['oil_capacity']       ?? 'Unknown';
-    $price    = '$' . ($quote['base_price']  ?? '115');
+    $price    = '$' . ($quote['base_price']  ?? '120');
     $notes    = $quote['service_notes']      ?? '';
 
     $body = "NEW QUICK QUOTE REQUEST\n";
