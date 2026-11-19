@@ -376,12 +376,6 @@ if (file_exists($jsonPath)) {
                     <a href="?download=about.html" class="btn btn-primary">Download about.html</a>
                     <a href="?download=locations.html" class="btn btn-primary">Download locations.html</a>
                 </div>
-                <p style="margin-top: 15px; font-size: 13px; color: #666;">
-                    <strong>SFTP Details:</strong><br>
-                    Host: 143.244.190.129<br>
-                    Username: master_npwtmaftpw<br>
-                    Upload to: /home/master/applications/njfxrssvcj/public_html/
-                </p>
             </div>
         <?php endif; ?>
         
