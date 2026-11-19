@@ -201,7 +201,7 @@
             'email' => 'info@mikeymobile.com',
             'service_area' => 'Fresno, CA & Surrounding Areas',
             'hours' => 'Monday - Saturday: 8:00 AM - 6:00 PM',
-            'pricing' => '$75 + Oil & Filter',
+            'pricing' => 'Starting at $120',
             'top_bar_text' => 'SERVING FRESNO & SURROUNDING AREAS'
         ];
 
