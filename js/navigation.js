@@ -45,7 +45,7 @@
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="container">
-                <span>⭐⭐⭐⭐⭐ 5-STAR RATED • LICENSED &amp; INSURED • SAME-DAY SERVICE AVAILABLE</span>
+                <span>⭐⭐⭐⭐⭐ 5-STAR RATED • LICENSED &amp; INSURED</span>
             </div>
         </div>
 
