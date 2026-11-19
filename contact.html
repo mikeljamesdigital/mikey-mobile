@@ -379,8 +379,8 @@
                     <form id="contactForm" action="https://formspree.io/f/meerrvlg" method="POST">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Full Name <span class="form-required">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Mike Johnson" required>
+                                <label for="full_name">Full Name <span class="form-required">*</span></label>
+                                <input type="text" id="full_name" name="full_name" placeholder="Mike Johnson" required>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email Address <span class="form-required">*</span></label>
@@ -394,13 +394,13 @@
                                 <input type="tel" id="phone" name="phone" placeholder="(559) 555-0100">
                             </div>
                             <div class="form-group">
-                                <label for="location">Your Location</label>
-                                <input type="text" id="location" name="location" placeholder="e.g., Woodward Park, Clovis North">
+                                <label for="address1">Street Address</label>
+                                <input type="text" id="address1" name="address1" placeholder="e.g., Woodward Park, Clovis North">
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="service">Service Needed</label>
+                            <label for="service">Service</label>
                             <select id="service" name="service">
                                 <option value="">-- Select a Service --</option>
                                 <option value="Standard Oil Change ($115/$135/$150)">Standard Oil Change — $115 / $135 / $150</option>
@@ -412,14 +412,25 @@
                             </select>
                         </div>
 
-                        <div class="form-group">
-                            <label for="vehicle">Your Vehicle</label>
-                            <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2019 Toyota Camry, 2021 Ford F-250">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="year">Year</label>
+                                <input type="number" id="year" name="year" placeholder="e.g., 2019" min="1980" max="2027">
+                            </div>
+                            <div class="form-group">
+                                <label for="make">Make</label>
+                                <input type="text" id="make" name="make" placeholder="e.g., Toyota, Ford">
+                            </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message <span class="form-required">*</span></label>
-                            <textarea id="message" name="message" placeholder="Tell us what you need, when you'd like service, and any questions you have..." required></textarea>
+                            <label for="model">Model</label>
+                            <input type="text" id="model" name="model" placeholder="e.g., Camry, F-250">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="reason_for_call">Reason For Call <span class="form-required">*</span></label>
+                            <textarea id="reason_for_call" name="reason_for_call" placeholder="Tell us what you need, when you'd like service, and any questions you have..." required></textarea>
                         </div>
 
                         <input type="submit" onclick="return gtag_report_conversion(window.location.href);" class="form-submit-btn" id="submitBtn" value="SEND MESSAGE">

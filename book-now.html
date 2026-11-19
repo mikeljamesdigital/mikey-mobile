@@ -335,8 +335,8 @@
 
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="name">Full Name <span class="form-required">*</span></label>
-                                <input type="text" id="name" name="name" placeholder="Mike Johnson" required>
+                                <label for="full_name">Full Name <span class="form-required">*</span></label>
+                                <input type="text" id="full_name" name="full_name" placeholder="Mike Johnson" required>
                             </div>
                             <div class="form-group">
                                 <label for="phone">Phone Number <span class="form-required">*</span></label>
@@ -363,14 +363,25 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="vehicle">Your Vehicle <span class="form-required">*</span></label>
-                                <input type="text" id="vehicle" name="vehicle" placeholder="e.g., 2019 Toyota Camry" required>
+                                <label for="year">Year <span class="form-required">*</span></label>
+                                <input type="number" id="year" name="year" placeholder="e.g., 2019" min="1980" max="2027" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="make">Make <span class="form-required">*</span></label>
+                                <input type="text" id="make" name="make" placeholder="e.g., Toyota" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Model <span class="form-required">*</span></label>
+                                <input type="text" id="model" name="model" placeholder="e.g., Camry" required>
                             </div>
                         </div>
 
                         <div class="form-group">
-                            <label for="location">Service Address / Neighborhood <span class="form-required">*</span></label>
-                            <input type="text" id="location" name="location" placeholder="e.g., 1234 Oak Ave, Woodward Park, Fresno" required>
+                            <label for="address1">Street Address <span class="form-required">*</span></label>
+                            <input type="text" id="address1" name="address1" placeholder="e.g., 1234 Oak Ave, Woodward Park, Fresno" required>
                         </div>
 
                         <div class="form-row">
@@ -391,8 +402,8 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Additional Notes</label>
-                            <textarea id="message" name="message" placeholder="Anything else we should know? (e.g., gate code, parking instructions, special requests)"></textarea>
+                            <label for="reason_for_call">Reason For Call</label>
+                            <textarea id="reason_for_call" name="reason_for_call" placeholder="Anything else we should know? (e.g., gate code, parking instructions, special requests)"></textarea>
                         </div>
 
                         <input type="submit" onclick="return gtag_report_conversion(window.location.href);" class="form-submit-btn" id="submitBtn" value="BOOK MY OIL CHANGE">
