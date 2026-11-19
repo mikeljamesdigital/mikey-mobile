@@ -46,10 +46,12 @@
         img{max-width:100%;display:block}
 
         /* TOP BAR */
-        .top-bar{background:#1E2D5A;color:#fff;text-align:center;padding:10px 20px;font-family:'Teko',sans-serif;font-size:18px;letter-spacing:.5px}
-        .top-bar a{color:#FF6BB5;font-weight:700}
-        .top-bar .gbp-link{color:#FFD700;font-weight:700;border:1px solid rgba(255,215,0,.5);border-radius:20px;padding:2px 12px;transition:background .2s;white-space:nowrap}
-        .top-bar .gbp-link:hover{background:rgba(255,215,0,.15)}
+        body > .top-bar{background:#1E2D5A;color:#fff;text-align:center;padding:6px 12px;font-family:'Teko',sans-serif;font-size:16px;letter-spacing:.5px;white-space:nowrap;line-height:1.2}
+        body > .top-bar a{color:#FF6BB5;font-weight:700}
+        body > .top-bar .gbp-link{color:#fff;font-weight:700}
+        body > .top-bar .gbp-link:hover{text-decoration:underline}
+        body > .top-bar .tb-stars{color:#FFD700;letter-spacing:1px}
+        body > .top-bar .tb-sep{color:rgba(255,255,255,.45);margin:0 10px;font-weight:400}
 
         /* HERO */
         .hero{background:linear-gradient(135deg,#1E2D5A 0%,#2a3f7a 50%,#1E2D5A 100%);display:flex;align-items:center;position:relative;overflow:visible;padding:60px 40px 0}.hero-copy{padding-bottom:48px}
@@ -206,6 +208,9 @@
             .stats-grid{grid-template-columns:repeat(2,1fr)}
             .trust-strip-inner{gap:12px 20px}
             .trust-item{font-size:15px}
+            body > .top-bar{font-size:14px}
+            body > .top-bar .tb-area{display:none}
+            body > .top-bar .tb-sep{margin:0 6px}
         }
     </style>
 <script
@@ -311,9 +316,7 @@
 </head>
 <body>
 
-    <div class="top-bar">
-        ⭐ <a href="https://share.google/bEofT1RucvkjMdXzh" target="_blank" rel="noopener" class="gbp-link">★★★★★ See Our Google Reviews</a> &nbsp;|&nbsp; 📞 <a href="tel:5598384267">(559) 838-4267</a> &nbsp;|&nbsp; Serving Fresno, Clovis &amp; the Central Valley
-    </div>
+    <div class="top-bar"><a href="https://share.google/bEofT1RucvkjMdXzh" target="_blank" rel="noopener" class="gbp-link"><span class="tb-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> Google Reviews</a><span class="tb-sep">|</span><a href="tel:5598384267">(559) 838-4267</a><span class="tb-area"><span class="tb-sep">|</span>Serving Fresno &amp; Clovis</span></div>
 
     <header><!-- Navigation will be loaded here by script --></header>
 
@@ -345,7 +348,7 @@
             <div class="trust-item">🚗 We Come to Your Driveway</div>
             <div class="trust-item">⏱️ Done in 45 minutes</div>
             <div class="trust-item">💰 Transparent Pricing</div>
-            <div class="trust-item">✅ Same-Day Available</div>
+            <div class="trust-item">✅ Convenient Scheduling</div>
         </div>
     </div>
 
@@ -370,7 +373,7 @@
                 <div class="card"><div class="card-icon">📅</div><h3>Convenient Scheduling</h3><p>Book online in 60 seconds. Choose your time, we'll be there.</p></div>
                 <div class="card"><div class="card-icon">✓</div><h3>Professional Service</h3><p>Certified technicians. Premium oils. Guaranteed quality.</p></div>
                 <div class="card"><div class="card-icon">💰</div><h3>Transparent Pricing</h3><p>No hidden fees. No upsells. Just honest, fair pricing.</p></div>
-                <div class="card"><div class="card-icon">🚀</div><h3>Same-Day Available</h3><p>Need it today? We offer same-day service in Fresno &amp; Clovis.</p></div>
+                <div class="card"><div class="card-icon">🚀</div><h3>Flexible Scheduling</h3><p>Book online or call, and we'll confirm a time that works in Fresno &amp; Clovis.</p></div>
                 <div class="card"><div class="card-icon">🛡️</div><h3>100% Guaranteed</h3><p>Not satisfied? We'll make it right or refund your money.</p></div>
             </div>
         </div>
@@ -619,7 +622,6 @@
                                 <option value="Standard Oil Change ($120/$140/$160)">Standard Oil Change — $120 / $140 / $160</option>
                                 <option value="Diesel Oil Change - $249">Diesel Oil Change (HD Trucks) &mdash; $249</option>
                                 <option value="Boat Pre-Season Service - $499">Boat Pre-Season Service &mdash; $499</option>
-                                <option value="Same-Day Rush Service">Same-Day Rush Service</option>
                                 <option value="Not Sure">Not Sure &mdash; I'll explain in notes</option>
                             </select>
                         </div>
@@ -665,7 +667,7 @@
                 <span>•</span>
                 <span>30-Day Guarantee</span>
                 <span>•</span>
-                <span>Same-Day Available</span>
+                <span>Convenient Scheduling</span>
             </div>
         </div>
     </section>
