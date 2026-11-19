@@ -39,16 +39,25 @@
         return html;
     }
 
+    // Homepage already renders its own navy top bar. Skip the shared bar
+    // on / and /index.html so that bar is not duplicated.
+    function isHomepage() {
+        const path = window.location.pathname.replace(/\/+$/, '') || '/';
+        return path === '/' || path.toLowerCase() === '/index.html';
+    }
+
     // Generate navigation HTML
     function generateNavigation(config) {
-        let html = `
+        const topBar = isHomepage() ? '' : `
         <!-- Top Bar -->
         <div class="top-bar">
             <div class="container">
-                <span>⭐⭐⭐⭐⭐ 5-STAR RATED • LICENSED &amp; INSURED</span>
+                <span><span style="color:#FFD700">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5-STAR RATED • LICENSED &amp; INSURED</span>
             </div>
         </div>
+`;
 
+        let html = topBar + `
         <!-- Navigation -->
         <nav class="navbar">
             <div class="container">
