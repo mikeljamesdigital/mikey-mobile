@@ -52,7 +52,7 @@
         '    </div>',
         '</div>',
         '<div class="footer-bottom">',
-        '    &copy; 2025 Mikey Mobile Oil Change. All rights reserved. | Licensed &amp; Insured in California | <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a>',
+        '    &copy; 2025 Mikey Mobile Oil Change. All rights reserved. | Licensed &amp; Insured in California | <a href="/privacy-policy.html" style="color:#aaa; text-decoration:none;">Privacy Policy</a> | <a href="/terms-and-conditions.html" style="color:#aaa; text-decoration:none;">Terms and Conditions</a>',
         '</div>'
     ].join('\n');
 
